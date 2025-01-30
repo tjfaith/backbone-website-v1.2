@@ -1,0 +1,190 @@
+"use client";
+import {
+  Navbar as HeroUINavbar,
+  NavbarContent,
+  NavbarMenu,
+  NavbarMenuToggle,
+  NavbarBrand,
+  NavbarItem,
+  NavbarMenuItem,
+} from "@heroui/navbar";
+import { Link } from "@heroui/link";
+import NextLink from "next/link";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+  DropdownSection,
+} from "@heroui/dropdown";
+import { Button } from "@heroui/button";
+import { Icon } from "@iconify/react";
+import useNavbar from "./useNavbar";
+
+import { BackboneLogo, CustomButton, ThemeSwitch } from "@/components";
+
+
+const Navbar = () => {
+  const { navItems, navMenuItems, isMenuOpen, currentPath, handleMenuToggle } =
+    useNavbar();
+
+  return (
+    <HeroUINavbar
+      className="bg-primary fixed shadow-lg    "
+      classNames={{
+        base: "bg-primary bg-opacity-80 backdrop-blur-md",
+        wrapper: "max-w-screen-2xl mx-auto lg:px-28 px-6 bg-transparent py-6",
+      }}
+      isBlurred={false}
+      isMenuOpen={isMenuOpen}
+      maxWidth="full"
+      position="sticky"
+      onMenuOpenChange={handleMenuToggle}
+    >
+      <NavbarContent className="basis-1/5   sm:basis-full" justify="start">
+        <NavbarBrand as="li" className=" max-w-fit">
+          <NextLink href="/">
+            <BackboneLogo />
+          </NextLink>
+        </NavbarBrand>
+      </NavbarContent>
+
+
+
+      <NavbarContent
+        className="hidden sm:flex gap-4"
+        justify="center"
+      >
+        <ul className="hidden lg:flex items-center gap-4 justify-start ml-2">
+          {navItems.map((item, index) => (
+            <NavbarItem key={index}>
+              {!item.menu ? (
+                <NextLink
+                  className={`${currentPath === item.href && "text-foreground-200"} hover:text-foreground-300 text-background transition-all duration-300 ease-in-out`}
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              ) : (
+                <Dropdown
+                  key={index}
+                  classNames={{ content: "border border-foreground-200" }}
+                  radius="lg"
+                  shadow="sm"
+                >
+                  <DropdownTrigger>
+                    <Button
+                      className="bg-transparent text-background text-base px-1"
+                      endContent={<Icon icon="ri:arrow-down-s-line" />}
+                      variant="flat"
+                    >
+                      {item.label}
+                    </Button>
+                  </DropdownTrigger>
+                  <DropdownMenu
+                    aria-label="Drop down"
+                    itemClasses={{
+                      base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
+                    }}
+                  >
+                    <DropdownSection title="WHAT WE HAVE FOR YOU">
+                      {item.menu.map((sub_item, index2) => (
+                        <DropdownItem
+                          key={index2}
+                          startContent={<Icon icon={sub_item.icon} />}
+                          textValue={sub_item.label}
+                        >
+                          <NextLink
+                            className="space-x-4 flex flex-row items-center"
+                            href={sub_item.href}
+                          >
+                            <span>{sub_item.label}</span>
+
+                          </NextLink>
+                        </DropdownItem>
+                      ))}
+                    </DropdownSection>
+                  </DropdownMenu>
+                </Dropdown>
+              )}
+            </NavbarItem>
+          ))}
+        </ul>
+        {/* <NavbarItem className="hidden lg:flex gap-2">
+          <ThemeSwitch />
+        </NavbarItem> */}
+      </NavbarContent>
+
+      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+        <NavbarMenuToggle />
+      </NavbarContent>
+
+      <NavbarContent justify="end" className="hidden sm:flex">
+        <NavbarItem>
+          <CustomButton fullWidth={false} as={Link}>
+            Get Started Now
+          </CustomButton>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarMenu className=" bg-opacity-50 backdrop-blur-lg">
+        <div className="mx-4 mt-2 flex flex-col gap-2 ">
+          {navMenuItems.map((item, index) => (
+            <div key={index}>
+              {!item.menu ? (
+                <NavbarMenuItem>
+                  <Link
+                    href={item.href}
+                    onPress={() => handleMenuToggle(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </NavbarMenuItem>
+              ) : (
+                <Dropdown
+                  classNames={{ content: "border border-foreground-200" }}
+                  radius="lg"
+                  shadow="sm"
+                >
+                  <DropdownTrigger>
+                    <NavbarMenuItem className="text-primary text-base flex items-center space-x-2">
+                      {item.label}
+                      <Icon icon="ri:arrow-down-s-line" />
+                    </NavbarMenuItem>
+                  </DropdownTrigger>
+                  <DropdownMenu
+                    aria-label="Drop down"
+                    itemClasses={{
+                      base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
+                    }}
+                  >
+                    <DropdownSection title="WHAT WE HAVE FOR YOU">
+                      {item.menu.map((sub_item, index2) => (
+                        <DropdownItem
+                          key={index2}
+                          startContent={<Icon icon={sub_item.icon} />}
+                          textValue={sub_item.label}
+                        >
+                          <NextLink
+                            className="space-x-4 flex flex-row items-center"
+                            href={sub_item.href}
+                            onClick={() => handleMenuToggle(false)}
+                          >
+                            <span>{sub_item.label}</span>
+
+                          </NextLink>
+                        </DropdownItem>
+                      ))}
+                    </DropdownSection>
+                  </DropdownMenu>
+                </Dropdown>
+              )}
+            </div>
+          ))}
+        </div>
+      </NavbarMenu>
+    </HeroUINavbar>
+  );
+};
+
+export default Navbar;

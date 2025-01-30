@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Extralight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/ClashDisplay-Variable.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Digital Numbers";
+  src: url("/assets/fonts/DigitalNumbers-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clash-display-font {
+  font-family: "Clash Display", sans-serif;
+}
+
+.digital-numbers-font {
+  font-family: "Digital Numbers", sans-serif;
+}
