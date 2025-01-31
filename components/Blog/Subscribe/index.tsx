@@ -2,9 +2,9 @@
 import React from "react";
 import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
+import { Icon } from "@iconify/react";
 
 import useSubscribe from "./useSubscribe";
-import { Icon } from "@iconify/react";
 
 const Subscribe = () => {
   const { handleSubscribe, setEmail, email, subLoading } = useSubscribe();

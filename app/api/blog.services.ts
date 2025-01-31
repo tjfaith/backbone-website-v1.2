@@ -1,9 +1,10 @@
-'use client'
+"use client";
 import { useMutation, useQuery } from "@tanstack/react-query";
+
+import api from "./api.services";
 
 import { QueryGetAllBlogsProps, SubscriberPayload } from "@/types";
 import { allBlog, blogCategory } from "@/app/utils/dummy_data";
-import api from "./api.services";
 
 function BlogServices() {
   const useGetAllBlog = ({
@@ -65,7 +66,7 @@ function BlogServices() {
     useGetAllBlog,
     useGetAllBlogCategory,
     useGetSingleBlog,
-    useBlogSubscriber
+    useBlogSubscriber,
   };
 }
 export default BlogServices;

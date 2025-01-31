@@ -7,9 +7,9 @@ import {
 } from "@heroui/modal";
 import { Image } from "@heroui/image";
 import { cn } from "@heroui/theme";
-import { ViewImageProps } from "@/types";
 import { Icon } from "@iconify/react";
 
+import { ViewImageProps } from "@/types";
 
 const ViewImage = ({ img, className }: ViewImageProps) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -62,8 +62,8 @@ const ViewImage = ({ img, className }: ViewImageProps) => {
                 <Image
                   disableAnimation
                   disableSkeleton
-                  className="object-contain h-screen-70"
                   alt="image"
+                  className="object-contain h-screen-70"
                   radius="none"
                   src={img}
                 />

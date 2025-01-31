@@ -1,11 +1,11 @@
 "use cleint";
 import React from "react";
+import { Icon } from "@iconify/react";
 
 import useBlogCard from "./useBlogCard";
 
 import { ViewImage } from "@/components";
 import { BlogCardProps } from "@/types";
-import { Icon } from "@iconify/react";
 
 const BlogCard = ({ data }: BlogCardProps) => {
   const { DOMPurify, viewBlog } = useBlogCard();

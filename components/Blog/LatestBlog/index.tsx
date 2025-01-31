@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
+import { Icon } from "@iconify/react";
 
 import useLatestBlog from "./useLatestBlog";
 
 import { ViewImage } from "@/components";
-import { Icon } from "@iconify/react";
 
 const LatestBlog = () => {
   const { latestBlog, DOMPurify, viewBlog } = useLatestBlog();

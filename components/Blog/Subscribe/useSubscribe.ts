@@ -1,14 +1,13 @@
 "use client";
 
-import { BlogServices } from "@/app/api";
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 
+import { BlogServices } from "@/app/api";
 
 function useSubscribe() {
   const [email, setEmail] = useState("");
-  const { mutateAsync: subscribe, isPending: subLoading } =
-    BlogServices().useBlogSubscriber();
+  const { isPending: subLoading } = BlogServices().useBlogSubscriber();
   const handleSubscribe = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
@@ -16,7 +15,7 @@ function useSubscribe() {
 
       toast.success(
         // response.data.message || "Subscription created sucessfully",
-        "Subscription created sucessfully",
+        "Subscription created successfully",
       );
       setEmail("");
     } catch (error: any) {

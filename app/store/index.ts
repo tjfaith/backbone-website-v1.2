@@ -1,5 +1,6 @@
 "use client";
 import { configureStore } from "@reduxjs/toolkit";
+
 import blogSlice from "./Features/blogSlice";
 
 export const store = configureStore({

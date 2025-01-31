@@ -2,7 +2,9 @@ import "@/styles/globals.css";
 import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
+
 import { Providers } from "./providers";
+
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer, Navbar } from "@/components";
@@ -33,15 +35,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body
-        className={fontSans.className}
-      >
+      <body className={fontSans.className}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Navbar />
-          <main>
-            {children}
-          </main>
-          {/* <Footer /> */}
+          <main>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

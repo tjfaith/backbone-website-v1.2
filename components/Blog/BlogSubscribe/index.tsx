@@ -1,4 +1,3 @@
-import { Image } from "@heroui/image";
 import React from "react";
 
 import { Subscribe } from "@/components";

@@ -1,19 +1,35 @@
-import { Img5 } from '@/public/assets'
-import { Icon } from '@iconify/react'
-import Image from 'next/image'
-const JoinUsBusinesses = () => {
-    return (
+import { Icon } from "@iconify/react";
+import Image from "next/image";
 
-        <div className='w-full relative    '>
-            <Image src={Img5} alt="image 5" className='object-cover  rounded-xl shadow-xl h-full w-full ' />
-            <div className='absolute  top-10 left-4  p-8 text-background  '>
-                <div className='uppercase text-base font-medium mb-2'>Businesses</div>
-                <div className='clash-display-font text-4xl font-medium text-accent2-200 tracking-wide max-w-md mb-4'>Manage bulk payments, automate transactions, and grow globally.</div>
-                <div className='flex items-center space-x-1 text-base font-medium'><span>Explore business solutions</span><Icon icon="ri:arrow-right-s-line" /></div>
-            </div>
-        </div>
+import { Img5 } from "@/public/assets";
 
-    )
+interface Props {
+  hideCaption?: boolean;
 }
+const JoinUsBusinesses = ({ hideCaption = true }: Props) => {
+  return (
+    <div className="w-full relative    ">
+      <Image
+        alt="image 5"
+        className="object-cover  rounded-xl shadow-xl h-full w-full "
+        src={Img5}
+      />
+      <div className="absolute top-0 md:top-10 left-0 md:left-4  p-8 text-background  animate__animated animate__flipInX">
+        <div className="uppercase text-xs md:text-base font-medium mb-2">
+          Businesses
+        </div>
+        <div className="clash-display-font text-xl md:text-4xl leading-5 md:leading-none font-medium text-accent2-200 md:tracking-wide max-w-md mb-4">
+          Manage bulk payments, automate transactions, and grow globally.
+        </div>
+        {!hideCaption && (
+          <div className="flex items-center space-x-1 text-xs md:text-base font-medium">
+            <span>Explore business solutions</span>
+            <Icon icon="ri:arrow-right-s-line" />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
-export default JoinUsBusinesses
+export default JoinUsBusinesses;

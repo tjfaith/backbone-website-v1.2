@@ -1,5 +1,5 @@
 function useHomePage() {
-    return {}
+  return {};
 }
 
-export default useHomePage
+export default useHomePage;

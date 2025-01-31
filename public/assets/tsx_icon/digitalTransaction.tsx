@@ -174,7 +174,7 @@ const digitalTransaction = () => {
                     <path d="M69.3133 281.261L70.7717 279.732H74.2691L75.6426 281.261H69.3133ZM68.8886 274.309L70.4178 275.781V279.25L68.8886 280.638V274.309ZM76.0956 280.638L74.5664 279.18V275.696L76.0956 274.309V280.638ZM69.2992 266.875H75.6284L74.2266 268.404H70.7576L69.2992 266.875ZM68.8461 273.813V267.484L70.3753 268.857V272.369L68.8461 273.813ZM76.0532 267.484V273.813L74.524 272.44V268.942L76.0532 267.484Z" fill="white" />
                 </g>
                 <foreignObject x="50" y="160" height={400} className='h-full w-full relative'>
-                    <div className="h-fll text-6xl font-medium text-primary w-full  digital-numbers-font flex items-center justify-center  ">
+                    <div className="h-fll text-5xl  font-medium text-primary w-full  digital-numbers-font flex items-center justify-center  ">
                         <CountUp enableScrollSpy scrollSpyOnce duration={4} end={783} />
                     </div>
                 </foreignObject>

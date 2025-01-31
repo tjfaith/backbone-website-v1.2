@@ -1,10 +1,9 @@
 "use client";
 import { useSelector } from "react-redux";
-
+import { useMemo, useRef, useState } from "react";
 
 import { BlogServices } from "@/app/api";
 import { RootState } from "@/app/store";
-import { useMemo, useRef, useState } from "react";
 
 function useBlog() {
   const blogRef = useRef<HTMLDivElement | null>(null);
@@ -32,8 +31,8 @@ function useBlog() {
     if (blogRef.current) {
       blogRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    setCurrentPage(page)
-  }
+    setCurrentPage(page);
+  };
 
   return {
     allBlogs,

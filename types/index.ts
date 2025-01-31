@@ -42,11 +42,11 @@ export interface BlogCardProps {
 }
 
 export interface SocialsLayoutProps {
-  children: ReactNode
-  hoverText: string
-  linkTo: string
-  hoverBgColor?: string
-  hoverBorderColor?: string
-  hoverIconColor?: string
+  children: ReactNode;
+  hoverText: string;
+  linkTo: string;
+  hoverBgColor?: string;
+  hoverBorderColor?: string;
+  hoverIconColor?: string;
   hoverChildren?: ReactNode;
 }

@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import { Spinner } from "@heroui/spinner";
+import { Icon } from "@iconify/react";
 
 import useSingleBlog from "./useSingleBlog";
 
 import { ViewImage } from "@/components";
-import { Icon } from "@iconify/react";
 
 const SingleBlog = () => {
   const { singleBlog, DOMPurify, router, blogLoading } = useSingleBlog();
@@ -30,7 +30,9 @@ const SingleBlog = () => {
               <div className=" flex items-center space-x-6 mt-8">
                 <div className=" text-sm text-foreground-600 whitespace-nowrap space-x-4">
                   {new Date(singleBlog?.created_at as string).toDateString()}{" "}
-                  {new Date(singleBlog?.created_at as string).toLocaleTimeString()}
+                  {new Date(
+                    singleBlog?.created_at as string,
+                  ).toLocaleTimeString()}
                 </div>
                 <div className="text-sm text-primary capitalize">
                   {singleBlog?.category?.name}

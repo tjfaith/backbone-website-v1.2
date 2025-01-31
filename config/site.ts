@@ -5,8 +5,8 @@ export const siteConfig = {
   description: "Trade and exchange currency",
   socials: [
     {
-      url: 'https://www.twitter.com/mybackbone_io',
-      icon: ''
-    }
-  ]
+      url: "https://www.twitter.com/mybackbone_io",
+      icon: "",
+    },
+  ],
 };

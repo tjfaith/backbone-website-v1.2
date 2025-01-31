@@ -3,8 +3,8 @@ import React from "react";
 import { useIsSSR } from "@react-aria/ssr";
 import { useTheme } from "next-themes";
 import { Image } from "@heroui/image";
-import { FullLogo } from "@/public/assets";
 
+import { FullLogo } from "@/public/assets";
 
 const CottonLogo = () => {
   const { theme } = useTheme();

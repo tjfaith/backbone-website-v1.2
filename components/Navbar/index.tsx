@@ -19,26 +19,32 @@ import {
 } from "@heroui/dropdown";
 import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react";
+
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, CustomButton, ThemeSwitch } from "@/components";
-
+import { BackboneLogo, CustomButton } from "@/components";
 
 const Navbar = () => {
-  const { navItems, navMenuItems, isMenuOpen, currentPath, handleMenuToggle } =
-    useNavbar();
+  const {
+    navItems,
+    navMenuItems,
+    isMenuOpen,
+    currentPath,
+    changeReady,
+    handleMenuToggle,
+  } = useNavbar();
 
   return (
     <HeroUINavbar
-      className="bg-primary fixed shadow-lg    "
+      className=" fixed  "
       classNames={{
-        base: "bg-primary bg-opacity-80 backdrop-blur-md",
-        wrapper: "max-w-screen-2xl mx-auto lg:px-28 px-6 bg-transparent py-6",
+        base: `${changeReady ? "bg-primary bg-opacity-50 backdrop-blur-lg animate__animated animate__slideInDown" : "bg-transparent"} shadow-none   transition-all duration-300 ease-in-out`,
+        wrapper: "max-w-screen-2xl mx-auto lg:px-28 px-6  py-6",
       }}
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="full"
-      position="sticky"
+      // position="sticky"
       onMenuOpenChange={handleMenuToggle}
     >
       <NavbarContent className="basis-1/5   sm:basis-full" justify="start">
@@ -49,12 +55,7 @@ const Navbar = () => {
         </NavbarBrand>
       </NavbarContent>
 
-
-
-      <NavbarContent
-        className="hidden sm:flex gap-4"
-        justify="center"
-      >
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <ul className="hidden lg:flex items-center gap-4 justify-start ml-2">
           {navItems.map((item, index) => (
             <NavbarItem key={index}>
@@ -99,7 +100,6 @@ const Navbar = () => {
                             href={sub_item.href}
                           >
                             <span>{sub_item.label}</span>
-
                           </NextLink>
                         </DropdownItem>
                       ))}
@@ -115,16 +115,19 @@ const Navbar = () => {
         </NavbarItem> */}
       </NavbarContent>
 
-      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarContent justify="end" className="hidden sm:flex">
+      <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem>
-          <CustomButton fullWidth={false} as={Link}>
+          <CustomButton as={Link} fullWidth={false} href="/#get_start">
             Get Started Now
           </CustomButton>
         </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent
+        className="lg:hidden basis-1 pl-4 text-background font-bold"
+        justify="end"
+      >
+        <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu className=" bg-opacity-50 backdrop-blur-lg">
@@ -171,7 +174,6 @@ const Navbar = () => {
                             onClick={() => handleMenuToggle(false)}
                           >
                             <span>{sub_item.label}</span>
-
                           </NextLink>
                         </DropdownItem>
                       ))}

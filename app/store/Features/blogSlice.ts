@@ -1,6 +1,7 @@
 "use client";
-import { BlogCategory } from "@/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { BlogCategory } from "@/types";
 
 interface BlogState {
   selectedCategory: BlogCategory;

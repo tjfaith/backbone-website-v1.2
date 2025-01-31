@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 function useNavbar() {
   const { theme } = useTheme();
@@ -13,6 +14,17 @@ function useNavbar() {
   const handleMenuToggle = (isOpen: boolean) => {
     setIsMenuOpen(isOpen);
   };
+
+  const { scrollY } = useScroll();
+  const [changeReady, setChangeReady] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > window.innerHeight * 0.27) {
+      setChangeReady(true);
+    } else {
+      setChangeReady(false);
+    }
+  });
 
   const serviceMenu = [
     {
@@ -25,6 +37,11 @@ function useNavbar() {
       icon: "ri:building-3-fill",
       href: "/#services",
     },
+    {
+      label: "NoneProfit",
+      icon: "ri:building-3-fill",
+      href: "/#services",
+    },
   ];
 
   const navItems = [
@@ -34,7 +51,7 @@ function useNavbar() {
     },
     {
       label: "About us",
-      href: "/about",
+      href: "/#about",
       menu: null,
     },
     {
@@ -50,12 +67,12 @@ function useNavbar() {
     },
     {
       label: "About us",
-      href: "/about",
+      href: "/#about",
       menu: null,
     },
     {
       label: "Contact us",
-      href: "/contact-us",
+      href: "/#contact-us",
       menu: null,
     },
     {
@@ -72,6 +89,7 @@ function useNavbar() {
     theme,
     isSSR,
     currentPath,
+    changeReady,
     handleMenuToggle,
   };
 }

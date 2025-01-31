@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Spinner } from "@heroui/spinner";
+import { Pagination } from "@heroui/pagination";
 
 import useBlog from "./useBlog";
 
@@ -10,7 +11,6 @@ import {
   BlogSubscribe,
   LatestBlog,
 } from "@/components";
-import { Pagination } from "@heroui/pagination";
 import { AllBlogs } from "@/types";
 const BlogPage = () => {
   const {
@@ -24,7 +24,7 @@ const BlogPage = () => {
   } = useBlog();
 
   return (
-    <div className=" min-h-screen pt-10">
+    <div className=" min-h-screen pt-28">
       <div className="max-w-screen-2xl mx-auto lg:px-28 px-6">
         <div className="italic text-2xl text-primary font-medium">Blog</div>
         <div className="">

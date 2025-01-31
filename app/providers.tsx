@@ -6,10 +6,11 @@ import { HeroUIProvider } from "@heroui/system";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Provider } from "react-redux";
-import { store } from "@/app/store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AOS from "aos";
 import { useEffect } from "react";
+
+import { store } from "@/app/store";
 
 export const queryClient = new QueryClient({
   defaultOptions: {
