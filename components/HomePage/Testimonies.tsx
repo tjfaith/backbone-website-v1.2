@@ -1,4 +1,3 @@
-import { Divider } from "@heroui/divider";
 import { Spacer } from "@heroui/spacer";
 import React from "react";
 
@@ -39,8 +38,11 @@ const Testimonies = () => {
 
         <div className=" grid md:grid-cols-3 gap-10 md:gap-5">
           {testimoniesList.map((item, index) => (
-            <div key={index} className={`${index === 0 && 'md:border-l-1'}  flex px-3 border-foreground gap-5 md:border-r-1`} data-aos="fade-up">
-
+            <div
+              key={index}
+              className={`${index === 0 && "md:border-l-1"}  flex px-3 border-foreground gap-5 md:border-r-1`}
+              data-aos="fade-up"
+            >
               {/* <Divider
                 className=" bg-background/50 md:block hidden"
                 orientation="vertical"
@@ -59,7 +61,6 @@ const Testimonies = () => {
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </div>
