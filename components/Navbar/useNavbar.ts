@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
@@ -16,16 +16,23 @@ function useNavbar() {
   };
 
   const { scrollY } = useScroll();
-  const [changeReady, setChangeReady] = useState(currentPath === '/' ? false : true);
+  const [changeReady, setChangeReady] = useState(
+    currentPath === "/" ? false : true,
+  );
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > window.innerHeight * 0.27) {
       setChangeReady(true);
     } else {
-      setChangeReady(currentPath === '/' ? false : true);
+      setChangeReady(currentPath === "/" ? false : true);
     }
   });
 
+  useEffect(() => {
+    if (changeReady === false && currentPath !== '/') {
+      setChangeReady(true)
+    }
+  }, [currentPath])
   const serviceMenu = [
     {
       label: "Individuals",
