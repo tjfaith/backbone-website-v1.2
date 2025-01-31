@@ -15,8 +15,12 @@ export async function generateMetadata({
   const { blog_id } = await params;
 
   // Find the specific blog using the `blog_id`
+  // const singleBlog =
+  //   allBlog.find((item: AllBlogs) => item.blog_id === blog_id) || null;
   const singleBlog =
-    allBlog.find((item: AllBlogs) => item.blog_id === blog_id) || null;
+    (await allBlog.find(
+      (item: AllBlogs) => item.blog_id === blog_id,
+    )) || null;
 
   return {
     title: singleBlog?.title || "Default Title",

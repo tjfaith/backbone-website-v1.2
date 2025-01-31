@@ -1,6 +1,6 @@
 "use client";
 import { useSelector } from "react-redux";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { BlogServices } from "@/app/api";
