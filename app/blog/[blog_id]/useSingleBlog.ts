@@ -1,15 +1,22 @@
 "use client";
 import createDOMPurify from "dompurify";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import { BlogServices } from "@/app/api";
+import { useEffect } from "react";
 function useSingleBlog() {
   const DOMPurify = createDOMPurify();
   const params = useSearchParams();
   const router = useRouter();
   const blog_id = params.get("id");
-  const { data: singleBlog, isLoading: blogLoading } =
+  const currentPath = usePathname();
+
+  const { data: singleBlog, isLoading: blogLoading, refetch: refetchBlog } =
     BlogServices().useGetSingleBlog(blog_id as string);
+
+  useEffect(() => {
+    refetchBlog()
+  }, [currentPath])
 
   return { singleBlog, DOMPurify, router, blogLoading };
 }
