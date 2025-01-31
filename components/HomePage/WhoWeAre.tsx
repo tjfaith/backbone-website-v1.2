@@ -14,7 +14,7 @@ import {
 } from "@/public/assets";
 const WhoWeAre = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 pt-60 md:pt-0  md:py-10 ">
+    <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 pt-60 pb-10 md:pt-0  md:py-10 ">
       <div className=" flex flex-col items-center justify-center mb-6">
         <div className="text-foreground-950 text-center text-3xl md:text-4xl font-medium clash-display-font">
           Why Everyone Trusts Backbone.

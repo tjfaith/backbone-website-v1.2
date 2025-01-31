@@ -21,7 +21,6 @@ function useNavbar() {
   );
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-
     if (latest > window.innerHeight * 0.27) {
       setChangeReady(true);
     } else {
@@ -30,10 +29,10 @@ function useNavbar() {
   });
 
   useEffect(() => {
-    if (changeReady === false && currentPath !== '/') {
-      setChangeReady(true)
+    if (changeReady === false && currentPath !== "/") {
+      setChangeReady(true);
     }
-  }, [currentPath])
+  }, [currentPath]);
   const serviceMenu = [
     {
       label: "Individuals",
@@ -76,11 +75,6 @@ function useNavbar() {
     {
       label: "About us",
       href: "/#about",
-      menu: null,
-    },
-    {
-      label: "Contact us",
-      href: "/#contact-us",
       menu: null,
     },
     {

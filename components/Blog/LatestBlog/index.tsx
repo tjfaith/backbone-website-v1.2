@@ -23,7 +23,7 @@ const LatestBlog = () => {
           </div>
           <div className=" grid md:grid-cols-2 mt-5 gap-10 items-center">
             <div className="">
-              <div className="md:text-3xl text-2xl font-bold">
+              <div className="md:text-3xl text-2xl font-bold text-primary">
                 {latestBlog?.title}
               </div>
               <div className=" mt-6 ">

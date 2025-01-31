@@ -11,7 +11,7 @@ const SingleBlog = () => {
   const { singleBlog, DOMPurify, router, blogLoading } = useSingleBlog();
 
   return (
-    <div className=" min-h-screen py-10 max-w-screen-2xl mx-auto lg:px-28 px-6">
+    <div className=" min-h-screen py-28 max-w-screen-2xl mx-auto lg:px-28 px-6">
       <button
         className="flex items-center space-x-1 cursor-pointer hover:text-primary ease-in-out duration-300 transition-all"
         onClick={() => router.push("/blog")}
@@ -38,7 +38,7 @@ const SingleBlog = () => {
                   {singleBlog?.category?.name}
                 </div>
               </div>
-              <div className=" mt-6 md:text-4xl  text-2xl font-bold">
+              <div className=" mt-6 md:text-4xl  text-2xl font-bold text-primary">
                 {" "}
                 {singleBlog?.title}
               </div>
@@ -57,7 +57,7 @@ const SingleBlog = () => {
               </div>
             </>
           ) : (
-            <div className="flex items-center justify-center h-screen-60 w-screen text-sm text-foreground">
+            <div className="flex items-center justify-center h-screen-60  text-sm text-foreground">
               Data not found
             </div>
           )}
