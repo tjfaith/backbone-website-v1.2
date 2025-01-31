@@ -31,18 +31,18 @@ const Footer = () => {
                 <Icon icon="ic:sharp-email" />
                 <Link
                   className="transition-all duration-300 ease-in-out text-background hover:text-primary-200"
-                  href="mailto:support@usecotton.io"
+                  href="mailto:sales@usecotton.io"
                 >
-                  <span>support@mybackbone.io</span>
+                  <span>sales@mybackbone.io</span>
                 </Link>
               </div>
               <div className="flex items-center gap-2">
                 <Icon icon="ri:phone-fill" />
                 <Link
                   className=" whitespace-nowrap text-background hover:text-primary-200"
-                  href="tel:+23480242893892"
+                  href="tel:+2347035849521"
                 >
-                  +234 802 4289 3892
+                  +234 703 584 9521
                 </Link>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Footer = () => {
       <Spacer y={28} />
       <Divider className="bg-background" />
       <div className=" mt-4 max-w-screen-2xl mx-auto lg:px-28 px-6 pb-10 ">
-        Copyright &copy; {new Date().getFullYear()}, Backbone
+        Copyright &copy; {new Date().getFullYear()}, Backbone Inc
       </div>
     </footer>
   );

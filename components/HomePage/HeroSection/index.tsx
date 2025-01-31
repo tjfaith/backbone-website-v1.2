@@ -12,15 +12,15 @@ const HeroSection = () => {
     <HeroBg1 key="bg1">
       <HeroContent />
     </HeroBg1>,
-    <HeroBg2 key="bg2">
-      <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />
-    </HeroBg2>,
+    // <HeroBg2 key="bg2">
+    //   <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />
+    // </HeroBg2>,
     <HeroBg3 key="bg3">
       <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />{" "}
     </HeroBg3>,
-    <HeroBg4 key="bg4">
-      <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />{" "}
-    </HeroBg4>,
+    // <HeroBg4 key="bg4">
+    //   <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />{" "}
+    // </HeroBg4>,
   ];
 
   const [randomHeroBg, setRandomHeroBg] = useState<any>(null);

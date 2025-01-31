@@ -22,7 +22,7 @@ import { Icon } from "@iconify/react";
 
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, CustomButton } from "@/components";
+import { BackboneLogo, CustomButton, ThemeSwitch } from "@/components";
 
 const Navbar = () => {
   const {
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <HeroUINavbar
-      className=" fixed  "
+      className="fixed"
       classNames={{
         base: `${changeReady ? "bg-primary bg-opacity-50 backdrop-blur-lg animate__animated animate__slideInDown" : "bg-transparent"} shadow-none   transition-all duration-300 ease-in-out`,
         wrapper: "max-w-screen-2xl mx-auto lg:px-28 px-6  py-6",
@@ -44,7 +44,6 @@ const Navbar = () => {
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="full"
-      // position="sticky"
       onMenuOpenChange={handleMenuToggle}
     >
       <NavbarContent className="basis-1/5   sm:basis-full" justify="start">
@@ -110,9 +109,9 @@ const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        {/* <NavbarItem className="hidden lg:flex gap-2">
+        <NavbarItem className="hidden lg:flex gap-2">
           <ThemeSwitch />
-        </NavbarItem> */}
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex" justify="end">
