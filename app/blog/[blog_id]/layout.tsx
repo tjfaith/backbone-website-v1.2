@@ -51,20 +51,22 @@
 //   return <>{children}</>;
 // }
 
-
 import { Metadata } from "next";
 import { allBlog } from "@/app/utils/dummy_data";
 import { AllBlogs } from "@/types";
 
-// Define the function signature for generateMetadata correctly.
+// Define the type for params as a Promise
+type tParams = Promise<{ blog_id: string }>;
+
 export async function generateMetadata({
   params,
 }: {
-  params: { blog_id: string };  // Params type with the dynamic `blog_id`
+  params: tParams;  // Expecting a Promise that resolves to { blog_id: string }
 }): Promise<Metadata> {
-  const { blog_id } = params;
+  // Wait for the params to resolve before using it
+  const { blog_id } = await params;
 
-  // Find the blog using the provided `blog_id`
+  // Find the specific blog using the `blog_id`
   const singleBlog = allBlog.find((item: AllBlogs) => item.blog_id === blog_id) || null;
 
   return {
@@ -98,7 +100,7 @@ export async function generateMetadata({
   };
 }
 
-// Layout component to render the children.
+// Your layout component
 export default function SingleBlgLayout({
   children,
 }: {
