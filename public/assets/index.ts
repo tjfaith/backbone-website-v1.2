@@ -53,4 +53,3 @@ export { default as Blog8 } from './img/blog/blog8.jpg'
 
 // tsx icon
 export { default as Spinner } from './tsx_icon/spinner'
-export { default as DigitalTransaction } from './tsx_icon/digitalTransaction'
