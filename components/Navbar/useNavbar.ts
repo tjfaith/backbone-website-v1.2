@@ -45,7 +45,7 @@ function useNavbar() {
       href: "/#services",
     },
     {
-      label: "NoneProfit",
+      label: "Nonprofit",
       icon: "ri:building-3-fill",
       href: "/#services",
     },

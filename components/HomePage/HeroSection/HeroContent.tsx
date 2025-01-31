@@ -62,14 +62,14 @@ const HeroContent = ({ avatarClass }: Props) => {
             />
           </AvatarGroup>
           <div className="md:text-left text-center">
-            <span>We have processed </span> $
+            <span>We processed </span> $
             <CountUp
               enableScrollSpy
               scrollSpyOnce
               duration={10}
-              end={249000000}
+              end={197957000}
             />
-            <span> in transaction in {new Date().getFullYear() - 1}.</span>
+            <span> in transactions in {new Date().getFullYear() - 1}.</span>
           </div>
         </div>
 

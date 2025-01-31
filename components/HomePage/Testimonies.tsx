@@ -39,13 +39,13 @@ const Testimonies = () => {
 
         <div className=" grid md:grid-cols-3 gap-10 md:gap-5">
           {testimoniesList.map((item, index) => (
-            <div key={index} className=" flex gap-5" data-aos="fade-up">
-              {index > 0 && (
-                <Divider
-                  className=" bg-background md:block hidden"
-                  orientation="vertical"
-                />
-              )}
+            <div key={index} className={`${index === 0 && 'md:border-l-1'}  flex px-3 border-foreground gap-5 md:border-r-1`} data-aos="fade-up">
+
+              {/* <Divider
+                className=" bg-background/50 md:block hidden"
+                orientation="vertical"
+              /> */}
+
               <div>
                 <div className=" text-left md:text-base text-sm">
                   {item.message}
@@ -59,6 +59,7 @@ const Testimonies = () => {
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </div>
