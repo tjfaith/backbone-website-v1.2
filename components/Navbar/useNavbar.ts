@@ -16,13 +16,13 @@ function useNavbar() {
   };
 
   const { scrollY } = useScroll();
-  const [changeReady, setChangeReady] = useState(false);
+  const [changeReady, setChangeReady] = useState(currentPath === '/' ? false : true);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > window.innerHeight * 0.27) {
       setChangeReady(true);
     } else {
-      setChangeReady(false);
+      setChangeReady(currentPath === '/' ? false : true);
     }
   });
 

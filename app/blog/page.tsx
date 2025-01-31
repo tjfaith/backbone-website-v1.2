@@ -56,7 +56,7 @@ const BlogPage = () => {
                   />
                 </>
               ) : (
-                <div className="flex items-center justify-center h-screen-60 w-screen text-sm text-foreground">
+                <div className="flex items-center justify-center h-screen-60  text-sm text-foreground">
                   No Blog found
                 </div>
               )}
