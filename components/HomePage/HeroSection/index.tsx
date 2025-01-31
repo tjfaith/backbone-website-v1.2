@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import HeroContent from "./HeroContent";
 import HeroBg1 from "./HeroBg1";
-import HeroBg2 from "./HeroBg2";
 import HeroBg3 from "./HeroBg3";
-import HeroBg4 from "./HeroBg4";
 
 const HeroSection = () => {
   const heroBgs = [

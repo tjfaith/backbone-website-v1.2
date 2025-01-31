@@ -22,7 +22,7 @@ import { Icon } from "@iconify/react";
 
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, CustomButton, ThemeSwitch } from "@/components";
+import { BackboneLogo, CustomButton } from "@/components";
 
 const Navbar = () => {
   const {
@@ -109,9 +109,9 @@ const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        <NavbarItem className="hidden lg:flex gap-2">
+        {/* <NavbarItem className="hidden lg:flex gap-2">
           <ThemeSwitch />
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex" justify="end">

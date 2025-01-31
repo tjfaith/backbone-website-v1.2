@@ -107,7 +107,8 @@ const WhoWeAre = () => {
               Global Reach
             </div>
             <div className=" text-lg text-foreground font-normal">
-              Access to over 150 countries through trusted partnerships (We settle everywhere in the world except the sanctioned countries)
+              Access to over 150 countries through trusted partnerships (We
+              settle everywhere in the world except the sanctioned countries)
             </div>
           </div>
         </div>
