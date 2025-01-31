@@ -1,6 +1,7 @@
 import { Metadata } from "next";
-
 import { allBlog } from "@/app/utils/dummy_data";
+import { AllBlogs } from "@/types";
+
 
 export async function generateMetadata({
   params,
@@ -9,16 +10,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { blog_id } = params;
 
-  const singleBlog =
-    (await allBlog.find(
-      (item: { blog_id: string }) => item.blog_id === blog_id,
-    )) || null;
+  const singleBlog = allBlog.find((item: AllBlogs) => item.blog_id === blog_id) || null;
 
   return {
-    title: singleBlog?.title,
+    title: singleBlog?.title || "Default Title",
     description: singleBlog?.description || "",
     openGraph: {
-      title: singleBlog?.title,
+      title: singleBlog?.title || "Default Title",
       description: singleBlog?.description || "",
       type: "article",
       url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog?title=${encodeURIComponent(singleBlog?.title || "")}&id=${singleBlog?.blog_id}`,
@@ -32,8 +30,8 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: "summary_large_image", // Twitter card type
-      title: singleBlog?.title,
+      card: "summary_large_image",
+      title: singleBlog?.title || "Default Title",
       description: singleBlog?.description || "",
       images: singleBlog?.cover_image || "",
     },
