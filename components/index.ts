@@ -6,6 +6,7 @@ export { default as CustomButton } from "./CustomButton";
 export { default as ViewImage } from "./ViewImage";
 export { default as Socials } from ".//Socials";
 export { default as SocialLayout } from "./SocialLayout";
+export { default as DigitalTransaction } from "./DigitalTransaction";
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";

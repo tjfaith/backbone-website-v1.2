@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 import {
-  DigitalTransaction,
   Innovation,
   LockImg,
   Rates,
@@ -12,6 +11,8 @@ import {
   User4,
   WorldMap,
 } from "@/public/assets";
+import { DigitalTransaction } from "@/components";
+
 const WhoWeAre = () => {
   return (
     <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 pt-60 pb-10 md:pt-0  md:py-10 ">

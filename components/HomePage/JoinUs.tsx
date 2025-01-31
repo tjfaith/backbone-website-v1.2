@@ -105,15 +105,24 @@ const JoinUs = () => {
         className="md:flex-grow w-full relative h-auto md:h-screen xl:h-auto"
         data-aos="fade-up"
       >
-        <div className="absolute inset-x-0 top-20  px-6 transition-all duration-400 ease-in-out ">
+        <button
+          className="absolute inset-x-0 top-20  px-6 transition-all duration-400 ease-in-out "
+          onClick={() => setSelectedTab(orderedComponents[2].key)}
+        >
           {orderedComponents[2].component}
-        </div>
-        <div className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out ">
+        </button>
+        <button
+          className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out "
+          onClick={() => setSelectedTab(orderedComponents[1].key)}
+        >
           {orderedComponents[1].component}
-        </div>
-        <div className="absolute inset-x-0 top-0 transition-all duration-400 ease-in-out ">
+        </button>
+        <button
+          className="absolute inset-x-0 top-0 transition-all duration-400 ease-in-out "
+          onClick={() => setSelectedTab(orderedComponents[0].key)}
+        >
           {React.cloneElement(components[0].component, { hideCaption: false })}
-        </div>
+        </button>
       </div>
     </div>
   );
