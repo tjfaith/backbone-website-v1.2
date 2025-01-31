@@ -18,11 +18,15 @@ const CustomButton = ({
   radius = "sm",
   variant,
   isDisabled,
+  href,
+  as,
   fullWidth = true,
   onPress,
 }: CustomButtonProps) => {
   return (
     <Button
+      href={href}
+      as={as}
       className={cn(
         variant == "bordered"
           ? "border-2 border-primary-700  text-primary-600"
