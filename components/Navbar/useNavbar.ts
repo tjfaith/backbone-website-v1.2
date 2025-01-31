@@ -21,6 +21,7 @@ function useNavbar() {
   );
 
   useMotionValueEvent(scrollY, "change", (latest) => {
+
     if (latest > window.innerHeight * 0.27) {
       setChangeReady(true);
     } else {
