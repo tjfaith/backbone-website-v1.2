@@ -22,7 +22,7 @@ import { Icon } from "@iconify/react";
 
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, CustomButton, ThemeSwitch } from "@/components";
+import { BackboneLogo, CustomButton } from "@/components";
 
 const Navbar = () => {
   const {
