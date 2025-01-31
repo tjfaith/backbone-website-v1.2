@@ -15,10 +15,10 @@ const JoinUsBusinesses = ({ hideCaption = true }: Props) => {
         src={Img5}
       />
       <div className="absolute top-0 md:top-10 left-0 md:left-4  p-8 text-background  animate__animated animate__flipInX">
-        <div className="uppercase text-xs md:text-base font-medium mb-2">
+        <div className="uppercase text-xs md:text-base font-medium mb-2 text-left">
           Businesses
         </div>
-        <div className="clash-display-font text-xl md:text-4xl leading-5 md:leading-none font-medium text-accent2-200 md:tracking-wide max-w-md mb-4">
+        <div className="clash-display-font text-xl md:text-4xl leading-5 text-left md:leading-none font-medium text-accent2-200 md:tracking-wide max-w-md mb-4">
           Manage bulk payments, automate transactions, and grow globally.
         </div>
         {!hideCaption && (

@@ -15,10 +15,10 @@ const JoinUsNonprofit = ({ hideCaption = true }: Props) => {
         src={Img6}
       />
       <div className="absolute top-0 md:top-10 left-0 md:left-4  p-8 text-background animate__animated animate__flipInX ">
-        <div className="uppercase text-xs md:text-base font-medium mb-2">
+        <div className="uppercase text-xs md:text-base font-medium mb-2 text-left">
           Nonprofits
         </div>
-        <div className="clash-display-font text-lg md:text-4xl font-medium text-accent1-200 leading-5 md:leading-none md:tracking-wide max-w-lg mb-4">
+        <div className="clash-display-font text-lg md:text-4xl font-medium text-left text-accent1-200 leading-5 md:leading-none md:tracking-wide max-w-lg mb-4">
           Securely fundraise, disburse grants, and track donor contributions.
         </div>
         {!hideCaption && (

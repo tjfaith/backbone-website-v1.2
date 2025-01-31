@@ -25,7 +25,6 @@ const CustomButton = ({
 }: CustomButtonProps) => {
   return (
     <Button
-      href={href}
       as={as}
       className={cn(
         variant == "bordered"
@@ -37,6 +36,7 @@ const CustomButton = ({
       color={color}
       endContent={endContent}
       fullWidth={fullWidth}
+      href={href}
       isDisabled={isDisabled}
       isLoading={isLoading}
       radius={radius}
