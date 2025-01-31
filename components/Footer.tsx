@@ -11,16 +11,13 @@ import { FullLogo } from "@/public/assets";
 const Footer = () => {
   return (
     <footer className="bg-primary text-background">
-      <div
-        className="p-10 max-w-screen-2xl mx-auto lg:px-28 px-6 "
-        id="footer"
-      >
+      <div className="p-10 max-w-screen-2xl mx-auto lg:px-28 px-6 " id="footer">
         <div className=" flex lg:flex-row flex-col gap-8 justify-between">
           <div>
             <Image alt="full logo" className=" mb-4" src={FullLogo.src} />
             <div className=" text-sm font-medium mb-8 max-w-md ">
-              We streamline payments for individuals, businesses, and nonprofits,
-              creating possibilities you never thought possible.
+              We streamline payments for individuals, businesses, and
+              nonprofits, creating possibilities you never thought possible.
             </div>
             <Socials />
             <div className=" space-y-5 mt-16">
