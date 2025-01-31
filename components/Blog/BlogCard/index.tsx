@@ -22,7 +22,9 @@ const BlogCard = ({ data }: BlogCardProps) => {
               {data?.category?.name}
             </div>
           </div>
-          <div className=" text-4xl font-bold mt-4">{data?.title}</div>
+          <div className=" text-4xl font-bold mt-4 text-primary">
+            {data?.title}
+          </div>
           <div className=" mt-4 ">
             {
               <div
