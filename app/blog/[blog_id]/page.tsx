@@ -50,7 +50,7 @@ const SingleBlog = () => {
                 {singleBlog && (
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: DOMPurify.sanitize(singleBlog?.blog_content),
+                      __html: DOMPurify?.sanitize(singleBlog?.blog_content),
                     }}
                   />
                 )}
