@@ -9,8 +9,11 @@ import { RootState } from "@/app/store";
 function useBlog() {
   const blogRef = useRef<HTMLDivElement | null>(null);
   const { selectedCategory } = useSelector((state: RootState) => state.blog);
-  const { data: allBlogs, isLoading: blogLoading, refetch: refetchBlog } =
-    BlogServices().useGetAllBlog({ category_id: selectedCategory.id });
+  const {
+    data: allBlogs,
+    isLoading: blogLoading,
+    refetch: refetchBlog,
+  } = BlogServices().useGetAllBlog({ category_id: selectedCategory.id });
   const currentPath = usePathname();
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -53,8 +56,9 @@ function useBlog() {
   };
 
   useEffect(() => {
-    refetchBlog()
-  }, [currentPath])
+    refetchBlog();
+  }, [currentPath]);
+
   return {
     allBlogs,
     blogLoading,

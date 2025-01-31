@@ -25,39 +25,41 @@ const Testimonies = () => {
   ];
 
   return (
-    <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 bg-primary py-16 text-background">
-      <div className=" mb-10" data-aos="fade-up">
-        <div className="clash-display-font text-3xl md:text-5xl tracking-tight mb-4">
-          What are people saying about us
+    <div className="bg-primary">
+      <div className="max-w-screen-2xl mx-auto lg:px-28 px-6  py-16 text-background">
+        <div className=" mb-10" data-aos="fade-up">
+          <div className="clash-display-font text-3xl md:text-5xl tracking-tight mb-4">
+            What are people saying about us
+          </div>
+          <div className=" md:max-w-3xl text-sm md:text-lg tracking-wider">
+            Imagine a world where payments aren’t just transactions but
+            opportunities—opportunities to connect, to grow, and to thrive.
+          </div>
         </div>
-        <div className=" md:max-w-3xl text-sm md:text-lg tracking-wider">
-          Imagine a world where payments aren’t just transactions but
-          opportunities—opportunities to connect, to grow, and to thrive.
-        </div>
-      </div>
 
-      <div className=" grid md:grid-cols-3 gap-10 md:gap-5">
-        {testimoniesList.map((item, index) => (
-          <div key={index} className=" flex gap-5" data-aos="fade-up">
-            {index > 0 && (
-              <Divider
-                className=" bg-background md:block hidden"
-                orientation="vertical"
-              />
-            )}
-            <div>
-              <div className=" text-left md:text-base text-sm">
-                {item.message}
-              </div>
-              <Spacer className="md:block hidden" y={20} />
-              <Spacer className="md:hidden block" y={5} />
-              <div className="md:text-base text-xs">
-                <div>{item.name}</div>
-                <div>{item.post}</div>
+        <div className=" grid md:grid-cols-3 gap-10 md:gap-5">
+          {testimoniesList.map((item, index) => (
+            <div key={index} className=" flex gap-5" data-aos="fade-up">
+              {index > 0 && (
+                <Divider
+                  className=" bg-background md:block hidden"
+                  orientation="vertical"
+                />
+              )}
+              <div>
+                <div className=" text-left md:text-base text-sm">
+                  {item.message}
+                </div>
+                <Spacer className="md:block hidden" y={20} />
+                <Spacer className="md:hidden block" y={5} />
+                <div className="md:text-base text-xs">
+                  <div>{item.name}</div>
+                  <div>{item.post}</div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

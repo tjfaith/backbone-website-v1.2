@@ -7,7 +7,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, PreLoader } from "@/components";
 
 export const metadata: Metadata = {
   title: {
@@ -36,6 +36,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <body className={fontSans.className}>
+        <PreLoader />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Navbar />
           <main>{children}</main>
