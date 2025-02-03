@@ -105,12 +105,11 @@ export default function Overlay() {
         <motion.div
           animate={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black"
-          style={{ pointerEvents: "none" }}
           exit={{ opacity: 0 }}
           initial={{ opacity: 1 }}
+          style={{ pointerEvents: "none" }}
           transition={{ duration: 1.2 }}
         >
-
           {/* SVG Loader */}
           <motion.svg
             height="42"
