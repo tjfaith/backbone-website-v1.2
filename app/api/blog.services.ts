@@ -41,7 +41,6 @@ function BlogServices() {
   };
 
   const useGetSingleBlog = (blog_id: string) => {
-    console.log(allBlog,)
     const fetchData = async () => {
       return allBlog.find((item) => item.blog_id === blog_id) || null;
     };

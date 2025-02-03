@@ -20,8 +20,7 @@ const Testimonies = () => {
         "“Backbone has transformed how we handle cross-border payments. We now focus on growth without worrying about transaction hurdles.”",
       name: "Sophia Green",
       post: "COO, Greenwave Inc.",
-    }
-
+    },
   ];
 
   return (

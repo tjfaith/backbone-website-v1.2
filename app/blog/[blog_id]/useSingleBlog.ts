@@ -9,12 +9,8 @@ function useSingleBlog() {
   const router = useRouter();
   const blog_id = params.get("id");
 
-  const {
-    data: singleBlog,
-    isLoading: blogLoading,
-  } = BlogServices().useGetSingleBlog(blog_id as string);
-
-
+  const { data: singleBlog, isLoading: blogLoading } =
+    BlogServices().useGetSingleBlog(blog_id as string);
 
   return { singleBlog, DOMPurify, router, blogLoading };
 }

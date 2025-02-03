@@ -7,7 +7,6 @@ const DigitalTransaction = () => {
 
   useEffect(() => {
     setIsClient(true);
-
   }, []);
 
   return (

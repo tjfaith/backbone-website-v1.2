@@ -9,10 +9,8 @@ import { RootState } from "@/app/store";
 function useBlog() {
   const blogRef = useRef<HTMLDivElement | null>(null);
   const { selectedCategory } = useSelector((state: RootState) => state.blog);
-  const {
-    data: allBlogs,
-    isLoading: blogLoading,
-  } = BlogServices().useGetAllBlog({ category_id: selectedCategory.id });
+  const { data: allBlogs, isLoading: blogLoading } =
+    BlogServices().useGetAllBlog({ category_id: selectedCategory.id });
   const currentPath = usePathname();
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,7 +26,7 @@ function useBlog() {
         .slice(0, -1)
         .sort((a, b) => Number(b.blog_id) - Number(a.blog_id))
         .slice(startIndex, endIndex)
-    )
+    );
   }, [allBlogs, currentPage, pageSize, currentPath]);
 
   const handlePageChange = (page: number) => {
@@ -37,8 +35,6 @@ function useBlog() {
     }
     setCurrentPage(page);
   };
-
-
 
   return {
     allBlogs,
