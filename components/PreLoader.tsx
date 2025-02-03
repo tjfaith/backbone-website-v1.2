@@ -98,10 +98,19 @@ export default function Overlay() {
   return (
     <AnimatePresence>
       {!isPageLoaded && (
+        // <motion.div
+        //   className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+        //   style={{ pointerEvents: "none" }}
+        // >
         <motion.div
+          animate={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black"
           style={{ pointerEvents: "none" }}
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
         >
+
           {/* SVG Loader */}
           <motion.svg
             height="42"
@@ -124,13 +133,13 @@ export default function Overlay() {
             />
           </motion.svg>
 
-          <motion.div
+          {/* <motion.div
             animate={{ opacity: 0 }}
             className="absolute inset-0 bg-black"
             exit={{ opacity: 0 }}
             initial={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
-          />
+          /> */}
         </motion.div>
       )}
     </AnimatePresence>
