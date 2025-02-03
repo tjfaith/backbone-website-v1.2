@@ -3,20 +3,15 @@ import { Metadata } from "next";
 import { allBlog } from "@/app/utils/dummy_data";
 import { AllBlogs } from "@/types";
 
-// Define the type for params as a Promise
 type tParams = Promise<{ blog_id: string }>;
 
 export async function generateMetadata({
   params,
 }: {
-  params: tParams; // Expecting a Promise that resolves to { blog_id: string }
+  params: tParams;
 }): Promise<Metadata> {
-  // Wait for the params to resolve before using it
   const { blog_id } = await params;
 
-  // Find the specific blog using the `blog_id`
-  // const singleBlog =
-  //   allBlog.find((item: AllBlogs) => item.blog_id === blog_id) || null;
   const singleBlog =
     (await allBlog.find((item: AllBlogs) => item.blog_id === blog_id)) || null;
 

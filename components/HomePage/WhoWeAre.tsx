@@ -29,6 +29,7 @@ const WhoWeAre = () => {
         <div
           className=" border rounded-xl bg-gradient-to-b from-background-100 from-50% to-foreground-200 shadow-sm border-foreground-300 inline-flex flex-col "
           data-aos="fade-up"
+          data-aos-offset="200"
         >
           <div className=" p-4 mb-16">
             <div className="clash-display-font text-foreground-950 text-3xl font-medium">

@@ -14,7 +14,7 @@ const HeroSection = () => {
     //   <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />
     // </HeroBg2>,
     <HeroBg3 key="bg3">
-      <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />{" "}
+      <HeroContent avatarClass="dark:from-primary dark:via-primary dark:to-primary dark:text-white from-background to-background via-background text-background md:text-primary" />{" "}
     </HeroBg3>,
     // <HeroBg4 key="bg4">
     //   <HeroContent avatarClass="from-background to-background via-background text-background md:text-primary" />{" "}

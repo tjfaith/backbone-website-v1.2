@@ -5,22 +5,23 @@ const Testimonies = () => {
   const testimoniesList = [
     {
       message:
-        "“At Backbone, every feature is designed with you in mind. Whether you’re transferring funds across borders, scaling your business globally, or driving donations for a cause, we’re here to deliver more than just a payment service.”",
-      name: "Charles Emmanuel",
-      post: "CEO, Omeri co",
+        "“Backbone made international transactions seamless for our business. The customer support and user-friendly platform have been game-changers for us.”",
+      name: "Jane Michaels",
+      post: "Founder, Lumina Tech",
     },
     {
       message:
-        "“At Backbone, every feature is designed with you in mind. Whether you’re transferring funds across borders, scaling your business globally, or driving donations for a cause, we’re here to deliver more than just a payment service.”",
-      name: "Charles Emmanuel",
-      post: "CEO, Omeri co",
+        "“Thanks to Backbone, our donation campaigns now reach a global audience with fast and secure payment solutions. It’s truly made a difference.”",
+      name: "Ahmed Khan",
+      post: "Director, Global Impact Initiative",
     },
     {
       message:
-        "“At Backbone, every feature is designed with you in mind. Whether you’re transferring funds across borders, scaling your business globally, or driving donations for a cause, we’re here to deliver more than just a payment service.”",
-      name: "Charles Emmanuel",
-      post: "CEO, Omeri co",
-    },
+        "“Backbone has transformed how we handle cross-border payments. We now focus on growth without worrying about transaction hurdles.”",
+      name: "Sophia Green",
+      post: "COO, Greenwave Inc.",
+    }
+
   ];
 
   return (

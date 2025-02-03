@@ -66,9 +66,9 @@ const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
         })}
       >
         {!isSelected || isSSR ? (
-          <Icon icon="ri:sun-fill" />
+          <Icon icon="ri:sun-fill" className="text-background" />
         ) : (
-          <Icon icon="ri:moon-fill" />
+          <Icon icon="ri:moon-fill" className="text-background" />
         )}
       </div>
     </Component>
