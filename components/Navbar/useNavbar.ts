@@ -46,7 +46,7 @@ function useNavbar() {
     },
     {
       label: "Nonprofit",
-      icon: "ri:building-3-fill",
+      icon: "fluent-mdl2:nonprofit-logo-32",
       href: "/#services",
     },
   ];

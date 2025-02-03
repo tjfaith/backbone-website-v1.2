@@ -5,6 +5,7 @@ import { Spacer } from "@heroui/spacer";
 import createDOMPurify from "dompurify";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { Link } from "@heroui/link";
 
 import { BlogServices } from "@/app/api";
 import { Spinner } from "@/public/assets";
@@ -41,17 +42,18 @@ const BlogExtract = () => {
         </div>
         <div>
           <Button
+            as={Link}
             className=" text-base text-foreground-600"
-            href="/#footer"
+            href="/blog"
             variant="bordered"
           >
-            Learn more about how we work{" "}
+            View all articles
           </Button>
         </div>
       </div>
       {!blogLoading ? (
         <div className="grid md:grid-cols-3 gap-5">
-          {allBlogs?.splice(0, 3).map((blog, index) => (
+          {allBlogs?.slice(-3).map((blog, index) => (
             <div
               key={index}
               className="hover:bg-accent2-200/50 rounded-xl p-2 transition-all ease-in-out duration-300"
