@@ -28,8 +28,6 @@ export { default as HeroBg2 } from "./HomePage/HeroSection/HeroBg2";
 export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
 export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
 
-
-
 // blog
 export { default as BlogCard } from "./Blog/BlogCard";
 export { default as BlogCategory } from "./Blog/BlogCategory";
