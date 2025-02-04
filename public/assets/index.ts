@@ -14,9 +14,7 @@ export { default as Rates } from './img/rates.png'
 export { default as Innovation } from './img/innovation.png'
 
 // hero
-export { default as Hero2 } from './img/hero/hero2.jpeg'
-export { default as Hero3 } from './img/hero/hero3.png'
-export { default as Hero4 } from './img/hero/hero4.jpeg'
+export { default as Hero2 } from './img/hero/hero2.png'
 
 // globalReach
 export { default as User1 } from './img/globalReach/user1.png'

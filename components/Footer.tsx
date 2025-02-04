@@ -87,7 +87,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link className="text-primary-200" href="/#support">
-                    Non Profits
+                    Nonprofits
                   </Link>
                 </li>
               </ul>
@@ -114,7 +114,7 @@ const Footer = () => {
       <Spacer y={28} />
       <Divider className="bg-background" />
       <div className=" mt-4 max-w-screen-2xl mx-auto lg:px-28 px-6 pb-10 ">
-        Copyright &copy; {new Date().getFullYear()}, Backbone Inc
+        Copyright &copy; {new Date().getFullYear()}, Backbone Inc.
       </div>
     </footer>
   );

@@ -22,6 +22,14 @@ export { default as WhoWeAre } from "./HomePage/WhoWeAre";
 export { default as Testimonies } from "./HomePage/Testimonies";
 export { default as BlogExtract } from "./HomePage/BlogExtract";
 
+// Home -> Hero section
+export { default as HeroBg1 } from "./HomePage/HeroSection/HeroBg1";
+export { default as HeroBg2 } from "./HomePage/HeroSection/HeroBg2";
+export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
+export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
+
+
+
 // blog
 export { default as BlogCard } from "./Blog/BlogCard";
 export { default as BlogCategory } from "./Blog/BlogCategory";
