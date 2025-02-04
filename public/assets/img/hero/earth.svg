@@ -1,0 +1,10 @@
+<svg id="earth" viewBox="0 0 100 100">
+  <!-- Earth Circle -->
+  <circle cx="50" cy="50" r="45" fill="lightblue" />
+  <!-- Continents (simple circles for now) -->
+  <circle cx="30" cy="30" r="3" fill="green" id="europe" />
+  <circle cx="70" cy="30" r="3" fill="green" id="asia" />
+  <circle cx="30" cy="70" r="3" fill="green" id="africa" />
+  <!-- More continents -->
+  <!-- Add your landmark elements here -->
+</svg>
