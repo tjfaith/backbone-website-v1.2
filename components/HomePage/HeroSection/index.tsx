@@ -18,15 +18,15 @@ const HeroSection = () => {
         <HeroContent avatarClass="from-background/30 to-background/30 via-background/30 text-primary" />
       </motion.div>
     </HeroBg1>,
-    // <HeroBg2 key="bg2">
-    //   <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
-    //     <HeroContent
-    //       avatarClass="dark:from-primary dark:via-primary dark:to-primary dark:text-white from-background-200 to-background-200 via-background-200 text-primary-600 md:text-primary"
-    //       descriptionClass="text-background"
-    //       caption={2}
-    //     />
-    //   </motion.div>
-    // </HeroBg2>,
+    <HeroBg2 key="bg2">
+      <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
+        <HeroContent
+          avatarClass="dark:from-primary dark:via-primary dark:to-primary dark:text-white from-background-200 to-background-200 via-background-200 text-primary-600 md:text-primary"
+          descriptionClass="text-background"
+          caption={2}
+        />
+      </motion.div>
+    </HeroBg2>,
   ];
 
   useEffect(() => {
