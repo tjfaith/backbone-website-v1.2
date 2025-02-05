@@ -8,7 +8,7 @@ import { NotificationCard } from "@/components";
 const About = () => {
   return (
     <div
-      className="max-w-screen-2xl mx-auto lg:px-28 px-6 space-y-12"
+      className="max-w-screen-xl mx-auto  lg:px-0 px-2 space-y-12"
       id="about"
     >
       {/* Global Payment */}
@@ -33,21 +33,21 @@ const About = () => {
 
       {/* Money transfer */}
       <div className="flex  md:flex-row flex-col  justify-between  gap-4">
-        <div className=" rounded-2xl border border-accent3-400 bg-gradient-to-b from-accent3-400/30  to-accent3-400  flex-grow flex flex-col   ">
+        <div className=" rounded-2xl border border-accent3-400 bg-gradient-to-b from-info-200/30  to-info-200  flex-grow flex flex-col   ">
           <div className="p-8">
-            <div className="text-accent3 uppercase text-sm md:text-base font-medium mb-2">
+            <div className="text-info uppercase text-sm md:text-base font-medium mb-2">
               Money transfer
             </div>
-            <div className="text-foreground-900 text-xl md:text-4xl max-w-sm tracking-tight font-medium clash-display-font mb">
+            <div className="text-info-950 text-xl md:text-4xl max-w-sm tracking-tight font-medium clash-display-font mb">
               Send money seamlessly to businesses and family anywhere in the
               world.
             </div>
             <div className="flex items-center text-foreground-900 gap-2 md:ml-10 text-xs md:text-base">
               <Divider
-                className="bg-foreground-900 w-10 h-[2px]"
+                className="bg-info-950 w-10 h-[2px]"
                 orientation="horizontal"
               />
-              <span>
+              <span className="text-primary">
                 Send and receive payments anywhere in the world with ease.
               </span>
             </div>
@@ -76,35 +76,31 @@ const About = () => {
             />
           </div>
         </div>
-        <Image
-          isBlurred
-          isZoomed
-          data-aos="fade-up"
-          height={600}
-          src={Img1.src}
-        />
+        <Image isZoomed data-aos="fade-up" height={600} src={Img1.src} />
       </div>
 
       {/* Exchange */}
       <div className="flex items-center md:flex-row flex-col justify-between gap-4">
         <Image isZoomed data-aos="fade-up" src={Img2.src} />
         <div
-          className="  bg-accent2-300 pt-8 px-8 rounded-2xl flex-grow"
+          className="  bg-secondary-100/50 pt-8 px-8 rounded-2xl flex-grow border border-secondary-100"
           data-aos="fade-up"
         >
           <div>
-            <div className="text-accent2 uppercase text-sm md:text-base font-medium mb-2">
+            <div className="text-secondary uppercase text-sm md:text-base font-medium mb-2">
               Currency exchange
             </div>
-            <div className="text-foreground-900 text-xl md:text-4xl max-w-sm tracking-tight font-medium clash-display-font mb">
+            <div className="text-info-950 text-xl md:text-4xl max-w-sm tracking-tight font-medium clash-display-font mb">
               Exchange major currencies effortlessly and at unbeatable rates.
             </div>
             <div className="flex items-center text-foreground-900 gap-2 md:ml-10 text-xs md:text-base">
               <Divider
-                className="bg-foreground-900 w-10 h-[2px]"
+                className="bg-info-950 w-10 h-[2px]"
                 orientation="horizontal"
               />
-              <span>we make it quick, simple, and seamless.</span>
+              <span className="text-primary">
+                we make it quick, simple, and seamless.
+              </span>
             </div>
           </div>
           <Image

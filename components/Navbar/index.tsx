@@ -31,6 +31,7 @@ const Navbar = () => {
     isMenuOpen,
     currentPath,
     changeReady,
+    showLightNav,
     handleMenuToggle,
   } = useNavbar();
 
@@ -38,18 +39,18 @@ const Navbar = () => {
     <HeroUINavbar
       className="fixed"
       classNames={{
-        base: `${changeReady ? "bg-primary bg-opacity-50 backdrop-blur-lg animate__animated animate__slideInDown" : "bg-transparent"} shadow-none   transition-all duration-300 ease-in-out`,
-        wrapper: "max-w-screen-2xl mx-auto lg:px-28 px-6  py-6",
+        base: ` px-2 lg:px-0 shadow-none  transition-all duration-300 ease-in-out bg-transparent`,
+        wrapper: `${changeReady ? "bg-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown mt-4" : "bg-transparent mt-6"} ${showLightNav || changeReady ? "text-background" : "text-primary"}  rounded-xl  py-6  px-2    `,
       }}
       isBlurred={false}
       isMenuOpen={isMenuOpen}
-      maxWidth="full"
+      maxWidth="xl"
       onMenuOpenChange={handleMenuToggle}
     >
-      <NavbarContent className="basis-1/5   sm:basis-full" justify="start">
+      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className=" max-w-fit">
           <NextLink href="/">
-            <BackboneLogo />
+            <BackboneLogo showLightLogo={changeReady} />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -60,7 +61,7 @@ const Navbar = () => {
             <NavbarItem key={index}>
               {!item.menu ? (
                 <NextLink
-                  className={`${currentPath === item.href && "text-foreground-200"} hover:text-foreground-300 text-background transition-all duration-300 ease-in-out`}
+                  className={`${currentPath === item.href && " bg-background-200 text-primary rounded-xl"} py-2 px-3 transition-all duration-300 ease-in-out`}
                   href={item.href}
                 >
                   {item.label}
@@ -74,7 +75,7 @@ const Navbar = () => {
                 >
                   <DropdownTrigger>
                     <Button
-                      className="bg-transparent text-background text-base px-1"
+                      className={`${changeReady || showLightNav ? "text-background" : "text-primary"} bg-transparent text-base px-1`}
                       endContent={<Icon icon="ri:arrow-down-s-line" />}
                       variant="flat"
                     >
@@ -109,12 +110,12 @@ const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        <NavbarItem className="hidden lg:flex gap-2">
+        <NavbarItem className="hidden lg:flex bg-primary items-center justify-center rounded-full p-0.5 h-6 w-6">
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex" justify="end">
+      <NavbarContent className="hidden lg:flex" justify="end">
         <NavbarItem>
           <CustomButton as={Link} fullWidth={false} href="/#get_start">
             Get Started Now
@@ -123,19 +124,24 @@ const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className="lg:hidden basis-1 pl-4 text-background font-bold"
+        className={`${changeReady ? "text-background" : "text-primary"} lg:hidden basis-1 pl-4  font-bold`}
         justify="end"
       >
+        <NavbarItem className="bg-primary flex items-center justify-center rounded-full p-0.5 h-6 w-6">
+          <ThemeSwitch />
+        </NavbarItem>
+
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarMenu className=" bg-opacity-50 backdrop-blur-lg">
-        <div className="mx-4 mt-2 flex flex-col gap-2 ">
+      <NavbarMenu className=" bg-transparent px-2 overflow-hidden">
+        <div className=" mt-5 flex flex-col gap-2 bg-opacity-50 backdrop-blur-lg p-5 rounded-xl bg-primary text-background animate__animated animate__flipInX">
           {navMenuItems.map((item, index) => (
             <div key={index}>
               {!item.menu ? (
                 <NavbarMenuItem>
                   <Link
+                    className="text-background"
                     href={item.href}
                     onPress={() => handleMenuToggle(false)}
                   >
@@ -149,7 +155,7 @@ const Navbar = () => {
                   shadow="sm"
                 >
                   <DropdownTrigger>
-                    <NavbarMenuItem className="text-primary text-base flex items-center space-x-2">
+                    <NavbarMenuItem className=" text-base flex items-center space-x-2">
                       {item.label}
                       <Icon icon="ri:arrow-down-s-line" />
                     </NavbarMenuItem>

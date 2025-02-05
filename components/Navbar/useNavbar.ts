@@ -1,38 +1,35 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useSelector } from "react-redux";
+
+import { RootState } from "@/app/store";
 
 function useNavbar() {
   const { theme } = useTheme();
   const isSSR = useIsSSR();
   const currentPath = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { showLightNav } = useSelector((state: RootState) => state.settings);
 
   const handleMenuToggle = (isOpen: boolean) => {
     setIsMenuOpen(isOpen);
   };
 
   const { scrollY } = useScroll();
-  const [changeReady, setChangeReady] = useState(
-    currentPath === "/" ? false : true,
-  );
+  const [changeReady, setChangeReady] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > window.innerHeight * 0.27) {
+    if (latest > window.innerHeight * 0.1) {
       setChangeReady(true);
     } else {
-      setChangeReady(currentPath === "/" ? false : true);
+      setChangeReady(false);
     }
   });
 
-  useEffect(() => {
-    if (changeReady === false && currentPath !== "/") {
-      setChangeReady(true);
-    }
-  }, [currentPath]);
   const serviceMenu = [
     {
       label: "Individuals",
@@ -44,11 +41,11 @@ function useNavbar() {
       icon: "ri:building-3-fill",
       href: "/#services",
     },
-    {
-      label: "Nonprofit",
-      icon: "fluent-mdl2:nonprofit-logo-32",
-      href: "/#services",
-    },
+    // {
+    //   label: "Nonprofit",
+    //   icon: "fluent-mdl2:nonprofit-logo-32",
+    //   href: "/#services",
+    // },
   ];
 
   const navItems = [
@@ -58,7 +55,7 @@ function useNavbar() {
     },
     {
       label: "About us",
-      href: "/#about",
+      href: "/about-us",
       menu: null,
     },
     {
@@ -74,7 +71,7 @@ function useNavbar() {
     },
     {
       label: "About us",
-      href: "/#about",
+      href: "/about-us",
       menu: null,
     },
     {
@@ -92,6 +89,7 @@ function useNavbar() {
     isSSR,
     currentPath,
     changeReady,
+    showLightNav,
     handleMenuToggle,
   };
 }

@@ -2,36 +2,37 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+// import { useDispatch } from "react-redux";
 
 import HeroContent from "./HeroContent";
 
-import { HeroBg1, HeroBg2 } from "@/components";
+import { HeroBg1 } from "@/components";
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
-
-  const darkHeroBgs = [
+  // const dispatch = useDispatch();
+  const heroBgs = [
     <HeroBg1 key="bg1">
       <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
-        <HeroContent avatarClass="dark:from-primary/30 dark:via-primary/30 dark:to-primary/30" />
+        <HeroContent avatarClass="from-background/30 to-background/30 via-background/30 text-primary" />
       </motion.div>
     </HeroBg1>,
-    <HeroBg2 key="bg2">
-      <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
-        <HeroContent
-          avatarClass="dark:from-primary dark:via-primary dark:to-primary dark:text-white from-background to-background via-background text-background md:text-primary"
-          caption={2}
-        />
-      </motion.div>
-    </HeroBg2>,
+    // <HeroBg2 key="bg2">
+    //   <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
+    //     <HeroContent
+    //       avatarClass="dark:from-primary dark:via-primary dark:to-primary dark:text-white from-background-200 to-background-200 via-background-200 text-primary-600 md:text-primary"
+    //       descriptionClass="text-background"
+    //       caption={2}
+    //     />
+    //   </motion.div>
+    // </HeroBg2>,
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Randomly set direction to 'left' or 'right'
       setDirection(Math.random() < 0.5 ? "left" : "right");
-      setActiveIndex((prevIndex) => (prevIndex + 1) % darkHeroBgs.length); // Assuming you have 2 background elements
+      setActiveIndex((prevIndex) => (prevIndex + 1) % heroBgs.length);
     }, 12000);
 
     return () => clearInterval(interval);
@@ -40,23 +41,15 @@ const HeroSection = () => {
   return (
     <div className="relative overflow-hidden w-full h-screen bg-primary">
       <AnimatePresence>
-        {/* <motion.div
-          key={activeIndex}
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "100%" }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute w-full h-full top-0 left-0"
-        > */}
         <motion.div
           key={activeIndex}
           animate={{ x: 0 }} // Stay in place
           className="absolute w-full h-full top-0 left-0"
-          exit={{ x: direction === "right" ? "-100%" : "100%" }} // Exit in opposite direction
-          initial={{ x: direction === "right" ? "100%" : "-100%" }} // Random entry direction
+          exit={{ x: direction === "right" ? "-100%" : "100%" }}
+          initial={{ x: direction === "right" ? "100%" : "-100%" }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          {darkHeroBgs[activeIndex]}
+          {heroBgs[activeIndex]}
         </motion.div>
       </AnimatePresence>
     </div>

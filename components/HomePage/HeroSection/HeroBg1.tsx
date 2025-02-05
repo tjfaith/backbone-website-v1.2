@@ -1,20 +1,30 @@
+"use client";
 import Image from "next/image";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { useDispatch } from "react-redux";
 
 import { Earth } from "@/public/assets";
-// import { RotatingEarth } from "@/components";
+import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 
 interface Props {
   children: ReactNode;
 }
 
-const HeroBg1Dark = ({ children }: Props) => {
+const HeroBg1 = ({ children }: Props) => {
+  const dispatch = useDispatch();
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    dispatch(setShowLightNav(theme === "light" ? false : true));
+  }, []);
+
   return (
     <div className="relative overflow-hidden">
-      <div className=" h-screen bg-[radial-gradient(ellipse_at_40%_40%,_var(--tw-gradient-stops))] from-accent1 from-0% via-primary via-50% to-primary to-100% ">
-        <div className="w-full h-screen absolute bottom-0 bg-[radial-gradient(ellipse_at_20%_90%,_var(--tw-gradient-stops))] from-accent2-600/50 from-0%  via-transparent via-40%  to-transparent to-100%" />
+      <div className=" h-screen bg-[radial-gradient(ellipse_at_40%_40%,_var(--tw-gradient-stops))] from-success from-0% via-background via-50% to-background to-100% ">
+        <div className="w-full h-screen absolute bottom-0 bg-[radial-gradient(ellipse_at_20%_90%,_var(--tw-gradient-stops))] from-warning/50 from-0%  via-transparent via-30%  to-transparent to-100%" />
 
-        <div className="h-screen absolute inset-0 z-10 bg-primary/60 pointer-events-none" />
+        <div className="h-screen absolute inset-0 z-10 bg-background/60 pointer-events-none" />
         {children}
 
         {/* <RotatingEarth /> */}
@@ -26,4 +36,4 @@ const HeroBg1Dark = ({ children }: Props) => {
   );
 };
 
-export default HeroBg1Dark;
+export default HeroBg1;

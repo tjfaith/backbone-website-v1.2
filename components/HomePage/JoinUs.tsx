@@ -5,11 +5,7 @@ import { Tab, Tabs } from "@heroui/tabs";
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 
-import {
-  JoinUsBusinesses,
-  JoinUsIndividual,
-  JoinUsNonprofit,
-} from "@/components";
+import { JoinUsBusinesses, JoinUsIndividual } from "@/components";
 
 const JoinUs = () => {
   const [selectedTab, setSelectedTab] = useState<any>("individuals");
@@ -18,10 +14,10 @@ const JoinUs = () => {
     {
       key: "individuals",
       component: <JoinUsIndividual />,
-      color: "bg-accent3",
+      color: "bg-info",
     },
-    { key: "businesses", component: <JoinUsBusinesses />, color: "bg-accent2" },
-    { key: "nonprofits", component: <JoinUsNonprofit />, color: "bg-accent1" },
+    { key: "businesses", component: <JoinUsBusinesses />, color: "bg-warning" },
+    // { key: "nonprofits", component: <JoinUsNonprofit />, color: "bg-success" },
   ];
 
   const orderedComponents = components.sort((a, b) =>
@@ -30,7 +26,7 @@ const JoinUs = () => {
 
   return (
     <div
-      className="max-w-screen-2xl mx-auto lg:px-28 px-6 py-36 flex items-start xl:flex-row flex-col justify-between gap-11  "
+      className="max-w-screen-xl mx-auto  lg:px-0 px-2 py-36 flex items-start xl:flex-row flex-col justify-between gap-11  "
       id="services"
     >
       <div
@@ -87,7 +83,7 @@ const JoinUs = () => {
               transactions to tailored payment options, we help businesses
               thrive in an increasingly digital world.
             </Tab>
-            <Tab
+            {/* <Tab
               key="nonprofits"
               className="text-background text-sm font-normal lg:tracking-wide"
               title="Nonprofits"
@@ -96,7 +92,7 @@ const JoinUs = () => {
               designed for nonprofits. Simplify donations, enhance donor
               engagement, and focus more on driving meaningful change for the
               communities you serve.
-            </Tab>
+            </Tab> */}
           </Tabs>
         </div>
       </div>
@@ -105,12 +101,12 @@ const JoinUs = () => {
         className="md:flex-grow w-full relative h-auto md:h-screen xl:h-auto"
         data-aos="fade-up"
       >
-        <button
+        {/* <button
           className="absolute inset-x-0 top-20  px-6 transition-all duration-400 ease-in-out "
           onClick={() => setSelectedTab(orderedComponents[2].key)}
         >
           {orderedComponents[2].component}
-        </button>
+        </button> */}
         <button
           className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out "
           onClick={() => setSelectedTab(orderedComponents[1].key)}

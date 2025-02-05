@@ -29,7 +29,7 @@ const CustomButton = ({
       className={cn(
         variant == "bordered"
           ? "border-2 border-primary-700  text-primary-600"
-          : "bg-gradient-to-t from-primary via-primary-800 to-primary-600 text-white ",
+          : "bg-gradient-to-t  from-[#000] via-[#242628] to-[#4C4F55] text-white ",
         "flex items-center p-[1px] text-sm ",
         className,
       )}
@@ -47,8 +47,8 @@ const CustomButton = ({
       variant={variant}
       onPress={onPress}
     >
-      <div className="bg-gradient-to-t from-primary-800/50 via-primary-600/50 to-primary-500  rounded-md h-full  p-[1px]">
-        <div className="bg-gradient-to-t from-primary/10 via-primary-800 to-primary-600 h-full flex items-center justify-center p-3 rounded-md">
+      <div className="bg-gradient-to-t from-[#242628]/50 via-[#4C4F55]/50 to-[#646671]  rounded-md h-full  p-[1px]">
+        <div className="bg-gradient-to-t from-[#000000]/10 via-[#242628] to-[#4C4F55] h-full flex items-center justify-center p-3 rounded-md">
           {!isLoading && children}
         </div>
       </div>

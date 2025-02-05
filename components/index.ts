@@ -8,6 +8,7 @@ export { default as Socials } from ".//Socials";
 export { default as SocialLayout } from "./SocialLayout";
 export { default as DigitalTransaction } from "./DigitalTransaction";
 export { default as PreLoader } from "./PreLoader";
+export { default as AboutCard } from "./AboutCard";
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";

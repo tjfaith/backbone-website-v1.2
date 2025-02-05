@@ -41,8 +41,8 @@ const NotificationCard = ({
               </div>
             </div>
             <div className=" text-xs md:text-sm md:tracking-wide">
-              Your transfer of $5,000 to Charles Emmanuel was successful. Thank
-              you for trusting Backbone!
+              Your transfer of $5,000 to Dale Daniel was successful. Thank you
+              for trusting Backbone!
             </div>
           </div>
         </>

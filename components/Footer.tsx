@@ -10,7 +10,7 @@ import { FullLogo } from "@/public/assets";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-background">
+    <footer className="bg-primary text-background rounded-t-2xl">
       <div className="p-10 max-w-screen-2xl mx-auto lg:px-28 px-6 " id="footer">
         <div className=" flex lg:flex-row flex-col gap-8 justify-between">
           <div>
