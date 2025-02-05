@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import HeroContent from "./HeroContent";
 
-import { HeroBg1 } from "@/components";
+import { HeroBg1, HeroBg2 } from "@/components";
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
