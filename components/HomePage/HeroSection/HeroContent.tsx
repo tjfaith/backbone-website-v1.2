@@ -21,7 +21,7 @@ const HeroContent = ({
   caption = 1,
 }: Props) => {
   return (
-    <div className=" absolute inset-0 h-screen  flex items-center max-w-screen-xl mx-auto  lg:px-0 px-2 md:justify-start justify-center  z-20 animate__animated animate__delay-4s">
+    <div className=" absolute inset-0 h-screen  flex items-center page-max-width md:justify-start justify-center  z-20 animate__animated animate__delay-4s">
       <div>
         <div
           className={cn(

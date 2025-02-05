@@ -10,8 +10,8 @@ import { FullLogo } from "@/public/assets";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-background rounded-t-2xl">
-      <div className="p-10 max-w-screen-2xl mx-auto lg:px-28 px-6 " id="footer">
+    <footer className="dark:bg-background bg-primary dark:text-primary text-background rounded-t-2xl">
+      <div className="p-10 page-max-width px-6 " id="footer">
         <div className=" flex lg:flex-row flex-col gap-8 justify-between">
           <div>
             <Image alt="full logo" className=" mb-4" src={FullLogo.src} />
@@ -30,7 +30,7 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Icon icon="ic:sharp-email" />
                 <Link
-                  className="transition-all duration-300 ease-in-out text-background hover:text-primary-200"
+                  className="transition-all duration-300 ease-in-out dark:text-primary text-background hover:text-primary-200"
                   href="mailto:sales@usecotton.io"
                 >
                   <span>sales@mybackbone.io</span>
@@ -39,7 +39,7 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Icon icon="ri:phone-fill" />
                 <Link
-                  className=" whitespace-nowrap text-background hover:text-primary-200"
+                  className=" whitespace-nowrap text-background dark:text-primary hover:text-primary-200"
                   href="tel:+2347035849521"
                 >
                   +234 703 584 9521
@@ -48,60 +48,84 @@ const Footer = () => {
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-background space-y-4">
+            <div className="text-background dark:text-primary space-y-4">
               <div className="text-xl font-medium ">Company</div>
               <ul className=" space-y-4">
                 <li>
-                  <Link className="text-background/70" href="/about-us">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/about-us"
+                  >
                     {" "}
                     About us
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-background/70" href="/blog">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/blog"
+                  >
                     {" "}
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-background/70" href="/#support">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/#support"
+                  >
                     {" "}
                     Support
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="text-background space-y-4">
+            <div className="text-background dark:text-primary space-y-4">
               <div className="text-xl font-medium ">What we offer</div>
               <ul className=" space-y-4">
                 <li>
-                  <Link className="text-background/70" href="/#about_us">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/#about_us"
+                  >
                     Individuals
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-background/70" href="/blog">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/blog"
+                  >
                     {" "}
                     Businesses
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-background/70" href="/#support">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/#support"
+                  >
                     Nonprofits
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="text-background space-y-4">
+            <div className="text-background dark:text-primary space-y-4">
               <div className="text-xl font-medium ">Legal</div>
               <ul className=" space-y-4">
                 <li>
-                  <Link className="text-background/70" href="/#">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/#"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-background/70" href="/#">
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/#"
+                  >
                     {" "}
                     Terms of Service
                   </Link>
@@ -112,8 +136,8 @@ const Footer = () => {
         </div>
       </div>
       <Spacer y={28} />
-      <Divider className="bg-background" />
-      <div className=" mt-4 max-w-screen-2xl mx-auto lg:px-28 px-6 pb-10 ">
+      <Divider className="bg-background dark:bg-primary" />
+      <div className=" mt-4 page-max-width px-6 pb-10 ">
         Copyright &copy; {new Date().getFullYear()}, Backbone Inc.
       </div>
     </footer>

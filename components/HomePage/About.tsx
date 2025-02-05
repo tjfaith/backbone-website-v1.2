@@ -7,10 +7,7 @@ import { NotificationCard } from "@/components";
 
 const About = () => {
   return (
-    <div
-      className="max-w-screen-xl mx-auto  lg:px-0 px-2 space-y-12 "
-      id="about"
-    >
+    <div className="page-max-width space-y-12 " id="about">
       {/* Global Payment */}
       <div className="bg-primary rounded-2xl text-background  flex items-end justify-between md:flex-row flex-col ">
         <div className="pl-8 py-16 space-y-2  w-full" data-aos="fade-up">

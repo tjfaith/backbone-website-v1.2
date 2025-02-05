@@ -29,7 +29,7 @@ const BlogExtract = () => {
   }, [currentPath]);
 
   return (
-    <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 py-14">
+    <div className="page-max-width px-6 py-14">
       <div className=" flex lg:flex-row flex-col lg:gap-0 gap-4 justify-between lg:items-end mb-8">
         <div>
           <div className="clash-display-font text-4xl font-medium text-primary">

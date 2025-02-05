@@ -13,7 +13,7 @@ const BlogCategory = () => {
         [{ name: "All", id: "all" }, ...blogCategories]?.map((category) => (
           <button
             key={category?.id}
-            className={`${selectedCategory.id === category.id ? "bg-primary text-white" : "bg-transparent text-foreground"} cursor-pointer px-3 py-2 text-sm rounded-full hover:bg-primary/50 transition-all duration-300 ease-in-out capitalize`}
+            className={`${selectedCategory.id === category.id ? "bg-primary text-white dark:text-foreground-900" : "bg-transparent text-foreground"} cursor-pointer px-3 py-2 text-sm rounded-full hover:bg-primary/50 dark:hover:bg-foreground-900 dark:hover:text-primary transition-all duration-300 ease-in-out capitalize`}
             onClick={() => handleSelectCategory(category)}
           >
             {category.name}

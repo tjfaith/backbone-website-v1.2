@@ -120,7 +120,7 @@ export default {
               50: "#FFF2E6",
               100: "#FFE0BF",
               200: "#FFCC99",
-              300: "#FFB366",
+              300: "#FFE4C9",
               400: "#FF9933",
               500: "#FF7300",
               600: "#DB5E00",
@@ -131,7 +131,7 @@ export default {
             },
             info: {
               50: "#E6F2FF",
-              100: "#CCE4FE",
+              100: "#C6E4FF",
               200: "#B4D5FD", // Added here as a lighter variant
               300: "#99CBFD",
               400: "#339AF9",
@@ -238,6 +238,7 @@ export default {
               700: "#66C2FF",
               800: "#99D9FF",
               900: "#CCEDFF",
+              950: "##C6E4FF",
               DEFAULT: "#0098FF",
             },
           },

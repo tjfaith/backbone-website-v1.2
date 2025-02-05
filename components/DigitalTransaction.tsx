@@ -429,7 +429,7 @@ const DigitalTransaction = () => {
             x="50"
             y="160"
           >
-            <div className="h-fll text-5xl  font-medium text-primary w-full  digital-numbers-font flex items-center justify-center  ">
+            <div className="h-fll text-5xl  font-medium text-primary dark:text-background w-full  digital-numbers-font flex items-center justify-center  ">
               <CountUp enableScrollSpy scrollSpyOnce duration={4} end={63} />
             </div>
           </foreignObject>

@@ -10,11 +10,11 @@ const LatestBlog = () => {
   const { latestBlog, DOMPurify, viewBlog } = useLatestBlog();
 
   return (
-    <div className="bg-foreground-50 rounded-3xl p-8 mt-5">
+    <div className="bg-foreground-50 dark:bg-background rounded-3xl p-8 mt-5">
       {latestBlog && (
         <div>
           <div className="flex items-center space-x-6">
-            <div className=" text-sm text-foreground-600 whitespace-nowrap">
+            <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap">
               {new Date(latestBlog?.created_at as string).toDateString()}
             </div>
             <div className="text-sm text-primary capitalize">
