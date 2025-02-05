@@ -22,8 +22,8 @@ const HeroSection = () => {
       <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
         <HeroContent
           avatarClass="dark:from-primary dark:via-primary dark:to-primary dark:text-white from-background-200 to-background-200 via-background-200 text-primary-600 md:text-primary"
-          descriptionClass="text-background"
           caption={2}
+          descriptionClass="text-background"
         />
       </motion.div>
     </HeroBg2>,
