@@ -40,17 +40,20 @@ const Navbar = () => {
       className="fixed"
       classNames={{
         base: ` px-2 lg:px-0 shadow-none  transition-all duration-300 ease-in-out bg-transparent`,
-        wrapper: `${changeReady ? "bg-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown mt-4" : "bg-transparent mt-6"} ${showLightNav || changeReady ? "text-background" : "text-primary"}  rounded-xl  py-6  px-2    `,
+        wrapper: `${changeReady ? "dark:bg-background bg-primary bg-opacity-80 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown mt-4" : "bg-transparent mt-6"} ${changeReady ? "text-background dark:text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"}  rounded-xl  py-6  px-2    `,
       }}
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
       onMenuOpenChange={handleMenuToggle}
     >
+      {/* ${showLightNav || changeReady ? "text-background" : "text-primary"} */}
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className=" max-w-fit">
           <NextLink href="/">
             <BackboneLogo showLightLogo={changeReady} />
+            {/* <div className="text-white">({String(showLightNav)}) show light</div>
+            <div className="text-white">({String(changeReady)}) change ready</div> */}
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -73,9 +76,10 @@ const Navbar = () => {
                   radius="lg"
                   shadow="sm"
                 >
+                  {/* ${changeReady || showLightNav ? "text-background" : "text-primary"} */}
                   <DropdownTrigger>
                     <Button
-                      className={`${changeReady || showLightNav ? "text-background" : "text-primary"} bg-transparent text-base px-1`}
+                      className={`${changeReady ? "text-background dark:text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"} bg-transparent text-base px-1`}
                       endContent={<Icon icon="ri:arrow-down-s-line" />}
                       variant="flat"
                     >

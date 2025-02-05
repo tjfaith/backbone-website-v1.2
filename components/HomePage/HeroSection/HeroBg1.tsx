@@ -17,7 +17,7 @@ const HeroBg1 = ({ children }: Props) => {
 
   useEffect(() => {
     dispatch(setShowLightNav(theme === "light" ? false : true));
-  }, []);
+  }, [theme]);
 
   return (
     <div className="relative overflow-hidden">

@@ -97,15 +97,15 @@ const HeroContent = ({
         {caption === 2 && (
           <div
             className={cn(
-              " text-2xl  sm:text-6xl font-medium text-background   clash-display-font mb-3 space-y-1",
+              " text-2xl  sm:text-6xl font-medium text-background dark:text-primary  clash-display-font mb-3 space-y-1",
               captionClass,
             )}
           >
-            <div className="flex items-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__faster">
+            <div className="flex items-center md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__faster">
               <div>Empowering</div> <div>Futures</div>
             </div>
 
-            <div className="flex items-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__fast">
+            <div className="flex items-center md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__fast">
               <div>Unlocking</div>
               <div>Possibilities</div>
             </div>
@@ -127,7 +127,7 @@ const HeroContent = ({
           </CustomButton>
           <Button
             as={Link}
-            className="text-primary-600 text-base font-medium border-2 bg-background "
+            className="text-[#525866] text-base font-medium border-2 bg-white "
             fullWidth={false}
             href="/#footer"
           >
