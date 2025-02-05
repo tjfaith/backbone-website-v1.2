@@ -33,9 +33,9 @@ export { default as About4 } from './img/about/about4.jpeg'
 
 // brands
 export { default as Fincra } from './img/brands/fincra.svg'
-export { default as FlutterWave } from './img/brands/flutterWave.svg'
+export { default as FlutterWave } from './img/brands/flutterWave.png'
 export { default as Graph } from './img/brands/graph.svg'
-export { default as Gray } from './img/brands/gray.svg'
+export { default as Grey } from './img/brands/grey.png'
 export { default as IvoryPay } from './img/brands/ivorypay.svg'
 export { default as JuicyWay } from './img/brands/juicyWay.svg'
 export { default as Klasha } from './img/brands/klasha.svg'

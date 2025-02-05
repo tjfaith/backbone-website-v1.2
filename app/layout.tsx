@@ -39,7 +39,7 @@ export default function RootLayout({
         <PreLoader />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Navbar />
-          <main>{children}</main>
+          <main className="dark:bg-background-200">{children}</main>
           <Footer />
         </Providers>
       </body>

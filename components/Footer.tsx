@@ -52,19 +52,19 @@ const Footer = () => {
               <div className="text-xl font-medium ">Company</div>
               <ul className=" space-y-4">
                 <li>
-                  <Link className="text-primary-200" href="/#about">
+                  <Link className="text-background/70" href="/about-us">
                     {" "}
                     About us
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-primary-200" href="/blog">
+                  <Link className="text-background/70" href="/blog">
                     {" "}
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-primary-200" href="/#support">
+                  <Link className="text-background/70" href="/#support">
                     {" "}
                     Support
                   </Link>
@@ -75,18 +75,18 @@ const Footer = () => {
               <div className="text-xl font-medium ">What we offer</div>
               <ul className=" space-y-4">
                 <li>
-                  <Link className="text-primary-200" href="/#about_us">
+                  <Link className="text-background/70" href="/#about_us">
                     Individuals
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-primary-200" href="/blog">
+                  <Link className="text-background/70" href="/blog">
                     {" "}
                     Businesses
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-primary-200" href="/#support">
+                  <Link className="text-background/70" href="/#support">
                     Nonprofits
                   </Link>
                 </li>
@@ -96,12 +96,12 @@ const Footer = () => {
               <div className="text-xl font-medium ">Legal</div>
               <ul className=" space-y-4">
                 <li>
-                  <Link className="text-primary-200" href="/#">
+                  <Link className="text-background/70" href="/#">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-primary-200" href="/#">
+                  <Link className="text-background/70" href="/#">
                     {" "}
                     Terms of Service
                   </Link>

@@ -6,7 +6,7 @@ import {
   Fincra,
   FlutterWave,
   Graph,
-  Gray,
+  Grey,
   IvoryPay,
   JuicyWay,
   Klasha,
@@ -19,7 +19,7 @@ import {
 
 const Partners = () => {
   return (
-    <div className="max-w-screen-xl mx-auto  lg:px-0 px-2 py-16 grid md:grid-cols-2 gap-10  bg-background">
+    <div className="max-w-screen-xl mx-auto  lg:px-0 px-2 py-16 grid md:grid-cols-2 gap-10  bg-background dark:bg-background-200">
       <div className="">
         <div className="clash-display-font" data-aos="fade-up">
           <span className="text-primary text-5xl font-medium">
@@ -48,18 +48,18 @@ const Partners = () => {
         className="grid-cols-3 inline-grid justify-end justify-items-center lg:gap-10 gap-5"
         data-aos="fade-up"
       >
-        <Image alt="flutterwave logo" radius="none" src={FlutterWave.src} />
-        <Image alt="Yellowcard logo" radius="none" src={YellowCard.src} />
-        <Image alt="Gray logo" radius="none" src={Gray.src} />
-        <Image alt="Fincra logo" radius="none" src={Fincra.src} />
-        <Image alt="Obsidian logo" radius="none" src={Obsidian.src} />
-        <Image alt="Waza logo" radius="none" src={Waza.src} />
-        <Image alt="Klasha logo" radius="none" src={Klasha.src} />
-        <Image alt="IvoryPay logo" radius="none" src={IvoryPay.src} />
-        <Image alt="JuicyWay logo" radius="none" src={JuicyWay.src} />
-        <Image alt="WeWire logo" radius="none" src={WeWire.src} />
-        <Image alt="Graph logo" radius="none" src={Graph.src} />
-        <Image alt="PayAza logo" radius="none" src={PayAza.src} />
+        <Image alt="flutterwave logo" radius="none" src={FlutterWave.src} className="dark:bg-primary bg-transparent rounded-full" />
+        <Image alt="Yellowcard logo" radius="none" src={YellowCard.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="Grey logo" radius="none" src={Grey.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="Fincra logo" radius="none" src={Fincra.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="Obsidian logo" radius="none" src={Obsidian.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="Waza logo" radius="none" src={Waza.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="Klasha logo" radius="none" src={Klasha.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="IvoryPay logo" radius="none" src={IvoryPay.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="JuicyWay logo" radius="none" src={JuicyWay.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="WeWire logo" radius="none" src={WeWire.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="Graph logo" radius="none" src={Graph.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
+        <Image alt="PayAza logo" radius="none" src={PayAza.src} className="dark:bg-primary bg-transparent rounded-full px-3 py-1" />
       </div>
     </div>
   );
