@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 
 import { BlogServices } from "@/app/api";
 import { RootState } from "@/app/store";
@@ -38,9 +39,11 @@ function useBlog() {
     setCurrentPage(page);
   };
 
+  const { theme } = useTheme();
+
   useEffect(() => {
-    dispatch(setShowLightNav(false));
-  }, []);
+    dispatch(setShowLightNav(theme === "light" ? false : true));
+  }, [theme]);
 
   return {
     allBlogs,

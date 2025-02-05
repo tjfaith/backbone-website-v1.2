@@ -18,16 +18,16 @@ const Socials = () => {
         </SocialLayout>
         <SocialLayout
           hoverBgColor="bg-background"
-          hoverBorderColor="border-accent3/50"
-          hoverIconColor="bg-accent3"
+          hoverBorderColor="border-info/50"
+          hoverIconColor="bg-info"
           hoverText="backbone-finance"
           linkTo="https://www.linkedin.com/company/backbone-finance/?viewAsMember=true"
         >
           <Icon icon="ri:linkedin-box-fill" />
         </SocialLayout>
         <SocialLayout
-          hoverBgColor="bg-accent2-100"
-          hoverBorderColor="border-accent2"
+          hoverBgColor="bg-secondary-100"
+          hoverBorderColor="border-secondary"
           hoverChildren={
             <Image
               alt="instagram"
@@ -54,7 +54,7 @@ const Socials = () => {
           <Icon icon="ri:tiktok-line" />
         </SocialLayout>
         <SocialLayout
-          hoverBgColor="bg-red-100"
+          hoverBgColor="bg-red-500"
           hoverBorderColor="border-red-300"
           hoverIconColor="bg-red-500"
           hoverText="mybackbonefi"

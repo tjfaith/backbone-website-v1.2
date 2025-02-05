@@ -15,7 +15,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
       <div className=" grid md:grid-cols-2 mt-5 gap-10 items-center">
         <div>
           <div className="flex items-center space-x-6 whitespace-nowrap">
-            <div className=" text-sm text-foreground-600">
+            <div className=" text-sm text-foreground-600 dark:text-foreground">
               {new Date(data?.created_at as string).toDateString()}
             </div>
             <div className="text-sm text-primary capitalize">

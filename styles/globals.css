@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.page-max-width {
+  @apply max-w-screen-xl mx-auto lg:px-0 px-6;
+}
+
 html {
   scroll-behavior: smooth;
 }

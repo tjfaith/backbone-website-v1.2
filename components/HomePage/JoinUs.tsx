@@ -16,7 +16,11 @@ const JoinUs = () => {
       component: <JoinUsIndividual />,
       color: "bg-info dark:bg-info-900",
     },
-    { key: "businesses", component: <JoinUsBusinesses />, color: "bg-warning" },
+    {
+      key: "businesses",
+      component: <JoinUsBusinesses />,
+      color: "bg-warning dark:bg-warning-900",
+    },
     // { key: "nonprofits", component: <JoinUsNonprofit />, color: "bg-success" },
   ];
 
@@ -26,7 +30,7 @@ const JoinUs = () => {
 
   return (
     <div
-      className="max-w-screen-xl mx-auto  lg:px-0 px-2 py-36 flex items-start xl:flex-row flex-col justify-between gap-11  "
+      className="page-max-width py-36 flex items-start xl:flex-row flex-col justify-between gap-11  "
       id="services"
     >
       <div
@@ -57,8 +61,9 @@ const JoinUs = () => {
             className=" mt-4"
             classNames={{
               tabList: " flex sm:flex-row flex-col",
-              tabContent: "text-primary-200 text-lg font-medium",
-              cursor: "text-foreground-950",
+              tabContent:
+                "dark:text-background text-primary-200 text-lg font-medium",
+              cursor: "text-foreground-200",
             }}
             selectedKey={selectedTab}
             size="sm"

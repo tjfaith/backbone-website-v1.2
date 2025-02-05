@@ -25,7 +25,7 @@ const BlogPage = () => {
 
   return (
     <div className=" min-h-screen pt-28">
-      <div className="max-w-screen-2xl mx-auto lg:px-28 px-6">
+      <div className="page-max-width px-6">
         <div className="italic text-2xl text-primary font-medium">Blog</div>
         <div className="">
           {blogLoading ? (
@@ -49,6 +49,7 @@ const BlogPage = () => {
                     showControls
                     classNames={{
                       base: "flex items-center justify-center mt-10",
+                      cursor: "dark:text-background",
                     }}
                     page={currentPage}
                     total={Math.ceil(allBlogs.length / pageSize)}

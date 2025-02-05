@@ -3,13 +3,13 @@ import { Image } from "@heroui/image";
 import { Icon } from "@iconify/react";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { useTheme } from "next-themes";
 
 import { About1, About2, About3, About4 } from "@/public/assets";
 import { AboutCard } from "@/components";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 
 const AboutUs = () => {
-  const dispatch = useDispatch();
   const about_items = [
     {
       img: About2,
@@ -52,13 +52,16 @@ const AboutUs = () => {
     },
   ];
 
+  const dispatch = useDispatch();
+  const { theme } = useTheme();
+
   useEffect(() => {
-    dispatch(setShowLightNav(false));
-  }, []);
+    dispatch(setShowLightNav(theme === "light" ? false : true));
+  }, [theme]);
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_70%_15%,_var(--tw-gradient-stops))] from-[#d2e8df] from-0% via-background via-20% to-background to-100% pt-40 pb-7">
-      <div className=" max-w-screen-xl mx-auto  lg:px-0 px-2 ">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_70%_15%,_var(--tw-gradient-stops))] from-[#d2e8df] dark:from-background-50 from-0% via-background dark:via-background-200 via-20% to-background dark:to-background-200 to-100% pt-40 pb-7">
+      <div className=" page-max-width ">
         <div className="flex flex-col items-center mb-9">
           <div className="uppercase mb-4 text-primary text-base font-medium p-2 bg-background-100 rounded-full shadow-inner">
             About Us

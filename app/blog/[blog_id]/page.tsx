@@ -11,7 +11,7 @@ const SingleBlog = () => {
   const { singleBlog, DOMPurify, router, blogLoading } = useSingleBlog();
 
   return (
-    <div className=" min-h-screen py-28 max-w-screen-2xl mx-auto lg:px-28 px-6">
+    <div className=" min-h-screen py-28 page-max-width px-6">
       <button
         className="flex items-center space-x-1 cursor-pointer hover:text-primary ease-in-out duration-300 transition-all"
         onClick={() => router.push("/blog")}
@@ -28,7 +28,7 @@ const SingleBlog = () => {
           {singleBlog ? (
             <>
               <div className=" flex items-center space-x-6 mt-8">
-                <div className=" text-sm text-foreground-600 whitespace-nowrap space-x-4">
+                <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap space-x-4">
                   {new Date(singleBlog?.created_at as string).toDateString()}{" "}
                   {new Date(
                     singleBlog?.created_at as string,
