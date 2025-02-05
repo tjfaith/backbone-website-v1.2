@@ -1,12 +1,14 @@
 "use client";
-import { useSelector } from "react-redux";
-import { useMemo, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { BlogServices } from "@/app/api";
 import { RootState } from "@/app/store";
+import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 
 function useBlog() {
+  const dispatch = useDispatch();
   const blogRef = useRef<HTMLDivElement | null>(null);
   const { selectedCategory } = useSelector((state: RootState) => state.blog);
   const { data: allBlogs, isLoading: blogLoading } =
@@ -35,6 +37,10 @@ function useBlog() {
     }
     setCurrentPage(page);
   };
+
+  useEffect(() => {
+    dispatch(setShowLightNav(false));
+  }, []);
 
   return {
     allBlogs,

@@ -32,10 +32,10 @@ const BlogExtract = () => {
     <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 py-14">
       <div className=" flex lg:flex-row flex-col lg:gap-0 gap-4 justify-between lg:items-end mb-8">
         <div>
-          <div className="clash-display-font text-4xl font-medium text-foreground-950">
+          <div className="clash-display-font text-4xl font-medium text-primary">
             Take a walk with us!
           </div>
-          <div className="text-foreground-950 max-w-xl">
+          <div className="text-primary-600 max-w-xl">
             Read about how Backbone has helped individuals and businesses across
             a variety of sectors.
           </div>
@@ -43,7 +43,7 @@ const BlogExtract = () => {
         <div>
           <Button
             as={Link}
-            className=" text-base text-foreground-600"
+            className=" text-base text-primary-600"
             href="/blog"
             variant="bordered"
           >
@@ -56,7 +56,7 @@ const BlogExtract = () => {
           {allBlogs?.slice(-3).map((blog, index) => (
             <div
               key={index}
-              className="hover:bg-accent2-200/50 rounded-xl p-2 transition-all ease-in-out duration-300"
+              className="flex flex-col hover:bg-foreground-200/50 rounded-xl p-2 transition-all ease-in-out duration-300"
               data-aos="fade-up"
             >
               <Image
@@ -64,39 +64,43 @@ const BlogExtract = () => {
                 className="object-cover h-screen-40 md:w-screen-30 mb-4"
                 src={blog.cover_image}
               />
-              <div>
-                <div className=" mb-2 uppercase text-foreground-400 font-normal text-sm">
-                  {blog.category.name}
-                </div>
-                <div className=" clash-display-font text-xl font-medium text-foreground-950 mb-2 leading-snug">
-                  {blog.title}
+              <div className="flex  flex-col justify-between flex-grow">
+                <div>
+                  <div className=" mb-2 uppercase text-primary-600 font-normal text-sm">
+                    {blog.category.name}
+                  </div>
+                  <div className=" clash-display-font text-xl font-medium text-primary mb-2 leading-snug">
+                    {blog.title}
+                  </div>
+                  <div className="text-primary-600">
+                    {
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: DOMPurify.sanitize(
+                            blog?.blog_content.length > 300
+                              ? blog?.blog_content.slice(0, 300) + "..."
+                              : blog?.blog_content,
+                          ),
+                        }}
+                        className="text-base"
+                      />
+                    }
+                  </div>
+                  <Spacer y={20} />
                 </div>
                 <div>
-                  {
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(
-                          blog?.blog_content.length > 300
-                            ? blog?.blog_content.slice(0, 300) + "..."
-                            : blog?.blog_content,
-                        ),
-                      }}
-                      className="text-base"
-                    />
-                  }
+                  <Button
+                    className="border text-primary-600"
+                    variant="bordered"
+                    onPress={() =>
+                      viewBlog(
+                        `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`,
+                      )
+                    }
+                  >
+                    View article
+                  </Button>
                 </div>
-                <Spacer y={20} />
-                <Button
-                  className="border"
-                  variant="bordered"
-                  onPress={() =>
-                    viewBlog(
-                      `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`,
-                    )
-                  }
-                >
-                  View article
-                </Button>
               </div>
             </div>
           ))}

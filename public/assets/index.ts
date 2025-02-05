@@ -1,5 +1,6 @@
 // img
 export { default as FullLogo } from './img/fullLogo.svg'
+export { default as FullLogoDark } from './img/fullLogoDark.svg'
 export { default as HalfLogo } from './img/halfLogo.svg'
 export { default as Earth } from './img/earth.png'
 export { default as ArrowUp } from './img/arrowUp.png'
@@ -22,6 +23,13 @@ export { default as User2 } from './img/globalReach/user2.png'
 export { default as User3 } from './img/globalReach/user3.png'
 export { default as User4 } from './img/globalReach/user4.png'
 export { default as WorldMap } from './img/globalReach/worldMap.png'
+
+// about 
+export { default as About1 } from './img/about/about1.jpeg'
+export { default as About2 } from './img/about/about2.jpeg'
+export { default as About3 } from './img/about/about3.png'
+export { default as About4 } from './img/about/about4.jpeg'
+
 
 // brands
 export { default as Fincra } from './img/brands/fincra.svg'

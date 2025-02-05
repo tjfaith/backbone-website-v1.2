@@ -1,18 +1,25 @@
 "use client";
 import React from "react";
-import { useIsSSR } from "@react-aria/ssr";
-import { useTheme } from "next-themes";
+// import { useIsSSR } from "@react-aria/ssr";
+// import { useTheme } from "next-themes";
 import { Image } from "@heroui/image";
+import { useSelector } from "react-redux";
 
-import { FullLogo } from "@/public/assets";
+import { FullLogo, FullLogoDark } from "@/public/assets";
+import { RootState } from "@/app/store";
 
-const CottonLogo = () => {
-  const { theme } = useTheme();
-  const isSSR = useIsSSR();
+interface Props {
+  showLightLogo?: boolean;
+}
+const BackboneLogo = ({ showLightLogo }: Props) => {
+  const { showLightNav } = useSelector((state: RootState) => state.settings);
+  // const { theme } = useTheme();
+  // const isSSR = useIsSSR();
 
   return (
+    // theme === "light" || isSSR ||
     <>
-      {theme === "light" || isSSR ? (
+      {showLightNav || showLightLogo ? (
         <Image
           alt="logo"
           className=" outline-none"
@@ -23,7 +30,7 @@ const CottonLogo = () => {
         <Image
           alt="logo2"
           className=" outline-none"
-          src={FullLogo.src}
+          src={FullLogoDark.src}
           width={120}
         />
       )}
@@ -31,4 +38,4 @@ const CottonLogo = () => {
   );
 };
 
-export default CottonLogo;
+export default BackboneLogo;

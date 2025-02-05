@@ -19,10 +19,10 @@ import {
 
 const Partners = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto lg:px-28 px-6 py-16 grid md:grid-cols-2 gap-10 ">
+    <div className="max-w-screen-xl mx-auto  lg:px-0 px-2 py-16 grid md:grid-cols-2 gap-10  bg-background">
       <div className="">
-        <div className="clash-display-font">
-          <span className="text-foreground-950 text-5xl font-medium">
+        <div className="clash-display-font" data-aos="fade-up">
+          <span className="text-primary text-5xl font-medium">
             <CountUp
               enableScrollSpy
               scrollSpyOnce
@@ -31,19 +31,23 @@ const Partners = () => {
               end={4.5}
             />
           </span>
-          <span className="text-foreground text-2xl font-medium">/5</span>
-          <span className=" italic text-foreground-950 text-base font-medium ml-1">
+          <span className="text-primary-400 text-2xl font-medium">/5</span>
+          <span className=" italic text-primary text-base font-medium ml-1">
             User Satisfaction Rating
           </span>
         </div>
         <div
-          className="text-foreground-950 text-2xl  xl:text-5xl font-medium leading-tight max-w-2xl clash-display-font"
+          className="text-primary text-2xl  xl:text-5xl font-medium leading-tight max-w-2xl clash-display-font"
+          data-aos="fade-up"
           id="get_started"
         >
           Trusted by Hundreds of Partners Across different Countries.
         </div>
       </div>
-      <div className="grid-cols-3 inline-grid justify-end justify-items-center lg:gap-10 gap-5">
+      <div
+        className="grid-cols-3 inline-grid justify-end justify-items-center lg:gap-10 gap-5"
+        data-aos="fade-up"
+      >
         <Image alt="flutterwave logo" radius="none" src={FlutterWave.src} />
         <Image alt="Yellowcard logo" radius="none" src={YellowCard.src} />
         <Image alt="Gray logo" radius="none" src={Gray.src} />
