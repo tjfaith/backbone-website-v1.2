@@ -27,7 +27,7 @@ const NotificationCard = ({
         <>
           <Image
             alt="half logo"
-            className=" p-3 bg-primary w-56 md:w-28 rounded-2xl"
+            className=" p-3 dark:bg-background bg-primary  w-56 md:w-28 rounded-2xl"
             sizes="sm"
             src={HalfLogo}
           />

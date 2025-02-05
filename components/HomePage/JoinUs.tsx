@@ -14,7 +14,7 @@ const JoinUs = () => {
     {
       key: "individuals",
       component: <JoinUsIndividual />,
-      color: "bg-info",
+      color: "bg-info dark:bg-info-900",
     },
     { key: "businesses", component: <JoinUsBusinesses />, color: "bg-warning" },
     // { key: "nonprofits", component: <JoinUsNonprofit />, color: "bg-success" },
@@ -33,14 +33,14 @@ const JoinUs = () => {
         className={`${orderedComponents[0].color} p-4  lg:max-w-md rounded-2xl gap-5 flex lg:flex-col md:flex-row flex-col justify-between transition-all ease-in-out duration-300`}
       >
         <div data-aos="fade-up">
-          <div className=" text-background text-base font-medium inline-flex flex-col ">
+          <div className=" text-background  text-base font-medium inline-flex flex-col ">
             <div className="flex items-center gap-1">
               <Icon icon="ri:group-fill" />
               <span>Who do we serve?</span>
             </div>
             <Divider className="bg-background" />
           </div>
-          <div className="clash-display-font text-3xl lg:text-5xl mt-4 font-medium text-background lg:max-w-xs pr-3 leading-tight  tracking-wider">
+          <div className="clash-display-font text-3xl lg:text-5xl mt-4 font-medium text-background dark:text-background-200 lg:max-w-xs pr-3 leading-tight  tracking-wider">
             Join us to Redefine the Way You Make Payment!
           </div>
         </div>
