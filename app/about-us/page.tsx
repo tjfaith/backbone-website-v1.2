@@ -22,7 +22,7 @@ const AboutUs = () => {
       ),
       title: "Mission",
       description:
-        "Our Mission is to enable at least half fiat transactions that either originate out of Africa, have their destination in Africa, or are in one way or the other connected to Africa and Africans.",
+        "Our Mission is to enable at least half of the B2B, B2C, and C2C transactions that either originate out of Africa, have their destination in Africa, or are in one way or the other connected to Africa and Africans.",
     },
     {
       img: About3,
@@ -35,7 +35,7 @@ const AboutUs = () => {
       ),
       title: "Vision",
       description:
-        "Our longterm goal and Vision is to build an ecosystem of integrated financial services that create possibilities for Africans and the rest of the world across a broad range of sectors, industries, and market segments.",
+        "Our long term goal and Vision is to build an ecosystem of integrated financial services that create possibilities for Africans and the rest of the world across a broad range of sectors, industries, and market segments.",
     },
     {
       img: About4,
