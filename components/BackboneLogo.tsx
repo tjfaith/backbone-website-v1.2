@@ -2,6 +2,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import { Image } from "@heroui/image";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { FullLogo, FullLogoDark } from "@/public/assets";
 
@@ -11,11 +12,11 @@ interface Props {
 const BackboneLogo = ({ showDarkLogo }: Props) => {
   // const { showLightNav } = useSelector((state: RootState) => state.settings);
   const { theme } = useTheme();
-  // const isSSR = useIsSSR();
+  const isSSR = useIsSSR();
 
   return (
     <>
-      {showDarkLogo && theme === "light" ? (
+      {showDarkLogo && (theme === "light" || isSSR) ? (
         <Image
           alt="logo2"
           className=" outline-none"
