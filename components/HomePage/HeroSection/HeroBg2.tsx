@@ -24,8 +24,7 @@ const HeroBg2 = ({ children }: Props) => {
         className=" h-screen bg-cover bg-fixed bg-center bg-no-repeat "
         style={{ backgroundImage: `url(${Hero2.src})` }}
       >
-        {/* <div className="h-screen absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_90%_10%,_var(--tw-gradient-stops))] from-transparent from-0% dark:via-[#0000] via-primary via-90% dark:to-[#0000] to-primary to-10%  pointer-events-none" /> */}
-        <div className="h-screen absolute inset-0 z-10 bg-black/40 pointer-events-none" />
+        <div className="h-screen absolute inset-0 z-10 bg-gradient-to-b from-black/30 via-black/30 to-secondary/10 dark:to-background/10 pointer-events-none" />
         {children}
       </div>
     </div>
