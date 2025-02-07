@@ -129,11 +129,9 @@ const Navbar = () => {
             fullWidth={false}
             href="/#get_start"
             variant={
-              showLightNav && (theme === "dark" || isSSR)
+              theme === "dark" || isSSR
                 ? "flat"
-                : showLightNav
-                  ? "light"
-                  : "flat"
+                : "light"
             }
           >
             Get Started Now
