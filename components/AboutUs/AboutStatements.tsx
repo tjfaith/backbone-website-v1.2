@@ -18,12 +18,15 @@ const AboutStatements = () => {
                     whileHover={{ scale: 1.5 }}
                 />
 
-                <div className="relative z-10 pointer-events-none flex flex-col justify-end h-full p-10 bg-black/30">
-                    <div className="text-3xl text-white mb-2 clash-display-font">
+                <div className="relative  z-10 pointer-events-none flex flex-col justify-end h-full p-10 bg-black/30">
+                    <div className="text-3xl text-white mb-2 clash-display-font drop-shadow-xl">
                         Mission
                     </div>
-                    <div className="xl:text-lg text-sm text-white max-w-xl font-medium tracking-tight">
-                        Our Mission is to enable at least half of the fiat, stablecoin, and Bitcoin transactions that either originate out of Africa, have their destination in Africa, or are in one way or the other connected to Africa and Africans.
+                    <div className="xl:text-lg text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl">
+                        Our Mission is to enable at least half of the fiat, stablecoin, and
+                        Bitcoin transactions that either originate out of Africa, have their
+                        destination in Africa, or are in one way or the other connected to
+                        Africa and Africans.
                     </div>
                 </div>
             </div>
@@ -40,7 +43,7 @@ const AboutStatements = () => {
                         whileHover={{ scale: 1.5 }}
                     />
 
-                    <div className="relative bg-black/60 z-10 pointer-events-none flex flex-col justify-end h-full p-10">
+                    <div className="relative bg-black/40 z-10 pointer-events-none flex flex-col justify-end h-full p-10">
                         <div className="text-3xl drop-shadow-xl text-white mb-2 clash-display-font">
                             Vision
                         </div>
