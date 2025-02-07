@@ -128,11 +128,7 @@ const Navbar = () => {
             as={Link}
             fullWidth={false}
             href="/#get_start"
-            variant={
-              theme === "dark" || isSSR
-                ? "flat"
-                : "light"
-            }
+            variant={theme === "dark" || isSSR ? "flat" : "light"}
           >
             Get Started Now
           </CustomButton>
