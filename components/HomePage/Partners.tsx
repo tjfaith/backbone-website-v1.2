@@ -28,7 +28,7 @@ const Partners = () => {
               scrollSpyOnce
               decimals={1}
               duration={5}
-              end={4.5}
+              end={4.8}
             />
           </span>
           <span className="text-primary-400 text-2xl font-medium">/5</span>
