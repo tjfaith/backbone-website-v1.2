@@ -127,7 +127,7 @@ const Navbar = () => {
             href="/#get_start"
             variant={showLightNav && (theme === 'dark' || isSSR) ? "flat" : showLightNav ? "light" : "flat"}
           >
-            Get Started Now {String(showLightNav)}
+            Get Started Now
           </CustomButton>
         </NavbarItem>
       </NavbarContent>
