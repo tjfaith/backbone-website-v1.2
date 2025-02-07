@@ -12,12 +12,16 @@ interface Props {
   avatarClass?: string;
   captionClass?: string;
   descriptionClass?: string;
+  offeringsBtnClass?: string;
+  showLightBtn?: boolean;
   caption?: number;
 }
 const HeroContent = ({
   avatarClass,
   captionClass,
   descriptionClass,
+  offeringsBtnClass,
+  showLightBtn,
   caption = 1,
 }: Props) => {
   return (
@@ -122,14 +126,24 @@ const HeroContent = ({
           global payment solution spanning 150+ countries.
         </div>
         <div className="flex items-center md:flex-row flex-col-reverse gap-4 animate__delay-2s animate__animated animate__fadeInUp animate__slower">
-          <CustomButton as={Link} fullWidth={false} href="/#get_started">
+          <CustomButton
+            as={Link}
+            fullWidth={false}
+            href="/#get_started"
+            variant={showLightBtn ? "light" : "flat"}
+          >
             Get Started Now
           </CustomButton>
           <Button
             as={Link}
-            className="text-[#525866] text-base font-medium dark:border-none dark:shadow-xl border-2 dark:bg-background dark:text-primary bg-white "
+            className={cn(
+              "text-primary text-base font-medium shadow-none bg-transparent",
+              offeringsBtnClass,
+            )}
+            endContent={<Icon icon="ri:arrow-right-s-line" />}
             fullWidth={false}
             href="/#footer"
+            variant="light"
           >
             Learn More About Our Offerings
           </Button>

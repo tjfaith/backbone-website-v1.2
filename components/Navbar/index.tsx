@@ -119,7 +119,12 @@ const Navbar = () => {
 
       <NavbarContent className="hidden lg:flex" justify="end">
         <NavbarItem>
-          <CustomButton as={Link} fullWidth={false} href="/#get_start">
+          <CustomButton
+            as={Link}
+            fullWidth={false}
+            href="/#get_start"
+            variant={showLightNav ? "light" : "flat"}
+          >
             Get Started Now
           </CustomButton>
         </NavbarItem>
