@@ -32,6 +32,8 @@ const Navbar = () => {
     currentPath,
     changeReady,
     showLightNav,
+    theme,
+    isSSR,
     handleMenuToggle,
   } = useNavbar();
 
@@ -123,7 +125,7 @@ const Navbar = () => {
             as={Link}
             fullWidth={false}
             href="/#get_start"
-            variant={showLightNav ? "light" : "flat"}
+            variant={showLightNav && (theme === 'dark' || isSSR) ? "flat" : showLightNav ? "light" : "flat"}
           >
             Get Started Now
           </CustomButton>
