@@ -1,12 +1,9 @@
 "use client";
 import React from "react";
-import { useIsSSR } from "@react-aria/ssr";
 import { useTheme } from "next-themes";
 import { Image } from "@heroui/image";
-import { useSelector } from "react-redux";
 
 import { FullLogo, FullLogoDark } from "@/public/assets";
-import { RootState } from "@/app/store";
 
 interface Props {
   showDarkLogo?: boolean;
