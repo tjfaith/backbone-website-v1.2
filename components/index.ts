@@ -8,7 +8,6 @@ export { default as Socials } from ".//Socials";
 export { default as SocialLayout } from "./SocialLayout";
 export { default as DigitalTransaction } from "./DigitalTransaction";
 export { default as PreLoader } from "./PreLoader";
-export { default as AboutCard } from "./AboutCard";
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";
@@ -29,7 +28,12 @@ export { default as HeroBg2 } from "./HomePage/HeroSection/HeroBg2";
 export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
 export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
 
-// blog
+// About
+export { default as AboutHero } from "./AboutUs/AboutHero";
+export { default as Achievement } from "./AboutUs/Achievement";
+export { default as AboutStatement } from "./AboutUs/AboutStatements";
+
+// Blog
 export { default as BlogCard } from "./Blog/BlogCard";
 export { default as BlogCategory } from "./Blog/BlogCategory";
 export { default as BlogSubscribe } from "./Blog/BlogSubscribe";

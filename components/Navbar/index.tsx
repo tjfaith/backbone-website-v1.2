@@ -41,7 +41,7 @@ const Navbar = () => {
     <HeroUINavbar
       className="fixed"
       classNames={{
-        base: `md:px-0 px-2 lg:px-0 shadow-none  transition-all duration-300 ease-in-out ${changeReady ? "bg-background text-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : showLightNav ? "bg-transparent text-background dark:text-primary" : "bg-transparent"}`,
+        base: `xl:px-0 md:px-4 px-2 lg:px-0 shadow-none  transition-all duration-300 ease-in-out ${changeReady ? "bg-background text-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : showLightNav ? "bg-transparent text-background dark:text-primary" : "bg-transparent"}`,
         wrapper: "md:px-0 px-4",
       }}
       isBlurred={false}
@@ -125,7 +125,13 @@ const Navbar = () => {
             as={Link}
             fullWidth={false}
             href="/#get_start"
-            variant={showLightNav && (theme === 'dark' || isSSR) ? "flat" : showLightNav ? "light" : "flat"}
+            variant={
+              showLightNav && (theme === "dark" || isSSR)
+                ? "flat"
+                : showLightNav
+                  ? "light"
+                  : "flat"
+            }
           >
             Get Started Now
           </CustomButton>

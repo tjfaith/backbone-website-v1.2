@@ -63,6 +63,11 @@ function useNavbar() {
       href: "/blog",
       menu: null,
     },
+    {
+      label: "Contact us",
+      href: "/contact-us",
+      menu: null,
+    },
   ];
   const navMenuItems = [
     {
@@ -77,6 +82,11 @@ function useNavbar() {
     {
       label: "Blog",
       href: "/blog",
+      menu: null,
+    },
+    {
+      label: "Contact us",
+      href: "/contact-us",
       menu: null,
     },
   ];

@@ -238,7 +238,7 @@ export default {
               700: "#66C2FF",
               800: "#99D9FF",
               900: "#CCEDFF",
-              950: "##C6E4FF",
+              950: "#C6E4FF",
               DEFAULT: "#0098FF",
             },
           },

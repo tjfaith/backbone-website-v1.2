@@ -52,7 +52,7 @@ const BlogExtract = () => {
         </div>
       </div>
       {!blogLoading ? (
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
           {allBlogs?.slice(-3).map((blog, index) => (
             <div
               key={index}

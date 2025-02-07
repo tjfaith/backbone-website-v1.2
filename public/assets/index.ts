@@ -28,7 +28,7 @@ export { default as WorldMap } from './img/globalReach/worldMap.png'
 // about 
 export { default as About1 } from './img/about/about1.jpeg'
 export { default as About2 } from './img/about/about2.jpeg'
-export { default as About3 } from './img/about/about3.png'
+export { default as About3 } from './img/about/about3.jpeg'
 export { default as About4 } from './img/about/about4.jpeg'
 
 
