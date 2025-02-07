@@ -13,6 +13,7 @@ export { default as Img6 } from './img/img6.png'
 export { default as LockImg } from './img/lock.png'
 export { default as Rates } from './img/rates.png'
 export { default as Innovation } from './img/innovation.png'
+export { default as Bar } from './img/bar.png'
 
 // hero
 export { default as Hero2 } from './img/hero/hero2.png'

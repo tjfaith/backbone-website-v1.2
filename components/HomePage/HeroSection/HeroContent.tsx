@@ -127,7 +127,7 @@ const HeroContent = ({
           </CustomButton>
           <Button
             as={Link}
-            className="text-[#525866] text-base font-medium border-2 bg-white "
+            className="text-[#525866] text-base font-medium dark:border-none dark:shadow-xl border-2 dark:bg-background dark:text-primary bg-white "
             fullWidth={false}
             href="/#footer"
           >
