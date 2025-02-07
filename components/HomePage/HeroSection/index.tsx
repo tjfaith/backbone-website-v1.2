@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
+import { useIsSSR } from "@react-aria/ssr";
 // import { useDispatch } from "react-redux";
 
 import HeroContent from "./HeroContent";
@@ -13,13 +14,15 @@ const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
+
   // const dispatch = useDispatch();
   const heroBgs = [
     <HeroBg1 key="bg1">
       <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
         <HeroContent
           avatarClass="dark:from-success-100/10 dark:via-foreground-800 dark:to-foreground-800 from-background/30 to-background/30 via-background/30 text-primary"
-          showLightBtn={theme === "dark" ? true : false}
+          showLightBtn={theme === "dark" || isSSR ? true : false}
         />
       </motion.div>
     </HeroBg1>,
@@ -30,7 +33,7 @@ const HeroSection = () => {
           caption={2}
           descriptionClass="text-background dark:text-primary"
           offeringsBtnClass="text-white"
-          showLightBtn={theme === "dark" ? false : true}
+          showLightBtn={theme === "dark" || isSSR ? false : true}
         />
       </motion.div>
     </HeroBg2>,
