@@ -92,7 +92,10 @@ const Navbar = () => {
                       base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
                     }}
                   >
-                    <DropdownSection classNames={{ heading: "font-bold dark:text-primary" }} title="Personal and Business Banking">
+                    <DropdownSection
+                      classNames={{ heading: "font-bold dark:text-primary" }}
+                      title="Personal and Business Banking"
+                    >
                       {item.menu.map((sub_item, index2) => (
                         <DropdownItem
                           key={index2}
@@ -126,11 +129,9 @@ const Navbar = () => {
             fullWidth={false}
             href="/#get_start"
             variant={
-              showLightNav && (theme === "dark" || isSSR)
+              theme === "dark" || isSSR
                 ? "flat"
-                : showLightNav
-                  ? "light"
-                  : "flat"
+                : "light"
             }
           >
             Get Started Now
@@ -177,14 +178,15 @@ const Navbar = () => {
                   </DropdownTrigger>
                   <DropdownMenu
                     aria-label="Drop down"
-                    classNames={{
-
-                    }}
+                    classNames={{}}
                     itemClasses={{
                       base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
                     }}
                   >
-                    <DropdownSection classNames={{ heading: "font-bold dark:text-primary" }} title="Personal and Business Banking">
+                    <DropdownSection
+                      classNames={{ heading: "font-bold dark:text-primary" }}
+                      title="Personal and Business Banking"
+                    >
                       {item.menu.map((sub_item, index2) => (
                         <DropdownItem
                           key={index2}

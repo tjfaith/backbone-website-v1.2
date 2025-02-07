@@ -27,7 +27,7 @@ const Achievement = () => {
                     </div>
                     <div className="text-background pl-2 text-xs">
                         Customers and partners served with excellence in{" "}
-                        {new Date().getFullYear() - 1}{" "}, and that we continue to serve.
+                        {new Date().getFullYear() - 1} , and that we continue to serve.
                     </div>
                 </div>
                 <div data-aos="fade-up">
@@ -41,7 +41,7 @@ const Achievement = () => {
                         />
                     </div>
                     <div className="text-background pl-2  text-xs">
-                        In payment processed through Backbone by our customers in{" "}
+                        In payments processed through Backbone by our customers in{" "}
                         {new Date().getFullYear() - 1}
                     </div>
                 </div>
@@ -51,8 +51,8 @@ const Achievement = () => {
                         <span className="font-medium">+</span>
                     </div>
                     <div className="text-background pl-2 text-xs">
-                        We settle anywhere in the world, apart from the sanctioned countries.{" "}
-                        {new Date().getFullYear() - 1}
+                        We settle anywhere in the world, apart from the
+                        sanctioned countries.
                     </div>
                 </div>
             </div>
