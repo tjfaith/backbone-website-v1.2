@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer, Navbar, PreLoader } from "@/components";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {
@@ -34,13 +35,19 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <meta
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          name="viewport"
+        />
+      </head>
       <body className={fontSans.className}>
         <PreLoader />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Navbar />
           <main className="dark:bg-background-200">{children}</main>
           <Footer />
+          <Toaster />
         </Providers>
       </body>
     </html>

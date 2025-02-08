@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { BlogServices } from "@/app/api";
 import { RootState } from "@/app/store";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
+import { useIsSSR } from "@react-aria/ssr";
 
 function useBlog() {
   const dispatch = useDispatch();
@@ -40,9 +41,10 @@ function useBlog() {
   };
 
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" ? false : true));
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
   return {

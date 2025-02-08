@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 
 import { Earth } from "@/public/assets";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
+import { useIsSSR } from "@react-aria/ssr";
 
 interface Props {
   children: ReactNode;
@@ -14,9 +15,11 @@ interface Props {
 const HeroBg1 = ({ children }: Props) => {
   const dispatch = useDispatch();
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
+
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" ? false : true));
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
   return (

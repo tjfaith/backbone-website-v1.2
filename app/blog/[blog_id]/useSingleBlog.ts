@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 import { BlogServices } from "@/app/api";
+import { useIsSSR } from "@react-aria/ssr";
 function useSingleBlog() {
   const dispatch = useDispatch();
   const DOMPurify = createDOMPurify();
@@ -18,9 +19,10 @@ function useSingleBlog() {
     BlogServices().useGetSingleBlog(blog_id as string);
 
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" ? false : true));
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
   return { singleBlog, DOMPurify, router, blogLoading };

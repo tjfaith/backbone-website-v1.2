@@ -10,13 +10,15 @@ import {
   BlogExtract,
 } from "@/components";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
+import { useIsSSR } from "@react-aria/ssr";
 
 const AboutUs = () => {
   const dispatch = useDispatch();
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" ? false : true));
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
   return (

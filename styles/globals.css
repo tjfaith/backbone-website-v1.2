@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 .page-max-width {
-  @apply max-w-screen-xl mx-auto xl:px-0 px-6;
+  @apply max-w-screen-xl mx-auto xl:px-0 md:px-8 px-6;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
 }
 
 @font-face {

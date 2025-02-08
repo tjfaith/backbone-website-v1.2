@@ -5,6 +5,8 @@ import { cn } from "@heroui/theme";
 
 import { Spinner } from "@/public/assets";
 import { CustomButtonProps } from "@/types";
+import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 const CustomButton = ({
   children,
@@ -23,14 +25,16 @@ const CustomButton = ({
   fullWidth = true,
   onPress,
 }: CustomButtonProps) => {
+  const { theme } = useTheme();
+  const isSSR = useIsSSR();
   return (
     <Button
       as={as}
       className={cn(
-        variant == "light"
+        theme == "light" || isSSR
           ? "bg-gray-200"
           : "bg-gradient-to-t  from-[#000] via-[#242628] to-[#4C4F55] text-primary",
-        "flex items-center p-[1px] text-sm ",
+        "flex items-center w-full p-[1px] text-sm ",
         className,
       )}
       color={color}
@@ -38,22 +42,20 @@ const CustomButton = ({
       fullWidth={fullWidth}
       href={href}
       isDisabled={isDisabled}
-      isLoading={isLoading}
       radius={radius}
       size={size}
-      spinner={<Spinner className="h-12 w-12" />}
       startContent={!isLoading && startContent}
       type={type}
       variant={variant}
       onPress={onPress}
     >
       <div
-        className={`${variant === "light" ? "bg-gray-200" : "bg-gradient-to-t"} from-[#242628]/50 via-[#4C4F55]/50 to-[#646671]  rounded-md h-full  p-[1px]`}
+        className={`${theme === "light" || isSSR ? "bg-gray-200" : "bg-gradient-to-t"} from-[#242628]/50 via-[#4C4F55]/50 to-[#646671] w-full  rounded-md h-full  p-[1px]`}
       >
         <div
-          className={`${variant === "light" ? "bg-gray-100 text-primary dark:text-background" : "bg-gradient-to-t text-background dark:text-primary"}  from-[#000000]/10 via-[#242628] to-[#4C4F55] h-full flex items-center justify-center p-3 rounded-md`}
+          className={`${theme === "light" || isSSR ? "bg-gray-100 text-primary dark:text-background" : "bg-gradient-to-t text-background dark:text-primary"}  from-[#000000]/10 via-[#242628] to-[#4C4F55] h-full flex items-center justify-center p-3 w-full rounded-md`}
         >
-          {!isLoading && children}
+          {!isLoading ? children : <Spinner color={theme === 'light' ? '#0E121B' : '#ffffff'} className="h-12 w-12" />}
         </div>
       </div>
     </Button>
