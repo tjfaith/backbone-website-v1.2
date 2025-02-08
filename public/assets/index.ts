@@ -58,5 +58,9 @@ export { default as Blog6 } from './img/blog/blog6.jpg'
 export { default as Blog7 } from './img/blog/blog7.jpg'
 export { default as Blog8 } from './img/blog/blog8.jpg'
 
+// why backbone
+export { default as Gage } from './img/whyBackbone/gage.svg'
+export { default as WorldMap2 } from './img/whyBackbone/worldMap.png'
+
 // tsx icon
 export { default as Spinner } from './tsx_icon/spinner'

@@ -100,14 +100,7 @@ const About = () => {
               </span>
             </div>
           </div>
-          <Image
-            disableAnimation
-            disableSkeleton
-            data-aos="fade-up"
-            data-aos-delay="600"
-            sizes="sm"
-            src={Img3.src}
-          />
+          <Image disableAnimation disableSkeleton sizes="sm" src={Img3.src} />
         </div>
       </div>
     </div>
