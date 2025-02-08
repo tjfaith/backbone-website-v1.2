@@ -2,11 +2,11 @@
 import React from "react";
 import { Button } from "@heroui/button";
 import { cn } from "@heroui/theme";
+import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { Spinner } from "@/public/assets";
 import { CustomButtonProps } from "@/types";
-import { useTheme } from "next-themes";
-import { useIsSSR } from "@react-aria/ssr";
 
 const CustomButton = ({
   children,
@@ -27,6 +27,7 @@ const CustomButton = ({
 }: CustomButtonProps) => {
   const { theme } = useTheme();
   const isSSR = useIsSSR();
+
   return (
     <Button
       as={as}
@@ -55,7 +56,14 @@ const CustomButton = ({
         <div
           className={`${theme === "light" || isSSR ? "bg-gray-100 text-primary dark:text-background" : "bg-gradient-to-t text-background dark:text-primary"}  from-[#000000]/10 via-[#242628] to-[#4C4F55] h-full flex items-center justify-center p-3 w-full rounded-md`}
         >
-          {!isLoading ? children : <Spinner color={theme === 'light' ? '#0E121B' : '#ffffff'} className="h-12 w-12" />}
+          {!isLoading ? (
+            children
+          ) : (
+            <Spinner
+              className="h-12 w-12"
+              color={theme === "light" ? "#0E121B" : "#ffffff"}
+            />
+          )}
         </div>
       </div>
     </Button>

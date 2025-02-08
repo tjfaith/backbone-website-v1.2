@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import {
   AboutHero,
@@ -10,7 +11,6 @@ import {
   BlogExtract,
 } from "@/components";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
-import { useIsSSR } from "@react-aria/ssr";
 
 const AboutUs = () => {
   const dispatch = useDispatch();

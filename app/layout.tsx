@@ -2,13 +2,13 @@ import "@/styles/globals.css";
 import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
+import { Toaster } from "react-hot-toast";
 
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer, Navbar, PreLoader } from "@/components";
-import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {

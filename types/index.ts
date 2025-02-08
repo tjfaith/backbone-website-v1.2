@@ -10,16 +10,16 @@ export interface ContactUsPayload {
   name: string;
   email: string;
   phoneNumber: E164Number | undefined;
-  subject: string
+  subject: string;
   message: string;
 }
 
 export interface ErrorResponse {
   response: {
     data: {
-      message: string
-    }
-  }
+      message: string;
+    };
+  };
 }
 
 export interface BlogCategory {

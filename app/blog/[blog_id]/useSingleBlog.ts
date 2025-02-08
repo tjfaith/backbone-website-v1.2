@@ -4,10 +4,10 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 import { BlogServices } from "@/app/api";
-import { useIsSSR } from "@react-aria/ssr";
 function useSingleBlog() {
   const dispatch = useDispatch();
   const DOMPurify = createDOMPurify();

@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { BlogServices } from "@/app/api";
 import { RootState } from "@/app/store";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
-import { useIsSSR } from "@react-aria/ssr";
 
 function useBlog() {
   const dispatch = useDispatch();

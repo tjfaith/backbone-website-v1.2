@@ -3,10 +3,10 @@ import Image from "next/image";
 import React, { ReactNode, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useDispatch } from "react-redux";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { Earth } from "@/public/assets";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
-import { useIsSSR } from "@react-aria/ssr";
 
 interface Props {
   children: ReactNode;
@@ -16,7 +16,6 @@ const HeroBg1 = ({ children }: Props) => {
   const dispatch = useDispatch();
   const { theme } = useTheme();
   const isSSR = useIsSSR();
-
 
   useEffect(() => {
     dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));

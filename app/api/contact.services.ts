@@ -2,9 +2,8 @@
 import { useMutation } from "@tanstack/react-query";
 
 import api from "./api.services";
+
 import { ContactUsPayload } from "@/types";
-
-
 
 function ContactServices() {
   const useSendMessage = () => {
@@ -17,11 +16,8 @@ function ContactServices() {
     });
   };
 
-
-
-
   return {
-    useSendMessage
+    useSendMessage,
   };
 }
 export default ContactServices;

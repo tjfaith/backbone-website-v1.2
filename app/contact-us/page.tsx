@@ -1,10 +1,11 @@
-'use client'
-import { ContactForm, ContactInfo } from "@/components";
+"use client";
 import { useTheme } from "next-themes";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 import { useIsSSR } from "@react-aria/ssr";
+
+import { setShowLightNav } from "@/app/store/Features/settingsSlice";
+import { ContactForm, ContactInfo } from "@/components";
 
 const ContactUs = () => {
   const dispatch = useDispatch();
