@@ -30,7 +30,7 @@ const JoinUs = () => {
 
   return (
     <div
-      className="page-max-width py-36 flex items-start xl:flex-row flex-col justify-between gap-11  "
+      className="page-max-width pt-36 flex items-start xl:flex-row flex-col justify-between gap-11  "
       id="services"
     >
       <div
@@ -103,28 +103,33 @@ const JoinUs = () => {
       </div>
 
       <div
-        className="md:flex-grow w-full relative h-auto md:h-screen xl:h-auto"
+        className="md:flex-grow w-full relative lg:h-screen md:h-screen-80"
         data-aos="fade-up"
       >
-        {/* <button
+        <div className="relative flex flex-col items-center pt-32 pb-10">
+          {/* <button
           className="absolute inset-x-0 top-20  px-6 transition-all duration-400 ease-in-out "
           onClick={() => setSelectedTab(orderedComponents[2].key)}
         >
           {orderedComponents[2].component}
         </button> */}
-        <button
-          className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out "
-          onClick={() => setSelectedTab(orderedComponents[1].key)}
-        >
-          {orderedComponents[1].component}
-        </button>
-        <button
-          className="absolute inset-x-0 top-0 transition-all duration-400 ease-in-out "
-          onClick={() => setSelectedTab(orderedComponents[0].key)}
-        >
-          {React.cloneElement(components[0].component, { hideCaption: false })}
-        </button>
+          <button
+            className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out "
+            onClick={() => setSelectedTab(orderedComponents[1].key)}
+          >
+            {orderedComponents[1].component}
+          </button>
+          <button
+            className="absolute inset-x-0 top-0 transition-all duration-400 ease-in-out "
+            onClick={() => setSelectedTab(orderedComponents[0].key)}
+          >
+            {React.cloneElement(components[0].component, {
+              hideCaption: false,
+            })}
+          </button>
+        </div>
       </div>
+      <Spacer className=" " y={48} />
     </div>
   );
 };

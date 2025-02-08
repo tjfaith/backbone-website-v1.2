@@ -18,9 +18,11 @@ export { default as JoinUs } from "./HomePage/JoinUs";
 export { default as JoinUsBusinesses } from "./HomePage/JoinUs_businesses";
 export { default as JoinUsIndividual } from "./HomePage/JoinUs_individual";
 export { default as JoinUsNonprofit } from "./HomePage/JoinUs_nonprofit";
-export { default as WhoWeAre } from "./HomePage/WhoWeAre";
+export { default as WhyBackbone } from "./HomePage/WhyBackbone";
 export { default as Testimonies } from "./HomePage/Testimonies";
 export { default as BlogExtract } from "./HomePage/BlogExtract";
+export { default as AnimatedGraph } from "./HomePage/AnimatedGraph";
+export { default as RippleIcon } from "./HomePage/RippleIcon";
 
 // Home -> Hero section
 export { default as HeroBg1 } from "./HomePage/HeroSection/HeroBg1";

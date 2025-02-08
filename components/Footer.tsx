@@ -72,7 +72,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/#support"
+                    href="/contact-us"
                   >
                     {" "}
                     Support
