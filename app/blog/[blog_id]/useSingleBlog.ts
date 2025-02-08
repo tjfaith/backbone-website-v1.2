@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 import { BlogServices } from "@/app/api";
@@ -18,9 +19,10 @@ function useSingleBlog() {
     BlogServices().useGetSingleBlog(blog_id as string);
 
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" ? false : true));
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
   return { singleBlog, DOMPurify, router, blogLoading };

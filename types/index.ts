@@ -1,8 +1,25 @@
 import { ButtonProps } from "@heroui/button";
 import { ReactNode } from "react";
+export type E164Number = string;
 
 export interface CustomButtonProps extends ButtonProps {
   children: ButtonProps["children"];
+}
+
+export interface ContactUsPayload {
+  name: string;
+  email: string;
+  phoneNumber: E164Number | undefined;
+  subject: string;
+  message: string;
+}
+
+export interface ErrorResponse {
+  response: {
+    data: {
+      message: string;
+    };
+  };
 }
 
 export interface BlogCategory {

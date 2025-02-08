@@ -126,14 +126,17 @@ const HeroContent = ({
           global payment solution spanning 150+ countries.
         </div>
         <div className="flex items-center md:flex-row flex-col-reverse gap-4 animate__delay-2s animate__animated animate__fadeInUp animate__slower">
-          <CustomButton
-            as={Link}
-            fullWidth={false}
-            href="/#get_started"
-            variant={showLightBtn ? "light" : "flat"}
-          >
-            Get Started Now
-          </CustomButton>
+          <div>
+            <CustomButton
+              as={Link}
+              fullWidth={false}
+              href="/#get_started"
+              variant={showLightBtn ? "light" : "flat"}
+            >
+              Get Started Now
+            </CustomButton>
+          </div>
+
           <Button
             as={Link}
             className={cn(

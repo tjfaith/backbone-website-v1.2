@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import {
   AboutHero,
@@ -14,9 +15,10 @@ import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 const AboutUs = () => {
   const dispatch = useDispatch();
   const { theme } = useTheme();
+  const isSSR = useIsSSR();
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" ? false : true));
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
   return (

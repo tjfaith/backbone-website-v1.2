@@ -39,3 +39,7 @@ export { default as BlogCategory } from "./Blog/BlogCategory";
 export { default as BlogSubscribe } from "./Blog/BlogSubscribe";
 export { default as LatestBlog } from "./Blog/LatestBlog";
 export { default as Subscribe } from "./Blog/Subscribe";
+
+// Contact
+export { default as ContactForm } from "./ContactUs/ContactForm";
+export { default as ContactInfo } from "./ContactUs/ContactInfo";

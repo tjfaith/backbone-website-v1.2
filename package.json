@@ -46,6 +46,7 @@
   "react-countup": "^6.5.3",
   "react-dom": "18.3.1",
   "react-hot-toast": "^2.5.1",
+  "react-phone-number-input": "^3.4.11",
   "react-redux": "^9.2.0"
  },
  "devDependencies": {

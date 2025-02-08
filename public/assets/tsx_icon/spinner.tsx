@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Spinner = ({ color = '#ffffff', className='' }) => {
+const Spinner = ({ color = '#ffffff', className = '' }) => {
   return (
     <svg
-    className={className}
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"

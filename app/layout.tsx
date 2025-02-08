@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
+import { Toaster } from "react-hot-toast";
 
 import { Providers } from "./providers";
 
@@ -34,13 +35,19 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <meta
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          name="viewport"
+        />
+      </head>
       <body className={fontSans.className}>
         <PreLoader />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Navbar />
           <main className="dark:bg-background-200">{children}</main>
           <Footer />
+          <Toaster />
         </Providers>
       </body>
     </html>
