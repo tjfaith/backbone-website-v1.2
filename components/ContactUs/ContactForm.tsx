@@ -142,7 +142,7 @@ const ContactForm = () => {
         />
       </div>
       <CustomButton fullWidth isLoading={loading} type="submit">
-        Get Started
+        Submit
       </CustomButton>
       <div className="text-xs text-primary text-center">
         By submitting this, I confirm that I have read and understood the{" "}
