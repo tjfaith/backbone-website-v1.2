@@ -25,8 +25,9 @@ export { default as AnimatedGraph } from "./HomePage/AnimatedGraph";
 export { default as RippleIcon } from "./HomePage/RippleIcon";
 
 // Home -> Hero section
-export { default as HeroBg1 } from "./HomePage/HeroSection/HeroBg1";
-export { default as HeroBg2 } from "./HomePage/HeroSection/HeroBg2";
+export { default as Hero1 } from "./HomePage/HeroSection/Hero1";
+export { default as Hero2 } from "./HomePage/HeroSection/Hero2";
+export { default as Hero3 } from "./HomePage/HeroSection/Hero3";
 export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
 export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
 

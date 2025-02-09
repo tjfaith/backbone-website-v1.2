@@ -16,7 +16,7 @@ export { default as Innovation } from './img/innovation.png'
 export { default as Bar } from './img/bar.png'
 
 // hero
-export { default as Hero2 } from './img/hero/hero2.png'
+export { default as Hero2Bg } from './img/hero/hero2Bg.png'
 
 // globalReach
 export { default as User1 } from './img/globalReach/user1.png'

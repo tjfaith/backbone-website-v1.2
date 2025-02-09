@@ -12,7 +12,7 @@ interface Props {
   children: ReactNode;
 }
 
-const HeroBg1 = ({ children }: Props) => {
+const Hero1 = ({ children }: Props) => {
   const dispatch = useDispatch();
   const { theme } = useTheme();
   const isSSR = useIsSSR();
@@ -38,4 +38,4 @@ const HeroBg1 = ({ children }: Props) => {
   );
 };
 
-export default HeroBg1;
+export default Hero1;

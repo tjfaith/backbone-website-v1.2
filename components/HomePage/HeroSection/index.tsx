@@ -4,11 +4,8 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { useIsSSR } from "@react-aria/ssr";
-// import { useDispatch } from "react-redux";
-
 import HeroContent from "./HeroContent";
-
-import { HeroBg1, HeroBg2 } from "@/components";
+import { Hero1, Hero2 } from "@/components";
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -16,17 +13,16 @@ const HeroSection = () => {
   const { theme } = useTheme();
   const isSSR = useIsSSR();
 
-  // const dispatch = useDispatch();
   const heroBgs = [
-    <HeroBg1 key="bg1">
+    <Hero1 key="bg1">
       <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
         <HeroContent
           avatarClass="dark:from-success-100/10 dark:via-foreground-800 dark:to-foreground-800 from-background/30 to-background/30 via-background/30 text-primary"
           showLightBtn={theme === "dark" || isSSR ? false : true}
         />
       </motion.div>
-    </HeroBg1>,
-    <HeroBg2 key="bg2">
+    </Hero1>,
+    <Hero2 key="bg2">
       <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
         <HeroContent
           avatarClass=" from-background-200 to-background-200 via-background-200 text-white drop-shadow-lg  md:text-primary"
@@ -36,7 +32,7 @@ const HeroSection = () => {
           showLightBtn={theme === "dark" || isSSR ? false : true}
         />
       </motion.div>
-    </HeroBg2>,
+    </Hero2>,
   ];
 
   useEffect(() => {
@@ -53,7 +49,7 @@ const HeroSection = () => {
       <AnimatePresence>
         <motion.div
           key={activeIndex}
-          animate={{ x: 0 }} // Stay in place
+          animate={{ x: 0 }}
           className="absolute w-full h-full top-0 left-0"
           exit={{ x: direction === "right" ? "-100%" : "100%" }}
           initial={{ x: direction === "right" ? "100%" : "-100%" }}
