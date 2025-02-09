@@ -22,7 +22,10 @@ const Hero2 = ({ children }: Props) => {
     <div className="relative overflow-hidden">
       <div
         className=" h-screen bg-cover bg-fixed bg-center bg-no-repeat "
-        style={{ backgroundImage: `url(${Hero2Bg.src})`, WebkitOverflowScrolling: 'touch', }}
+        style={{
+          backgroundImage: `url(${Hero2Bg.src})`,
+          WebkitOverflowScrolling: "touch",
+        }}
       >
         <div className="h-screen absolute inset-0 z-10 bg-gradient-to-b from-black/30 via-black/30 to-secondary/10 dark:to-background/10 pointer-events-none" />
         {children}

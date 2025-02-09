@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { useIsSSR } from "@react-aria/ssr";
+
 import HeroContent from "./HeroContent";
+
 import { Hero1, Hero2 } from "@/components";
 
 const HeroSection = () => {

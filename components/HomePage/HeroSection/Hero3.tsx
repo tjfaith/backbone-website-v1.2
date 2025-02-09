@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Hero3 = () => {
-    return (
-        <div>Hero3</div>
-    )
-}
+  return <div>Hero3</div>;
+};
 
-export default Hero3
+export default Hero3;
