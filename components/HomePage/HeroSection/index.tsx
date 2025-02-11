@@ -14,14 +14,7 @@ const HeroSection = () => {
   const isSSR = useIsSSR();
 
   const heroBgs = [
-    <Hero1 key="bg1">
-      <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
-        <HeroContent
-          avatarClass="dark:from-success-100/10 dark:via-foreground-800 dark:to-foreground-800 from-background/30 to-background/30 via-background/30 text-primary"
-          showLightBtn={theme === "dark" || isSSR ? false : true}
-        />
-      </motion.div>
-    </Hero1>,
+    <Hero1 key="bg1" />,
     <Hero2 key="bg2">
       <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
         <HeroContent
@@ -31,9 +24,17 @@ const HeroSection = () => {
           offeringsBtnClass="text-white"
           showLightBtn={theme === "dark" || isSSR ? false : true}
         />
+        <Hero3 key="bg3">
+          <motion.div exit={{ x: "-100%" }} transition={{ duration: 0.1 }}>
+            <HeroContent
+              avatarClass="dark:from-success-100/10 dark:via-foreground-800 dark:to-foreground-800 from-background/30 to-background/30 via-background/30 text-primary"
+              showLightBtn={theme === "dark" || isSSR ? false : true}
+            />
+          </motion.div>
+        </Hero3>
+        ,
       </motion.div>
     </Hero2>,
-    <Hero3 key="bg3" />,
   ];
 
   useEffect(() => {

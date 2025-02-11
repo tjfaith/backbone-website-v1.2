@@ -79,7 +79,13 @@ const Navbar = () => {
                 >
                   <DropdownTrigger>
                     <Button
-                      className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"} bg-transparent text-base px-1`}
+                      className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"} bg-transparent text-base px-1 
+                      ${
+                        item.menu.some((sub) => sub?.href === currentPath) &&
+                        "bg-background-200 text-primary rounded-xl"
+                      }
+                      
+                      `}
                       endContent={<Icon icon="ri:arrow-down-s-line" />}
                       variant="flat"
                     >
@@ -96,7 +102,7 @@ const Navbar = () => {
                       classNames={{ heading: "font-bold dark:text-primary" }}
                       title="Personal and Business Banking"
                     >
-                      {item.menu.map((sub_item, index2) => (
+                      {item.menu.map((sub_item: any, index2) => (
                         <DropdownItem
                           key={index2}
                           startContent={<Icon icon={sub_item.icon} />}
@@ -183,7 +189,7 @@ const Navbar = () => {
                       classNames={{ heading: "font-bold dark:text-primary" }}
                       title="Personal and Business Banking"
                     >
-                      {item.menu.map((sub_item, index2) => (
+                      {item.menu.map((sub_item: any, index2) => (
                         <DropdownItem
                           key={index2}
                           startContent={<Icon icon={sub_item.icon} />}

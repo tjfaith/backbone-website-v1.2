@@ -22,12 +22,15 @@ const TailoredSupport = () => {
   );
 
   return (
-    <div className=" rounded-2xl bg-background md:p-12 p-6" data-aos="fade-up">
+    <div
+      className=" rounded-2xl bg-background md:p-12 p-6 flex flex-col xl:items-start items-center"
+      data-aos="fade-up"
+    >
       <CTitle title="Tailored support" />
-      <div className="clash-display-font  lg:text-4xl md:text-3xl text-2xl text-primary font-medium max-w-lg mb-1">
+      <div className="clash-display-font xl:text-start text-center lg:text-4xl md:text-3xl text-2xl text-primary font-medium max-w-lg mb-1">
         Tailored Financial Solutions for your Business
       </div>
-      <div className="text-primary-400 text-base font-medium max-w-lg tracking-tight">
+      <div className="xl:text-start text-center text-primary-400 text-base font-medium max-w-lg tracking-tight">
         From seamless transactions to multi-currency support, manage your
         business finances effortlessly.
       </div>

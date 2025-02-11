@@ -35,7 +35,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
 
   return (
     <form
-      className=" rounded-lg dark:border-primary-50/10 border p-3"
+      className=" rounded-lg dark:border-primary-50/10 border p-3 bg-background md:w-auto w-full"
       data-aos="fade-up"
       onSubmit={handleSubmit}
     >
@@ -43,20 +43,21 @@ const SendMoneyForm = ({ title, action }: Props) => {
 
       <div className="flex flex-col items-center gap-1">
         {/* SENDER */}
-        <div className=" rounded-lg dark:border-primary-50/10 border p-2">
+        <div className=" rounded-lg dark:border-primary-50/10 border p-2 w-full">
           <small className="text-primary-400">Amount you are sending</small>
 
-          <div className="flex items-center gap-3  ">
+          <div className="flex md:flex-row flex-col-reverse items-center gap-3 md:mt-0 mt-2  ">
             <div className="flex items-center space-x-1 w-full">
               <div className="text-2xl font-medium clash-display-font text-primary">
                 {selectedCurrency.symbol}
               </div>
               <Input
                 classNames={{
-                  inputWrapper: "bg-transparent px-0 shadow-none",
-                  input: "text-2xl clash-display-font font-medium text-base",
+                  inputWrapper: "bg-transparent px-1 shadow-none",
+                  input: "text-3xl clash-display-font font-medium text-base",
                 }}
                 isRequired={true}
+                size="sm"
                 type="number"
                 validationBehavior="native"
                 value={amountToSend.toString()}
@@ -66,7 +67,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
             </div>
             <Select
               aria-label="currency"
-              className=" max-w-36 w-36 bg-transparent"
+              className=" md:max-w-36 md:w-36 w-full bg-transparent"
               classNames={{}}
               isRequired={true}
               selectedKeys={[currencyKey]}
@@ -105,12 +106,12 @@ const SendMoneyForm = ({ title, action }: Props) => {
         <div className=" rounded-lg dark:border-primary-50/10 border p-2 w-full">
           <small className="text-primary-400">Amount receiver gets</small>
 
-          <div className="flex items-center gap-3 ">
+          <div className="flex items-center md:flex-row flex-col-reverse md:mt-0 mt-2 gap-3 ">
             <div className="flex items-center space-x-1 w-full">
               <div className="text-2xl font-medium clash-display-font text-primary">
                 {selectedCurrency2.symbol}
               </div>
-              <div className="text-2xl clash-display-font font-medium  ">
+              <div className="text-2xl clash-display-font font-medium text-primary ">
                 {Number(
                   currencyConverter(
                     Number(amountToSend),
@@ -122,7 +123,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
             </div>
             <Select
               aria-label="currency"
-              className=" max-w-36 w-36 bg-transparent"
+              className=" md:max-w-36 md:w-36 w-full bg-transparent"
               classNames={{}}
               isRequired={true}
               selectedKeys={[currencyKey2]}
@@ -158,7 +159,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
 
         {/* RATE */}
       </div>
-      <div className=" mt-1">
+      <div className=" mt-1 text-xs">
         <div className="flex items-center space-x-2 mb-2">
           <Icon
             className="text-primary-400 text-base"

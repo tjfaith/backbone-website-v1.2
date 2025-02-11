@@ -34,18 +34,14 @@ function useNavbar() {
     {
       label: "Individuals",
       icon: "ri:user-6-fill",
-      href: "/#services",
+      href: "/offerings/individual",
     },
     {
       label: "Businesses",
       icon: "ri:building-3-fill",
-      href: "/#services",
+      href: "/offerings/businesses",
     },
-    // {
-    //   label: "Nonprofit",
-    //   icon: "fluent-mdl2:nonprofit-logo-32",
-    //   href: "/#services",
-    // },
+    ,
   ];
 
   const navItems = [

@@ -12,7 +12,7 @@ const CHeader = () => {
       <div className="z-0">
         <motion.div
           animate={{ scale: [1, 0.9, 1] }}
-          className="absolute bottom-2 lg:left-36 left-0 inline-flex items-center justify-center p-3 rounded-full bg-info-300 text-white text-3xl"
+          className="absolute lg:bottom-2 bottom-20 lg:left-36 left-0 inline-flex items-center justify-center p-3 rounded-full bg-info-300 text-white text-3xl"
           data-aos="fade-up"
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -21,7 +21,7 @@ const CHeader = () => {
 
         <motion.div
           animate={{ scale: [1, 0.9, 1] }}
-          className="absolute top-2 lg:right-36 right-0 inline-flex items-center justify-center p-3 rounded-full bg-secondary-5000/50 dark:bg-secondary-600/50 text-white text-3xl"
+          className="absolute top-2 lg:right-36 right-0 inline-flex items-center justify-center p-3 rounded-full bg-secondary-500 dark:bg-secondary-600/50 text-white text-3xl"
           data-aos="fade-up"
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -29,7 +29,7 @@ const CHeader = () => {
         </motion.div>
       </div>
       <div className=" z-10 w-full">
-        <div className=" sm:text-4xl text-3xl  gap-1 flex flex-col items-center justify-center mb-4 clash-display-font font-medium">
+        <div className=" sm:text-4xl text-3xl text-primary gap-1 flex flex-col items-center justify-center mb-4 clash-display-font font-medium">
           <div
             className="flex items-center sm:flex-row flex-col gap-1"
             data-aos="fade-up"

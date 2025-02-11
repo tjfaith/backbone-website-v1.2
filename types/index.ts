@@ -67,3 +67,11 @@ export interface SocialsLayoutProps {
   hoverIconColor?: string;
   hoverChildren?: ReactNode;
 }
+
+export type OfferingsStatus = "Coming soon" | "live";
+export interface Offerings {
+  icon: string;
+  title: string;
+  description: string;
+  status: OfferingsStatus;
+}
