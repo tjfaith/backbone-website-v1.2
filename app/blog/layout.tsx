@@ -1,8 +1,12 @@
-"use client";
-import React from "react";
-
-const WaitListLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+export const metadata = {
+  title: "Blog",
+  description: "Exciting incite about our everyday life.",
 };
 
-export default WaitListLayout;
+export default function BlogLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
