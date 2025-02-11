@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import Head from "next/head";
+
 import {
   BlogExtract,
   OfferingsCaption,
@@ -30,8 +31,8 @@ const Individual = () => {
       <Head>
         <title>Client Page - My Website</title>
         <meta
-          name="description"
           content="This is a client-side rendered page."
+          name="description"
         />
       </Head>
       <div className="relative bg-[radial-gradient(circle_at_40%_50%,_var(--tw-gradient-stops))] md:bg-[radial-gradient(circle_at_70%_15%,_var(--tw-gradient-stops))] from-[#d2e8df]/90 dark:from-success-100/60 from-0% via-background dark:via-background-200  via-5% md:via-30% to-background dark:to-background-200 to-100%">
