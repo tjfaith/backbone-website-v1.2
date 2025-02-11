@@ -41,6 +41,12 @@ export { default as MultiCurrencySupport } from "./HomePage/ChangingPayment/Mult
 export { default as TailoredSupport } from "./HomePage/ChangingPayment/TailoredSupport";
 export { default as CurrencySlider } from "./HomePage/ChangingPayment/CurrencySlider";
 
+// Offerings
+export { default as OfferingsCaption } from "./Offerings/OfferingsCaption";
+export { default as OfferingsCard } from "./Offerings/OfferingsCard";
+export { default as IndividualOfferings } from "./Offerings/IndividualOfferings";
+export { default as BusinessesOfferings } from "./Offerings/BusinessesOfferings";
+
 // About
 export { default as AboutHero } from "./AboutUs/AboutHero";
 export { default as Achievement } from "./AboutUs/Achievement";
