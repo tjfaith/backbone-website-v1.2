@@ -23,6 +23,7 @@ export { default as Testimonies } from "./HomePage/Testimonies";
 export { default as BlogExtract } from "./HomePage/BlogExtract";
 export { default as AnimatedGraph } from "./HomePage/AnimatedGraph";
 export { default as RippleIcon } from "./HomePage/RippleIcon";
+export { default as SendMoneyForm } from "./SendMoneyForm";
 
 // Home -> Hero section
 export { default as Hero1 } from "./HomePage/HeroSection/Hero1";
@@ -30,6 +31,15 @@ export { default as Hero2 } from "./HomePage/HeroSection/Hero2";
 export { default as Hero3 } from "./HomePage/HeroSection/Hero3";
 export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
 export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
+
+// Home -> Changing payment
+export { default as ChangingPayment } from "./HomePage/ChangingPayment";
+export { default as CTitle } from "./HomePage/ChangingPayment/CTitle";
+export { default as CHeader } from "./HomePage/ChangingPayment/CHeader";
+export { default as LocalAndInternational } from "./HomePage/ChangingPayment/LocalAndInternational";
+export { default as MultiCurrencySupport } from "./HomePage/ChangingPayment/MultiCurrencySupport";
+export { default as TailoredSupport } from "./HomePage/ChangingPayment/TailoredSupport";
+export { default as CurrencySlider } from "./HomePage/ChangingPayment/CurrencySlider";
 
 // About
 export { default as AboutHero } from "./AboutUs/AboutHero";

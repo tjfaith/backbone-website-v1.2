@@ -143,12 +143,12 @@ const HeroContent = ({
               "text-primary text-base font-medium shadow-none bg-transparent",
               offeringsBtnClass,
             )}
-            endContent={<Icon icon="ri:arrow-right-s-line" />}
+            // endContent={<Icon icon="ri:arrow-right-s-line" />}
             fullWidth={false}
-            href="/#footer"
+            href="/contact-us"
             variant="light"
           >
-            Learn More About Our Offerings
+            Contact sales
           </Button>
         </div>
       </div>

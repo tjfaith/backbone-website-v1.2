@@ -19,7 +19,7 @@ import {
 
 const Partners = () => {
   return (
-    <div className="page-max-width py-16 grid md:grid-cols-2 gap-10  bg-background dark:bg-background-200">
+    <div className="page-max-width pb-16 pt-32 md:pt-48 grid md:grid-cols-2 gap-10  bg-background dark:bg-background-200">
       <div className="">
         <div className="clash-display-font" data-aos="fade-up">
           <span className="text-primary text-5xl font-medium">

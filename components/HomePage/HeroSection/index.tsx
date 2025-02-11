@@ -5,9 +5,7 @@ import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { useIsSSR } from "@react-aria/ssr";
 
-import HeroContent from "./HeroContent";
-
-import { Hero1, Hero2 } from "@/components";
+import { Hero1, Hero2, Hero3, HeroContent } from "@/components";
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -35,6 +33,7 @@ const HeroSection = () => {
         />
       </motion.div>
     </Hero2>,
+    <Hero3 key="bg3" />,
   ];
 
   useEffect(() => {
@@ -47,7 +46,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden w-full h-screen bg-primary ">
+    <div className="relative  w-full min-h-screen bg-primary ">
       <AnimatePresence>
         <motion.div
           key={activeIndex}
