@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
 import { Icon } from "@iconify/react";
-import { useRouter } from "next/navigation";
 
 import { CTitle, SendMoneyForm } from "@/components";
 
 const LocalAndInternational = () => {
-  const router = useRouter();
-
   return (
     <div className=" rounded-2xl bg-background md:px-12 px-3 py-3 md:py-12 xl:py-3 mt-16 flex lg:flex-row flex-col items-center justify-between  space-y-5">
       <div data-aos="fade-up">

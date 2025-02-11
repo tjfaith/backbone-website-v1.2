@@ -29,7 +29,7 @@ function useSendMoneyForm({ action }: Props) {
   const handleCurrencyChange = (key: any) => {
     setCurrencyKey(key);
     const currency = allCurrencies.find(
-      (cur: { id: string }) => cur.id === key
+      (cur: { id: string }) => cur.id === key,
     );
 
     if (currency) {
@@ -40,7 +40,7 @@ function useSendMoneyForm({ action }: Props) {
   const handleCurrencyChange2 = (key: any) => {
     setCurrencyKey2(key);
     const currency = allCurrencies.find(
-      (cur: { id: string }) => cur.id === key
+      (cur: { id: string }) => cur.id === key,
     );
 
     if (currency) {
@@ -52,7 +52,7 @@ function useSendMoneyForm({ action }: Props) {
     return currencyConverter(
       Number(amount),
       selectedCurrency2?.abbreviation,
-      selectedCurrency?.abbreviation
+      selectedCurrency?.abbreviation,
     );
   };
   const handleMoneyToSend = () => {

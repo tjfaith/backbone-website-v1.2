@@ -3,7 +3,7 @@ import { exchangeRates } from ".";
 export const currencyConverter = (
   amount: number,
   fromCurrency: string,
-  toCurrency: string
+  toCurrency: string,
 ) => {
   if (!fromCurrency || !toCurrency) {
     return 0;
