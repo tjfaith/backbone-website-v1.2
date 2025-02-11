@@ -20,7 +20,7 @@ function useSendMoneyForm({ action }: Props) {
     Record<string, string>
   >({});
 
-  const [amountToSend, setAmountToSend] = useState(130000);
+  const [amountToSend, setAmountToSend] = useState(1000);
   const [transferFee, setTransferFee] = useState(0);
   const [platformFee, setPlatformFee] = useState(0);
   const [totalFee, setTotalFee] = useState(0);
