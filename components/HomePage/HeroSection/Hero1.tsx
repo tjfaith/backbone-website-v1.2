@@ -23,7 +23,7 @@ const Hero1 = ({ children }: Props) => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className=" h-screen bg-[radial-gradient(ellipse_at_40%_40%,_var(--tw-gradient-stops))] from-success from-0% via-background via-50% to-background to-100% ">
+      <div className=" min-h-screen bg-[radial-gradient(ellipse_at_40%_40%,_var(--tw-gradient-stops))] from-success from-0% via-background via-50% to-background to-100% ">
         <div className="w-full h-screen absolute bottom-0 bg-[radial-gradient(ellipse_at_20%_90%,_var(--tw-gradient-stops))] from-warning/50 from-0%  via-transparent via-30%  to-transparent to-100%" />
 
         <div className="h-screen absolute inset-0 z-10 bg-background/60 pointer-events-none" />

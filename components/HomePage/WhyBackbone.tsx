@@ -20,7 +20,7 @@ const WhyBackbone = () => {
         </div>
 
         {/* TOP CARDS */}
-        <div className=" flex xl:flex-row flex-col items-stretch gap-5 mb-5">
+        <div className=" flex xl:flex-row flex-col items-stretch gap-2 mb-2">
           {/* card1 */}
           <div
             className=" bg-[#131925] flex md:flex-row flex-col-reverse items-end justify-between border border-[#1D2739] px-6 text-[#FFFFFF] rounded-2xl xl:w-7/12"
@@ -69,7 +69,7 @@ const WhyBackbone = () => {
         </div>
 
         {/* BOTTOM CARDS */}
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-2">
           <div
             className="p-6 gap-4 justify-between border border-[#1D2739] px-6 text-[#FFFFFF] rounded-2xl bg-[radial-gradient(circle_at_15%_43%,_var(--tw-gradient-stops))] from-[#0473F9]/30 from-0% via-[#131925]/10 via-20% to-[#131925] to-100% "
             data-aos="fade-up"

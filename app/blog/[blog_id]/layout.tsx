@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { allBlog } from "@/app/utils/dummy_data";
+import { allBlog } from "@/app/utils";
 import { AllBlogs } from "@/types";
 
 type tParams = Promise<{ blog_id: string }>;

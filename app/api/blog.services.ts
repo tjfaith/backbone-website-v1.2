@@ -4,7 +4,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import api from "./api.services";
 
 import { QueryGetAllBlogsProps, SubscriberPayload } from "@/types";
-import { allBlog, blogCategory } from "@/app/utils/dummy_data";
+import { allBlog, blogCategory } from "@/app/utils";
 
 function BlogServices() {
   const useGetAllBlog = ({

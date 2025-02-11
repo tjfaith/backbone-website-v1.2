@@ -2,7 +2,6 @@
 export { default as FullLogo } from './img/fullLogo.svg'
 export { default as FullLogoDark } from './img/fullLogoDark.svg'
 export { default as HalfLogo } from './img/halfLogo.svg'
-export { default as Earth } from './img/earth.png'
 export { default as ArrowUp } from './img/arrowUp.png'
 export { default as Img1 } from './img/img1.png'
 export { default as Img2 } from './img/img2.png'
@@ -14,8 +13,11 @@ export { default as LockImg } from './img/lock.png'
 export { default as Rates } from './img/rates.png'
 export { default as Innovation } from './img/innovation.png'
 export { default as Bar } from './img/bar.png'
+export { default as Bar2 } from './img/bar2.png'
 
 // hero
+export { default as Earth } from './img/hero/earth.png'
+export { default as Map } from './img/hero/map.png'
 export { default as Hero2Bg } from './img/hero/hero2Bg.png'
 
 // globalReach
@@ -30,7 +32,6 @@ export { default as About1 } from './img/about/about1.jpeg'
 export { default as About2 } from './img/about/about2.jpeg'
 export { default as About3 } from './img/about/about3.jpeg'
 export { default as About4 } from './img/about/about4.jpeg'
-
 
 // brands
 export { default as Fincra } from './img/brands/fincra.svg'
