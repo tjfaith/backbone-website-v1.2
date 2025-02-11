@@ -9,7 +9,7 @@ import { Select, SelectItem } from "@heroui/select";
 import useSendMoneyForm from "./useSendMoneyForm";
 
 import { allCurrencies, currencyConverter } from "@/app/utils";
-import CustomButton from "@/components/CustomButton";
+import CustomButton from "@/components/UI/CustomButton";
 
 interface Props {
   title: ReactNode | string;

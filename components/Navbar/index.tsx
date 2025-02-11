@@ -22,7 +22,12 @@ import { Icon } from "@iconify/react";
 
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, CustomButton, ThemeSwitch } from "@/components";
+import {
+  BackboneLogo,
+  CustomButton,
+  CustomDropdown,
+  ThemeSwitch,
+} from "@/components";
 
 const Navbar = () => {
   const {
@@ -32,6 +37,7 @@ const Navbar = () => {
     currentPath,
     changeReady,
     showLightNav,
+    setIsMenuOpen,
     theme,
     isSSR,
     handleMenuToggle,
@@ -152,6 +158,7 @@ const Navbar = () => {
         <NavbarMenuToggle />
       </NavbarContent>
 
+      {/* mobile */}
       <NavbarMenu className=" bg-transparent px-2 overflow-hidden">
         <div className=" mt-5 flex flex-col gap-2 bg-opacity-50 backdrop-blur-lg p-5 rounded-xl bg-primary text-background animate__animated animate__flipInX">
           {navMenuItems.map((item, index) => (
@@ -167,46 +174,65 @@ const Navbar = () => {
                   </Link>
                 </NavbarMenuItem>
               ) : (
-                <Dropdown
-                  classNames={{ content: "border border-foreground-200" }}
-                  radius="lg"
-                  shadow="sm"
-                >
-                  <DropdownTrigger>
-                    <NavbarMenuItem className=" text-base flex items-center space-x-2">
-                      {item.label}
-                      <Icon icon="ri:arrow-down-s-line" />
-                    </NavbarMenuItem>
-                  </DropdownTrigger>
-                  <DropdownMenu
-                    aria-label="Drop down"
-                    classNames={{}}
-                    itemClasses={{
-                      base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
-                    }}
-                  >
-                    <DropdownSection
-                      classNames={{ heading: "font-bold dark:text-primary" }}
-                      title="Personal and Business Banking"
-                    >
-                      {item.menu.map((sub_item: any, index2) => (
-                        <DropdownItem
-                          key={index2}
-                          startContent={<Icon icon={sub_item.icon} />}
-                          textValue={sub_item.label}
-                        >
-                          <NextLink
-                            className="space-x-4 flex flex-row items-center"
-                            href={sub_item.href}
-                            onClick={() => handleMenuToggle(false)}
-                          >
-                            <span>{sub_item.label}</span>
-                          </NextLink>
-                        </DropdownItem>
-                      ))}
-                    </DropdownSection>
-                  </DropdownMenu>
-                </Dropdown>
+                <CustomDropdown
+                  items={item.menu}
+                  label={item.label}
+                  setIsMenuOpen={setIsMenuOpen}
+                />
+                // <Dropdown>
+                //   <DropdownTrigger>
+                //     <Button variant="bordered">Open Menu</Button>
+                //   </DropdownTrigger>
+                //   <DropdownMenu aria-label="Link Actions">
+                //     <DropdownItem key="home" href="/home">
+                //       Home
+                //     </DropdownItem>
+                //     <DropdownItem key="about" href="/about">
+                //       About
+                //     </DropdownItem>
+                //   </DropdownMenu>
+                // </Dropdown>
+                // <Dropdown
+                //   classNames={{ content: "border border-foreground-200" }}
+                //   radius="lg"
+                //   shadow="sm"
+                // >
+                //   <DropdownTrigger>
+                //     <NavbarMenuItem className=" text-base flex items-center space-x-2">
+                //       {item.label}
+                //       <Icon icon="ri:arrow-down-s-line" />
+                //     </NavbarMenuItem>
+                //   </DropdownTrigger>
+                //   <DropdownMenu
+                //     aria-label="Drop down"
+                //     classNames={{}}
+                //     itemClasses={{
+                //       base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
+                //     }}
+                //   >
+                //     <DropdownSection
+                //       classNames={{ heading: "font-bold dark:text-primary" }}
+                //       title="Personal and Business Banking"
+                //     >
+                //       {item.menu.map((sub_item: any, index2) => (
+                //         <DropdownItem
+                //           href={sub_item.href}
+                //           onPress={() => handleMenuToggle(false)}
+                //           key={index2}
+                //           // startContent={<Icon icon={sub_item.icon} />}
+                //           textValue={sub_item.label}
+                //         >
+                //           {/* <NextLink
+                //             className="space-x-4 flex flex-row items-center"
+                //             onClick={() => handleMenuToggle(false)}
+                //           > */}
+                //           {sub_item.label}
+                //           {/* </NextLink> */}
+                //         </DropdownItem>
+                //       ))}
+                //     </DropdownSection>
+                //   </DropdownMenu>
+                // </Dropdown>
               )}
             </div>
           ))}
