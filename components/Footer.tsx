@@ -86,7 +86,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/#about_us"
+                    href="/offerings/individual"
                   >
                     Individuals
                   </Link>
@@ -94,18 +94,10 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/blog"
+                    href="/offerings/businesses"
                   >
                     {" "}
                     Businesses
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-background/70 dark:text-primary/70"
-                    href="/#support"
-                  >
-                    Nonprofits
                   </Link>
                 </li>
               </ul>
