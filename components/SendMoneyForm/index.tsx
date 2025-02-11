@@ -1,10 +1,10 @@
 "use client";
 import React, { ReactNode } from "react";
 import { Icon } from "@iconify/react";
-import { Autocomplete, AutocompleteItem } from "@heroui/autocomplete";
 import { Image } from "@heroui/image";
 import { Input } from "@heroui/input";
 import { Divider } from "@heroui/divider";
+import { Select, SelectItem } from "@heroui/select";
 
 import useSendMoneyForm from "./useSendMoneyForm";
 
@@ -47,7 +47,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
           <small className="text-primary-400">Amount you are sending</small>
 
           <div className="flex items-center gap-3  ">
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-1 w-full">
               <div className="text-2xl font-medium clash-display-font text-primary">
                 {selectedCurrency.symbol}
               </div>
@@ -64,29 +64,27 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 onValueChange={(val) => setAmountToSend(Number(val))}
               />
             </div>
-            <Autocomplete
+            <Select
               aria-label="currency"
               className=" max-w-36 w-36 bg-transparent"
-              classNames={{ base: "p-0" }}
+              classNames={{}}
               isRequired={true}
-              selectedKey={currencyKey}
+              selectedKeys={[currencyKey]}
+              size="sm"
               startContent={
                 <Image
                   alt="currency image"
-                  className=" w-20"
                   radius="full"
-                  sizes="xl"
                   src={selectedCurrency.icon}
                 />
               }
               validationBehavior="native"
               variant="flat"
-              onSelectionChange={handleCurrencyChange}
+              onChange={(e) => handleCurrencyChange(e.target.value)}
             >
               {allCurrencies.map((currency) => (
-                <AutocompleteItem
+                <SelectItem
                   key={currency.id}
-                  className=" capitalize "
                   startContent={
                     <Image
                       alt="currency image"
@@ -96,9 +94,9 @@ const SendMoneyForm = ({ title, action }: Props) => {
                   }
                 >
                   {currency.abbreviation}
-                </AutocompleteItem>
+                </SelectItem>
               ))}
-            </Autocomplete>
+            </Select>
           </div>
         </div>
         <Icon className="text-primary-400 text-xl" icon="ri:swap-fill" />
@@ -122,29 +120,27 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 ).toLocaleString()}
               </div>
             </div>
-            <Autocomplete
+            <Select
               aria-label="currency"
-              className=" max-w-36  bg-transparent"
-              classNames={{ base: "p-0" }}
+              className=" max-w-36 w-36 bg-transparent"
+              classNames={{}}
               isRequired={true}
-              selectedKey={currencyKey2}
+              selectedKeys={[currencyKey2]}
+              size="sm"
               startContent={
                 <Image
                   alt="currency image"
-                  className=" w-20"
                   radius="full"
-                  sizes="xl"
                   src={selectedCurrency2.icon}
                 />
               }
               validationBehavior="native"
               variant="flat"
-              onSelectionChange={handleCurrencyChange2}
+              onChange={(e) => handleCurrencyChange2(e.target.value)}
             >
               {allCurrencies.map((currency) => (
-                <AutocompleteItem
+                <SelectItem
                   key={currency.id}
-                  className=" capitalize "
                   startContent={
                     <Image
                       alt="currency image"
@@ -154,9 +150,9 @@ const SendMoneyForm = ({ title, action }: Props) => {
                   }
                 >
                   {currency.abbreviation}
-                </AutocompleteItem>
+                </SelectItem>
               ))}
-            </Autocomplete>
+            </Select>
           </div>
         </div>
 

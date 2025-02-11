@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useCallback, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import AutoScroll from "embla-carousel-auto-scroll";
@@ -32,18 +32,35 @@ const CurrencySlider = () => {
 };
 
 const CurrencyRow = ({ index }: { index: number }) => {
+  const autoplayRef = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false }),
+  );
+
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 1, stopOnInteraction: false }),
+    autoplayRef.current,
     AutoScroll({
       playOnInit: true,
-      speed: 0.25,
+      speed: 1.5,
       stopOnInteraction: false,
       direction: index % 2 === 0 ? "forward" : "backward",
     }),
   ]);
 
+  const handleMouseEnter = useCallback(() => {
+    autoplayRef.current.stop();
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    autoplayRef.current.play();
+  }, []);
+
   return (
-    <div ref={emblaRef} className="overflow-hidden">
+    <div
+      ref={emblaRef}
+      className="overflow-hidden"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="flex gap-4">
         {[...slides, ...slides].map((flag, idx) => (
           <Chip
