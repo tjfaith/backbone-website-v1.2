@@ -96,6 +96,7 @@ function useNavbar() {
     currentPath,
     changeReady,
     showLightNav,
+    setIsMenuOpen,
     handleMenuToggle,
   };
 }

@@ -2,12 +2,15 @@ export { default as Navbar } from "./Navbar";
 export { default as Footer } from "./Footer";
 export { default as ThemeSwitch } from "./ThemeSwitch";
 export { default as BackboneLogo } from "./BackboneLogo";
-export { default as CustomButton } from "./CustomButton";
 export { default as ViewImage } from "./ViewImage";
 export { default as Socials } from ".//Socials";
 export { default as SocialLayout } from "./SocialLayout";
 export { default as DigitalTransaction } from "./DigitalTransaction";
 export { default as PreLoader } from "./PreLoader";
+
+//..... UI
+export { default as CustomButton } from "./UI/CustomButton";
+export { default as CustomDropdown } from "./UI/CustomDropdown";
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";

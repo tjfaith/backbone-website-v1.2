@@ -9,7 +9,7 @@ import { Select, SelectItem } from "@heroui/select";
 import useSendMoneyForm from "./useSendMoneyForm";
 
 import { allCurrencies, currencyConverter } from "@/app/utils";
-import CustomButton from "@/components/CustomButton";
+import CustomButton from "@/components/UI/CustomButton";
 
 interface Props {
   title: ReactNode | string;
@@ -116,8 +116,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                   currencyConverter(
                     Number(amountToSend),
                     selectedCurrency2?.abbreviation,
-                    selectedCurrency?.abbreviation,
-                  ),
+                    selectedCurrency?.abbreviation
+                  )
                 ).toLocaleString()}
               </div>
             </div>
@@ -173,8 +173,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 currencyConverter(
                   1,
                   selectedCurrency2?.abbreviation,
-                  selectedCurrency?.abbreviation,
-                ),
+                  selectedCurrency?.abbreviation
+                )
               ).toLocaleString()}{" "}
               {selectedCurrency.abbreviation}
             </span>
