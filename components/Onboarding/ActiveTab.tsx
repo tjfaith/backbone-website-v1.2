@@ -44,7 +44,7 @@ const ActiveTab = ({ step, activeStep, showLine }: Props) => {
       )}
       {showLine && (
         <hr
-          className={`${currentStep !== "step1" && currentStep !== "step4" ? "sm:block hidden" : "block"} w-full border-t-2 ${completedSteps.includes(activeStep) ? "border-success" : 'border-primary-100"'} mx-4`}
+          className={` mx-4 w-full border-t-2 ${currentStep !== "step1" && currentStep !== "step4" ? "sm:block hidden" : "block"}  ${completedSteps.includes(activeStep) ? "border-success" : 'border-primary-100"'}`}
         />
       )}
     </>
