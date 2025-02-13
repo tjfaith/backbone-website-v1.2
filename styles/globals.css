@@ -16,6 +16,14 @@ select {
   font-size: 16px;
 }
 
+.PhoneInputCountryIcon{
+  @apply !rounded-full overflow-hidden !border-none min-h-5 h-5 min-w-5 object-cover
+}
+
+.PhoneInputCountryIcon svg{
+  @apply w-full h-full object-cover
+}
+
 @font-face {
   font-family: "Clash Display";
   src: url("/assets/fonts/ClashDisplay-Bold.woff2") format("woff2");

@@ -1,15 +1,13 @@
 "use client";
 import { Input, Textarea } from "@heroui/input";
 import React from "react";
-import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import flags from "react-phone-number-input/flags";
 import { Link } from "@heroui/link";
 
 import useContactUs from "./useContactUs";
 
 import { E164Number } from "@/types";
-import { CustomButton } from "@/components";
+import { CustomButton, CustomPhoneInput } from "@/components";
 
 const ContactForm = () => {
   const { handleSubmit, setMessageData, loading, messageData } = useContactUs();
@@ -69,32 +67,16 @@ const ContactForm = () => {
           />
 
           <div className=" flex-grow md:w-auto w-full ">
-            <div className={`font-medium text-primary mb-2 text-sm`}>
-              <span>Phone number (Optional)</span>
-            </div>
-            <PhoneInput
-              containerComponentProps={{
-                className: `flex pl-3 border-2  rounded-lg box-border w-full  shadow-xs text-sm border-gray-200 dark:border-background-500 dark:hover:border-[#5E5F68] hover:border-[#A1A1AA] shadow-sm rounded-xl`,
-              }}
-              countryCallingCodeEditable={false}
-              countrySelectProps={{
-                className: " rounded-lg",
-              }}
-              defaultCountry="NG"
-              flags={flags}
-              international={true}
-              limitMaxLength={true}
-              numberInputProps={{
-                className: `w-xs bg-transparent border-l p-2 border-gray-200 dark:border-background-500 dark:hover:border-[#5E5F68] hover:border-[#A1A1AA] focus:outline-none`,
-              }}
-              rules={{ required: true }}
-              value={messageData.phoneNumber}
-              onChange={(value: E164Number | undefined) =>
+            <CustomPhoneInput
+              containerClass="rounded-lg"
+              label="Phone number (Optional)"
+              setValue={(value: E164Number | undefined) =>
                 setMessageData((prev) => ({
                   ...prev,
                   phoneNumber: value,
                 }))
               }
+              value={messageData.phoneNumber}
             />
           </div>
         </div>
