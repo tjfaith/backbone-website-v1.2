@@ -130,7 +130,7 @@ const HeroContent = ({
             <CustomButton
               as={Link}
               fullWidth={false}
-              href="/#get_started"
+              href="/onboarding"
               variant={showLightBtn ? "light" : "flat"}
             >
               Get Started Now

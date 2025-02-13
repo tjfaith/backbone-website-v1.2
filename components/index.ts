@@ -11,6 +11,9 @@ export { default as PreLoader } from "./PreLoader";
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";
 export { default as CustomDropdown } from "./UI/CustomDropdown";
+export { default as CustomCheckbox } from "./UI/CustomCheckbox";
+export { default as CustomPhoneInput } from "./UI/CustomPhoneInput";
+export { default as CustomFileUploader } from "./UI/CustomFileUploader";
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";
@@ -65,3 +68,17 @@ export { default as Subscribe } from "./Blog/Subscribe";
 // Contact
 export { default as ContactForm } from "./ContactUs/ContactForm";
 export { default as ContactInfo } from "./ContactUs/ContactInfo";
+
+// Onboarding
+export { default as OnboardingTab } from "./Onboarding/OnboardingTab";
+export { default as AccountType } from "./Onboarding/AccountType";
+export { default as ActiveTab } from "./Onboarding/ActiveTab";
+export { default as FormSubmitted } from "./Onboarding/FormSubmitted";
+
+// Onboarding --corporate
+export { default as CompanyInformation } from "./Onboarding/Corporate/CompanyInformation";
+export { default as CorporateDocument } from "./Onboarding/Corporate/CorporateDocument";
+
+// Onboarding --individual
+export { default as PersonalInformation } from "./Onboarding/Individual/PersonalInformation";
+export { default as IndividualDocument } from "./Onboarding/Individual/IndividualDocument";

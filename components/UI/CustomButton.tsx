@@ -9,6 +9,7 @@ import { Spinner } from "@/public/assets";
 import { CustomButtonProps } from "@/types";
 
 const CustomButton = ({
+  lightBtn = true,
   children,
   color = "primary",
   type = "button",
@@ -32,7 +33,7 @@ const CustomButton = ({
     <Button
       as={as}
       className={cn(
-        theme == "light" || isSSR
+        (theme == "light" || isSSR) && lightBtn
           ? "bg-gray-200"
           : "bg-gradient-to-t  from-[#000] via-[#242628] to-[#4C4F55] text-primary",
         "flex items-center w-full p-[1px] text-sm ",
@@ -51,10 +52,10 @@ const CustomButton = ({
       onPress={onPress}
     >
       <div
-        className={`${theme === "light" || isSSR ? "bg-gray-200" : "bg-gradient-to-t"} from-[#242628]/50 via-[#4C4F55]/50 to-[#646671] w-full  rounded-md h-full  p-[1px]`}
+        className={`${(theme === "light" || isSSR) && lightBtn ? "bg-gray-200" : "bg-gradient-to-t"} from-[#242628]/50 via-[#4C4F55]/50 to-[#646671] w-full  rounded-md h-full  p-[1px]`}
       >
         <div
-          className={`${theme === "light" || isSSR ? "bg-gray-100 text-primary dark:text-background" : "bg-gradient-to-t text-background dark:text-primary"}  from-[#000000]/10 via-[#242628] to-[#4C4F55] h-full flex items-center justify-center p-3 w-full rounded-md`}
+          className={`${(theme === "light" || isSSR) && lightBtn ? "bg-gray-100 text-primary dark:text-background" : "bg-gradient-to-t text-background dark:text-primary"}  from-[#000000]/10 via-[#242628] to-[#4C4F55] h-full flex items-center justify-center p-3 w-full rounded-md`}
         >
           {!isLoading ? (
             children
