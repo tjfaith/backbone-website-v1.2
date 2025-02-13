@@ -12,7 +12,7 @@ interface Props {
 
 const ActiveTab = ({ step, activeStep, showLine }: Props) => {
   const { stepTitle, currentStep, completedSteps } = useSelector(
-    (state: RootState) => state.onboarding,
+    (state: RootState) => state.onboarding
   );
 
   return (
@@ -22,10 +22,10 @@ const ActiveTab = ({ step, activeStep, showLine }: Props) => {
           <div className="rounded-full min-h-5 h-4 w-5 border-4 border-primary" />
 
           <div>
-            <div className="text-primary-400 text-xs font-medium whitespace-nowrap">
+            <div className="text-primary-400 md:text-xs text-[10px] font-medium whitespace-nowrap">
               {step}
             </div>
-            <div className="text-primary md:text-base text-sm font-normal whitespace-nowrap">
+            <div className="text-primary md:text-base text-xs font-normal whitespace-nowrap">
               {stepTitle}
             </div>
           </div>
@@ -44,7 +44,7 @@ const ActiveTab = ({ step, activeStep, showLine }: Props) => {
       )}
       {showLine && (
         <hr
-          className={`w-full border-t-2 ${completedSteps.includes(activeStep) ? "border-success" : 'border-primary-100"'} mx-4`}
+          className={`${currentStep !== "step1" && currentStep !== "step4" ? "hidden" : "block"} w-full border-t-2 ${completedSteps.includes(activeStep) ? "border-success" : 'border-primary-100"'} mx-4`}
         />
       )}
     </>
