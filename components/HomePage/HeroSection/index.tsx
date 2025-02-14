@@ -121,7 +121,7 @@ const HeroSection = () => {
       // Swipe right
       setDirection("left");
       setActiveIndex(
-        (prevIndex) => (prevIndex - 1 + heroBgs.length) % heroBgs.length
+        (prevIndex) => (prevIndex - 1 + heroBgs.length) % heroBgs.length,
       );
     }
   };
