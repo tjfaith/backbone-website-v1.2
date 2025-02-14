@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useIsSSR } from "@react-aria/ssr";
 
 import { BlogServices } from "@/app/api";
 import { RootState } from "@/app/store";
@@ -41,10 +40,9 @@ function useBlog() {
   };
 
   const { theme } = useTheme();
-  const isSSR = useIsSSR();
 
   useEffect(() => {
-    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
+    dispatch(setShowLightNav(true));
   }, [theme]);
 
   return {

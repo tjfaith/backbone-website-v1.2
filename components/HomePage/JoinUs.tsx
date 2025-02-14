@@ -45,7 +45,7 @@ const JoinUs = () => {
             <Divider className="bg-background" />
           </div>
           <div className="clash-display-font text-3xl lg:text-5xl mt-4 font-medium text-background dark:text-background-200 lg:max-w-xs pr-3 leading-tight  tracking-wider">
-            Join us to Redefine the Way You Make Payment!
+            Join us to Redefine the Way You Make Payments!
           </div>
         </div>
         <Spacer className="md:block hidden" y={36} />
@@ -75,8 +75,10 @@ const JoinUs = () => {
               className="text-background text-sm font-normal lg:tracking-wide"
               title="Individuals"
             >
-              We streamline payments for individuals, businesses, and
-              nonprofits, creating possibilities you never thought possible.
+              We facilitate people transact around the globe with greater ease
+              by providing them with advanced multi-currency accounts and
+              bespoke payment solutions. Allowing people to effortlessly trade,
+              pay, and connect around the world.
             </Tab>
             <Tab
               key="businesses"
@@ -88,16 +90,6 @@ const JoinUs = () => {
               transactions to tailored payment options, we help businesses
               thrive in an increasingly digital world.
             </Tab>
-            {/* <Tab
-              key="nonprofits"
-              className="text-background text-sm font-normal lg:tracking-wide"
-              title="Nonprofits"
-            >
-              Maximize your impact with our streamlined payment solutions
-              designed for nonprofits. Simplify donations, enhance donor
-              engagement, and focus more on driving meaningful change for the
-              communities you serve.
-            </Tab> */}
           </Tabs>
         </div>
       </div>
@@ -107,12 +99,6 @@ const JoinUs = () => {
         data-aos="fade-up"
       >
         <div className="relative flex flex-col items-center pt-32 pb-10">
-          {/* <button
-          className="absolute inset-x-0 top-20  px-6 transition-all duration-400 ease-in-out "
-          onClick={() => setSelectedTab(orderedComponents[2].key)}
-        >
-          {orderedComponents[2].component}
-        </button> */}
           <button
             className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out "
             onClick={() => setSelectedTab(orderedComponents[1].key)}

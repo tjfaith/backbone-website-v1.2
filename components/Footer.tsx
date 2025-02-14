@@ -27,13 +27,22 @@ const Footer = () => {
                   S.95, Tafawa Balewa Square, Race Course, Onikan, Lagos.
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <Icon icon="ic:sharp-email" />
+              <div className="flex md:items-center gap-3 md:flex-row flex-col">
+                <div className="flex items-center gap-2">
+                  <Icon icon="ic:sharp-email" />
+                  <Link
+                    className="transition-all duration-300 ease-in-out dark:text-primary text-background hover:text-primary-200"
+                    href="mailto:sales@mybackbone.io"
+                  >
+                    <span>sales@mybackbone.io</span>,
+                  </Link>
+                </div>
+
                 <Link
-                  className="transition-all duration-300 ease-in-out dark:text-primary text-background hover:text-primary-200"
-                  href="mailto:sales@usecotton.io"
+                  className="transition-all md:mr-0 md:ml-0 ml-6 duration-300 ease-in-out dark:text-primary text-background hover:text-primary-200"
+                  href="mailto:hello@mybackbone.io"
                 >
-                  <span>sales@mybackbone.io</span>
+                  <span>hello@mybackbone.io</span>
                 </Link>
               </div>
               <div className="flex items-center gap-2">
@@ -47,7 +56,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-12">
             <div className="text-background dark:text-primary space-y-4">
               <div className="text-xl font-medium ">Company</div>
               <ul className=" space-y-4">
@@ -108,9 +117,17 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/#"
+                    href="/privacy-policy"
                   >
                     Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/cookie-policy"
+                  >
+                    Cookie policy
                   </Link>
                 </li>
                 <li>
@@ -122,6 +139,44 @@ const Footer = () => {
                     Terms of Service
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/incorporation "
+                  >
+                    Incorporation
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="text-background dark:text-primary space-y-4">
+              <div className="text-xl font-medium ">Compliance</div>
+              <ul className=" space-y-4">
+                <li>
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/license"
+                  >
+                    License
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/security"
+                  >
+                    Security
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/aml"
+                  >
+                    AML
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -129,7 +184,7 @@ const Footer = () => {
       </div>
       <Spacer y={28} />
       <Divider className="bg-background dark:bg-primary" />
-      <div className=" mt-4 page-max-width px-6 pb-10 ">
+      <div className=" mt-4 page-max-width px-6 md:pb-10 pb-20 ">
         Copyright &copy; {new Date().getFullYear()}, Backbone Inc.
       </div>
     </footer>

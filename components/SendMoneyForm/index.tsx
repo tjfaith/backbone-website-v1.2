@@ -48,13 +48,14 @@ const SendMoneyForm = ({ title, action }: Props) => {
 
           <div className="flex md:flex-row flex-col-reverse items-center gap-3 md:mt-0 mt-2  ">
             <div className="flex items-center space-x-1 w-full">
-              <div className="text-2xl font-medium clash-display-font text-primary">
+              <div className="text-2xl font-medium clash-display-font text-primary ml-2 md:ml-0">
                 {selectedCurrency.symbol}
               </div>
               <Input
                 classNames={{
-                  inputWrapper: "bg-transparent px-1 shadow-none",
-                  input: "text-3xl clash-display-font font-medium text-base",
+                  inputWrapper:
+                    "bg-transparent px-1 shadow-none text-xs text-red-500",
+                  input: " clash-display-font font-medium text-2xl  ",
                 }}
                 isRequired={true}
                 size="sm"
@@ -67,7 +68,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
             </div>
             <Select
               aria-label="currency"
-              className=" md:max-w-36 md:w-36 w-full bg-transparent"
+              className=" md:max-w-36 md:w-44 w-full bg-transparent"
               classNames={{}}
               isRequired={true}
               selectedKeys={[currencyKey]}
@@ -107,11 +108,11 @@ const SendMoneyForm = ({ title, action }: Props) => {
           <small className="text-primary-400">Amount receiver gets</small>
 
           <div className="flex items-center md:flex-row flex-col-reverse md:mt-0 mt-2 gap-3 ">
-            <div className="flex items-center space-x-1 w-full">
+            <div className="flex items-center space-x-2 w-full ml-5 md:ml-0">
               <div className="text-2xl font-medium clash-display-font text-primary">
                 {selectedCurrency2.symbol}
               </div>
-              <div className="text-2xl clash-display-font font-medium text-primary ">
+              <div className="text-2xl clash-display-font  font-medium text-primary ">
                 {Number(
                   currencyConverter(
                     Number(amountToSend),
@@ -123,7 +124,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
             </div>
             <Select
               aria-label="currency"
-              className=" md:max-w-36 md:w-36 w-full bg-transparent"
+              className=" md:max-w-36 md:w-44 w-full bg-transparent"
               classNames={{}}
               isRequired={true}
               selectedKeys={[currencyKey2]}

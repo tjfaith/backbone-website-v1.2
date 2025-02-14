@@ -31,7 +31,7 @@ const BusinessesOfferings = () => {
       title: "Invoice Financing",
       description:
         "Unlock cash flow with invoice financing. Get support faster and keep your business moving forward.",
-      status: "Coming soon",
+      status: "live",
     },
     {
       icon: "ri:lock-fill",
@@ -65,7 +65,7 @@ const BusinessesOfferings = () => {
       icon: "ri:hand-coin-fill",
       title: "Physical Cards",
       description:
-        "Enjoy the convenience of a physical card linked to your Backbone wallet,",
+        "Enjoy the convenience of a physical card linked to your Backbone wallet.",
       status: "Coming soon",
     },
   ];

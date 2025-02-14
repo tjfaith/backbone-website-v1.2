@@ -13,18 +13,22 @@ const Subscribe = () => {
     <form className="flex items-start gap-2" onSubmit={handleSubscribe}>
       <Input
         isRequired
-        className="text-white"
         classNames={{
-          input: "text-base !text-white bg-transparent",
+          input:
+            "text-base  bg-transparent dark:!text-background text-primary focus-within:placeholder:text-primary",
           inputWrapper:
-            "bg-primary-900 !text-white hover:bg-primary-900 focus-within:!bg-primary-900",
-          innerWrapper: "bg-transparent !text-white",
-          mainWrapper: "!text-white",
+            "dark:bg-primary-900 bg-background  hover:bg-primary-900 dark:focus-within:!bg-primary-900",
+          // innerWrapper: "bg-transparent",
+          // mainWrapper: "",
         }}
         placeholder="Enter your email"
         startContent={
-          <Icon className="text-white text-xl" icon="ri:mail-fill" />
+          <Icon
+            className="dark:text-background text-primary text-xl"
+            icon="ri:mail-fill"
+          />
         }
+        type="email"
         validationBehavior="native"
         value={email}
         variant="flat"

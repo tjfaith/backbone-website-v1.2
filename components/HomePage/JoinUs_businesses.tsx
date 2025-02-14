@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import { Link } from "@heroui/link";
 
 import { Img5 } from "@/public/assets";
 
@@ -22,10 +23,13 @@ const JoinUsBusinesses = ({ hideCaption = true }: Props) => {
           Manage bulk payments, automate transactions, and grow globally.
         </div>
         {!hideCaption && (
-          <div className="flex items-center space-x-1 text-xs md:text-base font-medium dark:text-primary ">
+          <Link
+            className="flex items-center space-x-1 text-xs md:text-base font-medium dark:text-primary "
+            href="/offerings/businesses"
+          >
             <span>Explore business solutions</span>
             <Icon icon="ri:arrow-right-s-line" />
-          </div>
+          </Link>
         )}
       </div>
     </div>

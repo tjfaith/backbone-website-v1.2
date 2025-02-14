@@ -7,6 +7,7 @@ export { default as Socials } from ".//Socials";
 export { default as SocialLayout } from "./SocialLayout";
 export { default as DigitalTransaction } from "./DigitalTransaction";
 export { default as PreLoader } from "./PreLoader";
+export { default as ChatButton } from "./ChatButton";
 
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";
@@ -64,6 +65,7 @@ export { default as BlogCategory } from "./Blog/BlogCategory";
 export { default as BlogSubscribe } from "./Blog/BlogSubscribe";
 export { default as LatestBlog } from "./Blog/LatestBlog";
 export { default as Subscribe } from "./Blog/Subscribe";
+export { default as BlogHero } from "./Blog/BlogHero";
 
 // Contact
 export { default as ContactForm } from "./ContactUs/ContactForm";

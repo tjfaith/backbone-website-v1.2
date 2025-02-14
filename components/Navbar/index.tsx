@@ -85,10 +85,10 @@ const Navbar = () => {
                 >
                   <DropdownTrigger>
                     <Button
-                      className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"} bg-transparent text-base px-1 
+                      className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"}  bg-transparent text-base px-1 
                       ${
                         item.menu.some((sub) => sub?.href === currentPath) &&
-                        "bg-background-200 text-primary rounded-xl"
+                        "bg-background-200 text-primary rounded-xl px-3"
                       }
                       
                       `}

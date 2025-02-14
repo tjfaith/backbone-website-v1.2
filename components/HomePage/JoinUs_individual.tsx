@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import React from "react";
+import { Link } from "@heroui/link";
 
 import { Img4 } from "@/public/assets";
 
@@ -23,10 +24,13 @@ const JoinUsIndividual = ({ hideCaption = true }: Props) => {
           Simplify everyday payments, from money transfers to bill payments.
         </div>
         {!hideCaption && (
-          <div className="flex items-center space-x-1 text-xs md:text-base font-medium dark:text-primary text-background">
+          <Link
+            className="flex items-center space-x-1 text-xs md:text-base font-medium dark:text-primary text-background"
+            href="/offerings/individual"
+          >
             <span>Get started as an individual</span>
             <Icon icon="ri:arrow-right-s-line" />
-          </div>
+          </Link>
         )}
       </div>
     </div>

@@ -148,7 +148,7 @@ const HeroContent = ({
             href="/contact-us"
             variant="light"
           >
-            Contact sales
+            Contact Sales
           </Button>
         </div>
       </div>
