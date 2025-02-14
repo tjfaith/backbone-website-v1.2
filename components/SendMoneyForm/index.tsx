@@ -117,8 +117,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                   currencyConverter(
                     Number(amountToSend),
                     selectedCurrency2?.abbreviation,
-                    selectedCurrency?.abbreviation
-                  )
+                    selectedCurrency?.abbreviation,
+                  ),
                 ).toLocaleString()}
               </div>
             </div>
@@ -174,8 +174,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 currencyConverter(
                   1,
                   selectedCurrency2?.abbreviation,
-                  selectedCurrency?.abbreviation
-                )
+                  selectedCurrency?.abbreviation,
+                ),
               ).toLocaleString()}{" "}
               {selectedCurrency.abbreviation}
             </span>

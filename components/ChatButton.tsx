@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
 
 export default function ChatButton() {
   const phoneNumber = "+2347038109960";
   const encodedMessage = encodeURIComponent(
-    "👋Hello! I'm interested in your services."
+    "👋Hello! I'm interested in your services.",
   );
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

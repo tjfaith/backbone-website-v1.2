@@ -28,7 +28,7 @@ const BlogPage = () => {
     <>
       <BlogHero />
       <div className=" min-h-screen pt-10">
-        <div className="page-max-width mb-2">
+        <div className="page-max-width">
           <div className="">
             {blogLoading ? (
               <div className="flex items-center justify-center  h-screen-60 ">
