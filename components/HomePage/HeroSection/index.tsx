@@ -121,13 +121,15 @@ const HeroSection = () => {
       // Swipe right
       setDirection("left");
       setActiveIndex(
-        (prevIndex) => (prevIndex - 1 + heroBgs.length) % heroBgs.length,
+        (prevIndex) => (prevIndex - 1 + heroBgs.length) % heroBgs.length
       );
     }
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-primary">
+    <div
+      className={`relative w-full min-h-screen bg-primary  ${activeIndex !== 0 && "overflow-hidden"}`}
+    >
       <AnimatePresence>
         <motion.div
           key={activeIndex}

@@ -24,8 +24,8 @@ const Testimonies = () => {
   ];
 
   return (
-    <div className=" bg-background dark:bg-[#0E121B]">
-      <div className="page-max-width px-6  py-16 text-primary">
+    <div className=" bg-primary dark:bg-[#0E121B]">
+      <div className="page-max-width px-6  py-16 text-background dark:text-primary">
         <div className=" mb-10" data-aos="fade-up">
           <div className="clash-display-font text-3xl md:text-5xl tracking-tight mb-4">
             What are people saying about us
