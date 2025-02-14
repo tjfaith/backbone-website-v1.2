@@ -3,13 +3,13 @@ import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
 import { Toaster } from "react-hot-toast";
-import Script from "next/script";
+// import Script from "next/script";
 
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Footer, Navbar, PreLoader } from "@/components";
+import { Footer, Navbar, PreLoader, ChatButton } from "@/components";
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +42,7 @@ export default function RootLayout({
           name="viewport"
         />
 
-        <Script id="tawkto">
+        {/* <Script id="tawkto">
           {`
              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -54,10 +54,11 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
           `}
-        </Script>
+        </Script> */}
       </head>
       <body className={fontSans.className}>
         <PreLoader />
+        <ChatButton />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Navbar />
           <main className="dark:bg-background-200">{children}</main>

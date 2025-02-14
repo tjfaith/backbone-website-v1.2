@@ -31,7 +31,7 @@ const BusinessesOfferings = () => {
       title: "Invoice Financing",
       description:
         "Unlock cash flow with invoice financing. Get support faster and keep your business moving forward.",
-      status: "Coming soon",
+      status: "live",
     },
     {
       icon: "ri:lock-fill",

@@ -7,6 +7,7 @@ export { default as Socials } from ".//Socials";
 export { default as SocialLayout } from "./SocialLayout";
 export { default as DigitalTransaction } from "./DigitalTransaction";
 export { default as PreLoader } from "./PreLoader";
+export { default as ChatButton } from "./ChatButton";
 
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";

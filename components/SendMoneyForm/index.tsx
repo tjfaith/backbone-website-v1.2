@@ -108,7 +108,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
           <small className="text-primary-400">Amount receiver gets</small>
 
           <div className="flex items-center md:flex-row flex-col-reverse md:mt-0 mt-2 gap-3 ">
-            <div className="flex items-center space-x-1 w-full ml-5 md:ml-0">
+            <div className="flex items-center space-x-2 w-full ml-5 md:ml-0">
               <div className="text-2xl font-medium clash-display-font text-primary">
                 {selectedCurrency2.symbol}
               </div>
@@ -117,8 +117,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                   currencyConverter(
                     Number(amountToSend),
                     selectedCurrency2?.abbreviation,
-                    selectedCurrency?.abbreviation,
-                  ),
+                    selectedCurrency?.abbreviation
+                  )
                 ).toLocaleString()}
               </div>
             </div>
@@ -174,8 +174,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 currencyConverter(
                   1,
                   selectedCurrency2?.abbreviation,
-                  selectedCurrency?.abbreviation,
-                ),
+                  selectedCurrency?.abbreviation
+                )
               ).toLocaleString()}{" "}
               {selectedCurrency.abbreviation}
             </span>

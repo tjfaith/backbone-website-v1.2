@@ -156,9 +156,17 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/license-security"
+                    href="/license"
                   >
-                    License & Security
+                    License
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-background/70 dark:text-primary/70"
+                    href="/security"
+                  >
+                    Security
                   </Link>
                 </li>
                 <li>
@@ -176,7 +184,7 @@ const Footer = () => {
       </div>
       <Spacer y={28} />
       <Divider className="bg-background dark:bg-primary" />
-      <div className=" mt-4 page-max-width px-6 pb-10 ">
+      <div className=" mt-4 page-max-width px-6 md:pb-10 pb-20 ">
         Copyright &copy; {new Date().getFullYear()}, Backbone Inc.
       </div>
     </footer>
