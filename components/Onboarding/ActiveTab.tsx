@@ -12,7 +12,7 @@ interface Props {
 
 const ActiveTab = ({ step, activeStep, showLine }: Props) => {
   const { stepTitle, currentStep, completedSteps } = useSelector(
-    (state: RootState) => state.onboarding
+    (state: RootState) => state.onboarding,
   );
 
   return (

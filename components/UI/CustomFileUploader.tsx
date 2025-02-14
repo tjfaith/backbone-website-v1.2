@@ -68,7 +68,7 @@ const CustomFileUploader = ({
     } else if (file.size > MAX_FILE_SIZE) {
       fileError = true;
       setFileError(
-        `File "${file.name}" exceeds the ${formatFileSize(MAX_FILE_SIZE)} limit.`
+        `File "${file.name}" exceeds the ${formatFileSize(MAX_FILE_SIZE)} limit.`,
       );
     }
 

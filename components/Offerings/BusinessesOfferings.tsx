@@ -65,7 +65,7 @@ const BusinessesOfferings = () => {
       icon: "ri:hand-coin-fill",
       title: "Physical Cards",
       description:
-        "Enjoy the convenience of a physical card linked to your Backbone wallet,",
+        "Enjoy the convenience of a physical card linked to your Backbone wallet.",
       status: "Coming soon",
     },
   ];

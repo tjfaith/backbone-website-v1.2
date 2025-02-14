@@ -14,8 +14,8 @@ const WhyBackbone = () => {
         <div className=" md:max-w-3xl text-center mx-auto mb-10">
           <div className="text-aqua text-base font-medium">Why Backbone?</div>
           <div className="text-[#FFFFFF] text-medium md:text-2xl font-medium">
-            Whether it&apos;s cross-border transfers, global business scaling,
-            or donations, we deliver more than just payments.
+            Whether it&apos;s crossborder transfers, global business scaling, or
+            donations, we deliver more than just payments.
           </div>
         </div>
 
@@ -32,7 +32,7 @@ const WhyBackbone = () => {
               </div>
               <div className=" text-base font-normal tracking-wide">
                 We offer fast and efficient transactions tailored to your unique
-                timeline, ensuring that your business operates smoothly and on
+                timelines, ensuring that your business operates smoothly and on
                 schedule.
               </div>
             </div>

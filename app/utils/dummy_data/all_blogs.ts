@@ -19,7 +19,7 @@ export const allBlog: AllBlogs[] = [
       "Want To Celebrate Christmas Without Limits? Here’s How Backbone Simplifies Your Holiday Spending",
     cover_image: Blog1.src,
     keywords:
-      "Holiday season, Financial stress, Festive vibes, Send money, Nigeria, Buying gifts, International transactions, Small business, December rush, Backbone, Nigerian festive season, Financial gymnastics, Traditional banking, High fees, Transaction delays, Cross-border payments, Multi-currency wallet, Christmas Jollof, Bank transfers, Transaction fees, Gift shopping, Forex rates, Entrepreneurs, Sales surge, API integrations, Payment solutions, Blockchain technology, Digital scams, African transactions, Exorbitant costs, Economic barriers, Financial freedom, Instant transactions, Interconnected economy, Transaction costs, Empowering businesses, Financial potential, Celebrating without limits, Seamless transactions, Secure platform",
+      "Holiday season, Financial stress, Festive vibes, Send money, Nigeria, Buying gifts, International transactions, Small business, December rush, Backbone, Nigerian festive season, Financial gymnastics, Traditional banking, High fees, Transaction delays, Crossborder payments, Multi-currency wallet, Christmas Jollof, Bank transfers, Transaction fees, Gift shopping, Forex rates, Entrepreneurs, Sales surge, API integrations, Payment solutions, Blockchain technology, Digital scams, African transactions, Exorbitant costs, Economic barriers, Financial freedom, Instant transactions, Interconnected economy, Transaction costs, Empowering businesses, Financial potential, Celebrating without limits, Seamless transactions, Secure platform",
     description: "",
     blog_content: ``,
   },
@@ -230,10 +230,10 @@ export const allBlog: AllBlogs[] = [
     category: { id: "1", name: "marketing" },
     created_at: "2025-01-27 12:24:13 PM",
     title:
-      "Understanding Cross-border Payment Processing Delays: What's Really Going On?",
+      "Understanding Crossborder Payment Processing Delays: What's Really Going On?",
     cover_image: Blog7.src,
     keywords:
-      "international payments, cross-border transactions, sending money abroad, intermediaries, regulatory hurdles, time zones, settlement systems, trapped liquidity, payment fees, e-wallets, modern payment platforms, real-time tracking, payment timing, financial regulations, Backbone, faster transfers, global money transfer, international remittance, strategic payment planning, evolving financial technology, reducing transaction costs, global financial systems",
+      "international payments, crossborder transactions, sending money abroad, intermediaries, regulatory hurdles, time zones, settlement systems, trapped liquidity, payment fees, e-wallets, modern payment platforms, real-time tracking, payment timing, financial regulations, Backbone, faster transfers, global money transfer, international remittance, strategic payment planning, evolving financial technology, reducing transaction costs, global financial systems",
     description: "",
     blog_content: `
            <p style='margin:0in;margin-bottom:.0001pt;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>Ever wonder why sending money across borders feels like watching paint dry? In our hyper-connected world, where you can video chat with someone on the other side of the planet instantly, why does moving money internationally still feel like it&apos;s stuck in the last century?</p>
@@ -280,7 +280,7 @@ export const allBlog: AllBlogs[] = [
 <p style='margin:0in;margin-bottom:.0001pt;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>&nbsp;</p>
 <h3 style='margin-top:16.0pt;margin-right:0in;margin-bottom:4.0pt;margin-left:0in;line-height:115%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;'>Looking to the Future</h3>
 <p style='margin:0in;margin-bottom:.0001pt;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>&nbsp;</p>
-<p style='margin:0in;margin-bottom:.0001pt;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>The landscape of international payments is evolving rapidly. While we still face challenges, new technologies and innovative solutions Like<a href="https://docs.google.com/document/d/13vmZTnDgjSyIKX-45YDumjLoPMuTK0yhfLn5exKOVuE/edit?tab=t.0"><span style="color:#1155CC;">&nbsp;</span></a><a href="https://docs.google.com/document/d/13vmZTnDgjSyIKX-45YDumjLoPMuTK0yhfLn5exKOVuE/edit?tab=t.0"><strong><span style="color:#1155CC;">Backbone</span></strong></a> are emerging to make cross-border transactions smoother and faster. The key is understanding these hurdles and planning accordingly. Whether you&apos;re a business owner regularly sending money abroad or an individual making occasional international transfers, being informed and strategic about your approach can help you navigate these waters more effectively.</p>    
+<p style='margin:0in;margin-bottom:.0001pt;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>The landscape of international payments is evolving rapidly. While we still face challenges, new technologies and innovative solutions Like<a href="https://docs.google.com/document/d/13vmZTnDgjSyIKX-45YDumjLoPMuTK0yhfLn5exKOVuE/edit?tab=t.0"><span style="color:#1155CC;">&nbsp;</span></a><a href="https://docs.google.com/document/d/13vmZTnDgjSyIKX-45YDumjLoPMuTK0yhfLn5exKOVuE/edit?tab=t.0"><strong><span style="color:#1155CC;">Backbone</span></strong></a> are emerging to make crossborder transactions smoother and faster. The key is understanding these hurdles and planning accordingly. Whether you&apos;re a business owner regularly sending money abroad or an individual making occasional international transfers, being informed and strategic about your approach can help you navigate these waters more effectively.</p>    
     `,
   },
 

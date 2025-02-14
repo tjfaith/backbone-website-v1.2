@@ -124,7 +124,7 @@ const Hero1 = () => {
             href="/contact-us"
             variant="light"
           >
-            Contact sales
+            Contact Sales
           </Button>
         </div>
         <Image

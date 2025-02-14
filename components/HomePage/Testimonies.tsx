@@ -6,7 +6,7 @@ const Testimonies = () => {
     {
       message:
         "“Backbone made international transactions seamless for our business. The customer support and user-friendly platform have been game-changers for us.”",
-      name: "Jane Michaels",
+      name: "Emeka Ugochukwu",
       post: "Founder, Lumina Tech",
     },
     {
@@ -17,8 +17,8 @@ const Testimonies = () => {
     },
     {
       message:
-        "“Backbone has transformed how we handle cross-border payments. We now focus on growth without worrying about transaction hurdles.”",
-      name: "Sophia Green",
+        "“Backbone has transformed how we handle crossborder payments. We now focus on growth without worrying about transaction hurdles.”",
+      name: "Chukwuebuka Obinna",
       post: "COO, Greenwave Inc.",
     },
   ];

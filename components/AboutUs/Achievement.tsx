@@ -27,7 +27,7 @@ const Achievement = () => {
           </div>
           <div className="text-primary pl-2 text-xs">
             Customers and partners served with excellence in{" "}
-            {new Date().getFullYear() - 1} , and that we continue to serve.
+            {new Date().getFullYear() - 1}, and that we continue to serve.
           </div>
         </div>
         <div data-aos="fade-up">
