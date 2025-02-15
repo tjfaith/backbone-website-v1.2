@@ -25,7 +25,7 @@ const JoinUs = () => {
   ];
 
   const orderedComponents = components.sort((a, b) =>
-    a.key === selectedTab ? -1 : b.key === selectedTab ? 1 : 0,
+    a.key === selectedTab ? -1 : b.key === selectedTab ? 1 : 0
   );
 
   return (
@@ -44,7 +44,7 @@ const JoinUs = () => {
             </div>
             <Divider className="bg-background" />
           </div>
-          <div className="clash-display-font text-3xl lg:text-5xl mt-4 font-medium text-background dark:text-background-200 lg:max-w-xs pr-3 leading-tight  tracking-wider">
+          <div className="clash-display-font text-3xl lg:text-5xl mt-4 font-medium text-background dark:text-background-200 lg:max-w-xs pr-3 leading-tight tracking-wider">
             Join us to Redefine the Way You Make Payments!
           </div>
         </div>
@@ -60,14 +60,14 @@ const JoinUs = () => {
             aria-label="entity"
             className=" mt-4"
             classNames={{
-              tabList: " flex sm:flex-row flex-col",
-              tabContent:
-                "dark:text-background text-primary-200 text-lg font-medium",
-              cursor: "text-foreground-200",
+              tabList:
+                " flex sm:flex-row flex-col sm:px-1 px-5 sm:py-1 py-2 sm:bg-white/80  ",
+              tabContent: "text-primary  text-sm font-medium ",
             }}
+            radius="full"
             selectedKey={selectedTab}
             size="sm"
-            variant="light"
+            // variant="light"
             onSelectionChange={setSelectedTab}
           >
             <Tab

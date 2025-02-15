@@ -65,7 +65,7 @@ const CompanyInformation = () => {
 
   return (
     <form
-      className="bg-background p-6 rounded-xl  w-full"
+      className="bg-background p-6 rounded-xl  w-full animate__animated animate__fadeIn"
       onSubmit={handleSubmit}
     >
       <div className="text-primary md:text-2xl text-xl font-semibold">

@@ -27,7 +27,7 @@ const BlogHero = () => {
           </div>
           <div className="max-w-lg  animate__animated animate__fadeInUp animate__fast">
             <div className="mb-2 text-sm">
-              Get notifications about blog posts
+              Get notifications about our blog posts
             </div>
             <Subscribe />
           </div>

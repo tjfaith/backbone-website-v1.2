@@ -24,7 +24,7 @@ const JoinUsBusinesses = ({ hideCaption = true }: Props) => {
         </div>
         {!hideCaption && (
           <Link
-            className="flex items-center space-x-1 text-xs md:text-base font-medium dark:text-primary "
+            className="flex items-center space-x-1 text-xs md:text-base font-medium dark:text-primary text-background"
             href="/offerings/businesses"
           >
             <span>Explore business solutions</span>

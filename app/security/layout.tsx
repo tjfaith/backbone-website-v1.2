@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "License and Security",
+  title: "Security",
 };
 
-export default function LicenseSecurityLayout({
+export default function SecurityLayout({
   children,
 }: {
   children: React.ReactNode;
