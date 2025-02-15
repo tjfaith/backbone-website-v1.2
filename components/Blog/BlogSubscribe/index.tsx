@@ -11,7 +11,7 @@ const BlogSubscribe = () => {
             Subscribe to the Backbone Blog
           </div>
           <div className=" tracking-wider">
-            Get notifications about blog posts, company events and
+            Get notifications about blog our posts, company events and
             announcements, products and founder materials.
           </div>
           <Subscribe />

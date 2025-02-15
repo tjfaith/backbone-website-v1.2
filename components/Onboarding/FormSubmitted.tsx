@@ -7,7 +7,7 @@ import { CustomButton } from "@/components";
 
 const FormSubmitted = () => {
   return (
-    <div className="bg-background p-6 rounded-xl w-full">
+    <div className="bg-background p-6 rounded-xl w-full animate__animated animate__fadeIn">
       <div className="flex flex-col items-center justify-center p-6">
         <Icon className="text-6xl mb-4 text-success" icon="hugeicons:tick-01" />
 
