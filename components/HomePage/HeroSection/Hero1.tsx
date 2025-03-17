@@ -112,7 +112,11 @@ const Hero1 = () => {
         </div>
         <div className="flex items-center justify-center md:flex-row flex-col-reverse gap-4 animate__delay-2s animate__animated animate__fadeInUp animate__slower">
           <div>
-            <CustomButton as={Link} fullWidth={false} href="https://app.mybackbone.io/sign-in">
+            <CustomButton
+              as={Link}
+              fullWidth={false}
+              href="https://app.mybackbone.io/sign-in"
+            >
               Get Started Now
             </CustomButton>
           </div>

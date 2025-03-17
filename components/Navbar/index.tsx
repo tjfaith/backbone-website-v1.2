@@ -139,7 +139,7 @@ const Navbar = () => {
           <CustomButton
             as={Link}
             fullWidth={false}
-            href="/onboarding"
+            href="https://app.mybackbone.io/sign-in"
             variant={theme === "dark" || isSSR ? "flat" : "light"}
           >
             Get Started Now
