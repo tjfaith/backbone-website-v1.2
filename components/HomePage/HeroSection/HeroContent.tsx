@@ -130,7 +130,7 @@ const HeroContent = ({
             <CustomButton
               as={Link}
               fullWidth={false}
-              href="/onboarding"
+              href="https://app.mybackbone.io/sign-in"
               variant={showLightBtn ? "light" : "flat"}
             >
               Get Started Now
