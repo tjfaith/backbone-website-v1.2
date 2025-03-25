@@ -66,6 +66,13 @@ export { default as Blog12 } from "./img/blog/blog12.jpg";
 export { default as Blog13 } from "./img/blog/blog13.jpg";
 export { default as Blog14 } from "./img/blog/blog14.jpg";
 export { default as Blog15 } from "./img/blog/blog15.jpg";
+export { default as Blog16 } from "./img/blog/blog16.jpg";
+export { default as Blog17 } from "./img/blog/blog17.png";
+export { default as Blog18 } from "./img/blog/blog18.jpg";
+export { default as Blog19 } from "./img/blog/blog19.jpg";
+export { default as Blog20 } from "./img/blog/blog20.jpg";
+export { default as Blog21 } from "./img/blog/blog21.png";
+export { default as Blog22 } from "./img/blog/blog22.jpg";
 
 // why backbone
 export { default as Gage } from "./img/whyBackbone/gage.svg";
