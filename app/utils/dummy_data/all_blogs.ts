@@ -14,6 +14,8 @@ import {
   Blog2,
   Blog20,
   Blog21,
+  Blog22,
+  Blog23,
   Blog3,
   Blog4,
   Blog5,
@@ -846,7 +848,7 @@ export const allBlog: AllBlogs[] = [
     created_at: "2025-03-25 03:28:03 PM",
     title:
       "How Digital Payments Are Unlocking Africa’s Trillion-Dollar Potential",
-    cover_image: Blog21.src,
+    cover_image: Blog22.src,
     keywords:
       "Africa digital payments, financial inclusion, mobile money, fintech growth, e-commerce expansion, digital economy, M-PESA, Moniepoint, online retail, economic transformation, financial technology, payment innovation, financial access, economic development, digital financial services.",
     description:
@@ -861,5 +863,32 @@ export const allBlog: AllBlogs[] = [
 <p><strong>Challenges and Future Prospects</strong></p>
 <p><span style="font-weight: 400;">Despite these advancements, challenges such as regulatory hurdles, cybersecurity threats, and the need for digital literacy persist. Addressing these issues is crucial for sustaining the momentum of digital payment adoption. Continued investment in infrastructure, coupled with supportive regulatory frameworks, will be essential to fully harness Africa's economic potential through digital payments.</span></p>
 <p><span style="font-weight: 400;">Conclusively, digital payments are revolutionizing Africa's financial landscape, driving financial inclusion, attracting substantial investments, and expanding e-commerce. By overcoming existing challenges, Africa can fully unlock the economic benefits of digital financial services, paving the way for sustained economic growth and development.</span></p>`,
+  },
+  {
+    blog_id: "23",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-04-19 10:48:03 PM",
+    title: "What Easter Teaches Us About Rebuilding Systems from the Ground Up",
+    cover_image: Blog23.src,
+    keywords:
+      "Easter, renewal, growth, rethinking, systems, Africa, trade, payment, scale, fragmentation, outdated infrastructure, rebuild, silos, collections, disbursement, connectivity, platforms, scalability, global growth, engineering, transactions, B2B, B2C, C2C, reliability, frictionless, backbone, foundation, protocol, compliance, payout systems, durability, digital infrastructure, cross-border payments, execution, vision, financial systems, liquidity, structure, reset, resilience, transparency, intent, business growth",
+    description:
+      "Africa's economy is being reshaped by the rapid adoption of digital payment systems, driving financial inclusion, e-commerce expansion, and substantial fintech investments. Innovations like M-PESA have transformed access to financial services, while fintech firms such as Moniepoint are attracting major investments. E-commerce giants like Takealot are extending their reach to underserved markets. Despite challenges like regulatory hurdles and cybersecurity threats, Africa’s digital payment revolution holds the potential to unlock unprecedented economic growth and financial empowerment.",
+    blog_content: `<div class="WordSection1" style="page:WordSection1;">
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">Easter is often seen as a season of renewal. But beneath the celebrations, there’s a tougher, more relevant lesson for those building real systems: growth doesn’t begin with tweaking what’s working, it begins with rethinking what’s broken. For us at Backbone, that mindset sits at the core of everything we do.</span></span></p>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">Africa’s trade and payment systems weren’t built for scale. They’re fragmented, slow, and in many cases, outdated. If anything, the Easter story mirrors the challenge we face as a continent: when the old structure collapses or stops working, it’s not a patch-up job that gets you ahead. It’s a rebuild.</span></span></p>
+    <h3 style="break-after:avoid;font-weight:normal;line-height:115%;margin:14.0pt 0in 4pt;page-break-after:auto;text-align:justify;"><span style="color:black;font-family:Arial, sans-serif;font-size:13.0pt;"><span style="line-height:115%;" lang="EN" dir="ltr"><strong>Nothing Scales Without Systems</strong></span></span></h3>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">Too often, businesses across Africa are forced to operate in silos; one platform for collections, another for disbursement, none of them fully connected. It’s not sustainable. When you’re trying to move products, services, or capital across borders, patchwork systems don’t cut it.</span></span></p>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">At Backbone, we’re rebuilding from the ground up. We’re not offering another workaround. We’re engineering infrastructure that connects people, platforms, and possibilities—seamlessly. Because the only way African businesses grow globally is if their systems can hold the weight.</span></span></p>
+    <h3 style="break-after:avoid;font-weight:normal;line-height:115%;margin:14.0pt 0in 4pt;page-break-after:auto;text-align:justify;"><span style="color:black;font-family:Arial, sans-serif;font-size:13.0pt;"><span style="line-height:115%;" lang="EN" dir="ltr"><strong>Failure Isn’t Final. It’s a Trigger</strong></span></span></h3>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">In the Easter story, what looked like failure wasn’t the end. It was a reset. For many businesses, the pain points they experience: payment delays, failed settlements, liquidity gaps, aren’t signs to give up. They’re signals that the structure underneath isn’t strong enough.</span></span></p>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">That’s where Backbone comes in. We’re fixing the rails, not just the ride. We enable transactions to move smoothly across B2B, B2C, and C2C pipelines—reliable, fast, and frictionless. We’re not trying to make the old system better. We’re creating a new one altogether.</span></span></p>
+    <h3 style="break-after:avoid;font-weight:normal;line-height:115%;margin:14.0pt 0in 4pt;page-break-after:auto;text-align:justify;"><span style="color:black;font-family:Arial, sans-serif;font-size:13.0pt;"><span style="line-height:115%;" lang="EN" dir="ltr"><strong>Real Change Doesn’t Happen at the Surface</strong></span></span></h3>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">There’s a reason we call it “backbone.” What you build behind the scenes is what determines how far you go. As Easter reminds us, renewal starts deep not on the surface, not in the PR, not in quick hacks. If you want to operate on a new level, you build a foundation that can carry the vision.</span></span></p>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">Every protocol, payout system, and compliance layer we develop at Backbone is designed for durability. This isn’t just about digital transactions. It’s about building a financial infrastructure where businesses can move like they were meant to; confidently, transparently, and at scale.</span></span></p>
+    <h3 style="break-after:avoid;font-weight:normal;line-height:115%;margin:14.0pt 0in 4pt;page-break-after:auto;text-align:justify;"><span style="color:black;font-family:Arial, sans-serif;font-size:13.0pt;"><span style="line-height:115%;" lang="EN" dir="ltr"><strong>If You're Rebuilding, Start with the Right Foundation</strong></span></span></h3>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">Easter may be about hope, but business is about execution. This season, let’s not just reflect; let’s rebuild with intent. Whether you’re a small merchant trying to expand beyond your local market or an enterprise struggling with cross-border payments, the message is clear: your future will only grow as far as your systems allow it to.</span></span></p>
+    <p style="line-height:115%;margin:12.0pt 0in;text-align:justify;"><span style="font-family:Arial, sans-serif;font-size:11pt;"><span lang="EN" dir="ltr">Backbone is here to help you get that system right.</span></span></p>
+</div>`,
   },
 ];
