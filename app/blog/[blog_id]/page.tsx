@@ -26,12 +26,12 @@ const SingleBlog = () => {
       ) : (
         <>
           {singleBlog ? (
-            <>
+            <div className="">
               <div className=" flex items-center space-x-6 mt-8">
                 <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap space-x-4">
                   {new Date(singleBlog?.created_at as string).toDateString()}{" "}
                   {new Date(
-                    singleBlog?.created_at as string,
+                    singleBlog?.created_at as string
                   ).toLocaleTimeString()}
                 </div>
                 <div className="text-sm text-primary capitalize">
@@ -46,7 +46,7 @@ const SingleBlog = () => {
                 className="md:object-contain object-cover  h-screen-40 object-center w-screen mt-5"
                 img={singleBlog?.cover_image}
               />
-              <div className="mt-6">
+              <div className="mt-6 ">
                 {singleBlog && (
                   <div
                     dangerouslySetInnerHTML={{
@@ -55,7 +55,7 @@ const SingleBlog = () => {
                   />
                 )}
               </div>
-            </>
+            </div>
           ) : (
             <div className="flex items-center justify-center h-screen-60  text-sm text-foreground">
               Data not found
