@@ -19,6 +19,7 @@ import {
   Blog24,
   Blog25,
   Blog26,
+  Blog27,
   Blog3,
   Blog4,
   Blog5,
@@ -1095,5 +1096,80 @@ export const allBlog: AllBlogs[] = [
 <p style="line-height:1.38;margin-bottom:4pt;margin-top:0pt;text-align:justify;" dir="ltr"><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Conclusion</strong></span></span></p>
 <p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr"><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">The small brands that are scaling across Africa are not just betting on trends. They are building with intent. They are choosing tools that allow them to reach further, move faster, and take control of their finances.</span></span></p>
 <p><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone</strong></span><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"> is making that possible by removing the borders that limit African business potential. If you are a small brand looking to grow beyond where you started, now is the time to upgrade how you move money.</span></span></p>`,
+  },
+
+  {
+    blog_id: "27",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-05-14 11:10:10 AM",
+    title: "How Backbone Is Powering Africa’s Shift From Local to Global",
+    cover_image: Blog27.src,
+    keywords:
+      "digital economy, African entrepreneurs, cross-border payments, Backbone, global marketplace, payment infrastructure, scalability, local constraints, custodial wallets, payment transparency, international transactions, SaaS, B2B, B2C, C2C, diaspora markets, secure payments, payment offramps, financial infrastructure, digital business, Africa tech, logistics, fintech, remote teams, scalable startups, business growth, seamless transactions, payment innovation",
+    description:
+      "This article highlights the transformative impact of Backbone, a payment infrastructure platform built to empower African businesses in the digital economy. It addresses the long-standing challenges of cross-border payments—like delays, high fees, and inefficiencies—and introduces Backbone as a modern solution that simplifies transactions and supports scalable, secure, and global operations. Designed for Africa but built to compete globally, Backbone enables entrepreneurs to shift from survival to expansion, turning payments into a strategic advantage that drives trust, speed, and long-term business growth.",
+    blog_content: `<p>
+    <meta charset="utf-8">
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">In today’s digital economy, physical borders are no longer business barriers. And for African entrepreneurs, this change signals something profound. From online stores in Kigali to tech startups in Lagos, businesses across the continent are scaling with speed, ambition, and global intent. At the heart of this transition is one powerful engine of growth—Backbone.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Backbone is not just another platform. It is the infrastructure empowering African enterprises to move beyond the constraints of local systems and step confidently into the global marketplace.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>The payment problem that slows Africa down</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa’s digital businesses are evolving, but payments remain a drag. Cross-border transactions are often slowed by red tape, delayed settlement times, high fees, and limited transparency. A business in Accra trying to pay a supplier in Nairobi can still face a maze of conversions, paperwork, and old-school bank processes that break the flow.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">These frictions keep businesses local even when their ambitions are global. Backbone was created to fix this.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Built for Africa but ready for the world</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Backbone was not designed in a vacuum. It was built with Africa’s realities in mind and scaled with global possibilities at its core. Its infrastructure prioritizes speed, simplicity, and usability so that sending and receiving payments across countries feels no different from transacting locally.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For a logistics company paying international freight or a SaaS founder managing remote teams, Backbone provides the tools to move money easily, legally, and efficiently. And whether you’re running B2B operations, serving B2C customers, or coordinating C2C exchanges, the platform delivers the flexibility and clarity businesses need to thrive.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Integrated custodial wallets keep your assets accessible and secure. Offramps are clear and instant. Transactions are visible and transparent. Confidence becomes the default, not the exception.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>From survival to scale, Backbone grows with ambition</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa’s entrepreneurs are no longer settling for local survival. They are building brands that speak to a global audience. They are tapping into diaspora markets. They are moving with intent, not inertia.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">But big ambition requires infrastructure that does not shrink under pressure. Backbone meets that need. It supports founders at every stage—from onboarding a new venture to expanding operations across multiple countries.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">And this is already happening in the real world. Businesses across Africa are using Backbone to break out of local constraints and enter new markets. From creators working with overseas clients to wholesalers sourcing across the continent, these users are not waiting for permission. They are moving forward.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Payments now play offense, not defense</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Historically, payments were seen as a necessary backend process. Now, they’re a strategic advantage. Speed, reliability, and affordability in payments no longer just support your business—they define its competitiveness.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">With Backbone, businesses can offer fast, seamless, and transparent transactions that build trust and create loyalty. When you eliminate intermediaries and delays, your clients feel the difference. They stay. They refer. You win.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone is what Africa builds on next</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa’s business landscape is changing. What once revolved around small-scale trade and informal economies is now driven by bold ideas, scalable startups, and cultural exports. It is a continent thinking beyond the horizon.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">This next phase of growth needs more than tools. It needs infrastructure. Flexible. Secure. Future-ready. That’s what Backbone delivers. More than just a payment processor, it becomes the foundation under every transaction and every ambition.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">If your business is ready to leave borders behind, it is time to build on Backbone.</span></span>
+</p>`,
   },
 ];
