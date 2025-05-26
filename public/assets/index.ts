@@ -81,6 +81,9 @@ export { default as Blog27 } from "./img/blog/blog27.jpg";
 export { default as Blog28 } from "./img/blog/blog28.jpg";
 export { default as Blog29 } from "./img/blog/blog29.jpg";
 export { default as Blog30 } from "./img/blog/blog30.jpg";
+export { default as Blog31 } from "./img/blog/blog31.jpg";
+export { default as Blog32 } from "./img/blog/blog32.jpg";
+export { default as Blog33 } from "./img/blog/blog33.jpg";
 
 // why backbone
 export { default as Gage } from "./img/whyBackbone/gage.svg";

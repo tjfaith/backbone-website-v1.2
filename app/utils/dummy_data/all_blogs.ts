@@ -1,6 +1,14 @@
 import { AllBlogs } from "@/types";
 import {
   Blog1,
+  Blog2,
+  Blog3,
+  Blog4,
+  Blog5,
+  Blog6,
+  Blog7,
+  Blog8,
+  Blog9,
   Blog10,
   Blog11,
   Blog12,
@@ -11,7 +19,6 @@ import {
   Blog17,
   Blog18,
   Blog19,
-  Blog2,
   Blog20,
   Blog21,
   Blog22,
@@ -22,14 +29,10 @@ import {
   Blog27,
   Blog28,
   Blog29,
-  Blog3,
   Blog30,
-  Blog4,
-  Blog5,
-  Blog6,
-  Blog7,
-  Blog8,
-  Blog9,
+  Blog31,
+  Blog32,
+  Blog33,
 } from "@/public/assets";
 
 export const allBlog: AllBlogs[] = [
@@ -1418,6 +1421,298 @@ export const allBlog: AllBlogs[] = [
 </p>
 <p>
     <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Platforms like Backbone are designed to optimize cross-border payments by reducing processing times, enhancing security, and ensuring transparency. For fast and hassle-free international transactions, visit</span></span><a style="text-decoration:none;" target="_blank" rel="noopener noreferrer" href="http://www.mybackbone.io/"><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">&nbsp;</span></span><span style="background-color:transparent;color:#1155cc;font-family:Arial,sans-serif;font-size:11pt;"><span style="-webkit-text-decoration-skip:none;font-style:normal;font-variant:normal;font-weight:400;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre-wrap;"><u>www.mybackbone.io</u></span></span></a><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"> today.</span></span>
+</p>`,
+  },
+
+  {
+    blog_id: "31",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-05-26 09:35:16 AM",
+    title: "How Does the Growth of Fintech in Africa Compare to Other Regions?",
+    cover_image: Blog31.src,
+    keywords:
+      "fintech, Africa, mobile money, financial inclusion, digital payments, M-Pesa, MTN MoMo, Airtel Money, venture capital, fintech investment, regulatory challenges, PSD2, cryptocurrency, DeFi, blockchain, UPI, Alipay, WeChat Pay, financial services, mobile penetration, unbanked population, digital banking, embedded finance, scalable solutions, startup funding, economic infrastructure, fintech regulation, tech ecosystem, smartphone penetration, digital lending, institutional crypto, inflation hedge, cross-border payments",
+    description:
+      "This article compares Africa’s rapidly growing fintech sector to other global regions, highlighting its unique strengths such as mobile money dominance and high cryptocurrency adoption, as well as challenges like fragmented regulation and limited infrastructure. It explores investment trends, regional differences in digital finance models, and the continent’s potential to become a global fintech leader. The piece concludes by promoting Backbone as a tailored fintech solution for Africa.",
+    blog_content: `<p>
+    <meta charset="utf-8">
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">The fintech revolution has taken the world by storm, transforming how financial services are accessed and delivered. While Africa has emerged as a major player in the fintech space, its growth trajectory differs from other regions due to unique economic, infrastructural, and regulatory factors. Understanding these differences provides valuable insights into Africa’s position in the global fintech landscape and the opportunities that lie ahead.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Here’s how Africa’s fintech growth compares to other regions:</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>1. Market Size and Growth Rate</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa’s fintech sector has experienced exponential growth, fueled by increasing mobile penetration, a largely unbanked population, and innovative financial solutions. According to a report by McKinsey, Africa’s fintech market is expected to reach $65 billion in revenue by 2030, growing at an annual rate of 10%. This growth outpaces regions like Europe and North America, where fintech markets are more mature and expanding at a steadier pace of around 6% annually.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">However, while Africa’s fintech growth rate is impressive, the continent still lags behind regions like Asia, particularly China and India, where fintech adoption is widespread, and digital payment infrastructure is more advanced.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>2. Mobile Money and Financial Inclusion</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa is a global leader in mobile money adoption, driven by services like M-Pesa in Kenya, MTN MoMo, and Airtel Money. Over 60% of the world’s mobile money transactions occur in sub-Saharan Africa, making it the most significant fintech innovation on the continent. This is in stark contrast to Europe and North America, where traditional banking and credit card payments dominate digital transactions.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">In regions like Asia and Latin America, fintech growth has been driven more by digital banking, cryptocurrency adoption, and embedded finance rather than mobile money. For instance, India’s Unified Payments Interface (UPI) has revolutionized instant digital payments, while China’s Alipay and WeChat Pay dominate cashless transactions.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>3. Investment and Funding Trends</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Fintech investment in Africa has skyrocketed in recent years, with startups attracting record funding. In 2022 alone, African fintechs raised over $2 billion, making up more than 60% of all venture capital funding on the continent. This rapid influx of investment is a result of the high demand for financial services, the scalability of mobile-based solutions, and the continent’s growing tech ecosystem.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Comparatively, North America and Europe still lead in overall fintech funding, with U.S. fintech startups raising over $20 billion in 2023. However, Africa’s fintech sector is experiencing faster growth in percentage terms, demonstrating its untapped potential. Meanwhile, Asia has seen significant fintech investment, particularly in China and India, where government-backed digital finance initiatives have spurred rapid adoption.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>4. Regulatory Environment and Challenges</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">One of the biggest challenges for fintech in Africa is regulatory uncertainty. Many African countries have fragmented financial regulations, making it difficult for startups to scale across multiple markets. While regulators are increasingly working towards harmonizing policies, Africa still lags behind regions like Europe, where fintech-friendly regulations like PSD2 (Revised Payment Services Directive) have created a unified financial ecosystem.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">In contrast, North America has a well-established financial regulatory framework but faces challenges in balancing innovation with compliance. Asia, particularly China, has seen tighter fintech regulations in recent years, affecting major players like Ant Group. Despite this, India has created a more supportive environment through initiatives like the Digital India campaign and Aadhaar-based financial services.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>5. Cryptocurrency and Decentralized Finance (DeFi) Adoption</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa has one of the highest cryptocurrency adoption rates globally, with countries like Nigeria, Kenya, and South Africa leading the way. Cryptocurrencies provide an alternative financial system for the unbanked and serve as a hedge against inflation and currency instability. Chainalysis reports that Africa’s crypto market grew by over 1,200% between 2020 and 2021, surpassing growth rates in Europe and North America.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">However, Asia, particularly Southeast Asia, has also emerged as a major crypto hub, with countries like Vietnam and the Philippines seeing widespread adoption of crypto-based remittances and play-to-earn models. North America and Europe remain key players in institutional crypto adoption but have faced increased regulatory scrutiny.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>6. Future Outlook: Africa’s Fintech Potential</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Despite challenges, Africa’s fintech sector holds immense potential. The combination of a young, tech-savvy population, increasing smartphone penetration, and rising investor interest suggests that Africa could become a global fintech powerhouse in the coming years.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Key trends to watch include the rise of digital lending, embedded finance, and blockchain-based solutions that address the continent’s unique financial needs. As more governments introduce fintech-friendly policies and infrastructure improves, Africa’s fintech industry is poised for sustained growth.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Conclusion</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">While Africa’s fintech sector is growing at an impressive rate, its development differs from other regions due to its heavy reliance on mobile money, regulatory challenges, and funding dynamics. Compared to North America and Europe, Africa has a younger but rapidly expanding fintech ecosystem, while its growth trajectory aligns more closely with Asia and Latin America.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For fintech players looking to tap into Africa’s market, platforms like&nbsp;</span><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone</strong></span><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"> offer seamless, secure, and scalable payment solutions tailored for the continent’s unique financial landscape. To explore how Backbone can support your fintech journey, visit</span></span><a style="text-decoration:none;" target="_blank" rel="noopener noreferrer" href="http://www.mybackbone.io/"><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">&nbsp;</span></span><span style="background-color:transparent;color:#1155cc;font-family:Arial,sans-serif;font-size:11pt;"><span style="-webkit-text-decoration-skip:none;font-style:normal;font-variant:normal;font-weight:400;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre-wrap;"><u>www.mybackbone.io</u></span></span></a><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"> today.</span></span>
+</p>`,
+  },
+
+  {
+    blog_id: "32",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-05-26 09:50:36 AM",
+    title: "The Importance of Networking for African Startups",
+    cover_image: Blog32.src,
+    keywords:
+      "African startups, entrepreneurship, networking, funding, venture capital, angel investors, mentorship, business partnerships, accelerators, incubators, Africa Tech Summit, Startup Grind, GITEX Africa, ABAN, VC4A, Y Combinator, Techstars, Google for Startups Africa, cross-promotions, brand visibility, market penetration, startup ecosystem, strategic collaborations, industry trends, pitch events, social media, investor engagement, business growth, startup communities, business chambers, thought leadership",
+    description:
+      "This article highlights the crucial role of networking in the success of African startups, emphasizing how connections with investors, mentors, partners, and peers can unlock funding, foster mentorship, enhance collaboration, boost visibility, and keep entrepreneurs informed of industry trends. It also provides actionable tips for founders to leverage networking platforms, events, and communities to scale their businesses sustainably in Africa’s dynamic entrepreneurial landscape.",
+    blog_content: `<p>
+    <meta charset="utf-8">
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Starting and growing a business in Africa comes with unique opportunities and challenges. While access to funding, market penetration, and regulatory hurdles often top the list of concerns for entrepreneurs, one of the most powerful yet underrated tools for success is networking. Building strong relationships with investors, partners, mentors, and fellow entrepreneurs can be the key to unlocking business growth and sustainability.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Here’s why networking is essential for African startups and how founders can leverage it effectively.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Access to Funding Opportunities</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">One of the biggest hurdles for African startups is securing funding. Traditional financing channels, such as bank loans, can be difficult to access due to high-interest rates and stringent requirements. However, networking opens doors to alternative funding sources, including venture capitalists, angel investors, and grant programs. According to a&nbsp;</span></span><a style="text-decoration:none;" target="_blank" rel="noopener noreferrer" href="https://partechpartners.com/africa-reports/2022-africa-tech-venture-capital-report#:~:text=African%20tech%20start-ups%20raised%20a%20total%20of%20US%246.5B,global%20VC%20slowdown%2C%20this%20ecosystem%20is%20still%20growing."><span style="background-color:transparent;color:#1155cc;font-family:Arial,sans-serif;font-size:11pt;"><span style="-webkit-text-decoration-skip:none;font-style:normal;font-variant:normal;font-weight:400;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre-wrap;"><u>report by Partech Africa</u></span></span></a><span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">, African startups raised over $6.5 billion in 2022, with most investments coming through direct connections and networking events.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>How to Leverage It:</strong></span></span>
+</p>
+<ul style="margin-bottom:0;margin-top:0;padding-inline-start:48px;">
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Attend industry conferences and pitch events like Africa Tech Summit, GITEX Africa, and Startup Grind.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Engage with investors on platforms like LinkedIn, AngelList, and VC networking groups.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Join startup incubators and accelerators such as Y Combinator, Techstars, and Google for Startups Africa.</span></span>
+    </li>
+</ul>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Mentorship and Knowledge Sharing</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For many African entrepreneurs, starting a business is uncharted territory. Without proper guidance, navigating market entry, compliance, and scaling can be overwhelming. Networking allows founders to connect with experienced business leaders who can offer valuable insights, mentorship, and strategic advice.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>How to Leverage It:</strong></span></span>
+</p>
+<ul style="margin-bottom:0;margin-top:0;padding-inline-start:48px;">
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Join startup communities like the African Business Angel Network (ABAN) or local business chambers.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Seek mentorship from successful entrepreneurs through structured mentorship programs like VC4A Mentor-Driven Capital.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Attend webinars and panel discussions where industry experts share practical tips.</span></span>
+    </li>
+</ul>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Business Partnerships and Collaborations</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">No startup can thrive in isolation. Collaborating with other businesses, suppliers, and service providers can enhance operational efficiency and expand market reach. Strategic partnerships allow startups to share resources, reduce costs, and create new business opportunities.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>How to Leverage It:</strong></span></span>
+</p>
+<ul style="margin-bottom:0;margin-top:0;padding-inline-start:48px;">
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Partner with complementary businesses for cross-promotions or bundled offerings.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Leverage networking events to meet potential distributors, resellers, and technology partners.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Engage with industry-specific associations to access strategic collaborations.</span></span>
+    </li>
+</ul>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Brand Visibility and Market Penetration</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For African startups looking to scale, visibility is crucial. Being part of relevant business networks helps entrepreneurs increase brand recognition, gain media exposure, and establish credibility in their industry. A strong network can also provide referrals and word-of-mouth marketing, which is essential for business growth.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>How to Leverage It:</strong></span></span>
+</p>
+<ul style="margin-bottom:0;margin-top:0;padding-inline-start:48px;">
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Actively participate in panel discussions, podcasts, and industry talks.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Leverage social media networking to engage with key stakeholders.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Join business groups and forums where potential customers and partners are active.</span></span>
+    </li>
+</ul>
+<p style="line-height:1.38;margin-bottom:0pt;margin-top:14pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Keeping Up with Industry Trends</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">The African startup ecosystem is constantly evolving, with emerging technologies, shifting regulations, and new market trends shaping the business landscape. Networking keeps entrepreneurs informed about these developments, ensuring they stay ahead of the competition.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;text-align:justify;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>How to Leverage It:</strong></span></span>
+</p>
+<ul style="margin-bottom:0;margin-top:0;padding-inline-start:48px;">
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Subscribe to industry newsletters, podcasts, and reports from organizations like Disrupt Africa and AfriLabs.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Attend workshops and networking events where industry leaders discuss market trends.</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Engage with thought leaders on platforms like Twitter Spaces and Clubhouse</span></span>
+    </li>
+</ul>`,
+  },
+
+  {
+    blog_id: "33",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-05-26 09:55:36 AM",
+    title:
+      "Why Fintech Infrastructure Matters More Than Funding for African Startups",
+    cover_image: Blog33.src,
+    keywords:
+      "African startups, venture capital, financial infrastructure, Backbone platform, cross-border payments, startup scaling, currency conversion, financial operations, startup growth, operational efficiency, startup systems, fintech Africa, VC readiness, seamless transactions, digital financial rails, infrastructure for startups, motion over money, startup capability, scalable ventures, real-time finance",
+    description:
+      "While funding gets the spotlight, African startups are learning that fintech infrastructure is the real engine of sustainable growth. Discover how the right financial rails—not just capital—are powering scale, stability, and success across the continent.",
+    blog_content: `<p>
+    <meta charset="utf-8">
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For years, the dominant narrative around African startups has centered on funding. Seed rounds. Series A. The next big raise. But quietly, beneath the headlines and unicorn dreams, a more critical currency is defining the continent’s most resilient and scalable ventures: infrastructure. Not roads or rails this time — but financial infrastructure.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">In the rush to secure venture capital, many African startups overlook a deeper question: What powers your business when the money lands? Because without the infrastructure to actually move money, settle transactions, manage multi-currency operations, and build trust with users, even the largest investments can become liabilities.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">That’s where platforms like&nbsp;</span><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone</strong></span><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"> are changing the game.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>The Illusion of Capital Without Capability</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Capital can buy you time. It can amplify your reach. But it cannot replace systems. In regions like Africa, where borders, currencies, and regulatory landscapes are fragmented, the lack of infrastructure is often what strangles startups at scale.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Say a startup in Lagos secures $2M in funding. Great. But can they pay a contractor in Ghana the same day? Can they receive payments from customers in South Africa without losing 12% in fees? Can they issue a refund in USD while holding Naira or GHS? If the answer is no, then capital becomes a cushion for inefficiency, not a catalyst for growth.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Startups don’t just need money. They need motion.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Infrastructure Is What Backbone Does</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Backbone was built to solve this. Not to raise headlines, but to raise standards. It offers African startups a powerful back-end layer to move money, manage wallets, convert currencies, and power both local and global transactions — all from one dashboard.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">This isn’t a neobank. It’s not a payment processor. It’s financial infrastructure as a growth engine. The rails you wish the traditional banks had. The agility your finance team dreams of.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">So when funding comes, Backbone ensures you can deploy it instantly, efficiently, and smartly — without borders getting in the way.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Speed, Not Spend, Is the New Advantage</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">In today’s market, startups need to operate like organisms, not machines. They need to adapt. Iterate. Move fast. This means your payment stack should help you send money as quickly as you send a Slack message. Your currency conversions should happen in real-time. Your clients shouldn’t have to wait 3-5 business days to pay you.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Backbone was designed with this in mind. African founders can:</span></span>
+</p>
+<ul style="margin-bottom:0;margin-top:0;padding-inline-start:48px;">
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">&nbsp;Receive and store global currencies</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Convert and withdraw in local currencies</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Pay vendors and teammates instantly</span></span>
+    </li>
+    <li style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:disc;text-decoration:none;vertical-align:baseline;white-space:pre;" dir="ltr" aria-level="1">
+        <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Manage all activity from one intuitive place</span></span>
+    </li>
+</ul>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">No need for scattered tools. No delays. No guesswork.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Founders Who Win Build Systems, Not Just Slides</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">VCs are now looking beyond decks. They’re looking at how your business operates when no one is watching. Do you have the systems to scale? Can you service clients across countries? Can you keep your cashflow transparent, secure, and borderless?</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">With Backbone, startups can answer yes to all three. They gain not just financial tools, but the operational edge that investors trust. Because at the end of the day, it’s not how much you raise. It’s how efficiently you can move, grow, and sustain.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone is how Africa’s most forward-thinking startups are building the muscle behind the mission.</strong></span></span>
 </p>`,
   },
 ];
