@@ -33,6 +33,8 @@ import {
   Blog31,
   Blog32,
   Blog33,
+  Blog34,
+  Blog35,
 } from "@/public/assets";
 
 export const allBlog: AllBlogs[] = [
@@ -1713,6 +1715,145 @@ export const allBlog: AllBlogs[] = [
 </p>
 <p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
     <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone is how Africa’s most forward-thinking startups are building the muscle behind the mission.</strong></span></span>
+</p>`,
+  },
+
+  {
+    blog_id: "34",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-05-27 10:04:36 AM",
+    title:
+      "The Silent Cost of Currency Friction in African Trade and How to Fix It",
+    cover_image: Blog34.src,
+    keywords:
+      "Africa trade, currency friction, cross-border payments, intra-African trade, AfCFTA, SMEs, transaction delays, exchange rate volatility, financial infrastructure, USD dependency, multi-currency wallet, digital payments, Backbone platform, real-time settlement, pan-African commerce, decentralized finance, economic transformation, fintech Africa, trade interoperability, financial inclusion",
+    description:
+      "Currency friction silently drains African trade by inflating costs and slowing cross-border payments. Discover how Backbone is removing this hidden barrier with seamless, multi-currency infrastructure that empowers businesses across the continent.",
+    blog_content: `<p>
+    <meta charset="utf-8">
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>The Hidden Obstacle Undermining Africa’s Trade Ambitions</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Cross-border trade is the engine of economic transformation across Africa, but beneath the surface lies a slow and often invisible obstacle that drains progress: currency friction. While governments and institutions talk about enabling trade routes and breaking tariff barriers, it is the silent toll of money conversion, transaction delays, and inconsistent exchange rates that costs businesses the most.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Why Currency Friction Is the Hidden Tax on Trade</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Every time a Kenyan distributor pays a South African supplier or a Ghanaian e-commerce store receives funds from a European customer, something as basic as converting currency can create delays, reduce profit margins, and even stop deals in their tracks. It’s not dramatic, which is why it’s overlooked. But for thousands of small to medium-sized enterprises (SMEs) and fast-scaling startups trying to operate across multiple markets, the friction is felt daily.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">It’s in the hours lost chasing confirmations from traditional banks. It’s in the unpredictable spreads that turn a good deal into a barely viable one. And it’s in the trust deficit that grows when partners hesitate because they’re unsure if payments will clear or how much they’ll finally receive.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>How Outdated Systems Hold Intra-African Trade Hostage</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Intra-African trade, despite all the ambitions of the AfCFTA, still suffers from weak currency interoperability. The lack of seamless financial infrastructure means businesses must work through third-party intermediaries, subjecting their funds to unnecessary conversions often involving USD as a middle currency even in trade between neighboring African countries. This introduces not just cost, but complexity.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Meet Backbone — The Infrastructure Built to Eliminate Friction….But this doesn’t have to be the norm. This is where Backbone steps in.</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Backbone is building the financial rails that allow businesses in Africa to transact with each other and with the world without the friction. The platform empowers businesses with a multi-currency wallet system, enabling them to receive and send payments in USD, digital assets like USDT, or their local currencies, all from a single dashboard. There is no need to rely on third-party middlemen or wait days for transactions to clear.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Real-Time Payments. Transparent Rates. Full Control.</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">With Backbone, a business in Nairobi can settle payments with a supplier in Accra instantly. A startup in Ghana can receive client payments in USD and convert only what it needs into local currency—on its terms, with full transparency.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">The power of this infrastructure is not just in speed. It’s in giving businesses control. Currency friction has long created a situation where African entrepreneurs feel like passengers in their own transactions. With Backbone, they become pilots.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>A Future Where Money Moves Without Borders</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Imagine a pan-African logistics company that needs to pay drivers in different countries. Using traditional channels, they might spend hours reconciling payments and lose significant margins to poor exchange rates. With Backbone, the same company can disburse funds instantly across borders with fair rates, real-time tracking, and no guesswork.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>The Real Fix for Trade in Africa Lies in Infrastructure, Not Just Policy</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">The future of trade in Africa hinges on more than policy. It requires platforms that remove barriers quietly but powerfully—platforms like Backbone. Because when money moves freely, businesses move boldly. It’s time African trade stopped paying the silent cost. It’s time for infrastructure that matches the ambition of its people.</span></span>
+</p>`,
+  },
+
+  {
+    blog_id: "35",
+    category: { id: "1", name: "marketing" },
+    created_at: "2025-05-27 10:17:36 AM",
+    title: "Why Backbone Believes Instant Should Be the New Standard",
+    cover_image: Blog35.src,
+    keywords:
+      "Africa payments, cross-border trade, payment inefficiencies, instant transactions, currency interoperability, real-time payments, financial inclusion, Backbone platform, USD payments, stablecoins, digital wallets, mobile-first finance, intra-African commerce, fintech innovation, financial infrastructure, economic integration, FX fees, settlement delays, seamless transactions, decentralized finance",
+    description:
+      "Discover why instant payments should be the norm for African businesses. Learn how Backbone is building the financial infrastructure to eliminate delays, boost cross-border trade, and empower growth across the continent.",
+    blog_content: `<p>
+    <meta charset="utf-8">
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">In today’s economy, speed is no longer a competitive edge. It is the bare minimum. We message in seconds, stream in milliseconds, and order rides that arrive in minutes. Yet, when it comes to moving money, especially across African borders, speed still feels optional. At Backbone, we believe that instant should be the new standard, not the exception.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Money that moves slowly stalls momentum. For the businesses building Africa’s future, that is no longer acceptable.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>The $5 Billion Problem Africa Can’t Ignore</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Cross-border trade in Africa is vibrant and full of potential, but it is dragging a weight that few people see. The continent loses over five billion dollars every year to payment inefficiencies, according to a World Bank report. The culprits include transaction delays, hidden conversion fees, and poor currency interoperability.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Let us make it real. A business in Kenya trying to pay a partner in Nigeria might first convert Kenyan shillings to USD, then convert again to Nigerian naira. In between, they face volatile rates, multiple charges, and multi-day settlement times. It is a silent tax on ambition and a serious friction point for growth.&nbsp;</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">This problem is not just limited to intra-African trade. Even freelancers and startups serving global clients struggle with sluggish wire transfers, limited access to foreign exchange, and opaque banking systems.&nbsp;</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Globally, Instant Is the New Normal</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Real-time payments are not science fiction. They are already mainstream elsewhere. According to the 2024 ACI Worldwide report, India processed over 118 billion real-time transactions in 2023, while Brazil’s PIX payment system is reshaping commerce across Latin America. These economies are thriving because money moves as fast as ideas.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Africa, by contrast, has lagged. Only a few countries, like Ghana with GhIPSS and Nigeria with NIBSS, have embraced real-time domestic transfers. But cross-border interoperability remains patchy. If we want a truly integrated African economy, we must build faster, simpler financial rails that work across countries.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">That is why Backbone exists.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Backbone Is Making Instant the Default</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Backbone is reimagining financial infrastructure for African businesses. We are not just offering you that possibility. We are building a platform that makes moving money as instant and intuitive as sending a message.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">With Backbone, you can send or receive payments in USD, stablecoins like USDT, or local African currencies, all from a single dashboard. Whether you are in Lagos, Nairobi, Accra, or Kigali, you can manage transactions seamlessly without relying on third-party intermediaries.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Funds land in seconds, not days. You control your flow, your conversions, and your growth. Backbone floods your life with possibilities.&nbsp;</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>Why Instant Drives Financial Inclusion</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">Instant transactions are not just about convenience. They are a gateway to financial inclusion, especially for underserved entrepreneurs across Africa. According to the IMF, over fifty percent of Africans still lack access to formal financial systems. By removing the bottlenecks of traditional banking and offering real-time, mobile-first solutions, platforms like Backbone are helping close that gap.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">When payments are fast and reliable, trust grows. And when trust grows, so does business.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:13pt;"><span style="font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;"><strong>So, what now? Let Us Stop Waiting!</strong></span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">The rest of the world is already enjoying the benefits of real-time financial systems. African businesses deserve the same. At Backbone, we are building for the now. A world where money moves without borders, without delays, and without friction.</span></span>
+</p>
+<p style="line-height:1.38;margin-bottom:12pt;margin-top:12pt;" dir="ltr">
+    <span style="background-color:transparent; font-family:Arial,sans-serif;font-size:11pt;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">If your business moves across time zones, currencies, or continents, it is time to stop waiting. Instant is not a feature. It is the foundation. And with Backbone, it is already here.</span></span>
 </p>`,
   },
 ];
