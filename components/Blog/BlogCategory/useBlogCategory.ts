@@ -1,7 +1,7 @@
 "use client";
 import { useDispatch, useSelector } from "react-redux";
 
-import { BlogServices } from "@/app/api";
+import { BlogServices } from "@/app/utils/services";
 import { RootState } from "@/app/store";
 import { setSelectedCategory } from "@/app/store/Features/blogSlice";
 import { BlogCategory } from "@/types";

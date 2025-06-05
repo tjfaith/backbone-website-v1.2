@@ -62,10 +62,17 @@ const OfferingsCaption = ({
           />
         </AvatarGroup>
         <div className="md:text-left text-center text-base">
-          <span className="">We processed </span> <b>$197,957,000</b>
+          <span className="">We processed </span>{" "}
+          <b>
+            $
+            {Number(
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
+            ).toLocaleString()}
+          </b>
           <span className="">
             {" "}
-            in transactions in {new Date().getFullYear() - 1}.
+            in transactions from 8th March 2024 to 31st May, 2025. Welcome to
+            the new Standard!
           </span>
         </div>
       </div>
@@ -104,7 +111,11 @@ const OfferingsCaption = ({
       </div>
       <div className="flex items-center  md:flex-row flex-col-reverse gap-4   animate__animated animate__fadeInUp animate__slower">
         <div>
-          <CustomButton as={Link} fullWidth={false} href="/#get_started">
+          <CustomButton
+            as={Link}
+            fullWidth={false}
+            href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
+          >
             Get Started Now
           </CustomButton>
         </div>

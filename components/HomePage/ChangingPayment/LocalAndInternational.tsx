@@ -20,7 +20,7 @@ const LocalAndInternational = () => {
 
       <SendMoneyForm
         action={() =>
-          window.open("https://app.mybackbone.io/sign-in", "_blank")
+          window.open(`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`, "_blank")
         }
         title={
           <div className="text-primary clash-display-font text-sm flex items-center gap-1 font-medium ">

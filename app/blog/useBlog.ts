@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 
-import { BlogServices } from "@/app/api";
+import { BlogServices } from "@/app/utils/services";
 import { RootState } from "@/app/store";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 

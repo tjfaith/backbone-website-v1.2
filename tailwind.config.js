@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      listStyleType: {
+        roman: "lower-roman",
+        alpha: "lower-alpha",
+      },
       fontFamily: {
         sans: ["var(--font-sans)"],
       },

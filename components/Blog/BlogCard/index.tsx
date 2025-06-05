@@ -32,7 +32,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
                   __html: DOMPurify.sanitize(
                     data?.blog_content.length > 600
                       ? data?.blog_content.slice(0, 600) + "..."
-                      : data?.blog_content
+                      : data?.blog_content,
                   ),
                 }}
               />
@@ -41,7 +41,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
               className="flex mt-6 space-x-1 text-primary items-center font-sm cursor-pointer"
               onClick={() =>
                 viewBlog(
-                  `/${data.blog_id}?title=${encodeURIComponent(data.title)}&id=${data.blog_id}`
+                  `/${data.blog_id}?title=${encodeURIComponent(data.title)}&id=${data.blog_id}`,
                 )
               }
             >

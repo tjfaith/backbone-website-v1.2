@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 
-import { BlogServices } from "@/app/api";
+import { BlogServices } from "@/app/utils/services";
 
 function useSubscribe() {
   const [email, setEmail] = useState("");

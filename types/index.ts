@@ -2,9 +2,11 @@ import { ButtonProps } from "@heroui/button";
 import { ReactNode } from "react";
 
 export type E164Number = string;
+export type PaymentTypeStatus = "Coming soon" | "flutterwave" | "";
 export type OfferingsStatus = "Coming soon" | "live";
 export type AccountTypeProps = "individual" | "corporate";
 export type OnboardingStep = "step1" | "step2" | "step3" | "step4";
+export type CurrencyType = "CRYPTO" | "FIAT";
 export type CompanyType =
   | "Startup"
   | "Enterprise"
@@ -28,6 +30,22 @@ export interface ContactUsPayload {
   phoneNumber: E164Number | undefined;
   subject: string;
   message: string;
+}
+
+export interface PaymentDetailsProps {
+  amount: string;
+  currency: string;
+  tx_ref: string;
+  date: string;
+  status: string;
+}
+
+export interface PaymentOptions {
+  title: string;
+  start_icon: string;
+  link: string;
+  status: PaymentTypeStatus;
+  currency_type: CurrencyType[];
 }
 
 export interface ErrorResponse {

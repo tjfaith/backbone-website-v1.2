@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Link } from "@heroui/link";
 
-import { BlogServices } from "@/app/api";
+import { BlogServices } from "@/app/utils/services";
 import { Spinner } from "@/public/assets";
 
 const BlogExtract = () => {

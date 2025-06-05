@@ -84,3 +84,11 @@ export { default as CorporateDocument } from "./Onboarding/Corporate/CorporateDo
 // Onboarding --individual
 export { default as PersonalInformation } from "./Onboarding/Individual/PersonalInformation";
 export { default as IndividualDocument } from "./Onboarding/Individual/IndividualDocument";
+
+// Verify payment
+export { default as SuccessfulPayment } from "./VerifyPayment/SuccessfulPayment";
+export { default as CancelledPayment } from "./VerifyPayment/CancelledPayment";
+export { default as FailedPayment } from "./VerifyPayment/FailedPayment";
+
+// Policy
+export { default as PolicyNavigation } from "./Policies/PolicyNavigation";

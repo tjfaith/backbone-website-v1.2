@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 import { ContactUsPayload, E164Number, ErrorResponse } from "@/types";
-import { ContactServices } from "@/app/api";
+import { ContactServices } from "@/app/utils/services";
 
 function useContactUs() {
   const { mutateAsync: sendMessage, isPending: loading } =

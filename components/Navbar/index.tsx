@@ -139,7 +139,7 @@ const Navbar = () => {
           <CustomButton
             as={Link}
             fullWidth={false}
-            href="https://app.mybackbone.io/sign-in"
+            href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
             variant={theme === "dark" || isSSR ? "flat" : "light"}
           >
             Get Started Now
