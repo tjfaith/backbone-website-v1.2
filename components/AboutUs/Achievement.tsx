@@ -37,12 +37,12 @@ const Achievement = () => {
               enableScrollSpy
               scrollSpyOnce
               duration={6}
-              end={197957000}
+              end={Number(process.env.NEXT_PUBLIC_TOTAL_PROCESSED)}
             />
           </div>
           <div className="text-primary pl-2  text-xs">
-            In payments processed through Backbone by our customers in{" "}
-            {new Date().getFullYear() - 1}
+            In payments processed through Backbone by our customers from 8th
+            March 2024 to 31st May, 2025
           </div>
         </div>
         <div data-aos="fade-up">

@@ -72,10 +72,17 @@ const HeroContent = ({
             />
           </AvatarGroup>
           <div className="md:text-left text-center">
-            <span className="">We processed </span> <b>$197,957,000</b>
+            <span className="">We processed </span>{" "}
+            <b>
+              $
+              {Number(
+                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
+              ).toLocaleString()}
+            </b>
             <span className="">
               {" "}
-              in transactions in {new Date().getFullYear() - 1}.
+              in transactions from 8th March 2024 to 31st May, 2025. Welcome to
+              the new Standard!
             </span>
           </div>
         </div>
@@ -130,7 +137,7 @@ const HeroContent = ({
             <CustomButton
               as={Link}
               fullWidth={false}
-              href="https://app.mybackbone.io/sign-in"
+              href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
               variant={showLightBtn ? "light" : "flat"}
             >
               Get Started Now

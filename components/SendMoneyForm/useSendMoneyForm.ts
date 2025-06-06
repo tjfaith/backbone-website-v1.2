@@ -2,19 +2,22 @@
 
 import { FormEvent, useEffect, useState } from "react";
 
-import { allCurrencies, currencyConverter } from "@/app/utils";
+import { currencyConverter } from "@/app/utils";
+import { CurrencyServices } from "@/app/utils/services";
 
 interface Props {
   action: () => void;
 }
 function useSendMoneyForm({ action }: Props) {
-  const [currencyKey, setCurrencyKey] = useState<any>("1");
+  const { data: allCurrencies = [], isLoading: currenciesLoading } =
+    CurrencyServices().useGetAllCurrency();
+  const [currencyKey, setCurrencyKey] = useState<any>(allCurrencies[0]?.id);
 
   const [selectedCurrency, setSelectedCurrency] = useState<
     Record<string, string>
   >({});
 
-  const [currencyKey2, setCurrencyKey2] = useState<any>("2");
+  const [currencyKey2, setCurrencyKey2] = useState<any>(allCurrencies[1]?.id);
 
   const [selectedCurrency2, setSelectedCurrency2] = useState<
     Record<string, string>
@@ -79,11 +82,11 @@ function useSendMoneyForm({ action }: Props) {
 
   useEffect(() => {
     handleCurrencyChange(currencyKey);
-  }, [currencyKey]);
+  }, [currencyKey, currenciesLoading]);
 
   useEffect(() => {
     handleCurrencyChange2(currencyKey2);
-  }, [currencyKey2]);
+  }, [currencyKey2, currenciesLoading]);
 
   useEffect(() => {
     handleMoneyToSend();

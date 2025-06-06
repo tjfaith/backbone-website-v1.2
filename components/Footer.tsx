@@ -7,6 +7,7 @@ import { Divider } from "@heroui/divider";
 
 import { Socials } from "@/components";
 import { FullLogo } from "@/public/assets";
+// import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -117,7 +118,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/privacy-policy"
+                    href="/policies/privacy-policy"
                   >
                     Privacy Policy
                   </Link>
@@ -125,7 +126,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/cookie-policy"
+                    href="/policies/cookie-policy"
                   >
                     Cookie policy
                   </Link>
@@ -133,38 +134,38 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/#"
+                    href="/policies/service-terms"
                   >
                     {" "}
                     Terms of Service
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
                     href="/incorporation "
                   >
                     Incorporation
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
             <div className="text-background dark:text-primary space-y-4">
               <div className="text-xl font-medium ">Compliance</div>
               <ul className=" space-y-4">
-                <li>
+                {/* <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
                     href="/license"
                   >
                     License
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/security"
+                    href="/policies/privacy-policy#responsibility"
                   >
                     Security
                   </Link>
@@ -172,7 +173,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-background/70 dark:text-primary/70"
-                    href="/aml"
+                    href="/policies/aml-policy"
                   >
                     AML
                   </Link>

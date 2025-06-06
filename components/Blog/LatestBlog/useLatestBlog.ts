@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 
 import { RootState } from "@/app/store";
-import { BlogServices } from "@/app/api";
+import { BlogServices } from "@/app/utils/services";
 
 function useLatestBlog() {
   const { selectedCategory } = useSelector((state: RootState) => state.blog);

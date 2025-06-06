@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
-import { BlogServices } from "@/app/api";
+import { BlogServices } from "@/app/utils/services";
 function useSingleBlog() {
   const dispatch = useDispatch();
   const DOMPurify = createDOMPurify();

@@ -2,6 +2,10 @@
 export { default as FullLogo } from "./img/fullLogo.svg";
 export { default as FullLogoDark } from "./img/fullLogoDark.svg";
 export { default as HalfLogo } from "./img/halfLogo.svg";
+export { default as FlutterWaveLogo } from "./img/flutterwave.png";
+export { default as SuccessPaymentIcon } from "./img/success_payment.svg";
+export { default as CancelledPaymentIcon } from "./img/cancelled_payment.svg";
+export { default as FailedPaymentIcon } from "./img/failed_payment.svg";
 export { default as ArrowUp } from "./img/arrowUp.png";
 export { default as Img1 } from "./img/img1.png";
 export { default as Img2 } from "./img/img2.png";
