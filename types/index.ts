@@ -40,6 +40,21 @@ export interface PaymentDetailsProps {
   status: string;
 }
 
+export interface Currency {
+  id: string;
+  name: string;
+  code: string;
+  rate: number;
+  buy?: number | null;
+  sell?: number | null;
+  interest?: number | null;
+  lock_interest_rate?: number | null;
+  avatar: string;
+  symbol: string;
+  type: CurrencyType;
+  is_deleted: boolean;
+}
+
 export interface PaymentOptions {
   title: string;
   start_icon: string;
