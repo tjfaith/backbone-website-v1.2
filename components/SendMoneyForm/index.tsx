@@ -4,12 +4,13 @@ import { Icon } from "@iconify/react";
 import { Image } from "@heroui/image";
 import { Input } from "@heroui/input";
 import { Divider } from "@heroui/divider";
-import { Select, SelectItem } from "@heroui/select";
+import { Select, SelectedItems, SelectItem } from "@heroui/select";
+import { Button } from "@heroui/button";
 
 import useSendMoneyForm from "./useSendMoneyForm";
 
-import { allCurrencies, currencyConverter } from "@/app/utils";
 import CustomButton from "@/components/UI/CustomButton";
+import { Currency } from "@/types";
 
 interface Props {
   title: ReactNode | string;
@@ -17,19 +18,19 @@ interface Props {
 }
 const SendMoneyForm = ({ title, action }: Props) => {
   const {
-    currencyKey,
     selectedCurrency,
-    amountToSend,
     selectedCurrency2,
-    currencyKey2,
-    totalAmount,
-    transferFee,
-    platformFee,
-    totalFee,
+    activeCurrency,
+    convertedAmount,
+    fees,
+    amount,
+    currenciesLoading,
+    handleConvertCurrency,
+    setAmount,
+    handleSwap,
     handleSubmit,
     formatFigure,
     handleCurrencyChange2,
-    setAmountToSend,
     handleCurrencyChange,
   } = useSendMoneyForm({ action });
 
@@ -49,7 +50,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
           <div className="flex md:flex-row flex-col-reverse items-center gap-3 md:mt-0 mt-2  ">
             <div className="flex items-center space-x-1 w-full">
               <div className="text-2xl font-medium clash-display-font text-primary ml-2 md:ml-0">
-                {selectedCurrency.symbol}
+                {selectedCurrency?.symbol}
               </div>
               <Input
                 classNames={{
@@ -61,47 +62,60 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 size="sm"
                 type="number"
                 validationBehavior="native"
-                value={amountToSend.toString()}
+                value={amount.toString()}
                 variant="flat"
-                onValueChange={(val) => setAmountToSend(Number(val))}
+                onValueChange={(val) => setAmount(Number(val))}
               />
             </div>
             <Select
               aria-label="currency"
               className=" md:max-w-36 md:w-44 w-full bg-transparent"
               classNames={{}}
+              isLoading={currenciesLoading}
               isRequired={true}
-              selectedKeys={[currencyKey]}
+              renderValue={(items: SelectedItems<Currency>) => {
+                return items.map((item) => (
+                  <div key={item.key} className="flex items-center gap-2">
+                    <Image
+                      alt="currency image"
+                      radius="full"
+                      src={selectedCurrency?.avatar}
+                    />
+                    <div>{selectedCurrency?.code}</div>
+                  </div>
+                ));
+              }}
+              selectedKeys={[selectedCurrency?.id as any]}
               size="sm"
-              startContent={
-                <Image
-                  alt="currency image"
-                  radius="full"
-                  src={selectedCurrency.icon}
-                />
-              }
               validationBehavior="native"
               variant="flat"
               onChange={(e) => handleCurrencyChange(e.target.value)}
             >
-              {allCurrencies.map((currency) => (
+              {activeCurrency?.map((currency: Currency) => (
                 <SelectItem
-                  key={currency.id}
+                  key={currency?.id}
                   startContent={
                     <Image
                       alt="currency image"
                       radius="full"
-                      src={currency.icon}
+                      src={currency?.avatar}
                     />
                   }
                 >
-                  {currency.abbreviation}
+                  {currency.code}
                 </SelectItem>
               ))}
             </Select>
           </div>
         </div>
-        <Icon className="text-primary-400 text-xl" icon="ri:swap-fill" />
+        <Button
+          isIconOnly
+          className="text-default-600"
+          variant="light"
+          onPress={handleSwap}
+        >
+          <Icon className="text-primary-400 text-xl" icon="ri:swap-fill" />
+        </Button>
 
         {/* RECEIVER */}
         <div className=" rounded-lg dark:border-primary-50/10 border p-2 w-full">
@@ -110,16 +124,10 @@ const SendMoneyForm = ({ title, action }: Props) => {
           <div className="flex items-center md:flex-row flex-col-reverse md:mt-0 mt-2 gap-3 ">
             <div className="flex items-center space-x-2 w-full ml-5 md:ml-0">
               <div className="text-2xl font-medium clash-display-font text-primary">
-                {selectedCurrency2.symbol}
+                {selectedCurrency2?.symbol}
               </div>
               <div className="text-2xl clash-display-font  font-medium text-primary ">
-                {Number(
-                  currencyConverter(
-                    Number(amountToSend),
-                    selectedCurrency2?.abbreviation,
-                    selectedCurrency?.abbreviation,
-                  ),
-                ).toLocaleString()}
+                {Number(handleConvertCurrency()?.total || 0).toLocaleString()}
               </div>
             </div>
             <Select
@@ -127,31 +135,36 @@ const SendMoneyForm = ({ title, action }: Props) => {
               className=" md:max-w-36 md:w-44 w-full bg-transparent"
               classNames={{}}
               isRequired={true}
-              selectedKeys={[currencyKey2]}
+              renderValue={(items: SelectedItems<Currency>) => {
+                return items.map((item) => (
+                  <div key={item.key} className="flex items-center gap-2">
+                    <Image
+                      alt="currency image"
+                      radius="full"
+                      src={selectedCurrency2?.avatar}
+                    />
+                    <div>{selectedCurrency2?.code}</div>
+                  </div>
+                ));
+              }}
+              selectedKeys={[selectedCurrency2?.id as any]}
               size="sm"
-              startContent={
-                <Image
-                  alt="currency image"
-                  radius="full"
-                  src={selectedCurrency2.icon}
-                />
-              }
               validationBehavior="native"
               variant="flat"
               onChange={(e) => handleCurrencyChange2(e.target.value)}
             >
-              {allCurrencies.map((currency) => (
+              {activeCurrency.map((currency: Currency) => (
                 <SelectItem
                   key={currency.id}
                   startContent={
                     <Image
                       alt="currency image"
                       radius="full"
-                      src={currency.icon}
+                      src={currency.avatar}
                     />
                   }
                 >
-                  {currency.abbreviation}
+                  {currency.code}
                 </SelectItem>
               ))}
             </Select>
@@ -169,15 +182,11 @@ const SendMoneyForm = ({ title, action }: Props) => {
           <small>
             <span className="text-primary-600">Conversion rate:</span>{" "}
             <span className="text-primary">
-              1 {selectedCurrency2.abbreviation} ={" "}
-              {Number(
-                currencyConverter(
-                  1,
-                  selectedCurrency2?.abbreviation,
-                  selectedCurrency?.abbreviation,
-                ),
-              ).toLocaleString()}{" "}
-              {selectedCurrency.abbreviation}
+              {selectedCurrency?.symbol}1 = {selectedCurrency2?.symbol}
+              {Number(convertedAmount.sell_rate).toLocaleString("en-US", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 5,
+              })}
             </span>
           </small>
         </div>
@@ -190,10 +199,10 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 <div className=" h-3.5 w-3.5 bg-primary-400/50 rounded-full" />
               </div>
               <div>
-                {formatFigure(transferFee)} {selectedCurrency2.abbreviation}
+                {selectedCurrency2?.symbol} {formatFigure(fees.conversionFee)}
               </div>
             </div>
-            <div>Transfer fee</div>
+            <div>Conversion fee</div>
           </div>
           <div className=" flex justify-center items-center w-7 ">
             <div className="bg-primary-400/50 h-4 w-0.5" />
@@ -204,7 +213,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 <div className=" h-3.5 w-3.5 bg-primary-400/50 rounded-full" />
               </div>
               <div>
-                {formatFigure(platformFee)} {selectedCurrency2.abbreviation}
+                {selectedCurrency2?.symbol} {formatFigure(fees.platformFee)}
               </div>
             </div>
             <div>Platform fee</div>
@@ -220,7 +229,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 </div>
               </div>
               <div>
-                {formatFigure(totalFee)} {selectedCurrency2.abbreviation}
+                {selectedCurrency2?.symbol}{" "}
+                {formatFigure(Number(handleConvertCurrency()?.total_fee))}
               </div>
             </div>
             <div>Total fees</div>
@@ -236,7 +246,8 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 </div>
               </div>
               <div>
-                {formatFigure(totalAmount)} {selectedCurrency2.abbreviation}
+                {selectedCurrency2?.symbol}{" "}
+                {formatFigure(Number(handleConvertCurrency()?.total))}
               </div>
             </div>
             <div>Total amount</div>

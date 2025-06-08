@@ -1,7 +1,8 @@
 "use client";
 
-import { PreLoader } from "@/components";
 import { Suspense } from "react";
+
+import { PreLoader } from "@/components";
 
 export default function VerifyPaymentLayout({
   children,

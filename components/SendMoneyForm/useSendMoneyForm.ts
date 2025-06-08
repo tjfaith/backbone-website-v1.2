@@ -1,79 +1,84 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 
-import { currencyConverter } from "@/app/utils";
 import { CurrencyServices } from "@/app/utils/services";
+import { Currency } from "@/types";
 
 interface Props {
   action: () => void;
 }
+
 function useSendMoneyForm({ action }: Props) {
+  const fees = { conversionFee: 0, platformFee: 0 };
+  const [amount, setAmount] = useState(1);
+  const [activeCurrency, setActiveCurrency] = useState<Currency[]>([]);
+  const [selectedCurrency, setSelectedCurrency] = useState<Currency | null>(
+    null,
+  );
+  const [selectedCurrency2, setSelectedCurrency2] = useState<Currency | null>(
+    null,
+  );
+
   const { data: allCurrencies = [], isLoading: currenciesLoading } =
     CurrencyServices().useGetAllCurrency();
-  const [currencyKey, setCurrencyKey] = useState<any>(allCurrencies[0]?.id);
+  const { data: rates, isLoading: rateLoading } =
+    CurrencyServices().useGetExchangeRate(selectedCurrency?.id);
 
-  const [selectedCurrency, setSelectedCurrency] = useState<
-    Record<string, string>
-  >({});
+  const getCurrencyById = (id: string) =>
+    activeCurrency.find((cur) => cur.id === id);
+  const getCurrencyByCode = (code: string) =>
+    activeCurrency.find((cur) => cur.code === code);
 
-  const [currencyKey2, setCurrencyKey2] = useState<any>(allCurrencies[1]?.id);
+  const convertCurrency = () => {
+    if (!selectedCurrency || !selectedCurrency2)
+      return { sell_rate: 0, buy_rate: 0 };
+    if (selectedCurrency.code === selectedCurrency2.code)
+      return { sell_rate: amount, buy_rate: 0 };
 
-  const [selectedCurrency2, setSelectedCurrency2] = useState<
-    Record<string, string>
-  >({});
-
-  const [amountToSend, setAmountToSend] = useState(0);
-  const [transferFee, setTransferFee] = useState(0);
-  const [platformFee, setPlatformFee] = useState(0);
-  const [totalFee, setTotalFee] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
-
-  const handleCurrencyChange = (key: any) => {
-    setCurrencyKey(key);
-    const currency = allCurrencies.find(
-      (cur: { id: string }) => cur.id === key,
+    const rate = rates?.find(
+      (rate: { base_currency_id: string; target_currency_id: string }) =>
+        rate.base_currency_id === selectedCurrency.id &&
+        rate.target_currency_id === selectedCurrency2.id,
     );
 
-    if (currency) {
-      setSelectedCurrency(currency);
-    }
+    return {
+      sell_rate: rate?.sell_rate || 0,
+      buy_rate: rate?.buy_rate || 0,
+    };
   };
 
-  const handleCurrencyChange2 = (key: any) => {
-    setCurrencyKey2(key);
-    const currency = allCurrencies.find(
-      (cur: { id: string }) => cur.id === key,
-    );
+  const convertedAmount = useMemo(convertCurrency, [
+    amount,
+    selectedCurrency,
+    selectedCurrency2,
+    rateLoading,
+  ]);
 
-    if (currency) {
-      setSelectedCurrency2(currency);
-    }
+  const handleSwap = () => {
+    setSelectedCurrency(selectedCurrency2);
+    setSelectedCurrency2(selectedCurrency);
   };
 
-  const handleConvertCurrency = (amount: number) => {
-    return currencyConverter(
-      Number(amount),
-      selectedCurrency2?.abbreviation,
-      selectedCurrency?.abbreviation,
-    );
-  };
-  const handleMoneyToSend = () => {
-    setTransferFee(handleConvertCurrency(transferFee));
-    setPlatformFee(handleConvertCurrency(platformFee));
-    const convertSentAmount = handleConvertCurrency(amountToSend);
+  const handleCurrencyChange = (key: string) =>
+    setSelectedCurrency(getCurrencyById(key) || null);
+  const handleCurrencyChange2 = (key: string) =>
+    setSelectedCurrency2(getCurrencyById(key) || null);
 
-    setTotalFee(transferFee + platformFee);
+  const handleConvertCurrency = () => {
+    if (!amount || !selectedCurrency || !selectedCurrency2) return;
+    const rate = convertCurrency().sell_rate;
+    const total = amount * rate;
+    const total_fee = fees.conversionFee + fees.platformFee;
 
-    setTotalAmount(totalFee + convertSentAmount);
+    return { rate, total_fee, total, amount };
   };
 
-  const formatFigure = (value: number) => {
-    return Number(value.toFixed(2)).toLocaleString(undefined, {
+  const formatFigure = (value: number) =>
+    Number(value.toFixed(2)).toLocaleString(undefined, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -81,32 +86,32 @@ function useSendMoneyForm({ action }: Props) {
   };
 
   useEffect(() => {
-    handleCurrencyChange(currencyKey);
-  }, [currencyKey, currenciesLoading]);
+    setActiveCurrency(allCurrencies.filter((cur: Currency) => !cur.is_deleted));
+  }, [allCurrencies]);
 
   useEffect(() => {
-    handleCurrencyChange2(currencyKey2);
-  }, [currencyKey2, currenciesLoading]);
+    const usd = getCurrencyByCode("USD");
+    const ngn = getCurrencyByCode("NGN");
 
-  useEffect(() => {
-    handleMoneyToSend();
-  }, [currencyKey, currencyKey2, amountToSend, selectedCurrency]);
+    if (usd) setSelectedCurrency(usd);
+    if (ngn) setSelectedCurrency2(ngn);
+  }, [activeCurrency]);
 
   return {
-    currencyKey,
     selectedCurrency,
-    amountToSend,
     selectedCurrency2,
-    currencyKey2,
-    totalAmount,
-    transferFee,
-    platformFee,
-    totalFee,
+    activeCurrency,
+    convertedAmount,
+    fees,
+    amount,
+    currenciesLoading,
+    handleConvertCurrency,
+    setAmount,
+    handleSwap,
     handleSubmit,
     formatFigure,
-    handleCurrencyChange2,
-    setAmountToSend,
     handleCurrencyChange,
+    handleCurrencyChange2,
   };
 }
 
