@@ -10,7 +10,7 @@ function CurrencyServices() {
       const data = await api.get(
         `/currency/get-all${currency_type ? `?currency_type=${currency_type}` : ""}`
       );
-      console.log(data?.data?.data, "currency");
+
       return data?.data?.data || [];
     };
 

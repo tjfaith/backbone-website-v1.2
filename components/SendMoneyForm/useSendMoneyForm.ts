@@ -14,10 +14,10 @@ function useSendMoneyForm({ action }: Props) {
   const [amount, setAmount] = useState(1);
   const [activeCurrency, setActiveCurrency] = useState<Currency[]>([]);
   const [selectedCurrency, setSelectedCurrency] = useState<Currency | null>(
-    null
+    null,
   );
   const [selectedCurrency2, setSelectedCurrency2] = useState<Currency | null>(
-    null
+    null,
   );
 
   const { data: allCurrencies = [], isLoading: currenciesLoading } =
@@ -39,7 +39,7 @@ function useSendMoneyForm({ action }: Props) {
     const rate = rates?.find(
       (rate: { base_currency_id: string; target_currency_id: string }) =>
         rate.base_currency_id === selectedCurrency.id &&
-        rate.target_currency_id === selectedCurrency2.id
+        rate.target_currency_id === selectedCurrency2.id,
     );
 
     return {
