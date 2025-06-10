@@ -202,12 +202,12 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 {selectedCurrency2?.symbol} {formatFigure(fees.conversionFee)}
               </div>
             </div>
-            <div>Conversion fee</div>
+            <div>Transaction fee</div>
           </div>
           <div className=" flex justify-center items-center w-7 ">
             <div className="bg-primary-400/50 h-4 w-0.5" />
           </div>
-          <div className="w-full flex items-center justify-between h-3.5 text-primary-400 font-normal">
+          {/* <div className="w-full flex items-center justify-between h-3.5 text-primary-400 font-normal">
             <div className=" flex items-center gap-2">
               <div className=" flex justify-center items-center w-7 ">
                 <div className=" h-3.5 w-3.5 bg-primary-400/50 rounded-full" />
@@ -217,7 +217,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
               </div>
             </div>
             <div>Platform fee</div>
-          </div>
+          </div> */}
           <div className=" flex justify-center items-center w-7 ">
             <div className="bg-primary-400/50 h-4 w-0.5" />
           </div>
