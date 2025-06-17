@@ -127,7 +127,13 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 {selectedCurrency2?.symbol}
               </div>
               <div className="text-2xl clash-display-font  font-medium text-primary ">
-                {Number(handleConvertCurrency()?.total || 0).toLocaleString()}
+                {Number(handleConvertCurrency()?.total || 0).toLocaleString(
+                  "en-US",
+                  {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 5,
+                  }
+                )}
               </div>
             </div>
             <Select
