@@ -34,7 +34,7 @@ function useSendMoneyForm({ action }: Props) {
     if (!selectedCurrency || !selectedCurrency2)
       return { sell_rate: 0, buy_rate: 0 };
     if (selectedCurrency.code === selectedCurrency2.code)
-      return { sell_rate: amount, buy_rate: 0 };
+      return { sell_rate: 1, buy_rate: 0 };
 
     const rate = rates?.find(
       (rate: { base_currency_id: string; target_currency_id: string }) =>
@@ -73,17 +73,13 @@ function useSendMoneyForm({ action }: Props) {
 
     return { rate, total_fee, total, amount };
   };
-
   const formatFigure = (value: number) =>
-    // Number(value.toFixed(2)).toLocaleString(undefined, {
-    //   minimumFractionDigits: 2,
-    //   maximumFractionDigits: 2,
-    // });
-
-    Number(value).toLocaleString("en-US", {
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 5,
-    });
+    Number.isFinite(value)
+      ? value.toLocaleString("en-US", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 5,
+        })
+      : "0.00";
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

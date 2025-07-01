@@ -46,7 +46,6 @@ export async function generateMetadata({
   };
 }
 
-// Your layout component
 export default function SingleBlgLayout({
   children,
 }: {
