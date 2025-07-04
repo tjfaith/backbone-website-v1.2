@@ -42,7 +42,7 @@ const Achievement = () => {
           </div>
           <div className="text-primary pl-2  text-xs">
             In payments processed through Backbone by our customers from 8th
-            March 2024 to 31st May, 2025
+            March 2024 to 6th June, 2025
           </div>
         </div>
         <div data-aos="fade-up">
