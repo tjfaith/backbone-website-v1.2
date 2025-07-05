@@ -74,13 +74,13 @@ const Hero1 = () => {
             <b>
               $
               {Number(
-                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
+                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
               ).toLocaleString()}
             </b>
             <span className="">
               {" "}
               {/* {new Date().getFullYear() - 1} */}
-              in transactions from 8th March 2024 to 31st May, 2025. Welcome to
+              in transactions from 8th March 2024 to 6th June, 2025. Welcome to
               the new Standard!
             </span>
           </div>
