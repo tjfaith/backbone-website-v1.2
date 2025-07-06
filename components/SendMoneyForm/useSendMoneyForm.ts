@@ -87,8 +87,8 @@ function useSendMoneyForm({ action }: Props) {
   };
 
   useEffect(() => {
-    setActiveCurrency(allCurrencies.filter((cur: Currency) => !cur.is_deleted));
-  }, [allCurrencies]);
+    setActiveCurrency(allCurrencies);
+  }, [currenciesLoading]);
 
   useEffect(() => {
     const usd = getCurrencyByCode("USD");

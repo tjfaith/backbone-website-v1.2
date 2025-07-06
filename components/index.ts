@@ -8,6 +8,9 @@ export { default as SocialLayout } from "./SocialLayout";
 export { default as DigitalTransaction } from "./DigitalTransaction";
 export { default as PreLoader } from "./PreLoader";
 export { default as ChatButton } from "./ChatButton";
+export { default as Dot } from "./Dot";
+export { default as AppDownloadBtn } from "./AppDownloadBtn";
+export { default as OurOfferingsMenu } from "./OurOfferingsMenu";
 
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";
@@ -19,6 +22,7 @@ export { default as CustomFileUploader } from "./UI/CustomFileUploader";
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";
 export { default as Partners } from "./HomePage/Partners";
+export { default as OnePlace } from "./HomePage/OnePlace";
 export { default as About } from "./HomePage/About";
 export { default as NotificationCard } from "./HomePage/NotificationCard";
 export { default as JoinUs } from "./HomePage/JoinUs";

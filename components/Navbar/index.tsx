@@ -10,13 +10,6 @@ import {
 } from "@heroui/navbar";
 import { Link } from "@heroui/link";
 import NextLink from "next/link";
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-  DropdownSection,
-} from "@heroui/dropdown";
 import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react";
 
@@ -28,6 +21,8 @@ import {
   CustomDropdown,
   ThemeSwitch,
 } from "@/components";
+import { Card } from "@heroui/card";
+import { OurOfferingsMenu } from "@/components";
 
 const Navbar = () => {
   const {
@@ -55,8 +50,8 @@ const Navbar = () => {
       maxWidth="xl"
       onMenuOpenChange={handleMenuToggle}
     >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className=" max-w-fit">
+      <NavbarContent className="!flex-initial !w-fit px-0">
+        <NavbarBrand as="li" className="!p-0 !m-0">
           <NextLink href="/">
             <BackboneLogo
               showDarkLogo={changeReady || showLightNav === false}
@@ -65,7 +60,7 @@ const Navbar = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 w-full" justify="start">
         <ul className="hidden lg:flex items-center gap-4 justify-start ml-2">
           {navItems.map((item, index) => (
             <NavbarItem key={index}>
@@ -77,54 +72,7 @@ const Navbar = () => {
                   {item.label}
                 </NextLink>
               ) : (
-                <Dropdown
-                  key={index}
-                  classNames={{ content: "border border-foreground-200" }}
-                  radius="lg"
-                  shadow="sm"
-                >
-                  <DropdownTrigger>
-                    <Button
-                      className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"}  bg-transparent text-base px-1 
-                      ${
-                        item.menu.some((sub) => sub?.href === currentPath) &&
-                        "bg-background-200 text-primary rounded-xl px-3"
-                      }
-                      
-                      `}
-                      endContent={<Icon icon="ri:arrow-down-s-line" />}
-                      variant="flat"
-                    >
-                      {item.label}
-                    </Button>
-                  </DropdownTrigger>
-                  <DropdownMenu
-                    aria-label="Drop down"
-                    itemClasses={{
-                      base: "rounded-md  text-default-500 transition-opacity text-foreground data-[hover=true]:bg-default-100 dark:data-[hover=true]:bg-default-50  data-[selectable=true]:focus:bg-default-50 data-[pressed=true]:opacity-70  data-[focus-visible=true]:ring-default-500",
-                    }}
-                  >
-                    <DropdownSection
-                      classNames={{ heading: "font-bold dark:text-primary" }}
-                      title="Personal and Business Banking"
-                    >
-                      {item.menu.map((sub_item: any, index2) => (
-                        <DropdownItem
-                          key={index2}
-                          startContent={<Icon icon={sub_item.icon} />}
-                          textValue={sub_item.label}
-                        >
-                          <NextLink
-                            className="space-x-4 flex flex-row items-center"
-                            href={sub_item.href}
-                          >
-                            <span>{sub_item.label}</span>
-                          </NextLink>
-                        </DropdownItem>
-                      ))}
-                    </DropdownSection>
-                  </DropdownMenu>
-                </Dropdown>
+                <OurOfferingsMenu />
               )}
             </NavbarItem>
           ))}
@@ -136,14 +84,26 @@ const Navbar = () => {
 
       <NavbarContent className="hidden lg:flex" justify="end">
         <NavbarItem>
-          <CustomButton
+          <Button
+            className="text-primary"
+            variant="flat"
+            size="sm"
             as={Link}
-            fullWidth={false}
             href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
-            variant={theme === "dark" || isSSR ? "flat" : "light"}
+          >
+            Log in
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+          <Button
+            color="primary"
+            className="text-background"
+            size="sm"
+            as={Link}
+            href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-up`}
           >
             Get Started Now
-          </CustomButton>
+          </Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -174,11 +134,7 @@ const Navbar = () => {
                   </Link>
                 </NavbarMenuItem>
               ) : (
-                <CustomDropdown
-                  items={item.menu}
-                  label={item.label}
-                  setIsMenuOpen={setIsMenuOpen}
-                />
+                <OurOfferingsMenu />
               )}
             </div>
           ))}

@@ -18,6 +18,8 @@ export { default as Rates } from "./img/rates.png";
 export { default as Innovation } from "./img/innovation.png";
 export { default as Bar } from "./img/bar.png";
 export { default as Bar2 } from "./img/bar2.png";
+export { default as IosLogo } from "./img/iosLogo.svg";
+export { default as androidLogo } from "./img/androidLogo.svg";
 
 // hero
 export { default as Earth } from "./img/hero/earth.png";
@@ -31,6 +33,27 @@ export { default as User3 } from "./img/globalReach/user3.png";
 export { default as User4 } from "./img/globalReach/user4.png";
 export { default as WorldMap } from "./img/globalReach/worldMap.png";
 
+// Our Offerings
+export { default as GlobalBankingActive } from "./img/ourOfferings/globalBankingActive.png";
+export { default as GlobalBankingInActive } from "./img/ourOfferings/globalBankingInActive.png";
+export { default as GlobalBankingOpen } from "./img/ourOfferings/globalBankingOpen.png";
+
+export { default as TradeFinanceActive } from "./img/ourOfferings/tradeFinanceActive.png";
+export { default as TradeFinanceInActive } from "./img/ourOfferings/tradeFinanceInActive.png";
+export { default as TradeFinanceOpen } from "./img/ourOfferings/tradeFinanceOpen.png";
+
+export { default as InvestmentsActive } from "./img/ourOfferings/investmentsActive.png";
+export { default as InvestmentsInActive } from "./img/ourOfferings/investmentsInActive.png";
+export { default as InvestmentsOpen } from "./img/ourOfferings/investmentOpen.png";
+
+export { default as EnergyFinanceActive } from "./img/ourOfferings/energyFinanceActive.png";
+export { default as EnergyFinanceInActive } from "./img/ourOfferings/energyFinanceInActive.png";
+export { default as EnergyFinanceOpen } from "./img/ourOfferings/energyFinanceOpen.png";
+
+export { default as HomeFinanceActive } from "./img/ourOfferings/homeFinanceActive.png";
+export { default as HomeFinanceInActive } from "./img/ourOfferings/homeFinanceInActive.png";
+export { default as HomeFinanceOpen } from "./img/ourOfferings/homeFinanceOpen.png";
+
 // about
 export { default as About1 } from "./img/about/about1.jpeg";
 export { default as About2 } from "./img/about/about2.jpeg";
@@ -38,6 +61,9 @@ export { default as About3 } from "./img/about/about3.jpeg";
 export { default as About4 } from "./img/about/about4.jpeg";
 
 // brands
+export { default as Stripe } from "./img/brands/stripe.svg";
+export { default as ClearJunction } from "./img/brands/clearJunction.png";
+export { default as Conduit } from "./img/brands/conduit.png";
 export { default as Fincra } from "./img/brands/fincra.svg";
 export { default as FlutterWave } from "./img/brands/flutterWave.png";
 export { default as Graph } from "./img/brands/graph.svg";
@@ -52,6 +78,11 @@ export { default as WeWire } from "./img/brands/weWire.svg";
 export { default as YellowCard } from "./img/brands/yellowCard.svg";
 export { default as InstagramIcon } from "./img/brands/instagram_logo.svg";
 export { default as TikTokIcon } from "./img/brands/tiktok.svg";
+
+// app
+export { default as ReceiveImg } from "./img/app/receive.png";
+export { default as SendImg } from "./img/app/send.png";
+export { default as SwapImg } from "./img/app/swap.png";
 
 // blog
 export { default as BlogHeroImg } from "./img/blog/blogHero.jpg";

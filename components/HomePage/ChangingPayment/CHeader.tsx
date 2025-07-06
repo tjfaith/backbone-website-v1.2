@@ -12,20 +12,55 @@ const CHeader = () => {
       <div className="z-0">
         <motion.div
           animate={{ scale: [1, 0.9, 1] }}
-          className="absolute lg:bottom-2 bottom-20 lg:left-36 left-0 inline-flex items-center justify-center p-3 rounded-full bg-info-300 text-white text-3xl"
+          className="absolute lg:bottom-2 bottom-20 lg:left-36 left-0 inline-flex  p-3 rounded-full text-[#346A4D] text-3xl w-16 h-16
+    px-[19.692px] py-[14.769px]
+    justify-center items-center
+    gap-[4.923px]
+    flex-shrink-0
+    border-[0.615px] border-[#9BE1BC]
+    bg-[#D6F7E5]
+    shadow-[inset_0px_-0.615px_3.692px_0px_#9BE1BC,_2.462px_1.846px_0px_2.462px_#9BE1BC]
+          "
           data-aos="fade-up"
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <Icon icon="ri:coins-fill" />
+          ₦
         </motion.div>
 
         <motion.div
           animate={{ scale: [1, 0.9, 1] }}
-          className="absolute top-2 lg:right-36 right-0 inline-flex items-center justify-center p-3 rounded-full bg-secondary-500 dark:bg-secondary-600/50 text-white text-3xl"
+          className="absolute top-2 lg:right-36 right-0 inline-flex rounded-full dark:bg-secondary-600/50 text-[#6A5E34] text-3xl
+    w-16 h-16
+    px-[19.692px] py-[14.769px]
+    justify-center items-center
+    gap-[4.923px]
+    flex-shrink-0
+    border-[0.615px] border-[#E1D29B]
+    bg-[#F7F0D6]
+    shadow-[inset_0px_-0.615px_3.692px_0px_#E1D29B,_2.462px_1.846px_0px_2.462px_#E1D29B]
+          "
           data-aos="fade-up"
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <Icon icon="ri:flashlight-fill" />
+          £
+        </motion.div>
+
+        <motion.div
+          animate={{ scale: [1, 0.9, 1] }}
+          className="absolute -bottom-16 lg:right-48 right-0 inline-flex rounded-full dark:bg-secondary-600/50 text-[#34586A] text-3xl
+    w-16 h-16
+    px-[19.692px] py-[14.769px]
+    justify-center items-center
+    gap-[4.923px]
+    flex-shrink-0
+    border-[0.615px] border-[#9BCAE1]
+    bg-[#D6ECF7]
+    shadow-[inset_0px_-0.615px_3.692px_0px_#9BCAE1,_2.462px_1.846px_0px_2.462px_#9BCAE1]
+          "
+          data-aos="fade-up"
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          $
         </motion.div>
       </div>
       <div className=" z-10 w-full">

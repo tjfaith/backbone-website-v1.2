@@ -10,7 +10,7 @@ import {
 
 const ChangingPayment = () => {
   return (
-    <div className=" py-12 bg-gradient-to-b from-background to-background via-background-200 via-95% dark:via-success-100/5">
+    <div className=" py-12 bg-gradient-to-b from-background to-background-200 via-background-200 via-95% dark:via-success-100/5">
       <div className="page-max-width">
         <CHeader />
         <div className="space-y-2">
