@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 
 import { Providers } from "./providers";
 
+// test
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer, Navbar, PreLoader, ChatButton } from "@/components";
