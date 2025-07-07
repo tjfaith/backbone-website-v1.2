@@ -47,8 +47,7 @@ const CHeader = () => {
 
         <motion.div
           animate={{ scale: [1, 0.9, 1] }}
-          className="absolute -bottom-16 lg:right-48 right-0 inline-flex rounded-full dark:bg-secondary-600/50 text-[#34586A] text-3xl
-    w-16 h-16
+          className="absolute -bottom-16 lg:right-48 right-0 inline-flex rounded-full dark:bg-secondary-600/50 text-[#34586A] text-3xl w-16 h-16
     px-[19.692px] py-[14.769px]
     justify-center items-center
     gap-[4.923px]
@@ -97,7 +96,7 @@ const CHeader = () => {
           </div>
         </div>
         <div
-          className="text-primary-600 text-sm font-medium max-w-lg mx-auto text-center"
+          className="text-primary-600 text-base font-medium max-w-lg mx-auto text-center"
           data-aos="fade-up"
         >
           Imagine a world where payments aren’t just transactions but

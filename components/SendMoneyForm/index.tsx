@@ -191,7 +191,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
             <span className="text-primary-600">Conversion rate:</span>{" "}
             <span className="text-primary">
               {selectedCurrency?.symbol}1 = {selectedCurrency2?.symbol}
-              {Number(convertedAmount.sell_rate).toLocaleString("en-US", {
+              {Number(convertedAmount.buy_rate).toLocaleString("en-US", {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 5,
               })}
