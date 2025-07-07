@@ -9,6 +9,7 @@ import { Link } from "@heroui/link";
 
 import { BlogServices } from "@/app/utils/services";
 import { Spinner } from "@/public/assets";
+import { Icon } from "@iconify/react";
 
 const BlogExtract = () => {
   const {
@@ -29,31 +30,31 @@ const BlogExtract = () => {
   }, [currentPath]);
 
   return (
-    <div className="page-max-width px-6 py-14">
-      <div className=" flex lg:flex-row flex-col lg:gap-0 gap-4 justify-between lg:items-end mb-8">
+    <div className="page-max-width px-6 py-14 grid grid-cols-1 md:grid-cols-3">
+      <div className=" max-w-md  mb-8">
         <div>
           <div className="clash-display-font text-4xl font-medium text-primary">
             Take a walk with us!
           </div>
-          <div className="text-primary-600 max-w-xl">
+          <div className="text-primary-600 max-w-5xl">
             Read about how Backbone has helped individuals and businesses across
             a variety of sectors.
           </div>
         </div>
-        <div>
+        <div className="mt-6">
           <Button
             as={Link}
             className=" text-base text-primary-600"
             href="/blog"
             variant="bordered"
           >
-            View all articles
+            Learn more about how we work
           </Button>
         </div>
       </div>
       {!blogLoading ? (
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-          {allBlogs?.slice(-3).map((blog, index) => (
+        <div className="grid md:grid-cols-2 gap-5 col-span-2">
+          {allBlogs?.slice(-4).map((blog, index) => (
             <div
               key={index}
               className="flex flex-col hover:bg-foreground-200/50 rounded-xl p-2 transition-all ease-in-out duration-300"
@@ -61,7 +62,7 @@ const BlogExtract = () => {
             >
               <Image
                 alt="blog image"
-                className="object-cover h-screen-40 md:w-screen-30 mb-4"
+                className="object-cover h-screen-40 md:w-screen-30 w-screen mb-4"
                 src={blog.cover_image}
               />
               <div className="flex  flex-col justify-between flex-grow">
@@ -77,28 +78,28 @@ const BlogExtract = () => {
                       <div
                         dangerouslySetInnerHTML={{
                           __html: DOMPurify.sanitize(
-                            blog?.blog_content.length > 300
-                              ? blog?.blog_content.slice(0, 300) + "..."
-                              : blog?.blog_content,
+                            blog?.blog_content.length > 500
+                              ? blog?.blog_content.slice(0, 500) + "..."
+                              : blog?.blog_content
                           ),
                         }}
                         className="text-base"
                       />
                     }
                   </div>
-                  <Spacer y={20} />
+                  <Spacer y={5} />
                 </div>
                 <div>
                   <Button
-                    className="border text-primary-600"
-                    variant="bordered"
+                    className="text-primary-600 font-semibold px-0"
+                    variant="light"
                     onPress={() =>
                       viewBlog(
-                        `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`,
+                        `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`
                       )
                     }
                   >
-                    View article
+                    Read article <Icon icon="ri:arrow-right-s-line" />
                   </Button>
                 </div>
               </div>

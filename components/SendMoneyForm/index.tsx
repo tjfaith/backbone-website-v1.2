@@ -91,20 +91,22 @@ const SendMoneyForm = ({ title, action }: Props) => {
               variant="flat"
               onChange={(e) => handleCurrencyChange(e.target.value)}
             >
-              {activeCurrency?.map((currency: Currency) => (
-                <SelectItem
-                  key={currency?.id}
-                  startContent={
-                    <Image
-                      alt="currency image"
-                      radius="full"
-                      src={currency?.avatar}
-                    />
-                  }
-                >
-                  {currency.code}
-                </SelectItem>
-              ))}
+              {activeCurrency
+                ?.filter((cur: Currency) => !cur.is_deleted)
+                ?.map((currency: Currency) => (
+                  <SelectItem
+                    key={currency?.id}
+                    startContent={
+                      <Image
+                        alt="currency image"
+                        radius="full"
+                        src={currency?.avatar}
+                      />
+                    }
+                  >
+                    {currency.code}
+                  </SelectItem>
+                ))}
             </Select>
           </div>
         </div>
