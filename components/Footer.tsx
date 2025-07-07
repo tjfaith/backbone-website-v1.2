@@ -14,7 +14,7 @@ const Footer = () => {
   const [financeMenu, setFinanceMenu] = useState(false);
 
   return (
-    <footer className="dark:bg-background bg-primary dark:text-primary text-background rounded-t-2xl py-16">
+    <footer className="bg-black dark:text-primary text-background py-16">
       <div className="page-max-width">
         {/* ROW 1 */}
         <div className="mb-10">
@@ -305,6 +305,10 @@ const Footer = () => {
                     {process.env.NEXT_PUBLIC_NGN_NUMBER}
                   </Link>
                 </div>
+              </div>
+              <div className="text-xs text-background/70 dark:text-primary/70">
+                <div>9am - 5pm GMT +1</div>
+                <div>SMS and Calls only.</div>
               </div>
             </div>
 

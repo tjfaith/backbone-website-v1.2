@@ -9,7 +9,10 @@ interface props {
 }
 const AppDownloadBtn = ({ btnType }: props) => {
   return (
-    <Button radius="full" className="bg-background bg:text-primary">
+    <Button
+      radius="full"
+      className="bg-background dark:bg-primary bg:text-primary"
+    >
       <>
         {btnType === "ios" && (
           <div className="flex items-center gap-1">

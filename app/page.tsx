@@ -9,7 +9,7 @@ import {
   Testimonies,
   ChangingPayment,
   WhyBackbone,
-  OnePlace,
+  // OnePlace,
 } from "@/components";
 
 const HomePage = () => {
@@ -19,7 +19,7 @@ const HomePage = () => {
       <Partners />
       <ChangingPayment />
       <JoinUs />
-      <OnePlace />
+      {/* <OnePlace /> */}
       <WhyBackbone />
       <Testimonies />
       <BlogExtract />
