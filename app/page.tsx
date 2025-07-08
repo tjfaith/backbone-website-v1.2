@@ -21,7 +21,7 @@ const HomePage = () => {
       <JoinUs />
       {/* <OnePlace /> */}
       <WhyBackbone />
-      <Testimonies />
+      {/* <Testimonies /> */}
       <BlogExtract />
     </div>
   );

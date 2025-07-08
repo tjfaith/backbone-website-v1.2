@@ -64,13 +64,13 @@ const PrivacyPolicy = () => {
                   1. Introduction
                 </h2>
                 <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
-                  This Privacy Policy is developed by Backbone Technology
-                  Solutions Limited (the Company) in compliance with the
-                  Nigerian Data Protection Regulation 2019 and other similar
-                  regulations as well as a demonstration of the Company&apos;s
-                  commitment to provide its customers and other stakeholders
-                  with highest level of protection of their personal data
-                  obtained in the course of interacting with the Company.
+                  This Privacy Policy is developed by Backbone finance inc. (the
+                  Company) in compliance with the Nigerian Data Protection
+                  Regulation 2019 and other similar regulations as well as a
+                  demonstration of the Company&apos;s commitment to provide its
+                  customers and other stakeholders with highest level of
+                  protection of their personal data obtained in the course of
+                  interacting with the Company.
                 </p>
               </section>
 

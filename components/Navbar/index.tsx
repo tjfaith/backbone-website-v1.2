@@ -72,7 +72,7 @@ const Navbar = () => {
                   {item.label}
                 </NextLink>
               ) : (
-                <OurOfferingsMenu />
+                <OurOfferingsMenu changeReady={changeReady} />
               )}
             </NavbarItem>
           ))}

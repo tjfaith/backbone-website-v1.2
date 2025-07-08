@@ -50,8 +50,8 @@ const CookiePolicy = () => {
               {/* Introduction */}
               <section className="scroll-mt-20">
                 <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
-                  This Cookie Policy explains how Backbone Technology Solutions
-                  Ltd (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses
+                  This Cookie Policy explains how Backbone finance inc.
+                  (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses
                   cookies and similar tracking technologies on our website
                   (mybackbone.io).
                 </p>

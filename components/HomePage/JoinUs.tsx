@@ -76,10 +76,8 @@ const JoinUs = () => {
                 className="text-background text-sm font-normal lg:tracking-wide"
                 title="Individuals"
               >
-                We facilitate people transact around the globe with greater ease
-                by providing them with advanced multi-currency accounts and
-                bespoke payment solutions. Allowing people to effortlessly
-                trade, pay, and connect around the world.
+                We streamline payments for individuals, businesses, and
+                nonprofits, creating possibilities you never thought possible.
               </Tab>
               <Tab
                 key="businesses"

@@ -25,7 +25,7 @@ const Partners = () => {
     <div className="page-max-width pb-16 pt-32 md:pt-48 space-y-10   bg-background dark:bg-background-200">
       <div className="">
         <div className="clash-display-font" data-aos="fade-up">
-          <span className="text-primary text-5xl font-medium">
+          <span className="text-primary text-[32px] font-medium">
             <CountUp
               enableScrollSpy
               scrollSpyOnce
@@ -40,20 +40,23 @@ const Partners = () => {
           </span>
         </div>
         <div
-          className="text-primary text-2xl xl:text-5xl font-medium leading-tight max-w-4xl clash-display-font"
+          className="text-primary text-2xl md:text-[32px] font-medium leading-tight max-w-xl clash-display-font"
           data-aos="fade-up"
           id="get_started"
         >
           Trusted by Hundreds of Partners Across different Countries.
         </div>
       </div>
-      <div className="flex flex-wrap items-center gap-8 " data-aos="fade-up">
-        <Image
+      <div
+        className="sm:flex flex-wrap items-center grid grid-cols-2 gap-8  "
+        data-aos="fade-up"
+      >
+        {/* <Image
           alt="Stripe logo"
           className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-20"
           radius="none"
           src={Stripe.src}
-        />
+        /> */}
         <Image
           alt="ClearJunction logo"
           className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-36"
@@ -80,7 +83,7 @@ const Partners = () => {
         />
         <Image
           alt="flutterwave logo"
-          className="dark:bg-primary bg-transparent rounded-full w-52"
+          className="dark:bg-primary bg-transparent rounded-full w-36"
           radius="none"
           src={FlutterWave.src}
         />

@@ -11,6 +11,7 @@ export { default as ChatButton } from "./ChatButton";
 export { default as Dot } from "./Dot";
 export { default as AppDownloadBtn } from "./AppDownloadBtn";
 export { default as OurOfferingsMenu } from "./OurOfferingsMenu";
+export { default as ComingSoonBadge } from "./OurOfferingsMenu/ComingSoonBadge";
 
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";
