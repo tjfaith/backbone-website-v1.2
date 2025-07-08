@@ -187,13 +187,13 @@ const AmlPolicy = () => {
                   Bank of Nigeria (CBN) Anti-Money Laundering, Combating the
                   Financing of Terrorism and Countering Proliferation Financing
                   of Weapons of Mass Destructions in Financial Institutions)
-                  Regulations 2022. The management of Backbone Technology
-                  Solutions Limited (&quot;The Company&quot;) has come up with
-                  the following measures in the attainment of its objectives of
-                  ensuring full compliance and to safeguard the Company from
-                  being used as a tool for financial crime. The Company sets
-                  specific procedures for monitoring client onboarding, account
-                  classification, and KYC documentation.
+                  Regulations 2022. The management of Backbone finance inc.
+                  (&quot;The Company&quot;) has come up with the following
+                  measures in the attainment of its objectives of ensuring full
+                  compliance and to safeguard the Company from being used as a
+                  tool for financial crime. The Company sets specific procedures
+                  for monitoring client onboarding, account classification, and
+                  KYC documentation.
                 </p>
               </section>
 
@@ -206,10 +206,10 @@ const AmlPolicy = () => {
                   The objective of this policy is to provide Anti-Money
                   Laundering, Combating the Proliferation of Terrorism and
                   Countering Proliferation (AML, CFT & CPE) compliance
-                  guidelines for Backbone Technology Solutions Limited &quot;The
-                  Company&quot; under the regulatory purview of the CBN. Also,
-                  to diligently enforce AML, CFT, CPE measures and ensure
-                  effective compliance.
+                  guidelines for Backbone finance inc. &quot;The Company&quot;
+                  under the regulatory purview of the CBN. Also, to diligently
+                  enforce AML, CFT, CPE measures and ensure effective
+                  compliance.
                 </p>
                 <p className="text-sm sm:text-base text-primary-700 mt-3 leading-relaxed">
                   This Policy shall apply to every customer or client of the
@@ -1290,13 +1290,13 @@ const AmlPolicy = () => {
                   Introduction
                 </h3>
                 <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
-                  The Management of Backbone Technology Solutions Limited
-                  [&quot;The Company&quot;) is responsible for maintaining an
-                  effective internal control system commensurate with the scale,
-                  nature, and complexity of the organization&apos;s operations.
-                  The Company is responsible for setting specific internal
-                  control requirements for customer onboarding. This policy sets
-                  out the objectives, roles and responsibilities, processes, and
+                  The Management of Backbone finance inc. [&quot;The
+                  Company&quot;) is responsible for maintaining an effective
+                  internal control system commensurate with the scale, nature,
+                  and complexity of the organization&apos;s operations. The
+                  Company is responsible for setting specific internal control
+                  requirements for customer onboarding. This policy sets out the
+                  objectives, roles and responsibilities, processes, and
                   reporting procedures relating to Know Your Customer (KYC)
                   documentation and Controls.
                 </p>

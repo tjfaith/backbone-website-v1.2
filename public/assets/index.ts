@@ -20,6 +20,9 @@ export { default as Bar } from "./img/bar.png";
 export { default as Bar2 } from "./img/bar2.png";
 export { default as IosLogo } from "./img/iosLogo.svg";
 export { default as androidLogo } from "./img/androidLogo.svg";
+export { default as DottedBg } from "./img/dottedBg.svg";
+export { default as GradientLogo } from "./img/gradientLogo.svg";
+export { default as GradientBg } from "./img/gradientBg.png";
 
 // hero
 export { default as Earth } from "./img/hero/earth.png";

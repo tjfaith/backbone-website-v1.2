@@ -63,7 +63,15 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
                   <h3 className="font-semibold text-sm text-primary dark:text-primary">
                     {service.title}
                   </h3>
-                  <service.comingSoon />
+                  {service.comingSoon && (
+                    <div className="text-xs rounded-lg text-foreground-600 bg-background border-foreground-100 dark:bg-background-300 dark:text-foreground-100 dark:border-foreground-200 border-2 py-1 px-2 flex items-center gap-1 border-dashed">
+                      <Icon
+                        className="text-foreground-300 dark:text-foreground-400"
+                        icon="ri:forbid-fill"
+                      />
+                      <span>Coming soon</span>
+                    </div>
+                  )}
                 </div>
                 <p className="text-sm text-primary-400 dark:text-foreground-300 leading-relaxed">
                   {service.description}

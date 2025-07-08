@@ -327,7 +327,7 @@ const Footer = () => {
                       USA:
                     </span>{" "}
                     <span className="text-background dark:text-primary hover:text-primary-200">
-                      8 The Green, STE A, Dover CA 19901
+                      8, The Green, Suite A, Dover, DE 19901, United States
                     </span>
                   </div>
                 </div>

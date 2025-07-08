@@ -66,19 +66,19 @@ const ServiceTerms = () => {
               {/* Welcome */}
               <section className="scroll-mt-20">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                  Welcome to Backbone Technology Solutions Ltd
+                  Welcome to Backbone finance inc.
                 </h2>
                 <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   These Terms of Service (&quot;Terms&quot;) govern your access
-                  to and use of all products and services offered by Backbone
-                  Technology Solutions Ltd (&quot;Backbone,&quot;
-                  &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), including
-                  but not limited to Backbone Finance and BackbonePay, through
-                  our website (mybackbone.io), mobile applications, and related
-                  platforms (collectively, the &quot;Services&quot;). By
-                  accessing or using our Services, you agree to be bound by
-                  these Terms and our Privacy Policy. If you do not agree,
-                  please do not use our Services.
+                  to and use of all products and services offered byBackbone
+                  finance inc. (&quot;Backbone,&quot; &quot;we,&quot;
+                  &quot;our,&quot; or &quot;us&quot;), including but not limited
+                  to Backbone Finance and BackbonePay, through our website
+                  (mybackbone.io), mobile applications, and related platforms
+                  (collectively, the &quot;Services&quot;). By accessing or
+                  using our Services, you agree to be bound by these Terms and
+                  our Privacy Policy. If you do not agree, please do not use our
+                  Services.
                 </p>
               </section>
 
@@ -264,7 +264,7 @@ const ServiceTerms = () => {
                 </h2>
                 <div className="text-sm sm:text-base text-primary-700 leading-relaxed space-y-2">
                   <p>
-                    <strong>Backbone Technology Solutions Ltd</strong>
+                    <strong>Backbone finance inc.</strong>
                   </p>
                   <p>
                     <strong>Head Office:</strong> S.95, TBS, Race Course,

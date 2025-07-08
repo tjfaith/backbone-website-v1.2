@@ -27,10 +27,10 @@ const TailoredSupport = () => {
       data-aos="fade-up"
     >
       <CTitle title="Tailored support" />
-      <div className="clash-display-font xl:text-start text-center lg:text-4xl md:text-3xl text-2xl text-primary font-medium max-w-lg mb-1">
+      <div className="clash-display-font xl:text-start text-center md:text-[32px] text-2xl text-primary font-medium max-w-md mb-1">
         Tailored Financial Solutions for your Business
       </div>
-      <div className="xl:text-start text-center text-primary-400 text-base font-medium max-w-lg tracking-tight">
+      <div className="xl:text-start text-center text-primary-500 text-base font-normal max-w-md tracking-tight">
         From seamless transactions to multi-currency support, manage your
         business finances effortlessly.
       </div>
