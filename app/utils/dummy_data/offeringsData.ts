@@ -1,4 +1,3 @@
-import { ComingSoonBadge } from "@/components";
 import {
   EnergyFinanceActive,
   EnergyFinanceInActive,
@@ -56,7 +55,7 @@ export const offerings = [
     activeIcon: TradeFinanceActive,
     coverIcon: TradeFinanceOpen,
     active: false,
-    comingSoon: ComingSoonBadge,
+    comingSoon: true,
     generalLink: "offerings/trade-finance",
     generalLinkText: "Explore Trade Finance",
     details: [
@@ -92,7 +91,7 @@ export const offerings = [
     activeIcon: InvestmentsActive,
     coverIcon: InvestmentsOpen,
     active: false,
-    comingSoon: ComingSoonBadge,
+    comingSoon: true,
     generalLink: "offerings/investments",
     generalLinkText: "Explore Investments",
     details: [
@@ -114,7 +113,7 @@ export const offerings = [
     activeIcon: EnergyFinanceActive,
     coverIcon: EnergyFinanceOpen,
     active: false,
-    comingSoon: ComingSoonBadge,
+    comingSoon: true,
     generalLink: "offerings/energy-finance",
     generalLinkText: "Explore Energy Finance",
     details: [
@@ -136,7 +135,7 @@ export const offerings = [
     activeIcon: HomeFinanceActive,
     coverIcon: HomeFinanceOpen,
     active: false,
-    comingSoon: ComingSoonBadge,
+    comingSoon: true,
     generalLink: "offerings/home-finance",
     generalLinkText: "Explore Home Finance",
     details: [

@@ -6,7 +6,7 @@ import { RootState } from "@/app/store";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
 
 function useOurOfferingsMenu() {
-  const services = offerings;
+  const services = [...offerings];
   const { showLightNav } = useSelector((state: RootState) => state.settings);
   const [selectedMenu, seSelectedMenu] = useState(0);
   const [menuDetails, setMenuDetails] = useState(services[selectedMenu]);

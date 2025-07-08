@@ -9,6 +9,8 @@ import { Link } from "@heroui/link";
 import Image from "next/image";
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
 import { useDisclosure } from "@heroui/modal";
+import { AnimatePresence, motion } from "framer-motion";
+import { offerings } from "@/app/utils/dummy_data/offeringsData";
 
 const OurOfferingsMenu = ({ changeReady = false }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,7 +38,7 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
             isMobile && "mt-10"
           }`}
         >
-          {services.map((service) => (
+          {offerings.map((service) => (
             <button
               key={service.id}
               className={`flex items-start gap-3 p-2 rounded-lg cursor-pointer transition-all duration-200 ${
@@ -47,23 +49,64 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
               onClick={() => handleServiceClick(service.id)}
             >
               <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center">
-                {/* <Image
-                  alt="service icon"
-                  src={
-                    selectedMenu === service.id
-                      ? service.activeIcon
-                      : service.icon
-                  }
-                /> */}
-
-                <Image alt="service icon" src={service.icon} />
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={
+                      selectedMenu === service.id
+                        ? service.activeIcon.src
+                        : service.icon.src
+                    }
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="w-10 h-10 rounded-lg flex items-center justify-center"
+                  >
+                    <Image
+                      alt="service icon"
+                      src={
+                        selectedMenu === service.id
+                          ? service.activeIcon
+                          : service.icon
+                      }
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </motion.div>
+                </AnimatePresence>
               </div>
               <div className="min-w-0 text-left">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-semibold text-sm text-primary dark:text-primary">
                     {service.title}
                   </h3>
-                  <service.comingSoon />
+
+                  <AnimatePresence mode="wait">
+                    {service.comingSoon && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -4 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        key={`badge-${service.id}`}
+                      >
+                        <Chip
+                          className="text-xs rounded-lg text-foreground-600 bg-background border-foreground-100 
+        dark:bg-background-300 dark:text-foreground-100 dark:border-foreground-200 
+        border-2 py-1 px-2 items-center gap-1 border-dashed"
+                          startContent={
+                            <Icon
+                              className="text-foreground-300 dark:text-foreground-400"
+                              icon="ri:forbid-fill"
+                            />
+                          }
+                        >
+                          <span>Coming soon</span>
+                        </Chip>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <p className="text-sm text-primary-400 dark:text-foreground-300 leading-relaxed">
                   {service.description}
@@ -73,15 +116,6 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
           ))}
         </div>
       )}
-      {/* {!isMobile && (
-        <div className="h-full bg-red-500 flex-grow  ">
-          hh
-          <Divider
-            orientation="vertical"
-            className="bg-red-500-100 dark:bg-foreground-600 h-full"
-          />
-        </div>
-      )} */}
 
       {(isMobile ? viewDetails : true) && (
         <div className="p-4 space-y-6 w-full relative h-full lg:h-auto mt-8 lg:mt-0">
