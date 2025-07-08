@@ -58,7 +58,6 @@ const BlogExtract = () => {
             <div
               key={index}
               className="flex flex-col hover:bg-foreground-200/50 rounded-xl p-2 transition-all ease-in-out duration-300"
-              data-aos="fade-up"
             >
               <Image
                 alt="blog image"
