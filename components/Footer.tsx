@@ -42,7 +42,7 @@ const Footer = () => {
                     </span>
                   </button>
                   {globalBankingMenu && (
-                    <div className=" ml-3 animate__animated animate__flipInX flex flex-col">
+                    <div className=" ml-3 animate__animated animate__fadeIn flex flex-col">
                       <Link
                         className="text-background/70 dark:text-primary/70"
                         href="/offerings/individual"
@@ -83,7 +83,7 @@ const Footer = () => {
                     </span>
                   </button>
                   {financeMenu && (
-                    <div className="ml-3 animate__animated animate__flipInX flex flex-col">
+                    <div className="ml-3 animate__animated animate__fadeIn flex flex-col">
                       <Link
                         className="text-background/70 dark:text-primary/70"
                         href="/finance/rent"
@@ -186,35 +186,35 @@ const Footer = () => {
             <div className="md:flex hidden items-center gap-5">
               <Link
                 isExternal
-                className="text-background dark:text-primary text-xl"
+                className="text-background dark:text-primary text-2xl"
                 href="https://www.linkedin.com/company/backbone-finance/?viewAsMember=true"
               >
                 <Icon icon="mdi:linkedin" />
               </Link>
               <Link
                 isExternal
-                className="text-background dark:text-primary text-xl"
+                className="text-background dark:text-primary text-2xl"
                 href="https://www.twitter.com/mybackbone_io"
               >
                 <Icon icon="ri:twitter-x-fill" />
               </Link>
               <Link
                 isExternal
-                className="text-background dark:text-primary text-xl"
+                className="text-background dark:text-primary text-2xl"
                 href="https://www.facebook.com/mybackbone_io"
               >
                 <Icon icon="ri:facebook-circle-fill" />
               </Link>
               <Link
                 isExternal
-                className="text-background dark:text-primary text-xl"
+                className="text-background dark:text-primary text-2xl"
                 href="https://www.instagram.com/mybackbone.io"
               >
                 <Icon icon="mage:instagram-square" />
               </Link>
               <Link
                 isExternal
-                className="text-background dark:text-primary text-xl"
+                className="text-background dark:text-primary text-2xl"
                 href="https://www.tiktok.com/@mybackbone.io?_t=8n0PIC0zKfm&_r=1"
               >
                 <Icon icon="ri:tiktok-fill" />
@@ -240,7 +240,7 @@ const Footer = () => {
 
             <div className="text-background dark:text-primary">
               <div className="flex items-center gap-2">
-                <Dot />
+                <Dot timing={2} />
                 <div className="text-background dark:text-primary">
                   Phone Support
                 </div>
@@ -314,7 +314,7 @@ const Footer = () => {
 
             <div className="text-background dark:text-primary w-full">
               <div className="flex items-center gap-2">
-                <Dot />
+                <Dot timing={1} />
                 <div className="text-background dark:text-primary">Office</div>
               </div>
               <div className="w-full">
@@ -326,7 +326,7 @@ const Footer = () => {
                     <span className="text-background/70 dark:text-primary/70">
                       USA:
                     </span>{" "}
-                    <span className="text-background dark:text-primary hover:text-primary-200">
+                    <span className="text-background dark:text-primary">
                       8, The Green, Suite A, Dover, DE 19901, United States
                     </span>
                   </div>
@@ -340,7 +340,7 @@ const Footer = () => {
                     <span className="text-background/70 dark:text-primary/70">
                       UK:
                     </span>{" "}
-                    <span className="text-background dark:text-primary hover:text-primary-200">
+                    <span className="text-background dark:text-primary">
                       85, Great Portland Street, First Floor, London, W1W 7NT
                     </span>
                   </div>
@@ -354,7 +354,7 @@ const Footer = () => {
                     <span className="text-background/70 dark:text-primary/70">
                       NGN:
                     </span>{" "}
-                    <span className="text-background dark:text-primary hover:text-primary-200">
+                    <span className="text-background dark:text-primary">
                       S.95, Tafawa Balewa Square, Race Course, Onikan, Lagos.
                     </span>
                   </div>
