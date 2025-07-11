@@ -11,17 +11,10 @@ import {
 import { Link } from "@heroui/link";
 import NextLink from "next/link";
 import { Button } from "@heroui/button";
-import { Icon } from "@iconify/react";
 
 import useNavbar from "./useNavbar";
 
-import {
-  BackboneLogo,
-  CustomButton,
-  CustomDropdown,
-  ThemeSwitch,
-} from "@/components";
-import { Card } from "@heroui/card";
+import { BackboneLogo, ThemeSwitch } from "@/components";
 import { OurOfferingsMenu } from "@/components";
 
 const Navbar = () => {
@@ -85,22 +78,22 @@ const Navbar = () => {
       <NavbarContent className="hidden lg:flex" justify="end">
         <NavbarItem>
           <Button
-            className="text-primary"
-            variant="flat"
-            size="sm"
             as={Link}
+            className="text-primary"
             href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
+            size="sm"
+            variant="flat"
           >
             Log in
           </Button>
         </NavbarItem>
         <NavbarItem>
           <Button
-            color="primary"
-            className="text-background"
-            size="sm"
             as={Link}
+            className="text-background"
+            color="primary"
             href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-up`}
+            size="sm"
           >
             Get Started Now
           </Button>

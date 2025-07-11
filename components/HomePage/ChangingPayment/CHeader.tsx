@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 
 import { Bar, Bar2 } from "@/public/assets";
 

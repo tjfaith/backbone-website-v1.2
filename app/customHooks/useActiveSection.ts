@@ -10,6 +10,7 @@ export function useActiveSection(sectionIds: string[], offset: number = 180) {
 
       for (const id of sectionIds) {
         const el = document.getElementById(id);
+
         if (el && el.getBoundingClientRect().top <= offset) {
           current = id;
         }

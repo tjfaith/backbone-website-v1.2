@@ -3,19 +3,16 @@ import { Image } from "@heroui/image";
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "@heroui/link";
-import { Spacer } from "@heroui/spacer";
-
-import { FullLogo } from "@/public/assets";
-import { AppDownloadBtn, Dot } from "@/components";
 import { Divider } from "@heroui/divider";
-import { Button } from "@heroui/button";
 import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
 } from "@heroui/dropdown";
-import { color } from "framer-motion";
+
+import { FullLogo } from "@/public/assets";
+import { AppDownloadBtn, Dot } from "@/components";
 // import Link from "next/link";
 
 const Footer = () => {

@@ -7,9 +7,11 @@ import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { Link } from "@heroui/link";
 import Image from "next/image";
-import useOurOfferingsMenu from "./useOurOfferingsMenu";
 import { useDisclosure } from "@heroui/modal";
 import { AnimatePresence, motion } from "framer-motion";
+
+import useOurOfferingsMenu from "./useOurOfferingsMenu";
+
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
 
 const OurOfferingsMenu = ({ changeReady = false }) => {
@@ -56,22 +58,22 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
                         ? service.activeIcon.src
                         : service.icon.src
                     }
-                    initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.35, ease: "easeInOut" }}
                     className="w-10 h-10 rounded-lg flex items-center justify-center"
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
                   >
                     <Image
                       alt="service icon"
+                      className="object-contain"
+                      height={40}
                       src={
                         selectedMenu === service.id
                           ? service.activeIcon
                           : service.icon
                       }
                       width={40}
-                      height={40}
-                      className="object-contain"
                     />
                   </motion.div>
                 </AnimatePresence>
@@ -85,11 +87,11 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
                   <AnimatePresence mode="wait">
                     {service.comingSoon && (
                       <motion.div
-                        initial={{ opacity: 0, y: -4 }}
+                        key={`badge-${service.id}`}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -4 }}
+                        initial={{ opacity: 0, y: -4 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        key={`badge-${service.id}`}
                       >
                         <Chip
                           className="text-xs rounded-lg text-foreground-600 bg-background border-foreground-100 
@@ -121,8 +123,8 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
         <div className="p-4 space-y-6 w-full relative h-full lg:h-auto mt-8 lg:mt-0">
           {isMobile && (
             <button
-              onClick={handleBackToServices}
               className="text-sm text-primary dark:text-primary underline mb-3 flex items-center gap-1 absolute -top-5"
+              onClick={handleBackToServices}
             >
               <Icon icon="ri:arrow-left-s-line" />
               Back to services
@@ -131,8 +133,8 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
 
           {menuDetails.details.map((value, index) => (
             <div
-              className="mb-1 animate__animated animate__slideInUp"
               key={index}
+              className="mb-1 animate__animated animate__slideInUp"
             >
               <div className="text-primary text-sm dark:text-primary">
                 {value.title}
@@ -163,9 +165,9 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
           )}
 
           <Image
+            alt="cover icon"
             className="absolute bottom-0 right-0 rounded-br-lg"
             src={menuDetails.coverIcon}
-            alt="cover icon"
           />
         </div>
       )}

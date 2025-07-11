@@ -6,6 +6,7 @@ function UserServices() {
   const useGetLinkDetails = (link_id: string) => {
     const fetchData = async () => {
       const data = await api.get(`/payment/get-single-payment-link/${link_id}`);
+
       return data.data.data;
     };
 

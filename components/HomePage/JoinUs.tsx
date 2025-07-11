@@ -25,7 +25,7 @@ const JoinUs = () => {
   ];
 
   const orderedComponents = components.sort((a, b) =>
-    a.key === selectedTab ? -1 : b.key === selectedTab ? 1 : 0
+    a.key === selectedTab ? -1 : b.key === selectedTab ? 1 : 0,
   );
 
   return (

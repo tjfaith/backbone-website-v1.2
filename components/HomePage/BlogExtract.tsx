@@ -6,10 +6,10 @@ import createDOMPurify from "dompurify";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Link } from "@heroui/link";
+import { Icon } from "@iconify/react";
 
 import { BlogServices } from "@/app/utils/services";
 import { Spinner } from "@/public/assets";
-import { Icon } from "@iconify/react";
 
 const BlogExtract = () => {
   const {
@@ -79,7 +79,7 @@ const BlogExtract = () => {
                           __html: DOMPurify.sanitize(
                             blog?.blog_content.length > 500
                               ? blog?.blog_content.slice(0, 500) + "..."
-                              : blog?.blog_content
+                              : blog?.blog_content,
                           ),
                         }}
                         className="text-base"
@@ -94,7 +94,7 @@ const BlogExtract = () => {
                     variant="light"
                     onPress={() =>
                       viewBlog(
-                        `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`
+                        `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`,
                       )
                     }
                   >

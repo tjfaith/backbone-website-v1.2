@@ -12,7 +12,7 @@ const CTitle = ({ title, iconType = "check" }: Props) => {
         <div className="flex items-center justify-center text-background bg-primary rounded-full p-0.5 text-base">
           {iconType === "flashlight" && <Icon icon="ri:flashlight-fill" />}
           {iconType === "check" && (
-            <Icon icon="qlementine-icons:check-tick-16" className="text-xs" />
+            <Icon className="text-xs" icon="qlementine-icons:check-tick-16" />
           )}
         </div>
         <span>{title}</span>

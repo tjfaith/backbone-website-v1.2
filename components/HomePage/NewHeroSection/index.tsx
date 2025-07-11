@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
-
+import React from "react";
 import { Avatar, AvatarGroup } from "@heroui/avatar";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
 
-import { Bar, Bar2, Map } from "@/public/assets";
+import { Map } from "@/public/assets";
 import { CustomButton } from "@/components";
 
 const HeroSection = () => {
@@ -63,7 +62,7 @@ const HeroSection = () => {
             <b>
               $
               {Number(
-                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
               ).toLocaleString()}
             </b>
             <span className="">
