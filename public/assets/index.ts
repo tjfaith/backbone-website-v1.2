@@ -22,7 +22,8 @@ export { default as IosLogo } from "./img/iosLogo.svg";
 export { default as androidLogo } from "./img/androidLogo.svg";
 export { default as DottedBg } from "./img/dottedBg.svg";
 export { default as GradientLogo } from "./img/gradientLogo.svg";
-export { default as GradientBg } from "./img/gradientBg.png";
+export { default as GradientBg } from "./img/gradientBg.svg";
+export { default as User } from "./img/user.svg";
 
 // hero
 export { default as Earth } from "./img/hero/earth.png";
@@ -127,7 +128,7 @@ export { default as Blog35 } from "./img/blog/blog35.jpg";
 
 // why backbone
 export { default as Gage } from "./img/whyBackbone/gage.svg";
-export { default as WorldMap2 } from "./img/whyBackbone/worldMap.png";
+export { default as WorldMap2 } from "./img/whyBackbone/worldMap.svg";
 
 // tsx icon
 export { default as Spinner } from "./tsx_icon/spinner";

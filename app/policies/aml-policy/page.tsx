@@ -1,10 +1,59 @@
+"use client";
 import { Card } from "@heroui/card";
 import { Icon } from "@iconify/react";
 import React from "react";
+import { motion } from "framer-motion";
+
+import { useActiveSection } from "@/app/customHooks";
 
 const AmlPolicy = () => {
+  const sections = [
+    { id: "aml-overview", label: "Overview" },
+    { id: "aml-introduction", label: "Introduction" },
+    { id: "aml-objective", label: "Objective" },
+    { id: "aml-interpretation", label: "Interpretation" },
+    {
+      id: "aml-customer-acceptance",
+      label: "Customer Acceptance Policy",
+    },
+    {
+      id: "aml-customer-identification",
+      label: "Customer Identification Procedure",
+    },
+    { id: "aml-monitoring", label: "Monitoring of Transactions" },
+    { id: "aml-due-diligence", label: "Customer Due Diligence" },
+    { id: "aml-roles", label: "Roles and Responsibilities" },
+    { id: "aml-trainings", label: "Trainings" },
+    {
+      id: "aml-risk-classification",
+      label: "Risk-Based Classification of Clients",
+    },
+    { id: "aml-suspicious", label: "Suspicious Transactions" },
+    { id: "aml-customer-education", label: "Customer Education" },
+    {
+      id: "aml-existing-accounts",
+      label: "KYC for Existing Accounts",
+    },
+    { id: "aml-minimum-kyc", label: "Minimum Standard for KYC" },
+    { id: "aml-vasp", label: "Virtual Asset Service Providers" },
+    { id: "aml-record-keeping", label: "Record Keeping" },
+    {
+      id: "aml-internal-control",
+      label: "Internal Control Policies on KYC",
+    },
+    { id: "aml-appendix-i", label: "Appendix I" },
+    { id: "aml-appendix-ii", label: "Appendix II" },
+    { id: "aml-appendix-iii", label: "Appendix III" },
+    { id: "aml-appendix-iv", label: "Appendix IV" },
+    {
+      id: "aml-annexure",
+      label: "Annexure 1: Regulatory & Legal Framework",
+    },
+  ];
+  const activeId = useActiveSection(sections.map((s) => s.id));
+
   return (
-    <div className="w-full max-w-none">
+    <div className="w-full max-w-none scroll-mt-44" id="aml-overview">
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 lg:gap-8">
         {/* Table of Contents - Sidebar */}
         <Card className="p-3 sm:p-4 h-fit xl:sticky top-20 order-2 xl:order-1  lg:mb-auto mb-20">
@@ -15,62 +64,34 @@ const AmlPolicy = () => {
             />
             Table of Contents
           </h2>
-          <nav className="space-y-1">
-            {[
-              { id: "aml-overview", label: "Overview" },
-              { id: "aml-introduction", label: "Introduction" },
-              { id: "aml-objective", label: "Objective" },
-              { id: "aml-interpretation", label: "Interpretation" },
-              {
-                id: "aml-customer-acceptance",
-                label: "Customer Acceptance Policy",
-              },
-              {
-                id: "aml-customer-identification",
-                label: "Customer Identification Procedure",
-              },
-              { id: "aml-monitoring", label: "Monitoring of Transactions" },
-              { id: "aml-due-diligence", label: "Customer Due Diligence" },
-              { id: "aml-roles", label: "Roles and Responsibilities" },
-              { id: "aml-trainings", label: "Trainings" },
-              {
-                id: "aml-risk-classification",
-                label: "Risk-Based Classification of Clients",
-              },
-              { id: "aml-suspicious", label: "Suspicious Transactions" },
-              { id: "aml-customer-education", label: "Customer Education" },
-              {
-                id: "aml-existing-accounts",
-                label: "KYC for Existing Accounts",
-              },
-              { id: "aml-minimum-kyc", label: "Minimum Standard for KYC" },
-              { id: "aml-vasp", label: "Virtual Asset Service Providers" },
-              { id: "aml-record-keeping", label: "Record Keeping" },
-              {
-                id: "aml-internal-control",
-                label: "Internal Control Policies on KYC",
-              },
-              { id: "aml-appendix-i", label: "Appendix I" },
-              { id: "aml-appendix-ii", label: "Appendix II" },
-              { id: "aml-appendix-iii", label: "Appendix III" },
-              { id: "aml-appendix-iv", label: "Appendix IV" },
-              {
-                id: "aml-annexure",
-                label: "Annexure 1: Regulatory & Legal Framework",
-              },
-            ].map((item) => (
-              <a
-                key={item.id}
-                className="flex items-center text-xs sm:text-sm text-primary-700  hover:text-primary-900 dark:hover:text-background hover:bg-primary-100 rounded-md p-2 transition-colors"
-                href={`#${item.id}`}
-              >
-                <Icon
-                  className="h-3 w-3 sm:h-4 sm:w-4 mr-2 flex-shrink-0"
-                  icon="lucide:chevron-right"
-                />
-                <span className="leading-tight">{item.label}</span>
-              </a>
-            ))}
+          <nav className="relative space-y-1">
+            {sections.map((item, index) => {
+              const isActive = item.id === activeId;
+
+              return (
+                <a
+                  key={item.id}
+                  className="relative block px-3 py-2 rounded-md text-xs sm:text-sm font-medium text-primary-700 hover:bg-gray-100 dark:hover:text-background transition-colors"
+                  href={`#${item.id}`}
+                >
+                  {isActive && (
+                    <motion.div
+                      className="absolute inset-0 bg-primary/10 dark:bg-background/20 rounded-md z-[-1]"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                  <div className="flex items-center space-x-2">
+                    <span className="font-semibold">{index + 1}</span>
+                    <span className="leading-tight">{item.label}</span>
+                  </div>
+                </a>
+              );
+            })}
           </nav>
         </Card>
 
@@ -86,7 +107,7 @@ const AmlPolicy = () => {
 
           {/* AML Overview Section */}
           <Card className="p-4 sm:p-6 lg:p-8 mb-6 bg-amber-50 border-amber-200">
-            <div className="scroll-mt-20" id="aml-overview">
+            <div>
               <h2 className="text-xl sm:text-2xl font-bold mb-4 text-amber-800">
                 Key Highlights
               </h2>
@@ -169,10 +190,13 @@ const AmlPolicy = () => {
             </div>
           </Card>
 
-          <Card className="p-3 sm:p-4 md:p-6 lg:p-8">
+          <Card
+            className="p-3 sm:p-4 md:p-6 lg:p-8 scroll-pt-0"
+            id="aml-introduction"
+          >
             <div className="space-y-6 sm:space-y-8">
               {/* Introduction */}
-              <section className="scroll-mt-20" id="aml-introduction">
+              <section>
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   1. BACKBONE AML/KYC POLICY
                 </h2>
@@ -187,7 +211,7 @@ const AmlPolicy = () => {
                   Bank of Nigeria (CBN) Anti-Money Laundering, Combating the
                   Financing of Terrorism and Countering Proliferation Financing
                   of Weapons of Mass Destructions in Financial Institutions)
-                  Regulations 2022. The management of Backbone finance inc.
+                  Regulations 2022. The management of Backbone Finance Inc.
                   (&quot;The Company&quot;) has come up with the following
                   measures in the attainment of its objectives of ensuring full
                   compliance and to safeguard the Company from being used as a
@@ -198,7 +222,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Objective */}
-              <section className="scroll-mt-20" id="aml-objective">
+              <section className="scroll-mt-44" id="aml-objective">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   Objective
                 </h3>
@@ -206,7 +230,7 @@ const AmlPolicy = () => {
                   The objective of this policy is to provide Anti-Money
                   Laundering, Combating the Proliferation of Terrorism and
                   Countering Proliferation (AML, CFT & CPE) compliance
-                  guidelines for Backbone finance inc. &quot;The Company&quot;
+                  guidelines for Backbone Finance Inc. &quot;The Company&quot;
                   under the regulatory purview of the CBN. Also, to diligently
                   enforce AML, CFT, CPE measures and ensure effective
                   compliance.
@@ -218,7 +242,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Interpretation */}
-              <section className="scroll-mt-20" id="aml-interpretation">
+              <section className="scroll-mt-44" id="aml-interpretation">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   Interpretation
                 </h3>
@@ -331,7 +355,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Customer Acceptance Policy */}
-              <section className="scroll-mt-20" id="aml-customer-acceptance">
+              <section className="scroll-mt-44" id="aml-customer-acceptance">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   Customer Acceptance Policy (CAP)
                 </h3>
@@ -340,7 +364,7 @@ const AmlPolicy = () => {
                   upon which Backbone shall enter into a relationship with a
                   customer. The criteria are as follows:
                 </p>
-                <ul className="list-roman pl-6 space-y-2 text-sm sm:text-base text-primary-700">
+                <ul className="list-roman list-outside pl-6 space-y-2 text-sm sm:text-base text-primary-700 text-left">
                   <li>
                     The Company shall accept customers strictly in accordance
                     with this policy.
@@ -348,7 +372,7 @@ const AmlPolicy = () => {
                   <li>
                     No account shall be opened in an anonymous or false name.
                   </li>
-                  <li>
+                  <li className=" text-justify">
                     Responsible Units within the Company shall ensure that
                     Clients provide relevant documents and other information
                     depending on risk categories.
@@ -421,7 +445,7 @@ const AmlPolicy = () => {
 
               {/* Customer Identification Procedure */}
               <section
-                className="scroll-mt-20"
+                className="scroll-mt-44"
                 id="aml-customer-identification"
               >
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
@@ -478,7 +502,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Monitoring of Transactions */}
-              <section className="scroll-mt-20" id="aml-monitoring">
+              <section className="scroll-mt-44" id="aml-monitoring">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   2.0 Monitoring of Transactions
                 </h3>
@@ -511,7 +535,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Due Diligence */}
-              <section className="scroll-mt-20" id="aml-due-diligence">
+              <section className="scroll-mt-44" id="aml-due-diligence">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   3.0 Due Diligence
                 </h3>
@@ -712,7 +736,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Roles and Responsibilities */}
-              <section className="scroll-mt-20" id="aml-roles">
+              <section className="scroll-mt-44" id="aml-roles">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   Roles and Responsibilities of Relevant Team Members
                 </h3>
@@ -818,7 +842,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Trainings */}
-              <section className="scroll-mt-20" id="aml-trainings">
+              <section className="scroll-mt-44" id="aml-trainings">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   4.0 TRAININGS
                 </h3>
@@ -838,7 +862,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Risk-Based Classification of Clients */}
-              <section className="scroll-mt-20" id="aml-risk-classification">
+              <section className="scroll-mt-44" id="aml-risk-classification">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   5.0 RISK-BASED CLASSIFICATION OF CLIENTS
                 </h3>
@@ -1090,7 +1114,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Suspicious Transactions */}
-              <section className="scroll-mt-20" id="aml-suspicious">
+              <section className="scroll-mt-44" id="aml-suspicious">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   6.0 Suspicious Transactions:
                 </h3>
@@ -1132,7 +1156,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Customer Education */}
-              <section className="scroll-mt-20" id="aml-customer-education">
+              <section className="scroll-mt-44" id="aml-customer-education">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   7.0 Customer Education
                 </h3>
@@ -1159,7 +1183,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* KYC For Existing Accounts */}
-              <section className="scroll-mt-20" id="aml-existing-accounts">
+              <section className="scroll-mt-44" id="aml-existing-accounts">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   8.0 KYC For Existing Accounts
                 </h3>
@@ -1173,7 +1197,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Minimum Standard for KYC */}
-              <section className="scroll-mt-20" id="aml-minimum-kyc">
+              <section className="scroll-mt-44" id="aml-minimum-kyc">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   Minimum Standard for KYC
                 </h3>
@@ -1214,7 +1238,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Virtual Asset Service Providers */}
-              <section className="scroll-mt-20" id="aml-vasp">
+              <section className="scroll-mt-44" id="aml-vasp">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   9.0 Virtual Asset Service Providers:
                 </h3>
@@ -1233,7 +1257,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Record Keeping */}
-              <section className="scroll-mt-20" id="aml-record-keeping">
+              <section className="scroll-mt-44" id="aml-record-keeping">
                 <h3 className="text-lg font-medium text-primary-800 mb-2">
                   10.0 Record Keeping
                 </h3>
@@ -1282,7 +1306,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Internal Control Policies on KYC */}
-              <section className="scroll-mt-20" id="aml-internal-control">
+              <section className="scroll-mt-44" id="aml-internal-control">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   1. INTERNAL CONTROL POLICIES ON KYC
                 </h2>
@@ -1290,7 +1314,7 @@ const AmlPolicy = () => {
                   Introduction
                 </h3>
                 <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
-                  The Management of Backbone finance inc. [&quot;The
+                  The Management of Backbone Finance Inc. [&quot;The
                   Company&quot;) is responsible for maintaining an effective
                   internal control system commensurate with the scale, nature,
                   and complexity of the organization&apos;s operations. The
@@ -1588,7 +1612,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Appendix I */}
-              <section className="scroll-mt-20" id="aml-appendix-i">
+              <section className="scroll-mt-44" id="aml-appendix-i">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   Appendix I: Customer Identification Requirements
                 </h2>
@@ -1675,7 +1699,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Appendix II */}
-              <section className="scroll-mt-20" id="aml-appendix-ii">
+              <section className="scroll-mt-44" id="aml-appendix-ii">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   APPENDIX-II: CUSTOMER IDENTIFICATION PROCEDURE
                 </h2>
@@ -1818,7 +1842,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Appendix III */}
-              <section className="scroll-mt-20" id="aml-appendix-iii">
+              <section className="scroll-mt-44" id="aml-appendix-iii">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   Appendix III: Reporting Threshold
                 </h2>
@@ -1873,7 +1897,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Appendix IV */}
-              <section className="scroll-mt-20" id="aml-appendix-iv">
+              <section className="scroll-mt-44" id="aml-appendix-iv">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   Appendix IV: Suspicious Transactions
                 </h2>
@@ -1965,7 +1989,7 @@ const AmlPolicy = () => {
               </section>
 
               {/* Annexure 1 */}
-              <section className="scroll-mt-20" id="aml-annexure">
+              <section className="scroll-mt-44" id="aml-annexure">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   ANNEXURE 1
                 </h2>

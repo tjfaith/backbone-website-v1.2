@@ -2,10 +2,32 @@
 import { Card } from "@heroui/card";
 import { Icon } from "@iconify/react";
 import React from "react";
+import { motion } from "framer-motion";
+
+import { useActiveSection } from "@/app/customHooks";
 
 const PrivacyPolicy = () => {
+  const sections = [
+    { id: "introduction", label: "Introduction" },
+    { id: "objective", label: "Objective" },
+    { id: "scope", label: "Scope and Applicability" },
+    { id: "interpretation", label: "Interpretation" },
+    { id: "policy", label: "Policy" },
+    {
+      id: "responsibility",
+      label: "Responsibility of Data Subject",
+    },
+    { id: "consent", label: "Consent" },
+    { id: "processing", label: "Use/Processing of Data" },
+    { id: "disclosure", label: "Third-Party Disclosure" },
+    { id: "rights", label: "Data Confidentiality Rights" },
+    { id: "cookies", label: "Cookies" },
+  ];
+
+  const activeId = useActiveSection(sections.map((s) => s.id));
+
   return (
-    <div className="w-full max-w-none">
+    <div className="w-full max-w-none scroll-mt-44" id="introduction">
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 lg:gap-8">
         {/* Table of Contents - Sidebar */}
         <Card className="p-3 sm:p-4 h-fit xl:sticky top-20 order-2 xl:order-1  lg:mb-auto mb-20">
@@ -16,35 +38,35 @@ const PrivacyPolicy = () => {
             />
             Table of Contents
           </h2>
-          <nav className="space-y-1">
-            {[
-              { id: "introduction", label: "Introduction" },
-              { id: "objective", label: "Objective" },
-              { id: "scope", label: "Scope and Applicability" },
-              { id: "interpretation", label: "Interpretation" },
-              { id: "policy", label: "Policy" },
-              {
-                id: "responsibility",
-                label: "Responsibility of Data Subject",
-              },
-              { id: "consent", label: "Consent" },
-              { id: "processing", label: "Use/Processing of Data" },
-              { id: "disclosure", label: "Third-Party Disclosure" },
-              { id: "rights", label: "Data Confidentiality Rights" },
-              { id: "cookies", label: "Cookies" },
-            ].map((item) => (
-              <a
-                key={item.id}
-                className="flex items-center text-xs sm:text-sm text-primary-300 hover:text-primary dark:hover:text-background hover:bg-gray-100 rounded-md p-2 transition-colors"
-                href={`#${item.id}`}
-              >
-                <Icon
-                  className="h-3 w-3 sm:h-4 sm:w-4 mr-2 flex-shrink-0"
-                  icon="lucide:chevron-right"
-                />
-                <span className="leading-tight">{item.label}</span>
-              </a>
-            ))}
+
+          <nav className="relative space-y-1">
+            {sections.map((item, index) => {
+              const isActive = item.id === activeId;
+
+              return (
+                <a
+                  key={item.id}
+                  className="relative block px-3 py-2 rounded-md text-xs sm:text-sm font-medium text-primary-700 hover:bg-gray-100 dark:hover:text-background transition-colors"
+                  href={`#${item.id}`}
+                >
+                  {isActive && (
+                    <motion.div
+                      className="absolute inset-0 bg-primary/10 dark:bg-background/20 rounded-md z-[-1]"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                  <div className="flex items-center space-x-2">
+                    <span className="font-semibold">{index + 1}</span>
+                    <span className="leading-tight">{item.label}</span>
+                  </div>
+                </a>
+              );
+            })}
           </nav>
         </Card>
 
@@ -59,12 +81,12 @@ const PrivacyPolicy = () => {
           <Card className="p-3 sm:p-4 md:p-6 lg:p-8">
             <div className="space-y-6 sm:space-y-8">
               {/* Introduction */}
-              <section className="scroll-mt-20" id="introduction">
+              <section className="">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   1. Introduction
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
-                  This Privacy Policy is developed by Backbone finance inc. (the
+                <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
+                  This Privacy Policy is developed by Backbone Finance Inc. (the
                   Company) in compliance with the Nigerian Data Protection
                   Regulation 2019 and other similar regulations as well as a
                   demonstration of the Company&apos;s commitment to provide its
@@ -75,14 +97,14 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Objective */}
-              <section className="scroll-mt-20" id="objective">
+              <section className="scroll-mt-44" id="objective">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   2. Objective
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 mb-2 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 mb-2 leading-relaxed">
                   This Privacy Policy has been put in place to:
                 </p>
-                <ul className="list-disc pl-4 sm:pl-6 space-y-1 text-sm sm:text-base text-primary-300">
+                <ul className="list-disc pl-4 sm:pl-6 space-y-1 text-sm sm:text-base text-primary-700">
                   <li>
                     Inform data subjects about their rights, responsibilities,
                     and privileges.
@@ -97,11 +119,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Scope and Applicability */}
-              <section className="scroll-mt-20" id="scope">
+              <section className="scroll-mt-44" id="scope">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   3. Scope and Applicability
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   This Policy applies to all employees, clients and stakeholders
                   of the Company. This policy highlights the basis on which
                   personal data collected from Clients and other stakeholders
@@ -114,28 +136,28 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Ownership, Review and Approval */}
-              <section className="scroll-mt-20">
+              <section className="scroll-mt-44">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   4. Ownership, Review and Approval
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 mb-3 sm:mb-4 leading-relaxed">
                   The Head of Data Protection shall be responsible for the
                   development and maintenance of the data protection policy. The
                   policy shall be reviewed periodically in line with the
                   provisions of extant Data Protection laws.
                 </p>
-                <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   Final approval of this policy lies with the Managing Director
                   of the Company.
                 </p>
               </section>
 
               {/* Interpretation */}
-              <section className="scroll-mt-20" id="interpretation">
+              <section className="scroll-mt-44" id="interpretation">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   5. Interpretation
                 </h2>
-                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-primary-300">
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base text-primary-700">
                   <li>
                     <strong>i. Personal Data:</strong> This means any
                     information relating to an identified or identifiable
@@ -166,11 +188,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Policy */}
-              <section className="scroll-mt-20" id="policy">
+              <section className="scroll-mt-44" id="policy">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   6. Policy
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   This Privacy Policy describes your privacy rights with respect
                   to personal information which the Company may collect, use,
                   store, or otherwise process when you engage our services. It
@@ -181,11 +203,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Responsibility of Data Subject */}
-              <section className="scroll-mt-20" id="responsibility">
+              <section className="scroll-mt-44" id="responsibility">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   7. Responsibility of Data Subject
                 </h2>
-                <ul className="list-none pl-0 space-y-3 sm:space-y-4 text-sm sm:text-base text-primary-300">
+                <ul className="list-none pl-0 space-y-3 sm:space-y-4 text-sm sm:text-base text-primary-700">
                   <li className="flex flex-col sm:flex-row">
                     <span className="font-bold mr-0 sm:mr-2 mb-1 sm:mb-0">
                       a.
@@ -222,11 +244,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Consent */}
-              <section className="scroll-mt-20" id="consent">
+              <section className="scroll-mt-44" id="consent">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   8. Consent
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   You accept this privacy policy when you give consent upon
                   access to the Company&apos;s platforms, or use of the
                   Company&apos;s services, features, technologies, or functions
@@ -238,11 +260,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Use/Processing of Data Subject's Data */}
-              <section className="scroll-mt-20" id="processing">
+              <section className="scroll-mt-44" id="processing">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   9. Use/Processing of Data Subject&apos;s Data
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 mb-3 sm:mb-4 leading-relaxed">
                   During onboarding (electronically) and when you use our
                   website, we collect information such as website visits,
                   identification documents (driver&apos;s license, BVN, NIN,
@@ -255,12 +277,12 @@ const PrivacyPolicy = () => {
                   available sources such as the press, public search engines,
                   etc.
                 </p>
-                <p className="text-sm sm:text-base text-primary-300 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 mb-3 sm:mb-4 leading-relaxed">
                   The Company will only collect personal data in other to give
                   efficient, enjoyable, and secure services. We may use your
                   information to:
                 </p>
-                <ul className="list-none pl-0 space-y-2 text-sm sm:text-base text-primary-300">
+                <ul className="list-none pl-0 space-y-2 text-sm sm:text-base text-primary-700">
                   {[
                     "provide necessary services and support",
                     "process applications and send notices about transactions to requisite parties",
@@ -284,11 +306,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Third-Party Disclosure */}
-              <section className="scroll-mt-20" id="disclosure">
+              <section className="scroll-mt-44" id="disclosure">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   10. Third-Party Disclosure
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   As a policy, the Company does not share its Clients or other
                   stakeholder&apos;s information with third parties (unless with
                   prior obtained approval of the data subject) except for
@@ -303,11 +325,11 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Data Confidentiality Rights */}
-              <section className="scroll-mt-20" id="rights">
+              <section className="scroll-mt-44" id="rights">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   11. Data Confidentiality Rights
                 </h2>
-                <ul className="list-none pl-0 space-y-3 sm:space-y-4 text-sm sm:text-base text-primary-300">
+                <ul className="list-none pl-0 space-y-3 sm:space-y-4 text-sm sm:text-base text-primary-700">
                   <li className="flex flex-col sm:flex-row">
                     <span className="font-bold mr-0 sm:mr-2 mb-1 sm:mb-0">
                       a.
@@ -353,7 +375,7 @@ const PrivacyPolicy = () => {
               </section>
 
               {/* Cookies */}
-              <section className="scroll-mt-20" id="cookies">
+              <section className="scroll-mt-44" id="cookies">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 flex items-center">
                   <Icon
                     className="h-4 w-4 sm:h-5 sm:w-5 mr-2"
@@ -361,18 +383,18 @@ const PrivacyPolicy = () => {
                   />
                   12. Cookies
                 </h2>
-                <p className="text-sm sm:text-base text-primary-300 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 mb-3 sm:mb-4 leading-relaxed">
                   Cookies are small text files stored on your computer or mobile
                   devices whenever you visit a website. Cookies have many uses,
                   such as memorizing your preferences to tailor your experiences
                   while on our site– or to help us analyze our website traffic.
                 </p>
-                <p className="text-sm sm:text-base text-primary-300 mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-primary-700 mb-3 sm:mb-4 leading-relaxed">
                   The Company uses cookies to improve your experience while on
                   its website. We would like to let you know a few things about
                   our cookies:
                 </p>
-                <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-sm sm:text-base text-primary-300 mb-4">
+                <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-sm sm:text-base text-primary-700 mb-4">
                   <li>
                     Some cookies are essential to access certain areas of this
                     site;
@@ -469,7 +491,7 @@ const PrivacyPolicy = () => {
                         <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">
                           Strictly Necessary
                         </td>
-                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-300">
+                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-700">
                           These cookies are required to run our website, to keep
                           it secure, and to obey regulations that apply to us.
                         </td>
@@ -478,7 +500,7 @@ const PrivacyPolicy = () => {
                         <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">
                           Functional
                         </td>
-                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-300">
+                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-700">
                           These cookies remember your region or country,
                           language, accessibility options, and your settings.
                         </td>
@@ -487,7 +509,7 @@ const PrivacyPolicy = () => {
                         <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">
                           Performance
                         </td>
-                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-300">
+                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-700">
                           These cookies tell us how customers use our website.
                           We study and profile this data to help us improve our
                           products and performance.
@@ -497,7 +519,7 @@ const PrivacyPolicy = () => {
                         <td className="px-3 sm:px-6 py-4 whitespace-nowrap text-sm font-medium text-primary">
                           Marketing
                         </td>
-                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-300">
+                        <td className="px-3 sm:px-6 py-4 text-sm text-primary-800 dark:text-primary-700">
                           These cookies help us decide which products, services,
                           and offers may be relevant for you.
                         </td>

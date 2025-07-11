@@ -53,7 +53,7 @@ const PrivacyPolicyPage = () => {
               <p className="text-sm sm:text-base text-primary-200 mb-4 sm:mb-6 leading-relaxed">
                 Describes the rules which you agree to when using our services.
                 Understand your rights and responsibilities when engaging with
-                Backbone finance inc.
+                Backbone Finance Inc.
               </p>
               <Link
                 className="text-sm sm:text-base text-info hover:text-info-700 font-medium"
@@ -69,10 +69,6 @@ const PrivacyPolicyPage = () => {
         <Card className="p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow duration-200">
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
             <div className="flex-shrink-0 self-center sm:self-start">
-              <Icon
-                className="h-10 w-10 sm:h-12 sm:w-12 text-green-600"
-                icon="lucide:file-text"
-              />
               <Icon
                 className="h-10 w-10 sm:h-12 sm:w-12 text-amber-600"
                 icon="lucide:alert-triangle"

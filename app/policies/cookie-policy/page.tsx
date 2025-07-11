@@ -24,12 +24,12 @@ const CookiePolicy = () => {
             ].map((item) => (
               <a
                 key={item.id}
-                className="flex items-center text-xs sm:text-sm text-primary-700 hover:text-primary-900 dark:hover:text-background hover:bg-primary-100 rounded-md p-2 transition-colors"
+                className="flex items-center text-xs sm:text-sm text-primary-700 hover:text-primary dark:hover:text-background hover:bg-gray-100 rounded-md p-2 transition-colors"
                 href={`#${item.id}`}
               >
                 <Icon
                   className="h-3 w-3 sm:h-4 sm:w-4 mr-2 flex-shrink-0"
-                  icon="lucide:chevron-right"
+                  icon="icon-park-outline:dot"
                 />
                 <span className="leading-tight">{item.label}</span>
               </a>
@@ -48,9 +48,9 @@ const CookiePolicy = () => {
           <Card className="p-3 sm:p-4 md:p-6 lg:p-8">
             <div className="space-y-6 sm:space-y-8">
               {/* Introduction */}
-              <section className="scroll-mt-20">
+              <section className="scroll-mt-44">
                 <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
-                  This Cookie Policy explains how Backbone finance inc.
+                  This Cookie Policy explains how Backbone Finance Inc.
                   (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses
                   cookies and similar tracking technologies on our website
                   (mybackbone.io).
@@ -58,7 +58,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 1. What Are Cookies? */}
-              <section className="scroll-mt-20" id="cookie-what">
+              <section className="scroll-mt-44" id="cookie-what">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   1. What Are Cookies?
                 </h2>
@@ -69,7 +69,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 2. How We Use Cookies */}
-              <section className="scroll-mt-20" id="cookie-how">
+              <section className="scroll-mt-44" id="cookie-how">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   2. How We Use Cookies
                 </h2>
@@ -88,7 +88,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 3. Types of Cookies We Use */}
-              <section className="scroll-mt-20" id="cookie-types">
+              <section className="scroll-mt-44" id="cookie-types">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   3. Types of Cookies We Use
                 </h2>
@@ -109,7 +109,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 4. Third-Party Cookies */}
-              <section className="scroll-mt-20" id="cookie-third-party">
+              <section className="scroll-mt-44" id="cookie-third-party">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   4. Third-Party Cookies
                 </h2>
@@ -121,7 +121,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 5. Cookie Management */}
-              <section className="scroll-mt-20" id="cookie-management">
+              <section className="scroll-mt-44" id="cookie-management">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   5. Cookie Management
                 </h2>
@@ -133,7 +133,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 6. Updates to This Policy */}
-              <section className="scroll-mt-20" id="cookie-updates">
+              <section className="scroll-mt-44" id="cookie-updates">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   6. Updates to This Policy
                 </h2>
@@ -144,7 +144,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* Contact Information */}
-              <section className="scroll-mt-20" id="cookie-contact">
+              <section className="scroll-mt-44" id="cookie-contact">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   Contact Information
                 </h2>
