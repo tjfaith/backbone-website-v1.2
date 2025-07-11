@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                 >
                   {isActive && (
                     <motion.div
-                      className="absolute inset-0 bg-primary/10 dark:bg-background/20 rounded-md z-[-1]"
+                      className="absolute inset-0 bg-background-200 rounded-md z-[-1]"
                       layoutId="activeSection"
                       transition={{
                         type: "spring",
