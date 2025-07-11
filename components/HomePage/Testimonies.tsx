@@ -1,8 +1,8 @@
-import { Spacer } from "@heroui/spacer";
 import { Icon } from "@iconify/react";
 import React from "react";
-import Image from "next/image";
-import { DottedBg, GradientLogo } from "@/public/assets";
+import { Image } from "@heroui/image";
+
+import { User } from "@/public/assets";
 
 const Testimonies = () => {
   const testimoniesList = [
@@ -28,7 +28,6 @@ const Testimonies = () => {
 
   return (
     <div className="relative overflow-hidden z-20">
-      {/* <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_80%_30%,_var(--tw-gradient-stops))] from-[#182F5B] from-1% via-[#000] to-[#000] opacity-70" /> */}
       <div className="relative z-20 py-16 ">
         <div className="page-max-width px-6  text-background dark:text-primary">
           <div className=" mb-10" data-aos="fade-up">
@@ -43,14 +42,17 @@ const Testimonies = () => {
 
           <div className=" w-full">
             {testimoniesList.map((item, index) => (
-              <div key={index} data-aos="fade-up">
-                <div className=" text-left md:text-[32px] text-base leading-inherit font-medium tracking-wider max-w-7xl mb-4">
+              <div key={index} className="space-y-4" data-aos="fade-up">
+                <div className="h-12 w-12 rounded-full bg-[#2B303B] relative overflow-hidden text-white flex items-center justify-center">
+                  <Image alt="avatar" src={User.src} />
+                </div>
+                <div className="clash-display-font text-left md:text-[32px] text-base leading-inherit font-medium tracking-wider max-w-7xl mb-4">
                   {item.message}
                 </div>
                 <div className="md:text-base text-xs flex items-center w-full text-primary-500 ">
                   <div>{item.name}</div>
                   <div>
-                    <Icon icon="mdi:dot" className="text-[#CACFD8] text-3xl" />
+                    <Icon className="text-[#CACFD8] text-3xl" icon="mdi:dot" />
                   </div>
                   <div className="text-primary-500">{item.post}</div>
                 </div>

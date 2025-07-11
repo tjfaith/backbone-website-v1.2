@@ -2,11 +2,13 @@
 import { Icon } from "@iconify/react";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 const PolicyHeader = () => {
   const currentPath = usePathname();
   const router = useRouter();
-
+  const [changeReady, setChangeReady] = useState(false);
+  const { scrollY } = useScroll();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const tabs = [
@@ -17,13 +19,23 @@ const PolicyHeader = () => {
     { href: "/policies/cookie-policy", label: "Cookie Policy" },
   ];
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > window.innerHeight * 0.1) {
+      setChangeReady(true);
+    } else {
+      setChangeReady(false);
+    }
+  });
+
   return (
     <>
-      <header className="">
+      <header
+        className={`${changeReady ? "border-t-2 bg-background text-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : "bg-transparent text-background dark:text-primary"} fixed top-14 z-30 w-full`}
+      >
         <div className="w-full max-w-none px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
           <div className="flex justify-between items-center h-14 sm:h-16">
             <div className="flex items-center justify-center space-x-4 sm:space-x-8 min-w-0 flex-1">
-              <div className="flex items-center space-x-2 min-w-0 text-primary ">
+              <div className="flex items-center space-x-2 min-w-0 text-primary  ">
                 <Icon
                   className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0"
                   icon="lucide:building"
@@ -68,7 +80,9 @@ const PolicyHeader = () => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-gray-200 bg-white">
+        <div
+          className={`${changeReady ? " border-t-2 bg-background text-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : "bg-transparent text-background dark:text-primary"} md:hidden border-b border-gray-200 bg-white w-full top-16 fixed z-30`}
+        >
           <div className="px-3 sm:px-4 py-2 space-y-1">
             {tabs.map((tab, index) => (
               <button
@@ -91,7 +105,9 @@ const PolicyHeader = () => {
       )}
 
       {/* Tablet Navigation (visible on md screens) */}
-      <div className="hidden md:block lg:hidden">
+      <div
+        className={`${changeReady ? "border-t-2 bg-background text-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : "bg-transparent text-background dark:text-primary"} fixed z-30 w-full hidden md:block lg:hidden`}
+      >
         <div className="flex justify-center items-center overflow-x-auto px-4 scrollbar-hide">
           {tabs.map((tab, index) => (
             <button

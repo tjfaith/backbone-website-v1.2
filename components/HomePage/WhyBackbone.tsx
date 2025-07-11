@@ -31,8 +31,6 @@ const WhyBackbone = () => {
 
       <div className="absolute inset-0 z-[14] bg-[radial-gradient(circle_at_50%_35%,_var(--tw-gradient-stops))] from-[#1b324f] via-transparent to-transparent opacity-70" />
 
-      {/* <div className="absolute inset-0 z-[20] bg-[radial-gradient(circle_at_80%_80%,_var(--tw-gradient-stops))] from-[#335CFF] from-1% via-[#000] via-1% to-transparent to-100% " /> */}
-
       <div className="page-max-width z-20 relative">
         <div className=" md:max-w-3xl text-center mx-auto mb-10">
           <div className="text-aqua text-base font-medium mb-2">
@@ -52,7 +50,7 @@ const WhyBackbone = () => {
             data-aos="fade-up"
           >
             <div className="py-7 max-w-sm">
-              <div className="clash-display-font text-2xl font-medium">
+              <div className="clash-display-font text-2xl font-medium mb-2">
                 Built for Speed
               </div>
               <div className=" text-base font-normal">
@@ -83,7 +81,7 @@ const WhyBackbone = () => {
               <AnimatedGraph data-aos="flip-up" />
             </div>
             <div>
-              <div className="clash-display-font text-2xl font-medium">
+              <div className="clash-display-font text-2xl font-medium mb-2">
                 Competitive Rates
               </div>
               <div className=" text-medium md:text-base font-normal md:max-w-md">
@@ -103,7 +101,7 @@ const WhyBackbone = () => {
               <Image alt="World map 2" data-aos="flip-up" src={WorldMap2} />
             </div>
             <div>
-              <div className="clash-display-font text-2xl font-medium">
+              <div className="clash-display-font text-2xl font-medium mb-2">
                 Global Reach
               </div>
               <div className=" text-medium md:text-base font-normal md:max-w-sm">
@@ -118,7 +116,7 @@ const WhyBackbone = () => {
             data-aos="fade-up"
           >
             <div className=" md:w-8/12 flex flex-col justify-end">
-              <div className="clash-display-font text-2xl font-medium">
+              <div className="clash-display-font text-2xl font-medium mb-2">
                 Secured Transactions
               </div>
               <div className=" text-medium w-full md:text-base font-normal md:max-w-sm">
@@ -132,23 +130,7 @@ const WhyBackbone = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="relative bg-[#335CFF]"> */}
-      {/* <Image
-        fill
-        priority
-        alt="Dotted Background"
-        className="absolute inset-0 object-cover opacity-30 z-[13]"
-        src={DottedBg}
-      /> */}
-
-      {/* <Image
-        alt="Faded Logo"
-        className="absolute bottom-0 right-[22px] z-[12] "
-        src={GradientLogo}
-      /> */}
       <Testimonies />
-      {/* </div> */}
     </div>
   );
 };

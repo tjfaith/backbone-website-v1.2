@@ -11,7 +11,7 @@ const AppDownloadBtn = ({ btnType }: props) => {
   return (
     <Button
       radius="full"
-      className="bg-background dark:bg-primary bg:text-primary"
+      className="bg-background dark:bg-primary text-[#0E121B]"
     >
       <>
         {btnType === "ios" && (

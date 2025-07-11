@@ -25,7 +25,7 @@ const Footer = () => {
               nonprofits, creating possibilities you never thought possible.
             </div>
             <div className="text-background dark:text-primary space-y-1">
-              <div className="text-sm font-medium text-background/70 dark:text-primary/70 uppercase">
+              <div className="text-sm font-medium text-[#99A0AE] uppercase">
                 Offerings
               </div>
               <div className=" space-y-2 flex flex-col">
@@ -44,13 +44,13 @@ const Footer = () => {
                   {globalBankingMenu && (
                     <div className=" ml-3 animate__animated animate__fadeIn flex flex-col">
                       <Link
-                        className="text-background/70 dark:text-primary/70"
+                        className="text-[#99A0AE]"
                         href="/offerings/individual"
                       >
                         Personal Banking
                       </Link>
                       <Link
-                        className="text-background/70 dark:text-primary/70"
+                        className="text-[#99A0AE]"
                         href="/offerings/businesses"
                       >
                         Corporate Banking
@@ -84,16 +84,10 @@ const Footer = () => {
                   </button>
                   {financeMenu && (
                     <div className="ml-3 animate__animated animate__fadeIn flex flex-col">
-                      <Link
-                        className="text-background/70 dark:text-primary/70"
-                        href="/finance/rent"
-                      >
+                      <Link className="text-[#99A0AE]" href="/finance/rent">
                         Rent Finance
                       </Link>
-                      <Link
-                        className="text-background/70 dark:text-primary/70"
-                        href="/finance/property"
-                      >
+                      <Link className="text-[#99A0AE]" href="/finance/property">
                         Property Finance
                       </Link>
                     </div>
@@ -102,7 +96,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-background dark:text-primary space-y-1">
-              <div className="text-sm font-medium text-background/70 dark:text-primary/70 uppercase">
+              <div className="text-sm font-medium text-[#99A0AE] uppercase">
                 Company
               </div>
               <div className="flex flex-col space-y-2">
@@ -121,7 +115,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-background dark:text-primary space-y-1">
-              <div className="text-sm font-medium text-background/70 dark:text-primary/70 uppercase">
+              <div className="text-sm font-medium text-[#99A0AE] uppercase">
                 Resources
               </div>
               <ul className=" space-y-2">
@@ -161,7 +155,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="text-background dark:text-primary space-y-1">
-              <div className="text-sm font-medium text-background/70 dark:text-primary/70 uppercase">
+              <div className="text-sm font-medium text-[#99A0AE] uppercase">
                 Support
               </div>
               <ul className=" space-y-2">
@@ -180,7 +174,7 @@ const Footer = () => {
         {/* ROW 2 */}
         <div className="flex flex-col">
           <div className="flex justify-between items-center w-full mb-1">
-            <div className="text-sm font-medium text-background/70 dark:text-primary/70 uppercase">
+            <div className="text-sm font-medium text-[#99A0AE] uppercase">
               Contact
             </div>
             <div className="md:flex hidden items-center gap-5">
@@ -222,8 +216,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex items-start w-full gap-12 lg:flex-row flex-col">
-            <div className="text-background dark:text-primary">
-              <div className="flex items-center gap-2">
+            <div className="text-background dark:text-primary space-y-1">
+              <div className="flex items-center gap-1">
                 <Dot />
                 <div className="text-background dark:text-primary">
                   Live Chat & Email
@@ -239,22 +233,22 @@ const Footer = () => {
             </div>
 
             <div className="text-background dark:text-primary">
-              <div className="flex items-center gap-2">
-                <Dot timing={2} />
+              <div className="flex items-center gap-1">
+                <Dot timing={0.9} />
                 <div className="text-background dark:text-primary">
                   Phone Support
                 </div>
               </div>
-              <div>
+              <div className="space-y-2 mb-2">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
                     <Icon icon="circle-flags:us" />
-                    <div className="text-background/70 dark:text-primary/70">
+                    <div className="text-[#99A0AE] text-sm font-medium">
                       USA:
                     </div>
                   </div>
                   <Link
-                    className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200"
+                    className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200 text-base font-medium"
                     href={`tel:${process.env.NEXT_PUBLIC_USA_NUMBER?.replace(/\s+/g, "")}`}
                   >
                     {process.env.NEXT_PUBLIC_USA_NUMBER}
@@ -264,12 +258,12 @@ const Footer = () => {
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
                     <Icon icon="circle-flags:uk" />
-                    <div className="text-background/70 dark:text-primary/70">
+                    <div className="text-[#99A0AE] text-sm font-medium">
                       UK:
                     </div>
                   </div>
                   <Link
-                    className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200"
+                    className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200 text-base font-medium"
                     href={`tel:${process.env.NEXT_PUBLIC_UK_NUMBER_1?.replace(/\s+/g, "")}`}
                   >
                     {process.env.NEXT_PUBLIC_UK_NUMBER_1}
@@ -279,12 +273,12 @@ const Footer = () => {
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
                     <Icon icon="circle-flags:uk" />
-                    <div className="text-background/70 dark:text-primary/70">
+                    <div className="text-[#99A0AE]  text-sm font-medium">
                       UK:
                     </div>
                   </div>
                   <Link
-                    className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200"
+                    className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200 text-base font-medium"
                     href={`tel:${process.env.NEXT_PUBLIC_UK_NUMBER_2?.replace(/\s+/g, "")}`}
                   >
                     {process.env.NEXT_PUBLIC_UK_NUMBER_2}
@@ -294,9 +288,7 @@ const Footer = () => {
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
                     <Icon icon="circle-flags:ng" />
-                    <div className="text-background/70 dark:text-primary/70">
-                      NGN:
-                    </div>
+                    <div className="text-[#99A0AE]">NGN:</div>
                   </div>
                   <Link
                     className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200"
@@ -306,27 +298,27 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <div className="text-xs text-background/70 dark:text-primary/70">
+              <div className="text-xs text-[#99A0AE] space-y-1 ">
                 <div>9am - 5pm GMT +1</div>
                 <div>SMS and Calls only.</div>
               </div>
             </div>
 
             <div className="text-background dark:text-primary w-full">
-              <div className="flex items-center gap-2">
-                <Dot timing={1} />
+              <div className="flex items-center gap-1">
+                <Dot timing={0.8} />
                 <div className="text-background dark:text-primary">Office</div>
               </div>
-              <div className="w-full">
+              <div className="w-full space-y-2">
                 <div className="flex items-start gap-1">
                   <div className="mt-1">
                     <Icon icon="circle-flags:us" />
                   </div>
                   <div>
-                    <span className="text-background/70 dark:text-primary/70">
+                    <span className="text-[#99A0AE] text-sm font-medium">
                       USA:
                     </span>{" "}
-                    <span className="text-background dark:text-primary">
+                    <span className="text-background dark:text-primary font-medium">
                       8, The Green, Suite A, Dover, DE 19901, United States
                     </span>
                   </div>
@@ -337,10 +329,10 @@ const Footer = () => {
                     <Icon icon="circle-flags:uk" />
                   </div>
                   <div>
-                    <span className="text-background/70 dark:text-primary/70">
+                    <span className="text-[#99A0AE] text-sm font-medium">
                       UK:
                     </span>{" "}
-                    <span className="text-background dark:text-primary">
+                    <span className="text-background dark:text-primary font-medium">
                       85, Great Portland Street, First Floor, London, W1W 7NT
                     </span>
                   </div>
@@ -351,10 +343,10 @@ const Footer = () => {
                     <Icon icon="circle-flags:ng" />
                   </div>
                   <div>
-                    <span className="text-background/70 dark:text-primary/70">
+                    <span className="text-[#99A0AE] text-sm font-medium">
                       NGN:
                     </span>{" "}
-                    <span className="text-background dark:text-primary">
+                    <span className="text-background dark:text-primary font-medium">
                       S.95, Tafawa Balewa Square, Race Course, Onikan, Lagos.
                     </span>
                   </div>
@@ -402,8 +394,8 @@ const Footer = () => {
         </div>
         <Spacer y={12} />
         {/* ROW 3 */}
-        <div className="text-sm space-y-3">
-          <div>
+        <div className="text-sm">
+          <div className="mb-3">
             Copyright &copy; {new Date().getFullYear()}, Backbone Finance Inc
           </div>
           <div className="space-y-5 mb-6">

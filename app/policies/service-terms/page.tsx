@@ -40,12 +40,12 @@ const ServiceTerms = () => {
             ].map((item) => (
               <a
                 key={item.id}
-                className="flex items-center text-xs sm:text-sm text-primary-700 hover:text-primary-900 dark:hover:text-background hover:bg-primary-100 rounded-md p-2 transition-colors"
+                className="flex items-center text-xs sm:text-sm text-primary-700 hover:text-primary dark:hover:text-background hover:bg-gray-100 rounded-md p-2 transition-colors"
                 href={`#${item.id}`}
               >
                 <Icon
                   className="h-3 w-3 sm:h-4 sm:w-4 mr-2 flex-shrink-0"
-                  icon="lucide:chevron-right"
+                  icon="icon-park-outline:dot"
                 />
                 <span className="leading-tight">{item.label}</span>
               </a>
@@ -64,13 +64,13 @@ const ServiceTerms = () => {
           <Card className="p-3 sm:p-4 md:p-6 lg:p-8">
             <div className="space-y-6 sm:space-y-8">
               {/* Welcome */}
-              <section className="scroll-mt-20">
+              <section className="scroll-mt-44">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                  Welcome to Backbone finance inc.
+                  Welcome to Backbone Finance Inc.
                 </h2>
                 <p className="text-sm sm:text-base text-primary-700 leading-relaxed">
                   These Terms of Service (&quot;Terms&quot;) govern your access
-                  to and use of all products and services offered byBackbone
+                  to and use of all products and services offered by Backbone
                   finance inc. (&quot;Backbone,&quot; &quot;we,&quot;
                   &quot;our,&quot; or &quot;us&quot;), including but not limited
                   to Backbone Finance and BackbonePay, through our website
@@ -83,7 +83,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 1. Eligibility */}
-              <section className="scroll-mt-20" id="terms-eligibility">
+              <section className=" scroll-mt-44" id="terms-eligibility">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   1. Eligibility
                 </h2>
@@ -94,7 +94,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 2. Services Description */}
-              <section className="scroll-mt-20" id="terms-services">
+              <section className="scroll-mt-44" id="terms-services">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   2. Services Description
                 </h2>
@@ -109,7 +109,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 3. Account Registration and Responsibilities */}
-              <section className="scroll-mt-20" id="terms-accounts">
+              <section className="scroll-mt-44" id="terms-accounts">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   3. Account Registration and Responsibilities
                 </h2>
@@ -127,7 +127,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 4. Compliance and KYC/AML */}
-              <section className="scroll-mt-20" id="terms-compliance">
+              <section className="scroll-mt-44" id="terms-compliance">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   4. Compliance and KYC/AML
                 </h2>
@@ -141,7 +141,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 5. Intellectual Property */}
-              <section className="scroll-mt-20" id="terms-intellectual">
+              <section className="scroll-mt-44" id="terms-intellectual">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   5. Intellectual Property
                 </h2>
@@ -154,7 +154,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 6. Prohibited Activities */}
-              <section className="scroll-mt-20" id="terms-prohibited">
+              <section className="scroll-mt-44" id="terms-prohibited">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   6. Prohibited Activities
                 </h2>
@@ -171,7 +171,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 7. Third-Party Services */}
-              <section className="scroll-mt-20" id="terms-third-party">
+              <section className="scroll-mt-44" id="terms-third-party">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   7. Third-Party Services
                 </h2>
@@ -183,7 +183,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 8. Termination */}
-              <section className="scroll-mt-20" id="terms-termination">
+              <section className="scroll-mt-44" id="terms-termination">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   8. Termination
                 </h2>
@@ -196,7 +196,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 9. Disclaimer of Warranties */}
-              <section className="scroll-mt-20" id="terms-disclaimer">
+              <section className="scroll-mt-44" id="terms-disclaimer">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   9. Disclaimer of Warranties
                 </h2>
@@ -209,7 +209,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 10. Limitation of Liability */}
-              <section className="scroll-mt-20" id="terms-limitations">
+              <section className="scroll-mt-44" id="terms-limitations">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   10. Limitation of Liability
                 </h2>
@@ -221,7 +221,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 11. Indemnification */}
-              <section className="scroll-mt-20" id="terms-indemnity">
+              <section className="scroll-mt-44" id="terms-indemnity">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   11. Indemnification
                 </h2>
@@ -234,7 +234,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 12. Governing Law and Jurisdiction */}
-              <section className="scroll-mt-20" id="terms-governing">
+              <section className="scroll-mt-44" id="terms-governing">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   12. Governing Law and Jurisdiction
                 </h2>
@@ -246,7 +246,7 @@ const ServiceTerms = () => {
               </section>
 
               {/* 13. Modifications to Terms */}
-              <section className="scroll-mt-20" id="terms-changes">
+              <section className="scroll-mt-44" id="terms-changes">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   13. Modifications to Terms
                 </h2>
@@ -258,13 +258,13 @@ const ServiceTerms = () => {
               </section>
 
               {/* Contact Information */}
-              <section className="scroll-mt-20" id="terms-contact">
+              <section className="scroll-mt-44" id="terms-contact">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   Contact Information
                 </h2>
                 <div className="text-sm sm:text-base text-primary-700 leading-relaxed space-y-2">
                   <p>
-                    <strong>Backbone finance inc.</strong>
+                    <strong>Backbone Finance Inc.</strong>
                   </p>
                   <p>
                     <strong>Head Office:</strong> S.95, TBS, Race Course,
@@ -274,7 +274,8 @@ const ServiceTerms = () => {
                     <strong>Email Address:</strong> hello@mybackbone.io
                   </p>
                   <p>
-                    <strong>Phone Number:</strong> +234 703 810 9960
+                    <strong>Phone Number:</strong>{" "}
+                    {process.env.NEXT_PUBLIC_NGN_NUMBER}
                   </p>
                 </div>
               </section>
