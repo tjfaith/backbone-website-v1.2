@@ -52,12 +52,18 @@ const Footer = () => {
                       </span>
                     </button>
                   </DropdownTrigger>
-                  <DropdownMenu aria-label="Global banking" className="p-0">
-                    <DropdownItem key="individual" href="/offerings/individual">
-                      Personal Banking
+                  <DropdownMenu
+                    aria-label="Global banking"
+                    className="p-0"
+                    closeOnSelect={false}
+                  >
+                    <DropdownItem key="individual" textValue="individual">
+                      <Link href="/offerings/individual">Personal Banking</Link>
                     </DropdownItem>
-                    <DropdownItem key="corporate" href="/offerings/businesses">
-                      Corporate Banking
+                    <DropdownItem key="corporate" textValue="business">
+                      <Link href="/offerings/businesses">
+                        Corporate Banking
+                      </Link>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
@@ -89,14 +95,13 @@ const Footer = () => {
                     </button>
                   </DropdownTrigger>
                   <DropdownMenu aria-label="Global banking" className="p-0">
-                    <DropdownItem key="rent" href="/offerings/finance/rent">
-                      Rent Finance
+                    <DropdownItem key="rent" textValue="rent">
+                      <Link href="/offerings/finance/rent">Rent Finance</Link>
                     </DropdownItem>
-                    <DropdownItem
-                      key="property"
-                      href="/offerings/finance/property"
-                    >
-                      Property Finance
+                    <DropdownItem key="property" textValue="property">
+                      <Link href="/offerings/finance/property">
+                        Property Finance
+                      </Link>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
