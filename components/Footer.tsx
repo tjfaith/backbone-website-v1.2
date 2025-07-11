@@ -8,6 +8,14 @@ import { Spacer } from "@heroui/spacer";
 import { FullLogo } from "@/public/assets";
 import { AppDownloadBtn, Dot } from "@/components";
 import { Divider } from "@heroui/divider";
+import { Button } from "@heroui/button";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@heroui/dropdown";
+import { color } from "framer-motion";
 // import Link from "next/link";
 
 const Footer = () => {
@@ -30,70 +38,68 @@ const Footer = () => {
                 Offerings
               </div>
               <div className=" space-y-2 flex flex-col">
-                <div>
-                  <button
-                    className="gap-2 flex md:items-center "
-                    onClick={() => setGlobalBankingMenu(!globalBankingMenu)}
-                  >
-                    <span className="text-base whitespace-nowrap ">
-                      Global Banking
-                    </span>
-                    <span>
-                      <Icon icon="ri:arrow-down-s-line" />
-                    </span>
-                  </button>
-                  {globalBankingMenu && (
-                    <div className=" ml-3 animate__animated animate__fadeIn flex flex-col">
-                      <Link
-                        className="text-[#99A0AE]"
-                        href="/offerings/individual"
-                      >
-                        Personal Banking
-                      </Link>
-                      <Link
-                        className="text-[#99A0AE]"
-                        href="/offerings/businesses"
-                      >
-                        Corporate Banking
-                      </Link>
-                    </div>
-                  )}
-                </div>
+                <Dropdown
+                  className="text-primary bg-background-300 p-0"
+                  radius="sm"
+                >
+                  <DropdownTrigger className="">
+                    <button className="gap-2 flex md:items-center border-none focus:outline-none !active:outline-none outline-none">
+                      <span className="text-base whitespace-nowrap ">
+                        Global Banking
+                      </span>
+                      <span>
+                        <Icon icon="ri:arrow-down-s-line" />
+                      </span>
+                    </button>
+                  </DropdownTrigger>
+                  <DropdownMenu aria-label="Global banking" className="p-0">
+                    <DropdownItem key="individual" href="/offerings/individual">
+                      Personal Banking
+                    </DropdownItem>
+                    <DropdownItem key="corporate" href="/offerings/businesses">
+                      Corporate Banking
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+
                 <Link
                   className="text-background dark:text-primary"
-                  href="/trade-finance"
+                  href="/offerings/finance/trade"
                 >
                   Trade Finance
                 </Link>
                 <Link
                   className="text-background dark:text-primary"
-                  href="/investments"
+                  href="/offerings/investments"
                 >
                   Investments
                 </Link>
-                <div>
-                  <button
-                    className="gap-2 flex md:items-center "
-                    onClick={() => setFinanceMenu(!financeMenu)}
-                  >
-                    <span className="text-base whitespace-nowrap ">
-                      Home Finance
-                    </span>
-                    <span>
-                      <Icon icon="ri:arrow-down-s-line" />
-                    </span>
-                  </button>
-                  {financeMenu && (
-                    <div className="ml-3 animate__animated animate__fadeIn flex flex-col">
-                      <Link className="text-[#99A0AE]" href="/finance/rent">
-                        Rent Finance
-                      </Link>
-                      <Link className="text-[#99A0AE]" href="/finance/property">
-                        Property Finance
-                      </Link>
-                    </div>
-                  )}
-                </div>
+                <Dropdown
+                  className="text-primary bg-background-300 p-0"
+                  radius="sm"
+                >
+                  <DropdownTrigger className="">
+                    <button className="gap-2 flex md:items-center border-none focus:outline-none !active:outline-none outline-none">
+                      <span className="text-base whitespace-nowrap ">
+                        Home Finance
+                      </span>
+                      <span>
+                        <Icon icon="ri:arrow-down-s-line" />
+                      </span>
+                    </button>
+                  </DropdownTrigger>
+                  <DropdownMenu aria-label="Global banking" className="p-0">
+                    <DropdownItem key="rent" href="/offerings/finance/rent">
+                      Rent Finance
+                    </DropdownItem>
+                    <DropdownItem
+                      key="property"
+                      href="/offerings/finance/property"
+                    >
+                      Property Finance
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
               </div>
             </div>
             <div className="text-background dark:text-primary space-y-1">

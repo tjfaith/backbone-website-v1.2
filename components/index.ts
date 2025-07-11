@@ -12,6 +12,7 @@ export { default as Dot } from "./Dot";
 export { default as AppDownloadBtn } from "./AppDownloadBtn";
 export { default as OurOfferingsMenu } from "./OurOfferingsMenu";
 export { default as ComingSoonBadge } from "./OurOfferingsMenu/ComingSoonBadge";
+export { default as ComingSoon } from "./ComingSoon";
 
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";
