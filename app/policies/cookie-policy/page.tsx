@@ -1,10 +1,25 @@
+"use client";
 import { Card } from "@heroui/card";
 import { Icon } from "@iconify/react";
 import React from "react";
+import { motion } from "framer-motion";
+
+import { useActiveSection } from "@/app/customHooks";
 
 const CookiePolicy = () => {
+  const sections = [
+    { id: "cookie-what", label: "What Are Cookies?" },
+    { id: "cookie-how", label: "How We Use Cookies" },
+    { id: "cookie-types", label: "Types of Cookies We Use" },
+    { id: "cookie-third-party", label: "Third-Party Cookies" },
+    { id: "cookie-management", label: "Cookie Management" },
+    { id: "cookie-updates", label: "Updates to This Policy" },
+    { id: "cookie-contact", label: "Contact Information" },
+  ];
+  const activeId = useActiveSection(sections.map((s) => s.id));
+
   return (
-    <div className="w-full max-w-none">
+    <div className="w-full max-w-none scroll-mt-44" id="cookie-what">
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 lg:gap-8">
         {/* Table of Contents - Sidebar */}
         <Card className="p-3 sm:p-4 h-fit xl:sticky top-20 order-2 xl:order-1 lg:mb-auto mb-20">
@@ -12,28 +27,34 @@ const CookiePolicy = () => {
             <Icon className="h-4 w-4 sm:h-5 sm:w-5 mr-2" icon="lucide:cookie" />
             Table of Contents
           </h2>
-          <nav className="space-y-1">
-            {[
-              { id: "cookie-what", label: "What Are Cookies?" },
-              { id: "cookie-how", label: "How We Use Cookies" },
-              { id: "cookie-types", label: "Types of Cookies We Use" },
-              { id: "cookie-third-party", label: "Third-Party Cookies" },
-              { id: "cookie-management", label: "Cookie Management" },
-              { id: "cookie-updates", label: "Updates to This Policy" },
-              { id: "cookie-contact", label: "Contact Information" },
-            ].map((item) => (
-              <a
-                key={item.id}
-                className="flex items-center text-xs sm:text-sm text-primary-700 hover:text-primary dark:hover:text-background hover:bg-gray-100 rounded-md p-2 transition-colors"
-                href={`#${item.id}`}
-              >
-                <Icon
-                  className="h-3 w-3 sm:h-4 sm:w-4 mr-2 flex-shrink-0"
-                  icon="icon-park-outline:dot"
-                />
-                <span className="leading-tight">{item.label}</span>
-              </a>
-            ))}
+          <nav className="relative space-y-1">
+            {sections.map((item, index) => {
+              const isActive = item.id === activeId;
+
+              return (
+                <a
+                  key={item.id}
+                  className="relative block px-3 py-2 rounded-md text-xs sm:text-sm font-medium text-primary-700 hover:bg-gray-100 dark:hover:text-background transition-colors"
+                  href={`#${item.id}`}
+                >
+                  {isActive && (
+                    <motion.div
+                      className="absolute inset-0 bg-primary/10 dark:bg-background/20 rounded-md z-[-1]"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                  <div className="flex items-center space-x-2">
+                    <span className="font-semibold">{index + 1}</span>
+                    <span className="leading-tight">{item.label}</span>
+                  </div>
+                </a>
+              );
+            })}
           </nav>
         </Card>
 
@@ -58,7 +79,7 @@ const CookiePolicy = () => {
               </section>
 
               {/* 1. What Are Cookies? */}
-              <section className="scroll-mt-44" id="cookie-what">
+              <section className="">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                   1. What Are Cookies?
                 </h2>

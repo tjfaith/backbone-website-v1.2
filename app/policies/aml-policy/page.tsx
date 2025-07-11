@@ -179,7 +179,10 @@ const AmlPolicy = () => {
                     All client information is retained for a minimum of 5 years
                     post-transaction, including:
                   </p>
-                  <ul className="list-roman pl-5 text-sm text-primary-700 dark:text-background-700 space-y-1">
+                  <ul
+                    className="list-roman pl-5 text-sm text-primary-700 dark:text-background-700 space-y-1"
+                    id="aml-introduction"
+                  >
                     <li>Identification data and risk profiles</li>
                     <li>Account and financial details</li>
                     <li>Transaction records (nature, date, type, number)</li>
@@ -190,10 +193,7 @@ const AmlPolicy = () => {
             </div>
           </Card>
 
-          <Card
-            className="p-3 sm:p-4 md:p-6 lg:p-8 scroll-pt-0"
-            id="aml-introduction"
-          >
+          <Card className="p-3 sm:p-4 md:p-6 lg:p-8 scroll-mt-0">
             <div className="space-y-6 sm:space-y-8">
               {/* Introduction */}
               <section>
