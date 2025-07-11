@@ -41,7 +41,7 @@ const PolicyHeader = () => {
                   icon="lucide:building"
                 />
                 <span className="text-base sm:text-lg lg:text-xl font-normal truncate">
-                  Backbone Privacy & Terms
+                  Resources
                 </span>
               </div>
 

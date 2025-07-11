@@ -18,6 +18,8 @@ import {
   WeWire,
   YellowCard,
   Conduit,
+  FairMoney,
+  MultiGate,
 } from "@/public/assets";
 
 const Partners = () => {
@@ -59,89 +61,99 @@ const Partners = () => {
         /> */}
         <Image
           alt="ClearJunction logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-36"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[191.03px]"
           radius="none"
           src={ClearJunction.src}
         />
         <Image
           alt="Conduit logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[105.239px]"
           radius="none"
           src={Conduit.src}
         />
         <Image
           alt="Klasha logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[81.231px]"
           radius="none"
           src={Klasha.src}
         />
         <Image
           alt="Waza logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[80.818px]"
           radius="none"
           src={Waza.src}
         />
         <Image
           alt="flutterwave logo"
-          className="dark:bg-primary bg-transparent rounded-full w-36"
+          className="dark:bg-primary bg-transparent rounded-full w-[173.762px]"
           radius="none"
           src={FlutterWave.src}
         />
         <Image
           alt="Fincra logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[89.6px]"
           radius="none"
           src={Fincra.src}
         />
         <Image
-          alt="Grey logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          alt="Fairmoney logo"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[144.991px]"
           radius="none"
-          src={Grey.src}
+          src={FairMoney.src}
         />
         <Image
           alt="Yellowcard logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[113.826px]"
           radius="none"
           src={YellowCard.src}
         />
-
         <Image
           alt="Obsidian logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-36"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[200px]"
           radius="none"
           src={Obsidian.src}
         />
-
+        <Image
+          alt="WeWire logo"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[118.125px]"
+          radius="none"
+          src={WeWire.src}
+        />
         <Image
           alt="IvoryPay logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[108.162px]"
           radius="none"
           src={IvoryPay.src}
         />
         <Image
           alt="JuicyWay logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[99px]"
           radius="none"
           src={JuicyWay.src}
         />
         <Image
-          alt="WeWire logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
-          radius="none"
-          src={WeWire.src}
-        />
-        <Image
           alt="Graph logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[98.734px]"
           radius="none"
           src={Graph.src}
         />
         <Image
           alt="PayAza logo"
-          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-28"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[110.5px]"
           radius="none"
           src={PayAza.src}
+        />
+        <Image
+          alt="Grey logo"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[80.973px]"
+          radius="none"
+          src={Grey.src}
+        />
+        <Image
+          alt="MultiGate logo"
+          className="dark:bg-primary bg-transparent rounded-full px-3 py-1 w-[177.778px]"
+          radius="none"
+          src={MultiGate.src}
         />
       </div>
     </div>

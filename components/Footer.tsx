@@ -7,6 +7,7 @@ import { Spacer } from "@heroui/spacer";
 
 import { FullLogo } from "@/public/assets";
 import { AppDownloadBtn, Dot } from "@/components";
+import { Divider } from "@heroui/divider";
 // import Link from "next/link";
 
 const Footer = () => {
@@ -172,7 +173,7 @@ const Footer = () => {
           </div>
         </div>
         {/* ROW 2 */}
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-12">
           <div className="flex justify-between items-center w-full mb-1">
             <div className="text-sm font-medium text-[#99A0AE] uppercase">
               Contact
@@ -392,9 +393,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <Spacer y={12} />
+        <Divider className="bg-[#181B25]" />
         {/* ROW 3 */}
-        <div className="text-sm">
+        <div className="text-sm mt-12">
           <div className="mb-3">
             Copyright &copy; {new Date().getFullYear()}, Backbone Finance Inc
           </div>
