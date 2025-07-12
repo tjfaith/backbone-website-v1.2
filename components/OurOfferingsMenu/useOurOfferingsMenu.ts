@@ -12,6 +12,7 @@ function useOurOfferingsMenu() {
   const [selectedMenu, seSelectedMenu] = useState(0);
   const [menuDetails, setMenuDetails] = useState(services[selectedMenu]);
   const [viewDetails, setViewDetails] = useState(false);
+  const [showPopover, setShowPopover] = useState(false);
   const isMobile = useIsMobile();
   const HandleSelectedMenu = (id: number) => {
     seSelectedMenu(id);
@@ -32,6 +33,8 @@ function useOurOfferingsMenu() {
     isMobile,
     viewDetails,
     showLightNav,
+    showPopover,
+    setShowPopover,
     setViewDetails,
     handleServiceClick,
     handleBackToServices,

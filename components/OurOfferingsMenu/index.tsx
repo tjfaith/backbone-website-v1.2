@@ -15,7 +15,11 @@ import useOurOfferingsMenu from "./useOurOfferingsMenu";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
 
 const OurOfferingsMenu = ({ changeReady = false }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isOfferingsOpen,
+    onOpen: openOfferings,
+    onClose: closeOfferings,
+  } = useDisclosure();
 
   const {
     services,
@@ -24,6 +28,8 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
     isMobile,
     viewDetails,
     showLightNav,
+    showPopover,
+    setShowPopover,
     setViewDetails,
     handleServiceClick,
     handleBackToServices,
@@ -94,8 +100,8 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                       >
                         <Chip
-                          className="text-xs rounded-lg text-foreground-600 bg-background border-foreground-100 
-        dark:bg-background-300 dark:text-foreground-100 dark:border-foreground-200 
+                          className="text-xs rounded-lg text-foreground-600 bg-background border-foreground-100
+        dark:bg-background-300 dark:text-foreground-100 dark:border-foreground-200
         border-2 py-1 px-2 items-center gap-1 border-dashed"
                           startContent={
                             <Icon
@@ -146,6 +152,7 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
                 <Link
                   className="text-sm text-primary dark:text-primary flex items-center gap-1 mt-1 underline"
                   href={value.link}
+                  onPress={() => setShowPopover(false)}
                 >
                   <span>{value.linkText}</span>
                   <Icon icon="ri:arrow-right-s-line" />
@@ -158,6 +165,7 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
             <Link
               className="text-sm text-primary dark:text-primary flex items-center gap-1 underline mt-3"
               href={menuDetails.generalLink}
+              onPress={() => setShowPopover(false)}
             >
               {menuDetails.generalLinkText}
               <Icon icon="ri:arrow-right-s-line" />
@@ -182,12 +190,12 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
         variant="light"
         onPress={() => {
           handleBackToServices();
-          onOpen();
+          openOfferings();
         }}
       >
         Our Offerings
       </Button>
-      <Drawer isOpen={isOpen} onClose={onClose}>
+      <Drawer isOpen={isOfferingsOpen} onClose={closeOfferings}>
         <DrawerContent className="max-w-full bg-background-200 dark:bg-background-100 rounded-t-xl shadow-lg">
           <MenuContent />
         </DrawerContent>
@@ -198,16 +206,18 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
       offset={10}
       placement="bottom-start"
       size="sm"
-      // className="shadow-[0px_15px_80px_rgba(0,0,0,0.12),_0px_0px_0px_1px_#E1E4EA] border-none rounded-xl"
+      isOpen={showPopover}
+      onOpenChange={(open) => setShowPopover(open)}
     >
       <PopoverTrigger>
-        <Button
-          className={`${changeReady && "!text-primary"} text-base bg-transparent px-2  hover:text-primary dark:text-primary ${showLightNav ? "text-background" : "text-primary"}`}
-          endContent={<Icon icon="ri:arrow-down-s-line" />}
-          variant="light"
+        <button
+          className={`${changeReady && "!text-primary"} flex items-center gap-1 text-base bg-transparent px-2  hover:text-primary dark:text-primary ${showLightNav ? "text-background" : "text-primary"}`}
+          // endContent={<Icon icon="ri:arrow-down-s-line" />}
+          // variant="light"
         >
-          Our Offerings
-        </Button>
+          <span>Our Offerings</span>
+          <Icon icon="ri:arrow-down-s-line" />
+        </button>
       </PopoverTrigger>
       <PopoverContent className="max-w-5xl mx-auto shadow-xl p-0 bg-background-200 dark:bg-background-100 border-2 dark:border-foreground-600">
         <MenuContent />
