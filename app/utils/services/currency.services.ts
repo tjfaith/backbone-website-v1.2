@@ -8,7 +8,7 @@ function CurrencyServices() {
   const useGetAllCurrency = (currency_type?: CurrencyType) => {
     const fetchData = async () => {
       const data = await api.get(
-        `/currency/get-all${currency_type ? `?currency_type=${currency_type}` : ""}`
+        `/currency/get-all${currency_type ? `?currency_type=${currency_type}` : ""}`,
       );
 
       return data?.data?.data || [];

@@ -6,8 +6,10 @@ const useIsMobile = () => {
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024); // Tailwind lg breakpoint
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
+
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 

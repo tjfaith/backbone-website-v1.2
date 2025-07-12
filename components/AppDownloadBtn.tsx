@@ -1,7 +1,8 @@
-import { androidLogo, IosLogo } from "@/public/assets";
 import { Button } from "@heroui/button";
 import Image from "next/image";
 import React from "react";
+
+import { androidLogo, IosLogo } from "@/public/assets";
 // import {IosLogo, AndroidLogo}
 
 interface props {
@@ -10,20 +11,20 @@ interface props {
 const AppDownloadBtn = ({ btnType }: props) => {
   return (
     <Button
-      radius="full"
       className="bg-background dark:bg-primary text-[#0E121B]"
+      radius="full"
     >
       <>
         {btnType === "ios" && (
           <div className="flex items-center gap-1">
             <div>Get our app</div>
-            <Image src={IosLogo} alt="Ios logo" />
+            <Image alt="Ios logo" src={IosLogo} />
           </div>
         )}
         {btnType === "android" && (
           <div className="flex items-center gap-1">
             <div>Download our app</div>
-            <Image src={androidLogo} alt="Ios logo" />
+            <Image alt="Ios logo" src={androidLogo} />
           </div>
         )}
       </>

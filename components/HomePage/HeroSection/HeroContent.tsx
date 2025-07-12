@@ -30,7 +30,7 @@ const HeroContent = ({
         <div
           className={cn(
             "animate__delay-2s animate__animated animate__fadeInUp animate__fast md:bg-gradient-to-b from-primary-300 via-primary-300 to-primary-800 text-background rounded-full p-2 inline-flex md:flex-row flex-col items-center justify-center md:justify-start gap-3 mb-4",
-            avatarClass
+            avatarClass,
           )}
         >
           <AvatarGroup total={9}>
@@ -76,7 +76,7 @@ const HeroContent = ({
             <b>
               $
               {Number(
-                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
               ).toLocaleString()}
             </b>
             <span className="">
@@ -91,7 +91,7 @@ const HeroContent = ({
           <div
             className={cn(
               " text-2xl  sm:text-6xl font-medium  text-primary clash-display-font mb-3 space-y-1",
-              captionClass
+              captionClass,
             )}
           >
             <div className="flex items-center  md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__faster">
@@ -109,7 +109,7 @@ const HeroContent = ({
           <div
             className={cn(
               " text-2xl  sm:text-6xl font-medium text-background dark:text-primary  clash-display-font mb-3 space-y-1",
-              captionClass
+              captionClass,
             )}
           >
             <div className="flex items-center md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__faster">
@@ -126,7 +126,7 @@ const HeroContent = ({
         <div
           className={cn(
             "text-primary text-xs md:text-lg md:text-start text-center font-normal max-w-2xl mb-8 animate__delay-2s animate__animated animate__fadeInUp animate__slow",
-            descriptionClass
+            descriptionClass,
           )}
         >
           Where individuals, businesses, and nonprofits connect to a seamless
@@ -148,7 +148,7 @@ const HeroContent = ({
             as={Link}
             className={cn(
               "text-primary text-base font-medium shadow-none bg-transparent",
-              offeringsBtnClass
+              offeringsBtnClass,
             )}
             // endContent={<Icon icon="ri:arrow-right-s-line" />}
             fullWidth={false}

@@ -6,7 +6,6 @@ import {
   BlogExtract,
   JoinUs,
   Partners,
-  Testimonies,
   ChangingPayment,
   WhyBackbone,
   // OnePlace,

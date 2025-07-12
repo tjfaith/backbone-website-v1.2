@@ -134,7 +134,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
                   {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 5,
-                  }
+                  },
                 )}
               </div>
             </div>

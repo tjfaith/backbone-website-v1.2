@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import { useIsMobile } from "@/app/customHooks";
 import { useSelector } from "react-redux";
+
+import { useIsMobile } from "@/app/customHooks";
 import { RootState } from "@/app/store";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
 

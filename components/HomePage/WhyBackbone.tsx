@@ -1,15 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import {
-  Gage,
-  WorldMap2,
-  DottedBg,
-  GradientLogo,
-  GradientBg,
-} from "@/public/assets";
+import { Gage, WorldMap2, DottedBg, GradientBg } from "@/public/assets";
 import { AnimatedGraph, RippleIcon, Testimonies } from "@/components";
-import { Spacer } from "@heroui/spacer";
 
 const WhyBackbone = () => {
   return (
