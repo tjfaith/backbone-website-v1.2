@@ -61,8 +61,10 @@ s0.parentNode.insertBefore(s1,s0);
         <PreLoader />
         <ChatButton />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <Navbar />
-          <main className="dark:bg-background-200">{children}</main>
+          <main className="dark:bg-background-200">
+            <Navbar />
+            {children}
+          </main>
           <Footer />
           <Toaster />
         </Providers>

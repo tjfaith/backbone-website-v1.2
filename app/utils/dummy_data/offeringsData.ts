@@ -56,7 +56,7 @@ export const offerings = [
     coverIcon: TradeFinanceOpen,
     active: false,
     comingSoon: true,
-    generalLink: "offerings/trade-finance",
+    generalLink: "/offerings/finance/trade",
     generalLinkText: "Explore Trade Finance",
     details: [
       {
@@ -92,7 +92,7 @@ export const offerings = [
     coverIcon: InvestmentsOpen,
     active: false,
     comingSoon: true,
-    generalLink: "offerings/investments",
+    generalLink: "/offerings/investments",
     generalLinkText: "Explore Investments",
     details: [
       {
@@ -114,7 +114,7 @@ export const offerings = [
     coverIcon: EnergyFinanceOpen,
     active: false,
     comingSoon: true,
-    generalLink: "offerings/energy-finance",
+    generalLink: "/offerings/finance/energy",
     generalLinkText: "Explore Energy Finance",
     details: [
       {
@@ -136,7 +136,7 @@ export const offerings = [
     coverIcon: HomeFinanceOpen,
     active: false,
     comingSoon: true,
-    generalLink: "offerings/home-finance",
+    generalLink: "/offerings/finance/property",
     generalLinkText: "Explore Home Finance",
     details: [
       {

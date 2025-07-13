@@ -288,15 +288,15 @@ const ServiceTerms = () => {
                     <strong>Backbone Finance Inc.</strong>
                   </p>
                   <p>
-                    <strong>Head Office:</strong> S.95, TBS, Race Course,
-                    Onikan, Lagos Island, Lagos, Nigeria
+                    <strong>Head Office:</strong> 8, The Green, Suite A, Dover,
+                    DE 19901, United States
                   </p>
                   <p>
                     <strong>Email Address:</strong> hello@mybackbone.io
                   </p>
                   <p>
                     <strong>Phone Number:</strong>{" "}
-                    {process.env.NEXT_PUBLIC_NGN_NUMBER}
+                    {process.env.NEXT_PUBLIC_USA_NUMBER}
                   </p>
                 </div>
               </section>

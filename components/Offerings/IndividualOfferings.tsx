@@ -64,7 +64,7 @@ const IndividualOfferings = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-background to-background via-background-200 md:via-0% via-100% dark:via-success-100/5">
+    <div className="overflow-hidden bg-gradient-to-b from-background to-background via-background-200 md:via-0% via-100% dark:via-success-100/5">
       <div className="page-max-width space-y-16 py-12 ">
         <CHeader />
 
