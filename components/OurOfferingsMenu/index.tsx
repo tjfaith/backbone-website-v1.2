@@ -13,14 +13,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
 
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
+import { Dispatch, SetStateAction } from "react";
 
-const OurOfferingsMenu = ({ changeReady = false }) => {
-  const {
-    isOpen: isOfferingsOpen,
-    onOpen: openOfferings,
-    onClose: closeOfferings,
-  } = useDisclosure();
-
+interface Props {
+  changeReady?: boolean;
+  setIsMenuOpen?: Dispatch<SetStateAction<boolean>>;
+}
+const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
   const {
     services,
     selectedMenu,
@@ -29,12 +28,16 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
     viewDetails,
     showLightNav,
     showPopover,
+    isOfferingsOpen,
+    closeOfferings,
+    openOfferings,
+    closeAllMenu,
     setShowPopover,
     setViewDetails,
     handleServiceClick,
     handleBackToServices,
     HandleSelectedMenu,
-  } = useOurOfferingsMenu();
+  } = useOurOfferingsMenu({ setIsMenuOpen });
 
   const MenuContent = () => (
     <div
@@ -152,7 +155,9 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
                 <Link
                   className="text-sm text-primary dark:text-primary flex items-center gap-1 mt-1 underline"
                   href={value.link}
-                  onPress={() => setShowPopover(false)}
+                  onPress={() => {
+                    closeAllMenu();
+                  }}
                 >
                   <span>{value.linkText}</span>
                   <Icon icon="ri:arrow-right-s-line" />
@@ -165,7 +170,9 @@ const OurOfferingsMenu = ({ changeReady = false }) => {
             <Link
               className="text-sm text-primary dark:text-primary flex items-center gap-1 underline mt-3"
               href={menuDetails.generalLink}
-              onPress={() => setShowPopover(false)}
+              onPress={() => {
+                closeAllMenu();
+              }}
             >
               {menuDetails.generalLinkText}
               <Icon icon="ri:arrow-right-s-line" />

@@ -1,12 +1,16 @@
 "use client";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { useSelector } from "react-redux";
 
 import { useIsMobile } from "@/app/customHooks";
 import { RootState } from "@/app/store";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
+import { useDisclosure } from "@heroui/modal";
 
-function useOurOfferingsMenu() {
+interface Props {
+  setIsMenuOpen?: Dispatch<SetStateAction<boolean>>;
+}
+function useOurOfferingsMenu({ setIsMenuOpen }: Props) {
   const services = [...offerings];
   const { showLightNav } = useSelector((state: RootState) => state.settings);
   const [selectedMenu, seSelectedMenu] = useState(0);
@@ -14,6 +18,13 @@ function useOurOfferingsMenu() {
   const [viewDetails, setViewDetails] = useState(false);
   const [showPopover, setShowPopover] = useState(false);
   const isMobile = useIsMobile();
+
+  const {
+    isOpen: isOfferingsOpen,
+    onOpen: openOfferings,
+    onClose: closeOfferings,
+  } = useDisclosure();
+
   const HandleSelectedMenu = (id: number) => {
     seSelectedMenu(id);
     setMenuDetails(services[id]);
@@ -26,6 +37,12 @@ function useOurOfferingsMenu() {
 
   const handleBackToServices = () => setViewDetails(false);
 
+  const closeAllMenu = () => {
+    setIsMenuOpen && setIsMenuOpen(false);
+    setShowPopover(false);
+    closeOfferings();
+  };
+
   return {
     services,
     selectedMenu,
@@ -34,6 +51,10 @@ function useOurOfferingsMenu() {
     viewDetails,
     showLightNav,
     showPopover,
+    isOfferingsOpen,
+    closeOfferings,
+    openOfferings,
+    closeAllMenu,
     setShowPopover,
     setViewDetails,
     handleServiceClick,

@@ -127,7 +127,7 @@ const Navbar = () => {
                   </Link>
                 </NavbarMenuItem>
               ) : (
-                <OurOfferingsMenu />
+                <OurOfferingsMenu setIsMenuOpen={setIsMenuOpen} />
               )}
             </div>
           ))}
