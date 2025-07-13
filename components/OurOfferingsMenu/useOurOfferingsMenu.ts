@@ -1,11 +1,11 @@
 "use client";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useSelector } from "react-redux";
+import { useDisclosure } from "@heroui/modal";
 
 import { useIsMobile } from "@/app/customHooks";
 import { RootState } from "@/app/store";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
-import { useDisclosure } from "@heroui/modal";
 
 interface Props {
   setIsMenuOpen?: Dispatch<SetStateAction<boolean>>;
