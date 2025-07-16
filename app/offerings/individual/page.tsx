@@ -12,7 +12,6 @@ import {
   IndividualOfferings,
   Partners,
   SendMoneyForm,
-  Testimonies,
   WhyBackbone,
 } from "@/components";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
@@ -49,7 +48,7 @@ const Individual = () => {
               action={() =>
                 window.open(
                   `${process.env.NEXT_PUBLIC_APP_URL}/sign-in`,
-                  "_blank"
+                  "_blank",
                 )
               }
               title={

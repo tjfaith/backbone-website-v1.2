@@ -7,13 +7,12 @@ import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { Link } from "@heroui/link";
 import Image from "next/image";
-import { useDisclosure } from "@heroui/modal";
 import { AnimatePresence, motion } from "framer-motion";
+import { Dispatch, SetStateAction } from "react";
 
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
 
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
-import { Dispatch, SetStateAction } from "react";
 
 interface Props {
   changeReady?: boolean;
@@ -210,10 +209,10 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
     </>
   ) : (
     <Popover
+      isOpen={showPopover}
       offset={10}
       placement="bottom-start"
       size="sm"
-      isOpen={showPopover}
       onOpenChange={(open) => setShowPopover(open)}
     >
       <PopoverTrigger>

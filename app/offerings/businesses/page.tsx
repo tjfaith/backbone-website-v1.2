@@ -10,7 +10,6 @@ import {
   OfferingsCaption,
   Partners,
   SendMoneyForm,
-  Testimonies,
   WhyBackbone,
   BusinessesOfferings,
 } from "@/components";
@@ -41,7 +40,7 @@ const Businesses = () => {
               action={() =>
                 window.open(
                   `${process.env.NEXT_PUBLIC_APP_URL}/sign-in`,
-                  "_blank"
+                  "_blank",
                 )
               }
               title={
