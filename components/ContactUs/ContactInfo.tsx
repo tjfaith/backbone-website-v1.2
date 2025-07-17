@@ -31,7 +31,7 @@ const ContactInfo = () => {
       <div className="text-primary md:text-lg text-sm md:space-y-6 space-y-3 mt-4">
         <div className=" flex items-start space-x-2 ">
           <Icon className="text-2xl" icon="ri:map-pin-fill" />{" "}
-          <span>S.95, Tafawa Balewa Square, Race Course, Onikan, Lagos.</span>
+          <span> 8, The Green, Suite A, Dover, DE 19901, United States</span>
         </div>
         <Link
           className="md:text-lg text-sm  flex items-center space-x-2"
@@ -41,9 +41,10 @@ const ContactInfo = () => {
         </Link>
         <Link
           className="md:text-lg text-sm flex items-center space-x-2 "
-          href="tel:+2347035849521"
+          href={`tel:${process.env.NEXT_PUBLIC_UK_NUMBER_1?.replace(/\s+/g, "")}`}
         >
-          <Icon icon="ri:phone-fill" /> <span>+234 703 584 9521</span>
+          <Icon icon="ri:phone-fill" />{" "}
+          <span>{process.env.NEXT_PUBLIC_USA_NUMBER}</span>
         </Link>
       </div>
     </div>
