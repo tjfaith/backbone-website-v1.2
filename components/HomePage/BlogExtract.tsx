@@ -10,6 +10,7 @@ import { Icon } from "@iconify/react";
 
 import { BlogServices } from "@/app/utils/services";
 import { Spinner } from "@/public/assets";
+import { AllBlogs } from "@/types";
 
 const BlogExtract = () => {
   const {
@@ -17,6 +18,7 @@ const BlogExtract = () => {
     isLoading: blogLoading,
     refetch: refetchBlog,
   } = BlogServices().useGetAllBlog({});
+  const { data: categories } = BlogServices().useGetAllBlogCategory();
   const DOMPurify = createDOMPurify();
   const router = useRouter();
   const currentPath = usePathname();
@@ -54,7 +56,7 @@ const BlogExtract = () => {
       </div>
       {!blogLoading ? (
         <div className="grid md:grid-cols-2 gap-5 col-span-2">
-          {allBlogs?.slice(-4).map((blog, index) => (
+          {allBlogs?.data?.slice(-4).map((blog: AllBlogs, index: number) => (
             <div
               key={index}
               className="flex flex-col hover:bg-foreground-200/50 rounded-xl p-2 transition-all ease-in-out duration-300"
@@ -62,12 +64,14 @@ const BlogExtract = () => {
               <Image
                 alt="blog image"
                 className="object-cover h-screen-40 md:w-screen-30 w-screen mb-4"
-                src={blog.cover_image}
+                src={blog.featuredImage}
               />
               <div className="flex  flex-col justify-between flex-grow">
                 <div>
                   <div className=" mb-2 uppercase text-primary-600 font-normal text-sm">
-                    {blog.category.name}
+                    {categories?.find(
+                      (cat: { _id: string }) => cat._id === blog.category,
+                    )?.name ?? "—"}
                   </div>
                   <div className=" clash-display-font text-xl font-medium text-primary mb-2 leading-snug">
                     {blog.title}
@@ -77,9 +81,9 @@ const BlogExtract = () => {
                       <div
                         dangerouslySetInnerHTML={{
                           __html: DOMPurify.sanitize(
-                            blog?.blog_content.length > 500
-                              ? blog?.blog_content.slice(0, 500) + "..."
-                              : blog?.blog_content,
+                            blog?.content.length > 500
+                              ? blog?.content.slice(0, 500) + "..."
+                              : blog?.content,
                           ),
                         }}
                         className="text-base"
@@ -94,7 +98,7 @@ const BlogExtract = () => {
                     variant="light"
                     onPress={() =>
                       viewBlog(
-                        `/${blog.blog_id}?title=${encodeURIComponent(blog.title)}&id=${blog.blog_id}`,
+                        `/${blog._id}?title=${encodeURIComponent(blog.title)}&id=${blog._id}`,
                       )
                     }
                   >

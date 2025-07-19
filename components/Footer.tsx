@@ -1,6 +1,6 @@
 "use client";
 import { Image } from "@heroui/image";
-import React, { useState } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "@heroui/link";
 import { Divider } from "@heroui/divider";
@@ -16,8 +16,8 @@ import { AppDownloadBtn, Dot } from "@/components";
 // import Link from "next/link";
 
 const Footer = () => {
-  const [globalBankingMenu, setGlobalBankingMenu] = useState(false);
-  const [financeMenu, setFinanceMenu] = useState(false);
+  // const [globalBankingMenu, setGlobalBankingMenu] = useState(false);
+  // const [financeMenu, setFinanceMenu] = useState(false);
 
   return (
     <footer className="bg-black dark:text-primary text-background py-16">

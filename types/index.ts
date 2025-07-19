@@ -32,6 +32,16 @@ export interface ContactUsPayload {
   message: string;
 }
 
+export interface BlogRequestFace {
+  limit?: number;
+  search?: string | null;
+  author?: string | null;
+  page?: number;
+  from?: string | null;
+  to?: string | null;
+  category?: string | null;
+}
+
 export interface PaymentDetailsProps {
   amount: string;
   currency: string;
@@ -72,19 +82,48 @@ export interface ErrorResponse {
 }
 
 export interface BlogCategory {
+  _id?: string | null;
   name: string;
-  id: string;
+  description: string;
+  createdAt?: string;
 }
 
+export type ArticleStatus = "published" | "draft";
+
 export interface AllBlogs {
-  blog_id: string;
-  title: string;
-  description: string;
-  category: BlogCategory;
-  created_at: string;
-  cover_image: string;
-  blog_content: string;
-  keywords: string;
+  _id?: string;
+  title: string; //
+  content: string; //
+  tags: string[]; //
+  description: string; //
+  status: ArticleStatus; //
+  featuredImage?: any; //
+  category: string; //
+  createdAt?: string;
+  updatedAt?: string;
+  views?: null | number;
+  comments?: null | CommentFace[];
+  likes?: null | number;
+  shares?: null | number;
+  featured?: boolean;
+  allowComments?: boolean;
+  author: {
+    id: string;
+    name: string;
+    email: string;
+    avatar: string;
+  };
+}
+
+export interface CommentFace {
+  _id: string;
+  postId: string;
+  authorId: string;
+  name: string;
+  content: string;
+  createdAt: string;
+  updatedAt?: string;
+  isApproved: boolean;
 }
 
 export interface QueryGetAllBlogsProps {

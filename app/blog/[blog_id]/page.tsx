@@ -29,13 +29,13 @@ const SingleBlog = () => {
             <div className="">
               <div className=" flex items-center space-x-6 mt-8">
                 <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap space-x-4">
-                  {new Date(singleBlog?.created_at as string).toDateString()}{" "}
+                  {new Date(singleBlog?.createdAt as string).toDateString()}{" "}
                   {new Date(
-                    singleBlog?.created_at as string,
+                    singleBlog?.createdAt as string,
                   ).toLocaleTimeString()}
                 </div>
                 <div className="text-sm text-primary capitalize">
-                  {singleBlog?.category?.name}
+                  {/* {singleBlog?.category?.name} */}
                 </div>
               </div>
               <div className=" mt-6 md:text-4xl  text-2xl font-bold text-primary">
@@ -44,13 +44,13 @@ const SingleBlog = () => {
               </div>
               <ViewImage
                 className="md:object-contain object-cover  h-screen-40 object-center w-screen mt-5"
-                img={singleBlog?.cover_image}
+                img={singleBlog?.featuredImage}
               />
               <div className="mt-6 ">
                 {singleBlog && (
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: DOMPurify?.sanitize(singleBlog?.blog_content),
+                      __html: DOMPurify?.sanitize(singleBlog?.content),
                     }}
                   />
                 )}

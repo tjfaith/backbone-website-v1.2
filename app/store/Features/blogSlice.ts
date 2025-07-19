@@ -8,7 +8,7 @@ interface BlogState {
 }
 
 const initialState: BlogState = {
-  selectedCategory: { name: "All", id: "all" },
+  selectedCategory: { name: "All", _id: null, description: "" },
 };
 
 const blogSlice = createSlice({
