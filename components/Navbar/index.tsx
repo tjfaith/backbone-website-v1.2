@@ -25,8 +25,6 @@ const Navbar = () => {
     currentPath,
     changeReady,
     showLightNav,
-    theme,
-    isSSR,
     setIsMenuOpen,
     handleMenuToggle,
   } = useNavbar();

@@ -8,7 +8,7 @@ import { ViewImage } from "@/components";
 import { BlogCardProps } from "@/types";
 
 const BlogCard = ({ data }: BlogCardProps) => {
-  const { DOMPurify, viewBlog } = useBlogCard();
+  const { DOMPurify, categories, viewBlog } = useBlogCard();
 
   return (
     <div>
@@ -16,10 +16,12 @@ const BlogCard = ({ data }: BlogCardProps) => {
         <div>
           <div className="flex items-center space-x-6 whitespace-nowrap">
             <div className=" text-sm text-foreground-600 dark:text-foreground">
-              {new Date(data?.created_at as string).toDateString()}
+              {new Date(data?.createdAt as string).toDateString()}
             </div>
             <div className="text-sm text-primary capitalize">
-              {data?.category?.name}
+              {categories?.find(
+                (cat: { _id: string }) => cat._id === data?.category,
+              )?.name ?? "—"}
             </div>
           </div>
           <div className=" text-4xl font-bold mt-4 text-primary">
@@ -30,9 +32,9 @@ const BlogCard = ({ data }: BlogCardProps) => {
               <div
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(
-                    data?.blog_content.length > 600
-                      ? data?.blog_content.slice(0, 600) + "..."
-                      : data?.blog_content,
+                    data?.content?.length > 600
+                      ? data?.content?.slice(0, 600) + "..."
+                      : data?.content,
                   ),
                 }}
               />
@@ -41,7 +43,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
               className="flex mt-6 space-x-1 text-primary items-center font-sm cursor-pointer"
               onClick={() =>
                 viewBlog(
-                  `/${data.blog_id}?title=${encodeURIComponent(data.title)}&id=${data.blog_id}`,
+                  `/${data?._id}?title=${encodeURIComponent(data.title)}&id=${data?._id}`,
                 )
               }
             >
@@ -51,7 +53,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
         </div>
         <ViewImage
           className="w-full object-cover  h-screen-35"
-          img={data?.cover_image}
+          img={data?.featuredImage}
         />
       </div>
     </div>

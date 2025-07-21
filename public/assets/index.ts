@@ -92,41 +92,6 @@ export { default as SwapImg } from "./img/app/swap.png";
 
 // blog
 export { default as BlogHeroImg } from "./img/blog/blogHero.jpg";
-export { default as Blog1 } from "./img/blog/blog1.png";
-export { default as Blog2 } from "./img/blog/blog2.jpg";
-export { default as Blog3 } from "./img/blog/blog3.jpg";
-export { default as Blog4 } from "./img/blog/blog4.jpg";
-export { default as Blog5 } from "./img/blog/blog5.jpg";
-export { default as Blog6 } from "./img/blog/blog6.jpg";
-export { default as Blog7 } from "./img/blog/blog7.jpg";
-export { default as Blog8 } from "./img/blog/blog8.jpg";
-export { default as Blog9 } from "./img/blog/blog9.jpg";
-export { default as Blog10 } from "./img/blog/blog10.jpg";
-export { default as Blog11 } from "./img/blog/blog11.jpg";
-export { default as Blog12 } from "./img/blog/blog12.jpg";
-export { default as Blog13 } from "./img/blog/blog13.jpg";
-export { default as Blog14 } from "./img/blog/blog14.jpg";
-export { default as Blog15 } from "./img/blog/blog15.jpg";
-export { default as Blog16 } from "./img/blog/blog16.jpg";
-export { default as Blog17 } from "./img/blog/blog17.png";
-export { default as Blog18 } from "./img/blog/blog18.jpg";
-export { default as Blog19 } from "./img/blog/blog19.jpg";
-export { default as Blog20 } from "./img/blog/blog20.jpg";
-export { default as Blog21 } from "./img/blog/blog21.png";
-export { default as Blog22 } from "./img/blog/blog22.jpg";
-export { default as Blog23 } from "./img/blog/blog23.jpg";
-export { default as Blog24 } from "./img/blog/blog24.jpg";
-export { default as Blog25 } from "./img/blog/blog25.jpg";
-export { default as Blog26 } from "./img/blog/blog26.png";
-export { default as Blog27 } from "./img/blog/blog27.jpg";
-export { default as Blog28 } from "./img/blog/blog28.jpg";
-export { default as Blog29 } from "./img/blog/blog29.jpg";
-export { default as Blog30 } from "./img/blog/blog30.jpg";
-export { default as Blog31 } from "./img/blog/blog31.jpg";
-export { default as Blog32 } from "./img/blog/blog32.jpg";
-export { default as Blog33 } from "./img/blog/blog33.jpg";
-export { default as Blog34 } from "./img/blog/blog34.jpg";
-export { default as Blog35 } from "./img/blog/blog35.jpg";
 
 // why backbone
 export { default as Gage } from "./img/whyBackbone/gage.svg";

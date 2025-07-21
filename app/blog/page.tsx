@@ -14,15 +14,7 @@ import {
 } from "@/components";
 import { AllBlogs } from "@/types";
 const BlogPage = () => {
-  const {
-    allBlogs,
-    blogLoading,
-    currentPage,
-    paginatedBlogs,
-    pageSize,
-    blogRef,
-    handlePageChange,
-  } = useBlog();
+  const { allBlogs, blogLoading, blogRef, handlePageChange } = useBlog();
 
   return (
     <>
@@ -36,15 +28,15 @@ const BlogPage = () => {
               </div>
             ) : (
               <div>
-                {allBlogs && allBlogs?.length > 0 ? (
+                {allBlogs?.data && allBlogs?.data?.length > 0 && <LatestBlog />}
+                <div ref={blogRef}>
+                  <BlogCategory />
+                </div>
+                {allBlogs?.data && allBlogs?.data?.length > 0 ? (
                   <>
-                    <LatestBlog />
-                    <div ref={blogRef}>
-                      <BlogCategory />
-                    </div>
                     <div className=" mt-5 flex flex-col gap-20">
-                      {paginatedBlogs?.map((blog: AllBlogs) => (
-                        <BlogCard key={blog.blog_id} data={blog} />
+                      {allBlogs?.data?.map((blog: AllBlogs) => (
+                        <BlogCard key={blog._id} data={blog} />
                       ))}
                     </div>
                     <Pagination
@@ -53,8 +45,8 @@ const BlogPage = () => {
                         base: "flex items-center justify-center mt-10",
                         cursor: "dark:text-background",
                       }}
-                      page={currentPage}
-                      total={Math.ceil(allBlogs.length / pageSize)}
+                      page={allBlogs?.page}
+                      total={allBlogs?.totalPages}
                       onChange={handlePageChange}
                     />
                   </>

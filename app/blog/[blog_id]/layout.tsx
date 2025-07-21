@@ -1,19 +1,22 @@
 import { Metadata } from "next";
 
-import { allBlog } from "@/app/utils";
-import { AllBlogs } from "@/types";
-
-type tParams = Promise<{ blog_id: string }>;
+import { getBlogById } from "@/app/utils/services/internalServices/blog.server.service";
 
 export async function generateMetadata({
   params,
 }: {
-  params: tParams;
+  params: Promise<{ blog_id: string }>; // ✅ make this a Promise
 }): Promise<Metadata> {
-  const { blog_id } = await params;
+  const { blog_id } = await params; // ✅ await it
 
-  const singleBlog =
-    (await allBlog.find((item: AllBlogs) => item.blog_id === blog_id)) || null;
+  const singleBlog = await getBlogById(blog_id);
+
+  if (!singleBlog) {
+    return {
+      title: "Blog Not Found",
+      description: "The blog you're looking for does not exist.",
+    };
+  }
 
   return {
     title: singleBlog?.title || "Default Title",
@@ -22,10 +25,10 @@ export async function generateMetadata({
       title: singleBlog?.title || "Default Title",
       description: singleBlog?.description || "",
       type: "article",
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog?title=${encodeURIComponent(singleBlog?.title || "")}&id=${singleBlog?.blog_id}`,
+      url: `/blog?title=${encodeURIComponent(singleBlog?.title || "")}&id=${singleBlog?._id}`,
       images: [
         {
-          url: singleBlog?.cover_image || "",
+          url: singleBlog?.featuredImage || "",
           width: 1200,
           height: 630,
           alt: `Cover image for ${singleBlog?.title}`,
@@ -36,13 +39,13 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: singleBlog?.title || "Default Title",
       description: singleBlog?.description || "",
-      images: singleBlog?.cover_image || "",
+      images: singleBlog?.featuredImage || "",
     },
     robots: {
       index: true,
       follow: true,
     },
-    keywords: singleBlog?.keywords || "backbone, blog, tags",
+    keywords: singleBlog.tags?.join(", ") || "backbone, blog, tags",
   };
 }
 

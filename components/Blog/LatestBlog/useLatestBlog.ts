@@ -9,6 +9,7 @@ import { BlogServices } from "@/app/utils/services";
 
 function useLatestBlog() {
   const { selectedCategory } = useSelector((state: RootState) => state.blog);
+  const { data: categories } = BlogServices().useGetAllBlogCategory();
 
   const DOMPurify = createDOMPurify();
   const router = useRouter();
@@ -16,10 +17,12 @@ function useLatestBlog() {
     router.push(`/blog/${blog_id}`);
   };
   const { data: allBlogs, isLoading: blogLoading } =
-    BlogServices().useGetAllBlog({ category_id: selectedCategory.id });
-  const latestBlog = allBlogs && allBlogs[allBlogs?.length - 1];
+    BlogServices().useGetAllBlog({
+      category: selectedCategory._id,
+      onlyLatest: true,
+    });
 
-  return { latestBlog, blogLoading, DOMPurify, viewBlog };
+  return { blogLoading, DOMPurify, allBlogs, categories, viewBlog };
 }
 
 export default useLatestBlog;

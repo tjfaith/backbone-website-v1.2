@@ -20,7 +20,6 @@ interface Props {
 }
 const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
   const {
-    services,
     selectedMenu,
     menuDetails,
     isMobile,
@@ -32,10 +31,8 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
     openOfferings,
     closeAllMenu,
     setShowPopover,
-    setViewDetails,
     handleServiceClick,
     handleBackToServices,
-    HandleSelectedMenu,
   } = useOurOfferingsMenu({ setIsMenuOpen });
 
   const MenuContent = () => (

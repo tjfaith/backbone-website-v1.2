@@ -10,15 +10,17 @@ const BlogCategory = () => {
   return (
     <div className="flex items-center space-x-5 mt-12 overflow-x-auto xscroll pb-2">
       {blogCategories &&
-        [{ name: "All", id: "all" }, ...blogCategories]?.map((category) => (
-          <button
-            key={category?.id}
-            className={`${selectedCategory.id === category.id ? "bg-primary text-white dark:text-foreground-900" : "bg-transparent text-foreground"} cursor-pointer px-3 py-2 text-sm rounded-full hover:bg-primary/50 dark:hover:bg-foreground-900 dark:hover:text-primary transition-all duration-300 ease-in-out capitalize`}
-            onClick={() => handleSelectCategory(category)}
-          >
-            {category.name}
-          </button>
-        ))}
+        [{ name: "All", _id: null, description: "" }, ...blogCategories]?.map(
+          (category) => (
+            <button
+              key={category?._id}
+              className={`${selectedCategory._id === category._id ? "bg-primary text-white dark:text-foreground-900" : "bg-transparent text-foreground"} cursor-pointer px-3 py-2 text-sm rounded-full hover:bg-primary/50 dark:hover:bg-foreground-900 dark:hover:text-primary hover:text-background transition-all duration-300 ease-in-out capitalize`}
+              onClick={() => handleSelectCategory(category)}
+            >
+              {category.name}
+            </button>
+          ),
+        )}
     </div>
   );
 };
