@@ -44,8 +44,7 @@ function BlogServices() {
       if (excludeLatest) params.append("excludeLatest", "true");
 
       const { data } = await api.get(`/blog?${params.toString()}`);
-      console.log(params, "blog params");
-      console.log(data, "blog list");
+
       return data || [];
     };
 
