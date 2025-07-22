@@ -42,7 +42,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import { getCollection } from "@/app/utils/db";
 
-// Using loose typing on `context` to avoid toolchain errors
+export const revalidate = 0;
+
 export async function PATCH(req: NextRequest, context: any) {
   const { id } = context?.params ?? {};
 

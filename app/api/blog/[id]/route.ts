@@ -3,9 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { getCollection } from "@/app/utils/db";
 
+export const revalidate = 0;
+
 export async function GET(
   _req: NextRequest,
-  context: { params: Promise<{ id: string }> },
+  context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
 
