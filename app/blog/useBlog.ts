@@ -10,6 +10,8 @@ import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 function useBlog() {
   const dispatch = useDispatch();
   const blogRef = useRef<HTMLDivElement | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 5;
   const { selectedCategory } = useSelector((state: RootState) => state.blog);
   const { data: allBlogs, isLoading: blogLoading } =
     BlogServices().useGetAllBlog({
@@ -17,8 +19,11 @@ function useBlog() {
       excludeLatest: true,
     });
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 5;
+  const { data: latestBlog } = BlogServices().useGetAllBlog({
+    page: currentPage,
+    category: selectedCategory._id,
+    onlyLatest: true,
+  });
 
   const handlePageChange = (page: number) => {
     if (blogRef.current) {
@@ -37,6 +42,7 @@ function useBlog() {
     allBlogs,
     blogLoading,
     currentPage,
+    latestBlog,
     // paginatedBlogs,
     pageSize,
     blogRef,

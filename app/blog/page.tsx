@@ -14,7 +14,10 @@ import {
 } from "@/components";
 import { AllBlogs } from "@/types";
 const BlogPage = () => {
-  const { allBlogs, blogLoading, blogRef, handlePageChange } = useBlog();
+  const { allBlogs, blogLoading, blogRef, latestBlog, handlePageChange } =
+    useBlog();
+  const blogList =
+    allBlogs?.data?.length > 0 ? allBlogs.data : (latestBlog?.data ?? []);
 
   return (
     <>
@@ -28,14 +31,14 @@ const BlogPage = () => {
               </div>
             ) : (
               <div>
-                <LatestBlog />
+                {allBlogs?.data?.length > 0 && <LatestBlog />}
                 <div ref={blogRef}>
                   <BlogCategory />
                 </div>
-                {allBlogs?.data && allBlogs?.data?.length > 0 ? (
+                {blogList?.length > 0 ? (
                   <>
                     <div className=" mt-5 flex flex-col gap-20">
-                      {allBlogs?.data?.map((blog: AllBlogs) => (
+                      {blogList?.map((blog: AllBlogs) => (
                         <BlogCard key={blog._id} data={blog} />
                       ))}
                     </div>
