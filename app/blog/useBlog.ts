@@ -15,12 +15,12 @@ function useBlog() {
   const { selectedCategory } = useSelector((state: RootState) => state.blog);
   const { data: allBlogs, isLoading: blogLoading } =
     BlogServices().useGetAllBlog({
+      page: currentPage,
       category: selectedCategory._id,
       excludeLatest: true,
     });
 
   const { data: latestBlog } = BlogServices().useGetAllBlog({
-    page: currentPage,
     category: selectedCategory._id,
     onlyLatest: true,
   });
