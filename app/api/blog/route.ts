@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { getCollection } from "@/app/utils/db";
 
+export const revalidate = 0;
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const query: any = {};

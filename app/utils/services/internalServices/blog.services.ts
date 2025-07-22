@@ -35,7 +35,7 @@ function BlogServices() {
         limit: String(limit),
       });
 
-      if (search) params.append("q", search); // Note: use "q" to match API
+      if (search) params.append("q", search);
       if (author) params.append("author", author);
       if (category) params.append("category", category);
       if (from) params.append("from", from);
