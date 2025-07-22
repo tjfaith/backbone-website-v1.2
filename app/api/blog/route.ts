@@ -24,6 +24,8 @@ export async function GET(req: NextRequest) {
   const onlyLatest = searchParams.get("onlyLatest") === "true";
   const excludeLatest = searchParams.get("excludeLatest") === "true";
 
+  console.log(onlyLatest, "latest excluded2");
+  console.log(typeof onlyLatest, "type2");
   query.status = "published";
 
   if (filters.q) {

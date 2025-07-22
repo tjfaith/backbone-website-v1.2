@@ -28,7 +28,7 @@ const BlogPage = () => {
               </div>
             ) : (
               <div>
-                {allBlogs?.data && allBlogs?.data?.length > 0 && <LatestBlog />}
+                <LatestBlog />
                 <div ref={blogRef}>
                   <BlogCategory />
                 </div>

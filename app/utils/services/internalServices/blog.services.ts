@@ -35,7 +35,7 @@ function BlogServices() {
         limit: String(limit),
       });
 
-      if (search) params.append("q", search); // Note: use "q" to match API
+      if (search) params.append("q", search);
       if (author) params.append("author", author);
       if (category) params.append("category", category);
       if (from) params.append("from", from);
@@ -44,7 +44,8 @@ function BlogServices() {
       if (excludeLatest) params.append("excludeLatest", "true");
 
       const { data } = await api.get(`/blog?${params.toString()}`);
-
+      console.log(params, "blog params");
+      console.log(data, "blog list");
       return data || [];
     };
 
