@@ -22,7 +22,7 @@ function useLatestBlog() {
       onlyLatest: true,
     });
 
-  return { blogLoading, DOMPurify, allBlogs, categories, viewBlog };
+  return { blogLoading, DOMPurify, allBlogs, categories, router, viewBlog };
 }
 
 export default useLatestBlog;
