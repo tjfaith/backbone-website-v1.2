@@ -8,7 +8,8 @@ import useSingleBlog from "./useSingleBlog";
 import { ViewImage } from "@/components";
 
 const SingleBlog = () => {
-  const { singleBlog, DOMPurify, router, blogLoading } = useSingleBlog();
+  const { singleBlog, DOMPurify, router, blogLoading, categories } =
+    useSingleBlog();
 
   return (
     <div className=" min-h-screen py-28 page-max-width px-6">
@@ -31,11 +32,13 @@ const SingleBlog = () => {
                 <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap space-x-4">
                   {new Date(singleBlog?.createdAt as string).toDateString()}{" "}
                   {new Date(
-                    singleBlog?.createdAt as string,
+                    singleBlog?.createdAt as string
                   ).toLocaleTimeString()}
                 </div>
                 <div className="text-sm text-primary capitalize">
-                  {/* {singleBlog?.category?.name} */}
+                  {categories?.find(
+                    (cat: { _id: string }) => cat._id === singleBlog?.category
+                  )?.name ?? "—"}
                 </div>
               </div>
               <div className=" mt-6 md:text-4xl  text-2xl font-bold text-primary">

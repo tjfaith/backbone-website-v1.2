@@ -18,6 +18,8 @@ function useSingleBlog() {
   const { data: singleBlog, isLoading: blogLoading } =
     BlogServices().useGetSingleBlog(blog_id as string);
 
+  const { data: categories } = BlogServices().useGetAllBlogCategory();
+
   const { theme } = useTheme();
   const isSSR = useIsSSR();
 
@@ -25,7 +27,7 @@ function useSingleBlog() {
     dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
-  return { singleBlog, DOMPurify, router, blogLoading };
+  return { singleBlog, DOMPurify, router, blogLoading, categories };
 }
 
 export default useSingleBlog;
