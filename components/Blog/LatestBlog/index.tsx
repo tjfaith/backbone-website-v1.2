@@ -2,14 +2,14 @@
 
 import React from "react";
 import { Icon } from "@iconify/react";
+import parse from "html-react-parser";
 
 import useLatestBlog from "./useLatestBlog";
 
 import { ViewImage } from "@/components";
 
 const LatestBlog = () => {
-  const { allBlogs, DOMPurify, categories, blogLoading, viewBlog } =
-    useLatestBlog();
+  const { allBlogs, categories, blogLoading, viewBlog } = useLatestBlog();
 
   return (
     <>
@@ -22,13 +22,13 @@ const LatestBlog = () => {
                   <div className="flex items-center space-x-6">
                     <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap">
                       {new Date(
-                        allBlogs?.data[0]?.createdAt as string
+                        allBlogs?.data[0]?.createdAt as string,
                       ).toDateString()}
                     </div>
                     <div className="text-sm text-primary capitalize">
                       {categories?.find(
                         (cat: { _id: string }) =>
-                          cat._id === allBlogs?.data[0]?.category
+                          cat._id === allBlogs?.data[0]?.category,
                       )?.name ?? "—"}
                     </div>
                   </div>
@@ -38,33 +38,33 @@ const LatestBlog = () => {
                         {allBlogs?.data[0]?.title}
                       </div>
                       <div className=" mt-6 ">
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(
-                              allBlogs?.data[0]?.content?.length > 700
-                                ? allBlogs?.data[0]?.content.slice(0, 700) +
-                                    "..."
-                                : allBlogs?.data[0]?.content
-                            ),
-                          }}
-                          className="hidden lg:block"
-                        />
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(
-                              allBlogs?.data[0]?.content?.length > 100
-                                ? allBlogs?.data[0]?.content.slice(0, 100) +
-                                    "..."
-                                : allBlogs?.data[0]?.content
-                            ),
-                          }}
-                          className="lg:hidden block"
-                        />
+                        <div className="prose hidden lg:block">
+                          {typeof allBlogs?.data[0]?.content === "string"
+                            ? parse(
+                                allBlogs?.data[0]?.content?.length > 700
+                                  ? allBlogs?.data[0]?.content.slice(0, 700) +
+                                      "..."
+                                  : allBlogs?.data[0]?.content,
+                              )
+                            : null}
+                        </div>
+
+                        <div className="mt-6 prose lg:hidden block">
+                          {typeof allBlogs?.data[0]?.content === "string"
+                            ? parse(
+                                allBlogs?.data[0]?.content?.length > 100
+                                  ? allBlogs?.data[0]?.content.slice(0, 100) +
+                                      "..."
+                                  : allBlogs?.data[0]?.content,
+                              )
+                            : null}
+                        </div>
+
                         <button
                           className="flex mt-6 space-x-1 text-primary items-center font-medium cursor-pointer"
                           onClick={() =>
                             viewBlog(
-                              `/${allBlogs?.data[0]?._id}?title=${encodeURIComponent(allBlogs?.data[0]?.title)}&id=${allBlogs?.data[0]?._id}`
+                              `/${allBlogs?.data[0]?._id}?title=${encodeURIComponent(allBlogs?.data[0]?.title)}&id=${allBlogs?.data[0]?._id}`,
                             )
                           }
                         >

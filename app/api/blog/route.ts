@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
 import { getCollection } from "@/app/utils/db";
@@ -16,6 +17,7 @@ export async function GET(req: NextRequest) {
     author: searchParams.get("author"),
     category: searchParams.get("category"),
     status: searchParams.get("status"),
+    omeriProductName: "backbone",
     q: searchParams.get("q"),
     from: searchParams.get("from"),
     to: searchParams.get("to"),
@@ -46,6 +48,25 @@ export async function GET(req: NextRequest) {
   }
 
   const collection = await getCollection("blogs");
+
+  // ✅ If filtering by product name, get its _id from omeri_products
+  if (filters.omeriProductName) {
+    const productsCollection = await getCollection("omeri_products");
+    const product = await productsCollection.findOne({
+      name: filters.omeriProductName,
+    });
+
+    if (product?._id) {
+      query.omeriProduct = new ObjectId(product._id);
+    } else {
+      return NextResponse.json({
+        data: [],
+        total: 0,
+        page,
+        totalPages: 0,
+      });
+    }
+  }
 
   if (onlyLatest) {
     const latestBlog = await collection
