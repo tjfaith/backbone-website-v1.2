@@ -28,7 +28,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
           <div className=" text-4xl font-bold mt-4 text-primary">
             {data?.title}
           </div>
-          <div className=" mt-4 space-y-4">
+          <div className=" mt-4 space-y-5">
             {typeof data?.content === "string"
               ? parse(
                   data?.content?.length > 600

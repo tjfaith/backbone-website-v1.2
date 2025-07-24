@@ -49,7 +49,7 @@ const SingleBlog = () => {
                 className="md:object-contain object-cover  h-screen-40 object-center w-screen mt-5"
                 img={singleBlog?.featuredImage}
               />
-              <div className="mt-6 space-y-4">
+              <div className="mt-6 space-y-5">
                 {typeof singleBlog?.content === "string"
                   ? parse(singleBlog?.content)
                   : null}

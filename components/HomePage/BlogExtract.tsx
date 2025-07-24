@@ -76,7 +76,7 @@ const BlogExtract = () => {
                     {blog.title}
                   </div>
                   <div className="text-primary-600">
-                    <div className="text-base space-y-4">
+                    <div className="text-base space-y-5">
                       {typeof blog?.content === "string"
                         ? parse(
                             blog?.content.length > 500

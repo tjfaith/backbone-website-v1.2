@@ -38,7 +38,7 @@ const LatestBlog = () => {
                         {allBlogs?.data[0]?.title}
                       </div>
                       <div className=" mt-6 ">
-                        <div className="space-y-4 hidden lg:block">
+                        <div className="space-y-5 hidden lg:block">
                           {typeof allBlogs?.data[0]?.content === "string"
                             ? parse(
                                 allBlogs?.data[0]?.content?.length > 700
@@ -49,7 +49,7 @@ const LatestBlog = () => {
                             : null}
                         </div>
 
-                        <div className="mt-6 space-y-4 lg:hidden block">
+                        <div className="mt-6 space-y-5 lg:hidden block">
                           {typeof allBlogs?.data[0]?.content === "string"
                             ? parse(
                                 allBlogs?.data[0]?.content?.length > 100
