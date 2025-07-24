@@ -31,7 +31,6 @@ function useBlog() {
     }
     setCurrentPage(page);
   };
-  // ddd
 
   const { theme } = useTheme();
 
@@ -44,7 +43,6 @@ function useBlog() {
     blogLoading,
     currentPage,
     latestBlog,
-    // paginatedBlogs,
     pageSize,
     blogRef,
     handlePageChange,
