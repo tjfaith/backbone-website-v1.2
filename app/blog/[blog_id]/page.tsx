@@ -2,14 +2,14 @@
 import React from "react";
 import { Spinner } from "@heroui/spinner";
 import { Icon } from "@iconify/react";
+import parse from "html-react-parser";
 
 import useSingleBlog from "./useSingleBlog";
 
 import { ViewImage } from "@/components";
 
 const SingleBlog = () => {
-  const { singleBlog, DOMPurify, router, blogLoading, categories } =
-    useSingleBlog();
+  const { singleBlog, router, blogLoading, categories } = useSingleBlog();
 
   return (
     <div className=" min-h-screen py-28 page-max-width px-6">
@@ -32,12 +32,12 @@ const SingleBlog = () => {
                 <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap space-x-4">
                   {new Date(singleBlog?.createdAt as string).toDateString()}{" "}
                   {new Date(
-                    singleBlog?.createdAt as string
+                    singleBlog?.createdAt as string,
                   ).toLocaleTimeString()}
                 </div>
                 <div className="text-sm text-primary capitalize">
                   {categories?.find(
-                    (cat: { _id: string }) => cat._id === singleBlog?.category
+                    (cat: { _id: string }) => cat._id === singleBlog?.category,
                   )?.name ?? "—"}
                 </div>
               </div>
@@ -49,14 +49,10 @@ const SingleBlog = () => {
                 className="md:object-contain object-cover  h-screen-40 object-center w-screen mt-5"
                 img={singleBlog?.featuredImage}
               />
-              <div className="mt-6 ">
-                {singleBlog && (
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: DOMPurify?.sanitize(singleBlog?.content),
-                    }}
-                  />
-                )}
+              <div className="mt-6 prose">
+                {typeof singleBlog?.content === "string"
+                  ? parse(singleBlog?.content)
+                  : null}
               </div>
             </div>
           ) : (

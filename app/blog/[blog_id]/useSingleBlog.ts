@@ -1,5 +1,4 @@
 "use client";
-import createDOMPurify from "dompurify";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -10,7 +9,6 @@ import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 import { BlogServices } from "@/app/utils/services";
 function useSingleBlog() {
   const dispatch = useDispatch();
-  const DOMPurify = createDOMPurify();
   const params = useSearchParams();
   const router = useRouter();
   const blog_id = params.get("id");
@@ -27,7 +25,7 @@ function useSingleBlog() {
     dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
   }, [theme]);
 
-  return { singleBlog, DOMPurify, router, blogLoading, categories };
+  return { singleBlog, router, blogLoading, categories };
 }
 
 export default useSingleBlog;

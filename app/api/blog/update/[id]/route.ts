@@ -40,6 +40,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
+
 import { getCollection } from "@/app/utils/db";
 
 export const revalidate = 0;
@@ -66,13 +67,13 @@ export async function PATCH(req: NextRequest, context: any) {
     {
       $inc: { views: 1 },
       $set: { updatedAt: new Date() },
-    }
+    },
   );
 
   if (result.modifiedCount === 0) {
     return NextResponse.json(
       { error: "Blog not found or not updated" },
-      { status: 404 }
+      { status: 404 },
     );
   }
 

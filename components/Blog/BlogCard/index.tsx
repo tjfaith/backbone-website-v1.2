@@ -1,6 +1,7 @@
 "use cleint";
 import React from "react";
 import { Icon } from "@iconify/react";
+import parse from "html-react-parser";
 
 import useBlogCard from "./useBlogCard";
 
@@ -8,7 +9,7 @@ import { ViewImage } from "@/components";
 import { BlogCardProps } from "@/types";
 
 const BlogCard = ({ data }: BlogCardProps) => {
-  const { DOMPurify, categories, viewBlog } = useBlogCard();
+  const { categories, viewBlog } = useBlogCard();
 
   return (
     <div>
@@ -27,18 +28,15 @@ const BlogCard = ({ data }: BlogCardProps) => {
           <div className=" text-4xl font-bold mt-4 text-primary">
             {data?.title}
           </div>
-          <div className=" mt-4 ">
-            {
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(
-                    data?.content?.length > 600
-                      ? data?.content?.slice(0, 600) + "..."
-                      : data?.content,
-                  ),
-                }}
-              />
-            }
+          <div className=" mt-4 prose">
+            {typeof data?.content === "string"
+              ? parse(
+                  data?.content?.length > 600
+                    ? data?.content?.slice(0, 600) + "..."
+                    : data?.content,
+                )
+              : null}
+
             <button
               className="flex mt-6 space-x-1 text-primary items-center font-sm cursor-pointer"
               onClick={() =>

@@ -2,11 +2,11 @@
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Spacer } from "@heroui/spacer";
-import createDOMPurify from "dompurify";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Link } from "@heroui/link";
 import { Icon } from "@iconify/react";
+import parse from "html-react-parser";
 
 import { BlogServices } from "@/app/utils/services";
 import { Spinner } from "@/public/assets";
@@ -19,7 +19,6 @@ const BlogExtract = () => {
     refetch: refetchBlog,
   } = BlogServices().useGetAllBlog({});
   const { data: categories } = BlogServices().useGetAllBlogCategory();
-  const DOMPurify = createDOMPurify();
   const router = useRouter();
   const currentPath = usePathname();
 
@@ -77,18 +76,15 @@ const BlogExtract = () => {
                     {blog.title}
                   </div>
                   <div className="text-primary-600">
-                    {
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: DOMPurify.sanitize(
+                    <div className="text-base">
+                      {typeof blog?.content === "string"
+                        ? parse(
                             blog?.content.length > 500
                               ? blog?.content.slice(0, 500) + "..."
                               : blog?.content,
-                          ),
-                        }}
-                        className="text-base"
-                      />
-                    }
+                          )
+                        : null}
+                    </div>
                   </div>
                   <Spacer y={5} />
                 </div>
