@@ -21,19 +21,19 @@ const BlogCard = ({ data }: BlogCardProps) => {
             </div>
             <div className="text-sm text-primary capitalize">
               {categories?.find(
-                (cat: { _id: string }) => cat._id === data?.category,
+                (cat: { _id: string }) => cat._id === data?.category
               )?.name ?? "—"}
             </div>
           </div>
           <div className=" text-4xl font-bold mt-4 text-primary">
             {data?.title}
           </div>
-          <div className=" mt-4 prose">
+          <div className=" mt-4 space-y-5">
             {typeof data?.content === "string"
               ? parse(
                   data?.content?.length > 600
                     ? data?.content?.slice(0, 600) + "..."
-                    : data?.content,
+                    : data?.content
                 )
               : null}
 
@@ -41,7 +41,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
               className="flex mt-6 space-x-1 text-primary items-center font-sm cursor-pointer"
               onClick={() =>
                 viewBlog(
-                  `/${data?._id}?title=${encodeURIComponent(data.title)}&id=${data?._id}`,
+                  `/${data?._id}?title=${encodeURIComponent(data.title)}&id=${data?._id}`
                 )
               }
             >
