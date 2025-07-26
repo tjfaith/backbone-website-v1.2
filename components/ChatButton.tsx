@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 export default function ChatButton() {
   const phoneNumber = process.env.NEXT_PUBLIC_SALES_WHATSAPP_CONTACT;
   const encodedMessage = encodeURIComponent(
-    "👋Hello! I need more info about Backbone https://mybackbone.io",
+    "👋Hello! I need more info about Backbone https://mybackbone.io"
   );
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

@@ -73,11 +73,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
                       alt="service icon"
                       className="object-contain"
                       height={40}
-                      src={
-                        selectedMenu === service.id
-                          ? service.activeIcon
-                          : service.icon
-                      }
+                      src={service.activeIcon}
                       width={40}
                     />
                   </motion.div>
