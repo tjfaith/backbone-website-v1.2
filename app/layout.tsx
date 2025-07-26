@@ -1,9 +1,10 @@
 import "@/styles/globals.css";
+import "@/styles/google_translate_element.css";
 import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
 import { Toaster } from "react-hot-toast";
-// import Script from "next/script";
+import Script from "next/script";
 
 import { Providers } from "./providers";
 
@@ -63,11 +64,35 @@ s0.parentNode.insertBefore(s1,s0);
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <main className="dark:bg-background-200">
             <Navbar />
+            {/* <div id="google_translate_element"></div> */}
             {children}
           </main>
           <Footer />
           <Toaster />
         </Providers>
+
+        {/* ✅ Google Translate Init Script */}
+        {/* <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                  pageLanguage: 'en',
+                  includedLanguages: 'en,es,fr,de,ar,bn', // Add more if needed
+                  layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+              }
+            `,
+          }}
+          id="google-translate-init"
+          strategy="afterInteractive"
+        /> */}
+
+        {/* ✅ Load Google Translate Script */}
+        {/* <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        /> */}
       </body>
     </html>
   );
