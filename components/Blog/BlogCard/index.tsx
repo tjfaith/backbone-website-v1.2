@@ -12,7 +12,6 @@ const BlogCard = ({ data }: BlogCardProps) => {
   const { categories, viewBlog } = useBlogCard();
 
   return (
-    <div>
       <div className=" grid md:grid-cols-2 mt-5 gap-10 items-center">
         <div>
           <div className="flex items-center space-x-6 whitespace-nowrap">
@@ -21,7 +20,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
             </div>
             <div className="text-sm text-primary capitalize">
               {categories?.find(
-                (cat: { _id: string }) => cat._id === data?.category
+                (cat: { _id: string }) => cat._id === data?.category,
               )?.name ?? "—"}
             </div>
           </div>
@@ -33,7 +32,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
               ? parse(
                   data?.content?.length > 600
                     ? data?.content?.slice(0, 600) + "..."
-                    : data?.content
+                    : data?.content,
                 )
               : null}
 
@@ -41,7 +40,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
               className="flex mt-6 space-x-1 text-primary items-center font-sm cursor-pointer"
               onClick={() =>
                 viewBlog(
-                  `/${data?._id}?title=${encodeURIComponent(data.title)}&id=${data?._id}`
+                  `/${data?._id}?title=${encodeURIComponent(data.title)}&id=${data?._id}`,
                 )
               }
             >
@@ -54,7 +53,6 @@ const BlogCard = ({ data }: BlogCardProps) => {
           img={data?.featuredImage}
         />
       </div>
-    </div>
   );
 };
 

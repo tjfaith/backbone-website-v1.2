@@ -4,7 +4,6 @@ import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
 import { Toaster } from "react-hot-toast";
-import Script from "next/script";
 
 import { Providers } from "./providers";
 

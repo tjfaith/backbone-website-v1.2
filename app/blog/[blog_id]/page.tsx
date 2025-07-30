@@ -32,12 +32,12 @@ const SingleBlog = () => {
                 <div className=" text-sm text-foreground-600 dark:text-foreground whitespace-nowrap space-x-4">
                   {new Date(singleBlog?.createdAt as string).toDateString()}{" "}
                   {new Date(
-                    singleBlog?.createdAt as string
+                    singleBlog?.createdAt as string,
                   ).toLocaleTimeString()}
                 </div>
                 <div className="text-sm text-primary capitalize">
                   {categories?.find(
-                    (cat: { _id: string }) => cat._id === singleBlog?.category
+                    (cat: { _id: string }) => cat._id === singleBlog?.category,
                   )?.name ?? "—"}
                 </div>
               </div>
