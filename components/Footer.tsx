@@ -279,7 +279,7 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
                     <Icon icon="circle-flags:uk" />
                     <div className="text-[#99A0AE]  text-sm font-medium">
@@ -292,7 +292,7 @@ const Footer = () => {
                   >
                     {process.env.NEXT_PUBLIC_UK_NUMBER_2}
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
