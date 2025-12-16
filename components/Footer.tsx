@@ -279,20 +279,20 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                {/* <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
-                    <Icon icon="circle-flags:uk" />
+                    <Icon icon="emojione:flag-for-canada" />
                     <div className="text-[#99A0AE]  text-sm font-medium">
-                      UK:
+                      CAD:
                     </div>
                   </div>
                   <Link
                     className="whitespace-nowrap text-background dark:text-primary hover:text-primary-200 text-base font-medium"
-                    href={`tel:${process.env.NEXT_PUBLIC_UK_NUMBER_2?.replace(/\s+/g, "")}`}
+                    href={`tel:${process.env.NEXT_PUBLIC_CANADA_NUMBER?.replace(/\s+/g, "")}`}
                   >
-                    {process.env.NEXT_PUBLIC_UK_NUMBER_2}
+                    {process.env.NEXT_PUBLIC_CANADA_NUMBER}
                   </Link>
-                </div> */}
+                </div>
 
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
@@ -343,6 +343,20 @@ const Footer = () => {
                     </span>{" "}
                     <span className="text-background dark:text-primary font-medium">
                       85, Great Portland Street, First Floor, London, W1W 7NT
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-1">
+                  <div className="mt-1">
+                    <Icon icon="circle-flags:uk" />
+                  </div>
+                  <div>
+                    <span className="text-[#99A0AE] text-sm font-medium">
+                      CAD:
+                    </span>{" "}
+                    <span className="text-background dark:text-primary font-medium">
+                      3230 Yonge Street #4292 Toronto, ON M4N306 Canada
                     </span>
                   </div>
                 </div>
