@@ -48,7 +48,7 @@ export const offerings = [
   },
   {
     id: 1,
-    title: "Trade finance",
+    title: "Trade Finance",
     description:
       "Backbone gives you access to the capital and instruments you need to scale your business",
     icon: TradeFinanceInActive,

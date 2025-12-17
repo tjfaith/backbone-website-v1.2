@@ -66,7 +66,7 @@ const OfferingsCaption = ({
           <b>
             $
             {Number(
-              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
             ).toLocaleString()}
           </b>
           <span className="">
@@ -107,7 +107,7 @@ const OfferingsCaption = ({
 
       <div className="text-primary-600 xl:text-left text-center text-xs md:text-medium  font-normal max-w-3xl mb-4   animate__animated animate__fadeInUp animate__slow">
         Where individuals, businesses, and nonprofits connect to a seamless
-        global payment solution spanning 150+ countries.
+        global payment solution spanning 170+ countries.
       </div>
       <div className="flex items-center  md:flex-row flex-col-reverse gap-4   animate__animated animate__fadeInUp animate__slower">
         <div>

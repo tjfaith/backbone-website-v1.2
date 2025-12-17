@@ -74,14 +74,14 @@ const Hero1 = () => {
             <b>
               $
               {Number(
-                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
+                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
               ).toLocaleString()}
             </b>
             <span className="">
               {" "}
               {/* {new Date().getFullYear() - 1} */}
-              in transactions from 8th March 2024 to 6th June, 2025. Welcome to
-              the new Standard!
+              in transactions from 8th March, 2024 to 30th November, 2025. Join
+              us on the road to $1B!
             </span>
           </div>
         </div>
@@ -116,7 +116,7 @@ const Hero1 = () => {
 
         <div className="text-primary-600 text-xs md:text-medium text-center font-normal max-w-3xl mb-4 animate__delay-2s animate__animated animate__fadeInUp animate__slow">
           Where individuals, businesses, and nonprofits connect to a seamless
-          global payment solution spanning 150+ countries.
+          global payment solution spanning 170+ countries.
         </div>
         <div className="flex items-center justify-center md:flex-row flex-col-reverse gap-4 animate__delay-2s animate__animated animate__fadeInUp animate__slower">
           <div>
