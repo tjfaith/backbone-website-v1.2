@@ -31,7 +31,7 @@ const Hero1 = () => {
     >
       <div className="flex flex-col items-center justify-center page-max-width">
         <div className="animate__delay-2s animate__animated animate__fadeInUp animate__fast md:bg-background-100 md:shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]  dark:text-white  md:text-primary rounded-full p-[6px] inline-flex md:flex-row flex-col items-center justify-center md:justify-start gap-3 mb-4">
-          <AvatarGroup size="sm" total={9}>
+          <AvatarGroup size="sm" total={170}>
             <Avatar
               classNames={{ base: "bg-transparent" }}
               icon={
