@@ -189,7 +189,7 @@ const GlobalPopover = () => {
   );
 
   const Content = (
-    <div className="p-3 bg-white rounded-2xl border">
+    <div className="p-3 bg-white rounded-2xl md:border border-none">
       <p className="text-[11px] font-medium mb-3 tracking-[0.22px] leading-3">
         SELECT YOUR REGION
       </p>
@@ -201,7 +201,7 @@ const GlobalPopover = () => {
         Global
       </Chip>
 
-      <div className="grid grid-cols-3 gap-3 text-sm mb-5">
+      <div className="grid sm:grid-cols-3 grid-cols-2 gap-3 text-sm mb-5">
         {regions.map((item) => (
           <button
             key={item.name}
@@ -242,7 +242,12 @@ const GlobalPopover = () => {
     return (
       <>
         {Trigger}
-        <Drawer isOpen={open} onOpenChange={setOpen} placement="bottom">
+        <Drawer
+          size="full"
+          isOpen={open}
+          onOpenChange={setOpen}
+          placement="bottom"
+        >
           <DrawerContent className="rounded-t-3xl p-4">{Content}</DrawerContent>
         </Drawer>
       </>
