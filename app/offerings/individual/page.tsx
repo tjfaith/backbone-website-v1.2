@@ -12,7 +12,9 @@ import {
   IndividualOfferings,
   Partners,
   SendMoneyForm,
-  WhyBackbone,
+  WhyBackbone1,
+  WhyBackbone2,
+  WhyBackbone3,
 } from "@/components";
 import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 
@@ -48,7 +50,7 @@ const Individual = () => {
               action={() =>
                 window.open(
                   `${process.env.NEXT_PUBLIC_APP_URL}/sign-in`,
-                  "_blank",
+                  "_blank"
                 )
               }
               title={
@@ -65,7 +67,9 @@ const Individual = () => {
         </div>
       </div>
       <IndividualOfferings />
-      <WhyBackbone />
+      <WhyBackbone1 />
+      <WhyBackbone2 />
+      <WhyBackbone3 />
       {/* <Testimonies /> */}
       <BlogExtract />
     </>
