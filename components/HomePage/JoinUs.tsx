@@ -1,6 +1,5 @@
 "use client";
 import { Divider } from "@heroui/divider";
-import { Spacer } from "@heroui/spacer";
 import { Tab, Tabs } from "@heroui/tabs";
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
@@ -8,34 +7,29 @@ import React, { useState } from "react";
 import { JoinUsBusinesses, JoinUsIndividual } from "@/components";
 
 const JoinUs = () => {
-  const [selectedTab, setSelectedTab] = useState<any>("individuals");
+  const [selectedTab, setSelectedTab] = useState<"individuals" | "businesses">(
+    "individuals"
+  );
 
-  const components = [
-    {
-      key: "individuals",
+  const components = {
+    individuals: {
       component: <JoinUsIndividual />,
-      color: "bg-info dark:bg-info-900",
+      color: "bg-info-250 dark:bg-info-900",
     },
-    {
-      key: "businesses",
+    businesses: {
       component: <JoinUsBusinesses />,
       color: "bg-warning dark:bg-warning-900",
     },
-    // { key: "nonprofits", component: <JoinUsNonprofit />, color: "bg-success" },
-  ];
-
-  const orderedComponents = components.sort((a, b) =>
-    a.key === selectedTab ? -1 : b.key === selectedTab ? 1 : 0,
-  );
+  };
 
   return (
-    <div className="bg-background-200">
+    <div className="bg-background-75 py-8">
       <div
-        className="page-max-width pt-36 flex items-start xl:flex-row flex-col justify-between gap-11"
+        className="page-max-width grid xl:grid-cols-[28rem_1fr] gap-[45px] "
         id="services"
       >
         <div
-          className={`${orderedComponents[0].color} p-4  lg:max-w-md rounded-2xl gap-5 flex lg:flex-col md:flex-row flex-col justify-between transition-all ease-in-out duration-300`}
+          className={`${components[selectedTab]?.color} p-4 rounded-2xl max-w-md flex flex-col justify-between  `}
         >
           <div data-aos="fade-up">
             <div className=" text-background  text-base font-medium inline-flex flex-col ">
@@ -45,11 +39,10 @@ const JoinUs = () => {
               </div>
               <Divider className="bg-background" />
             </div>
-            <div className="clash-display-font text-3xl lg:text-5xl mt-4 font-medium text-background dark:text-background-200 lg:max-w-xs pr-3 leading-tight tracking-wider">
+            <div className="clash-display-font text-3xl lg:text-5xl pr-8 mt-4 font-medium text-background dark:text-background-200 lg:max-w-xs  leading-[56px] tracking-[-1%]">
               Join us to Redefine the Way You Make Payments!
             </div>
           </div>
-          <Spacer className="md:block hidden" y={36} />
           <div>
             <Divider
               className="bg-background lg:block hidden "
@@ -59,17 +52,25 @@ const JoinUs = () => {
             <Tabs
               fullWidth
               aria-label="entity"
-              className=" mt-4"
+              className=" mt-4 "
               classNames={{
                 tabList:
-                  " flex sm:flex-row flex-col sm:px-1 px-5 sm:py-1 py-2 sm:bg-white/80  ",
-                tabContent: "text-primary  text-sm font-medium ",
+                  " flex sm:flex-row flex-col sm:px-1 px-5 py-0 sm:bg-transparent  ",
+                tabContent: `text-white  text-sm font-medium ${
+                  selectedTab === "individuals"
+                    ? "group-data-[selected=true]:text-[#1F7EAD]"
+                    : selectedTab === "businesses" &&
+                      "group-data-[selected=true]:text-[#FF7300]"
+                }
+                  `,
+                tab: "py-5",
               }}
               radius="full"
-              selectedKey={selectedTab}
               size="sm"
-              // variant="light"
-              onSelectionChange={setSelectedTab}
+              selectedKey={selectedTab}
+              onSelectionChange={(key) =>
+                setSelectedTab(key as "individuals" | "businesses")
+              }
             >
               <Tab
                 key="individuals"
@@ -93,28 +94,32 @@ const JoinUs = () => {
           </div>
         </div>
 
-        <div
-          className="md:flex-grow w-full relative lg:h-screen md:h-screen-80"
-          data-aos="fade-up"
-        >
-          <div className="relative flex flex-col items-center pt-32 pb-10">
-            <button
-              className="absolute inset-x-0 top-10 px-3 transition-all duration-400 ease-in-out "
-              onClick={() => setSelectedTab(orderedComponents[1].key)}
-            >
-              {orderedComponents[1].component}
-            </button>
-            <button
-              className="absolute inset-x-0 top-0 transition-all duration-400 ease-in-out "
-              onClick={() => setSelectedTab(orderedComponents[0].key)}
-            >
-              {React.cloneElement(components[0].component, {
-                hideCaption: false,
-              })}
-            </button>
-          </div>
+        <div className="h-[80vh] relative">
+          <button
+            className="transition-all duration-400 ease-in-out h-[80vh] w-[95%] absolute left-1/2 -translate-x-1/2 right-0 z-0 -bottom-5 "
+            onClick={() =>
+              setSelectedTab(
+                selectedTab === "individuals" ? "businesses" : "individuals"
+              )
+            }
+          >
+            {
+              components[
+                selectedTab === "individuals" ? "businesses" : "individuals"
+              ].component
+            }
+          </button>
+          <button
+            className="transition-all duration-400 ease-in-out h-[80vh] w-full z-10 "
+            onClick={() =>
+              setSelectedTab(
+                selectedTab === "individuals" ? "businesses" : "individuals"
+              )
+            }
+          >
+            {components[selectedTab].component}
+          </button>
         </div>
-        <Spacer className=" " y={48} />
       </div>
     </div>
   );

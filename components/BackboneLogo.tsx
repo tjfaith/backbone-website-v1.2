@@ -16,21 +16,23 @@ const BackboneLogo = ({ showDarkLogo }: Props) => {
 
   return (
     <>
-      {showDarkLogo && (theme === "light" || isSSR) ? (
-        <Image
-          alt="logo2"
-          className=" outline-none"
-          src={FullLogoDark.src}
-          width={120}
-        />
-      ) : (
-        <Image
-          alt="logo"
-          className=" outline-none"
-          src={FullLogo.src}
-          width={120}
-        />
-      )}
+      {/* {showDarkLogo && (theme === "light" || isSSR) ? ( */}
+      <Image
+        radius="none"
+        alt="logo2"
+        className=" outline-none"
+        src={FullLogoDark.src}
+        width={220}
+      />
+      {/* // ) : (
+      //   <Image
+      //     radius="none"
+      //     alt="logo"
+      //     className=" outline-none"
+      //     src={FullLogo.src}
+      //     width={220}
+      //   />
+      // )} */}
     </>
   );
 };

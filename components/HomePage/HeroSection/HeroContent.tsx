@@ -1,163 +1,203 @@
-"use client";
-import { Avatar, AvatarGroup } from "@heroui/avatar";
-import { Icon } from "@iconify/react";
-import React from "react";
+// import { Button } from "@heroui/button";
+// import { Divider } from "@heroui/divider";
+// import { Link } from "@heroui/link";
+// import React from "react";
+
+// const HeroContent = () => {
+//   return (
+//     <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+//       <div
+//         className="
+//     inline-flex
+//     flex-col
+//     items-center
+//     gap-2
+//     px-4 py-3
+//     rounded-xl
+//     shadow-[0_1px_0_0_rgba(0,0,0,0.05),0_0_0_1px_rgba(225,228,234,0.5)]
+//     bg-background-200
+//     mb-6
+
+//     lg:flex-row
+//     lg:gap-3
+//     lg:justify-start
+//   "
+//       >
+//         {/* Left divider — desktop only */}
+//         <Divider
+//           orientation="vertical"
+//           className="hidden lg:block bg-info-250 h-5 w-0.5"
+//         />
+
+//         {/* Text */}
+//         <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1 text-small text-center lg:text-left">
+//           <span>Processed over</span>
+//           <b>
+//             $
+//             {Number(
+//               process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+//             ).toLocaleString()}
+//           </b>
+//           <span>in transactions in 2025</span>
+//         </div>
+
+//         {/* Right divider — desktop only */}
+//         <Divider
+//           orientation="vertical"
+//           className="hidden lg:block bg-foreground-100 h-5 w-0.5"
+//         />
+
+//         {/* CTA */}
+//         <span className="text-primary-400 text-base tracking-[-0.176px] leading-6">
+//           Read More
+//         </span>
+//       </div>
+
+//       {/* HEADLINE — unchanged desktop */}
+//       <div className="clash-display-font text-[40px] font-medium tracking-[0.8px] leading-[52px] text-black mb-3">
+//         Powering payments that unlock global opportunities
+//       </div>
+
+//       <div className="text-primary-500 text-lg tracking-[-0.27px] leading-6 mb-8">
+//         We connect individuals, businesses, and nonprofits to a seamless global
+//         payment solution, spanning over 150 countries worldwide.
+//       </div>
+
+//       <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+//         <Button
+//           as={Link}
+//           className="text-background !px-6"
+//           color="primary"
+//           href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-up`}
+//           size="sm"
+//         >
+//           Get Started Now
+//         </Button>
+//         <Button
+//           as={Link}
+//           className="text-primary !px-6"
+//           href="/contact-us"
+//           size="sm"
+//           variant="flat"
+//         >
+//           Contact sales
+//         </Button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HeroContent;
+
 import { Button } from "@heroui/button";
-import { cn } from "@heroui/theme";
+import { Divider } from "@heroui/divider";
 import { Link } from "@heroui/link";
+import React from "react";
 
-import { CustomButton } from "@/components";
-
-interface Props {
-  avatarClass?: string;
-  captionClass?: string;
-  descriptionClass?: string;
-  offeringsBtnClass?: string;
-  showLightBtn?: boolean;
-  caption?: number;
-}
-const HeroContent = ({
-  avatarClass,
-  captionClass,
-  descriptionClass,
-  offeringsBtnClass,
-  showLightBtn,
-  caption = 1,
-}: Props) => {
+const HeroContent = () => {
   return (
-    <div className=" absolute inset-0 h-screen  flex items-center page-max-width md:justify-start justify-center  z-20 animate__animated animate__delay-4s">
-      <div>
+    <div
+      className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
+      data-aos="fade-up"
+    >
+      <div
+        className="
+          inline-flex
+          flex-col
+          items-center
+          gap-2
+          px-4 py-3
+          rounded-xl
+          shadow-[0_1px_0_0_rgba(0,0,0,0.05),0_0_0_1px_rgba(225,228,234,0.5)]
+          bg-background-200
+          mb-6
+
+          lg:flex-row
+          lg:gap-3
+          lg:justify-start
+        "
+        data-aos="zoom-in"
+        data-aos-delay="100"
+      >
+        {/* Left divider — desktop only */}
+        <Divider
+          orientation="vertical"
+          className="hidden lg:block bg-info-250 h-5 w-0.5"
+        />
+
+        {/* Text */}
         <div
-          className={cn(
-            "animate__delay-2s animate__animated animate__fadeInUp animate__fast md:bg-gradient-to-b from-primary-300 via-primary-300 to-primary-800 text-background rounded-full p-2 inline-flex md:flex-row flex-col items-center justify-center md:justify-start gap-3 mb-4",
-            avatarClass
-          )}
+          className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1 text-small text-center lg:text-left"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
-          <AvatarGroup total={170}>
-            <Avatar
-              classNames={{ base: "bg-transparent" }}
-              icon={
-                <Icon
-                  className="text-3xl h-full w-full"
-                  icon="emojione:flag-for-nigeria"
-                />
-              }
-            />
-            <Avatar
-              classNames={{ base: "bg-transparent" }}
-              icon={
-                <Icon
-                  className="text-3xl  h-full w-full"
-                  icon="emojione:flag-for-united-states"
-                />
-              }
-            />
-            <Avatar
-              classNames={{ base: "bg-transparent" }}
-              icon={
-                <Icon
-                  className="text-3xl  h-full w-full"
-                  icon="circle-flags:gb"
-                />
-              }
-            />
-            <Avatar
-              classNames={{ base: "bg-transparent" }}
-              icon={
-                <Icon
-                  className="text-3xl  h-full w-full"
-                  icon="circle-flags:cn"
-                />
-              }
-            />
-          </AvatarGroup>
-          <div className="md:text-left text-center">
-            <span className="">We processed </span>{" "}
-            <b>
-              $
-              {Number(
-                process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
-              ).toLocaleString()}
-            </b>
-            <span className="">
-              {" "}
-              in transactions from 8th March, 2024 to 30th November, 2025. Join
-              us on the road to $1B!
-            </span>
-          </div>
+          <span>Processed over</span>
+          <b>
+            $
+            {Number(
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+            ).toLocaleString()}
+          </b>
+          <span>in transactions in 2025</span>
         </div>
 
-        {caption === 1 && (
-          <div
-            className={cn(
-              " text-2xl  sm:text-6xl font-medium  text-primary clash-display-font mb-3 space-y-1",
-              captionClass
-            )}
-          >
-            <div className="flex items-center  md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__faster">
-              <div>Powering</div> <div>Payments</div>
-            </div>
+        {/* Right divider — desktop only */}
+        <Divider
+          orientation="vertical"
+          className="hidden lg:block bg-foreground-100 h-5 w-0.5"
+        />
 
-            <div className="flex items-center md:flex-row flex-col md:justify-start justify-center md:gap-2  animate__delay-2s animate__animated animate__fadeInUp animate__fast">
-              <div>Unlocking</div>
-              <div>Global Opportunities</div>
-            </div>
-          </div>
-        )}
-
-        {caption === 2 && (
-          <div
-            className={cn(
-              " text-2xl  sm:text-6xl font-medium text-background dark:text-primary  clash-display-font mb-3 space-y-1",
-              captionClass
-            )}
-          >
-            <div className="flex items-center md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__faster">
-              <div>Empowering</div> <div>Futures</div>
-            </div>
-
-            <div className="flex items-center md:justify-start justify-center gap-2 animate__delay-2s animate__animated animate__fadeInUp animate__fast">
-              <div>Unlocking</div>
-              <div>Possibilities</div>
-            </div>
-          </div>
-        )}
-
-        <div
-          className={cn(
-            "text-primary text-xs md:text-lg md:text-start text-center font-normal max-w-2xl mb-8 animate__delay-2s animate__animated animate__fadeInUp animate__slow",
-            descriptionClass
-          )}
+        {/* CTA */}
+        <span
+          className="text-primary-400 text-base tracking-[-0.176px] leading-6"
+          data-aos="fade-left"
+          data-aos-delay="300"
         >
-          Where individuals, businesses, and nonprofits connect to a seamless
-          global payment solution spanning 150+ countries.
-        </div>
-        <div className="flex items-center md:flex-row flex-col-reverse gap-4 animate__delay-2s animate__animated animate__fadeInUp animate__slower">
-          <div>
-            <CustomButton
-              as={Link}
-              fullWidth={false}
-              href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
-              variant={showLightBtn ? "light" : "flat"}
-            >
-              Get Started Now
-            </CustomButton>
-          </div>
+          Read More
+        </span>
+      </div>
 
-          <Button
-            as={Link}
-            className={cn(
-              "text-primary text-base font-medium shadow-none bg-transparent",
-              offeringsBtnClass
-            )}
-            // endContent={<Icon icon="ri:arrow-right-s-line" />}
-            fullWidth={false}
-            href="/contact-us"
-            variant="light"
-          >
-            Contact Sales
-          </Button>
-        </div>
+      {/* HEADLINE */}
+      <div
+        className="clash-display-font text-[40px] font-medium tracking-[0.8px] leading-[52px] text-black mb-3"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Powering payments that unlock global opportunities
+      </div>
+
+      <div
+        className="text-primary-500 text-lg tracking-[-0.27px] leading-6 mb-8"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        We connect individuals, businesses, and nonprofits to a seamless global
+        payment solution, spanning over 150 countries worldwide.
+      </div>
+
+      <div
+        className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <Button
+          as={Link}
+          className="text-background !px-6"
+          color="primary"
+          href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-up`}
+          size="sm"
+        >
+          Get Started Now
+        </Button>
+        <Button
+          as={Link}
+          className="text-primary !px-6"
+          href="/contact-us"
+          size="sm"
+          variant="flat"
+        >
+          Contact sales
+        </Button>
       </div>
     </div>
   );

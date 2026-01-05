@@ -7,21 +7,26 @@ import {
   JoinUs,
   Partners,
   ChangingPayment,
-  WhyBackbone,
-  // OnePlace,
+  BackboneFee,
+  WhyBackbone1,
+  WhyBackbone2,
+  WhyBackbone3,
+  DownloadApp,
 } from "@/components";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="md:pt-0 pt-20">
       <HeroSection />
       <Partners />
       <ChangingPayment />
       <JoinUs />
-      {/* <OnePlace /> */}
-      <WhyBackbone />
-      {/* <Testimonies /> */}
+      <BackboneFee />
+      <WhyBackbone1 />
+      <WhyBackbone2 />
+      <WhyBackbone3 />
       <BlogExtract />
+      <DownloadApp />
     </div>
   );
 };

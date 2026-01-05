@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
+        beau: ["var(--font-beau-rivage)"],
       },
       height: {
         "screen-20": "20vh",
@@ -62,6 +63,7 @@ export default {
               200: "#8A9FB7",
               300: "#7A8FA5",
               400: "#99A0AE",
+              450: "#717784",
               500: "#525866",
               600: "#4A5C6F",
               700: "#3A4A5E",
@@ -85,6 +87,7 @@ export default {
             },
             background: {
               50: "#FFFFFF",
+              75: "#FAFAFA",
               100: "#F7F7F7",
               200: "#F5F7FA",
               300: "#E2E8F0",
@@ -138,6 +141,7 @@ export default {
               50: "#E6F2FF",
               100: "#C6E4FF",
               200: "#B4D5FD",
+              250: "#47C2FF",
               300: "#0075FF",
               400: "#339AF9",
               500: "#0473F9",
@@ -253,6 +257,7 @@ export default {
               50: "#131925",
               100: "#1D2739",
               200: "#000C19",
+              250: "#47C2FF",
               300: "#0063C2",
               400: "#007CE6",
               500: "#0098FF",
