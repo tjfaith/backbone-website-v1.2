@@ -1,0 +1,23 @@
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
+import { cn } from "@heroui/theme";
+import React from "react";
+
+interface Props {
+  className?: string;
+}
+const GetStartedBtn = ({ className }: Props) => {
+  return (
+    <Button
+      as={Link}
+      className={cn("text-background px-6 py-5 text-sm", className)}
+      color="primary"
+      href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-up`}
+      size="sm"
+    >
+      Get Started Now
+    </Button>
+  );
+};
+
+export default GetStartedBtn;

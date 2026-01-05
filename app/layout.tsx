@@ -9,7 +9,7 @@ import { Providers } from "./providers";
 
 // test
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontBeauRivage, fontSans } from "@/config/fonts";
 import { Footer, Navbar, PreLoader, ChatButton } from "@/components";
 
 export const metadata: Metadata = {
@@ -24,10 +24,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  // themeColor: [
+  //   { media: "(prefers-color-scheme: light)", color: "white" },
+  //   { media: "(prefers-color-scheme: dark)", color: "black" },
+  // ],
+  themeColor: "white",
 };
 
 export default function RootLayout({
@@ -36,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html className="light" suppressHydrationWarning lang="en">
       <head>
         <meta
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -57,10 +58,17 @@ s0.parentNode.insertBefore(s1,s0);
           `}
         </Script> */}
       </head>
-      <body className={fontSans.className}>
+      <body className={`${fontSans.className} ${fontBeauRivage.variable}`}>
         <PreLoader />
         <ChatButton />
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+        <Providers
+          themeProps={{
+            attribute: "class",
+            defaultTheme: "light",
+            forcedTheme: "light",
+            enableSystem: false,
+          }}
+        >
           <main className="dark:bg-background-200">
             <Navbar />
             {/* <div id="google_translate_element"></div> */}

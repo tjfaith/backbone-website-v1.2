@@ -2,6 +2,7 @@
 export { default as FullLogo } from "./img/fullLogo.svg";
 export { default as FullLogoDark } from "./img/fullLogoDark.svg";
 export { default as HalfLogo } from "./img/halfLogo.svg";
+export { default as halfLogoBlack } from "./img/halfLogoBlack.svg";
 export { default as FlutterWaveLogo } from "./img/flutterwave.png";
 export { default as SuccessPaymentIcon } from "./img/cancelled_payment.svg";
 export { default as CancelledPaymentIcon } from "./img/cancelled_payment.svg";
@@ -13,6 +14,8 @@ export { default as Img3 } from "./img/img3.png";
 export { default as Img4 } from "./img/img4.png";
 export { default as Img5 } from "./img/img5.png";
 export { default as Img6 } from "./img/img6.png";
+export { default as WhyBB1 } from "./img/whyBB1.png";
+export { default as WhyBB2 } from "./img/whyBB2.jpg";
 export { default as LockImg } from "./img/lock.png";
 export { default as Rates } from "./img/rates.png";
 export { default as Innovation } from "./img/innovation.png";
@@ -24,18 +27,33 @@ export { default as DottedBg } from "./img/dottedBg.svg";
 export { default as GradientLogo } from "./img/gradientLogo.svg";
 export { default as GradientBg } from "./img/gradientBg.svg";
 export { default as User } from "./img/user.svg";
+export { default as colorLogo } from "./img/colorLogo.svg";
+export { default as colorLogo2 } from "./img/colorLogo2.svg";
+export { default as Exchange } from "./img/exchange.svg";
+export { default as WorldMap } from "./img/worldMap.svg";
+export { default as transactionCrab } from "./img/transactionCrab.svg";
+export { default as backboneColoredLogo } from "./img/backboneColoredLogo.svg";
 
 // hero
 export { default as Earth } from "./img/hero/earth.png";
 export { default as Map } from "./img/hero/map.png";
 export { default as Hero2Bg } from "./img/hero/hero2Bg.png";
+export { default as Hero1 } from "./img/hero/hero1.png";
+export { default as Hero2 } from "./img/hero/hero2.png";
+export { default as Hero3 } from "./img/hero/hero3.png";
+export { default as Hero4 } from "./img/hero/hero4.png";
+export { default as Hero5 } from "./img/hero/hero5.png";
+export { default as Hero6 } from "./img/hero/hero6.png";
+export { default as Pattern } from "./img/hero/pattern.svg";
+export { default as Pattern2 } from "./img/hero/pattern2.svg";
+export { default as Pattern3 } from "./img/hero/pattern3.svg";
 
 // globalReach
 export { default as User1 } from "./img/globalReach/user1.png";
 export { default as User2 } from "./img/globalReach/user2.png";
 export { default as User3 } from "./img/globalReach/user3.png";
 export { default as User4 } from "./img/globalReach/user4.png";
-export { default as WorldMap } from "./img/globalReach/worldMap.png";
+// export { default as WorldMap } from "./img/globalReach/worldMap.png";
 
 // Our Offerings
 // export { default as GlobalBankingActive } from "./img/ourOfferings/globalBankingActive.png";
@@ -101,6 +119,8 @@ export { default as BlogHeroImg } from "./img/blog/blogHero.jpg";
 // why backbone
 export { default as Gage } from "./img/whyBackbone/gage.svg";
 export { default as WorldMap2 } from "./img/whyBackbone/worldMap.svg";
+export { default as Meeting } from "./img/whyBackbone/meeting.png";
 
 // tsx icon
 export { default as Spinner } from "./tsx_icon/spinner";
+export { default as TransactionIcon } from "./tsx_icon/transactionIcon.svg";

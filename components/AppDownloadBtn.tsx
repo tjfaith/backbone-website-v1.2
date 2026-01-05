@@ -11,7 +11,7 @@ interface props {
 const AppDownloadBtn = ({ btnType }: props) => {
   return (
     <Button
-      className="bg-background dark:bg-primary text-[#0E121B]"
+      className="bg-background-200 dark:bg-primary text-[#0E121B]"
       radius="full"
     >
       <>

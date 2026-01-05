@@ -14,7 +14,12 @@ import { Button } from "@heroui/button";
 
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, ThemeSwitch } from "@/components";
+import {
+  BackboneLogo,
+  GetStartedBtn,
+  GlobalPopover,
+  ThemeSwitch,
+} from "@/components";
 import { OurOfferingsMenu } from "@/components";
 
 const Navbar = () => {
@@ -33,25 +38,31 @@ const Navbar = () => {
     <HeroUINavbar
       className="fixed"
       classNames={{
-        base: `xl:px-0 md:px-4 px-2 lg:px-0 shadow-none  transition-all duration-300 ease-in-out ${changeReady ? "bg-background text-primary bg-opacity-50 backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : showLightNav ? "bg-transparent text-background dark:text-primary" : "bg-transparent"}`,
+        base: `xl:px-0 md:px-4 px-2 lg:px-0 shadow-none  transition-all duration-300 ease-in-out ${changeReady ? "bg-background-200/60 text-primary  backdrop-blur-3xl transition-all ease-in-out duration-300 animate__animated animate__slideInDown" : showLightNav ? "bg-transparent text-background dark:text-primary" : "bg-transparent"}`,
         wrapper: "xl:px-0 md:px-8 px-4",
       }}
-      isBlurred={false}
+      isBlurred={true}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
       onMenuOpenChange={handleMenuToggle}
     >
-      <NavbarContent className="!flex-initial !w-fit px-0">
+      <NavbarContent className="!flex-initial !w-fit px-0 ">
         <NavbarBrand as="li" className="!p-0 !m-0">
           <NextLink href="/">
             <BackboneLogo
-              showDarkLogo={changeReady || showLightNav === false}
+              // showDarkLogo={changeReady || showLightNav === false}
+              showDarkLogo={changeReady === false}
             />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
+      <NavbarContent justify="start">
+        <NavbarItem>
+          <GlobalPopover />
+        </NavbarItem>
+      </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 w-full" justify="start">
+      <NavbarContent className="hidden sm:flex gap-4 w-full" justify="center">
         <ul className="hidden lg:flex items-center gap-4 justify-start ml-2">
           {navItems.map((item, index) => (
             <NavbarItem key={index}>
@@ -68,16 +79,16 @@ const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        <NavbarItem className="hidden lg:flex bg-primary items-center justify-center rounded-full p-0.5 h-6 w-6">
+        {/* <NavbarItem className="hidden lg:flex bg-primary items-center justify-center rounded-full p-0.5 h-6 w-6">
           <ThemeSwitch />
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
 
       <NavbarContent className="hidden lg:flex" justify="end">
         <NavbarItem>
           <Button
             as={Link}
-            className="text-primary"
+            className="text-primary py-5 px-6"
             href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
             size="sm"
             variant="flat"
@@ -86,15 +97,7 @@ const Navbar = () => {
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <Button
-            as={Link}
-            className="text-background"
-            color="primary"
-            href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-up`}
-            size="sm"
-          >
-            Get Started Now
-          </Button>
+          <GetStartedBtn />
         </NavbarItem>
       </NavbarContent>
 
@@ -102,9 +105,9 @@ const Navbar = () => {
         className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"} lg:hidden basis-1 pl-4  font-bold`}
         justify="end"
       >
-        <NavbarItem className="bg-primary flex items-center justify-center rounded-full p-0.5 h-6 w-6">
+        {/* <NavbarItem className="bg-primary flex items-center justify-center rounded-full p-0.5 h-6 w-6">
           <ThemeSwitch />
-        </NavbarItem>
+        </NavbarItem> */}
 
         <NavbarMenuToggle />
       </NavbarContent>
