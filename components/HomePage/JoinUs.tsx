@@ -45,25 +45,24 @@ const JoinUs = () => {
           </div>
           <div>
             <Divider
-              className="bg-background lg:block hidden "
+              className="bg-background lg:block hidden   "
               orientation="horizontal"
             />
 
             <Tabs
               fullWidth
               aria-label="entity"
-              className=" mt-4 "
               classNames={{
                 tabList:
-                  " flex sm:flex-row flex-col sm:px-1 px-5 py-0 bg-transparent  ",
-                tabContent: `text-white  text-sm font-medium ${
+                  "flex sm:flex-row flex-col sm:px-1 px-5 py-4 bg-transparent",
+                tabContent: `text-white w-full text-sm font-medium rounded-full px-4 py-2 ${
                   selectedTab === "individuals"
-                    ? "group-data-[selected=true]:text-[#1F7EAD]"
+                    ? "group-data-[selected=true]:text-[#1F7EAD] group-data-[selected=true]:bg-white"
                     : selectedTab === "businesses" &&
-                      "group-data-[selected=true]:text-[#FF7300]"
-                }
-                  `,
-                tab: "py-5",
+                      "group-data-[selected=true]:text-[#FF7300] group-data-[selected=true]:bg-white"
+                }`,
+                tab: "",
+                panel: "min-h-[120px] flex items-start", // ⭐ KEY FIX
               }}
               radius="full"
               size="sm"
@@ -74,15 +73,16 @@ const JoinUs = () => {
             >
               <Tab
                 key="individuals"
-                className="text-background text-sm font-normal lg:tracking-wide"
+                className="text-background py-0 text-sm font-normal lg:tracking-wide"
                 title="Individuals"
               >
                 We streamline payments for individuals, businesses, and
                 nonprofits, creating possibilities you never thought possible.
               </Tab>
+
               <Tab
                 key="businesses"
-                className="text-background text-sm font-normal lg:tracking-wide"
+                className="text-background py-0 text-sm font-normal lg:tracking-wide"
                 title="Businesses"
               >
                 We empower businesses with seamless payment solutions, enabling
