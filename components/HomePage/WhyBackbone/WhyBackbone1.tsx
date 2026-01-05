@@ -14,7 +14,7 @@ const WhyBackbone1 = () => {
       className="overflow-hidden bg-background-75 pb-8 pt-24 lg:pt-48 min-h-[85vh]"
       data-aos="fade-up"
     >
-      <div className="page-max-width grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+      <div className="page-max-width grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-28">
         {/* LEFT SECTION */}
         <div className="relative flex items-center" data-aos="fade-right">
           <div
@@ -33,7 +33,7 @@ const WhyBackbone1 = () => {
           </div>
 
           <div
-            className="absolute right-0 -bottom-14 "
+            className="absolute -right-7 -bottom-14 "
             data-aos="fade-left"
             data-aos-delay="250"
           >
@@ -55,7 +55,7 @@ const WhyBackbone1 = () => {
 
         {/* RIGHT SECTION */}
         <div
-          className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left"
+          className="flex flex-col justify-center items-end lg:items-start text-center lg:text-left"
           data-aos="fade-left"
         >
           <CTitle
@@ -66,7 +66,7 @@ const WhyBackbone1 = () => {
           />
 
           <div
-            className="clash-display-font tracking-[-0.16px] leading-10 text-3xl text-primary font-medium max-w-lg mb-3"
+            className="clash-display-font tracking-[-0.16px] leading-10 text-[32px] text-primary font-medium max-w-xl mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >

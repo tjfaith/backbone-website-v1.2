@@ -10,13 +10,13 @@ const BackboneFee = () => {
   return (
     <div className="overflow-hidden bg-background-75">
       <div className="page-max-width pt-12 pb-12">
-        <div>
+        <div className=" mb-[23px]">
           <CTitle
-            className="border border-foreground-100 bg-white mb-1"
+            className="border border-foreground-100 bg-white mb-3 pr-[10px] pl-[6px] py-[6px]"
             iconType="flashlight"
             title="Backbone is free to use, with no hidden fees when you transact"
           />
-          <div className="clash-display-font xl:text-start text-center  text-2xl text-primary font-medium max-w-md mb-1">
+          <div className="clash-display-font xl:text-start text-center  text-2xl text-primary font-medium max-w-md mb-3">
             Send, receive, and swap <br /> your money effortlessly in one place.
           </div>
           <div className="text-primary-500 text-base font-normal leading-6 tracking-[-0.176px]">
@@ -24,7 +24,7 @@ const BackboneFee = () => {
             simplify how you move and manage funds
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
           <div className="h-full flex flex-col  p-4">
             <div className="flex items-end justify-center bg-white  rounded-3xl flex-1">
               <Image alt="send" src={SendImg} />

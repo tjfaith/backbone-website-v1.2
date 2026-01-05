@@ -12,7 +12,7 @@ const CTitle = ({ title, iconType = "check", className }: Props) => {
     <div className="xl:block  flex flex-col justify-center items-center ">
       <div
         className={cn(
-          "mb-4 text-primary inline-flex gap-2 text-sm font-medium bg-background-100 rounded-full items-center py-1 px-2 shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]",
+          "mb-4 text-primary inline-flex gap-2 text-sm font-medium bg-background-100 rounded-full items-center py-[6px] pr-[10px] pl-[6px] shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]",
           className
         )}
       >

@@ -121,9 +121,9 @@
 import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { Button } from "@heroui/button";
-import { Chip } from "@heroui/chip";
 import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 import { Drawer, DrawerContent } from "@heroui/drawer";
+
 import Dot from "./Dot";
 
 const GlobalPopover = () => {
@@ -178,9 +178,10 @@ const GlobalPopover = () => {
 
   const Trigger = (
     <Button
-      onPress={() => isMobile && setOpen(true)}
-      className="flex items-center gap-2 rounded-full !px-2 border shadow-sm"
+      className="flex bg-white items-center gap-2 text-primary rounded-full border-background-200 !px-2 border shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_#E1E4EA]"
+      color="primary"
       variant="bordered"
+      onPress={() => isMobile && setOpen(true)}
     >
       <Icon className="text-lg" icon="ri:global-line" />
       Global
@@ -189,24 +190,24 @@ const GlobalPopover = () => {
   );
 
   const Content = (
-    <div className="p-3 bg-white rounded-2xl md:border border-none">
+    <div className="p-3 bg-white rounded-2xl md:border border-none box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.02), 0 0 7px 2px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(225, 228, 234, 0.50)">
       <p className="text-[11px] font-medium mb-3 tracking-[0.22px] leading-3">
         SELECT YOUR REGION
       </p>
 
-      <Chip
-        className="text-info-250 text-sm font-normal tracking-[-0.084px] leading-5 bg-info-250/10 mb-3"
-        startContent={<Icon icon="ri:global-line" />}
-      >
-        Global
-      </Chip>
+      <div className="text-info-250 text-sm font-normal tracking-[-0.084px] rounded-full gap-1 inline-flex items-center py-1 px-3 leading-5 bg-info-250/10 mb-[6px]">
+        <Icon className="text-[15px]" icon="ri:global-line" />
+        <span className=" p-1">Global</span>
+      </div>
+
+      <div className="w-full h-px bg-[linear-gradient(to_right,#E1E4EA_50%,transparent_0%)] mb-[6px] bg-[length:10px_1px] bg-repeat-x" />
 
       <div className="grid sm:grid-cols-3 grid-cols-2 gap-3 text-sm mb-5">
         {regions.map((item) => (
           <button
             key={item.name}
+            className="flex items-center gap-2 hover:text-primary transition text-left p-3"
             onClick={() => setOpen(false)}
-            className="flex items-center gap-2 hover:text-primary transition text-left"
           >
             <span className="text-lg">
               <Icon icon={item.flag} />
@@ -227,7 +228,7 @@ const GlobalPopover = () => {
 
       <div className="grid grid-cols-3 gap-y-3 gap-x-4 text-sm text-default-500">
         {comingSoon.map((item) => (
-          <div key={item.name} className="flex items-center gap-2">
+          <div key={item.name} className="flex items-center gap-2 p-3">
             <span className="text-lg">
               <Icon icon={item.flag} />
             </span>
@@ -243,10 +244,10 @@ const GlobalPopover = () => {
       <>
         {Trigger}
         <Drawer
-          size="full"
           isOpen={open}
-          onOpenChange={setOpen}
           placement="bottom"
+          size="full"
+          onOpenChange={setOpen}
         >
           <DrawerContent className="rounded-t-3xl p-4">{Content}</DrawerContent>
         </Drawer>
@@ -257,7 +258,7 @@ const GlobalPopover = () => {
   return (
     <Popover showArrow placement="bottom-start">
       <PopoverTrigger>{Trigger}</PopoverTrigger>
-      <PopoverContent className="!items-start p-1 rounded-2xl border shadow-[0_6px_8px_0_rgba(0,0,0,0.02),0_0_7px_2px_rgba(0,0,0,0.03),0_0_0_1px_rgba(225,228,234,0.5)] bg-[#F5F7FA]">
+      <PopoverContent className="!items-start p-1 rounded-2xl border shadow-[0_6px_8px_0_rgba(0,0,0,0.02),_0_0_7px_2px_rgba(0,0,0,0.03),_0_0_0_1px_rgba(225,228,234,0.5)] bg-[#F5F7FA]">
         {Content}
       </PopoverContent>
     </Popover>

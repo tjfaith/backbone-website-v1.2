@@ -23,7 +23,6 @@ export { default as CustomPhoneInput } from "./UI/CustomPhoneInput";
 export { default as CustomFileUploader } from "./UI/CustomFileUploader";
 export { default as GetStartedBtn } from "./UI/GetStartedBtn";
 export { default as ContactSalesBtn } from "./UI/ContactSalesBtn";
-export { default as IOSAppLink } from "./UI/IOSAppLink";
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";
