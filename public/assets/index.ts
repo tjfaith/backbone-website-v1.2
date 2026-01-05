@@ -109,9 +109,9 @@ export { default as FairMoney } from "./img/brands/fairMoney.png";
 export { default as MultiGate } from "./img/brands/multiGate.png";
 
 // app
-export { default as ReceiveImg } from "./img/app/receive.png";
-export { default as SendImg } from "./img/app/send.png";
-export { default as SwapImg } from "./img/app/swap.png";
+export { default as ReceiveImg } from "./img/app/receive.svg";
+export { default as SendImg } from "./img/app/send.svg";
+export { default as SwapImg } from "./img/app/swap.svg";
 
 // blog
 export { default as BlogHeroImg } from "./img/blog/blogHero.jpg";

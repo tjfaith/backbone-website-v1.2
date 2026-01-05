@@ -7,10 +7,10 @@ const DrawPattern = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="653"
-      height="492"
       viewBox="0 0 653 492"
       fill="none"
+      className="w-full h-full"
+      preserveAspectRatio="xMidYMid slice"
     >
       <g style={{ mixBlendMode: "soft-light" }}>
         <motion.path
