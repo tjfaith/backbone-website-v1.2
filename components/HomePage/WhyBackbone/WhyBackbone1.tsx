@@ -25,7 +25,7 @@ const WhyBackbone1 = () => {
           </div>
 
           <div
-            className=" max-w-md lg:absolute -bottom-32 "
+            className=" sm:block hidden max-w-md lg:absolute sm:-bottom-32 "
             data-aos="zoom-in"
             data-aos-delay="150"
           >
