@@ -16,7 +16,7 @@ import {
 
 const HomePage = () => {
   return (
-    <div className="md:pt-0 pt-20">
+    <div className="md:pt-0 pt-20 overflow-x-hidden">
       <HeroSection />
       <Partners />
       <ChangingPayment />

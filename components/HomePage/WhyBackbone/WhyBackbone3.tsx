@@ -6,7 +6,7 @@ import { ContactSalesBtn, CTitle, GetStartedBtn } from "@/components";
 
 const WhyBackbone3 = () => {
   return (
-    <div className="py-16 sm:py-20" data-aos="fade-up">
+    <div className="overflow-x-hidden py-16 sm:py-20" data-aos="fade-up">
       <div
         className="
           page-max-width

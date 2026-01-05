@@ -11,7 +11,7 @@ import {
 const WhyBackbone1 = () => {
   return (
     <div
-      className="bg-background-75 pb-8 pt-24 lg:pt-48 min-h-[85vh]"
+      className="overflow-x-hidden bg-background-75 pb-8 pt-24 lg:pt-48 min-h-[85vh]"
       data-aos="fade-up"
     >
       <div className="page-max-width grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
