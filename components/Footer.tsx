@@ -80,7 +80,7 @@ const Footer = () => {
                     }`}
                   />
                 </button>
-
+                {/* dnew  */}
                 {openGlobal && (
                   <div className="ml-4 flex flex-col space-y-2">
                     <Link
