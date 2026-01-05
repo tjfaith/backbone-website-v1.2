@@ -16,7 +16,7 @@ const images = [
   Hero6.src,
 ];
 
-const IMAGE_DURATION = 26; // seconds per image
+const IMAGE_DURATION = 16; // seconds per image
 const DRAW_DELAY = 1.2; // when pattern starts after image settles
 
 const HeroImageSlider = () => {
