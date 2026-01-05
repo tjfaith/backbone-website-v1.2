@@ -126,7 +126,7 @@ const SecureTransactionsCard = () => {
     <div className="border-t-[0.5px] lg:border-l-[0.5px]">
       {/* testimonial */}
       <div
-        className="flex items-stretch flex-0 gap-5 py-8 px-6 border-b-1"
+        className="flex items-stretch flex-0 gap-5 sm:h-[23vh] py-8 px-6 border-b-1"
         data-aos="fade-up"
       >
         <div
@@ -171,22 +171,23 @@ const SecureTransactionsCard = () => {
       </div>
 
       {/* card section */}
-      <div className="py-6 pl-6 sm:pl-10 lg:pl-20 flex flex-col justify-between">
-        <div className="relative mb-10 w-full grid grid-cols-1 lg:grid-cols-[13rem_35rem]">
-          {/* invoice card */}
-          <div className="w-full flex justify-center">
-            <div className="relative px-3 mx-auto py-1 inline-flex rounded-full  flex-col items-center text-center text-info-250 bg-[#EBF8FF] border-none mb-3 sm:mb-4 lg:mb-5">
-              <div className="rounded-full h-3.5 w-3.5 bg-white absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 flex items-center justify-center">
-                <div className="bg-info-250 rounded-full h-2 w-2" />
-              </div>
-              <div className="bg-[#EBF8FF] text-info-250 rounded-lg text-sm whitespace-nowrap">
-                Maximum Security
-              </div>
-            </div>
+      <div className="py-6 pl-6 sm:pl-10 lg:pl-20 flex flex-col relative justify-between  ">
+        <div className="absolute z-10 left-1/2 -translate-x-1/2  border  px-3  py-1 inline-flex rounded-full  flex-col items-center text-center text-info-250 bg-[#EBF8FF] border-none mb-3 sm:mb-4 lg:mb-5">
+          <Icon
+            className="absolute -bottom-2 sm:-bottom-3 left-1/2 -translate-x-1/2 rotate-180 text-[#EBF8FF]"
+            icon="mingcute:triangle-fill"
+          />
+          <div className="bg-[#EBF8FF] text-info-250 rounded-lg text-sm whitespace-nowrap">
+            Maximum Security
           </div>
+        </div>
 
-          <div className=" py-4 overflow-hidden relative" data-aos="fade-right">
-            <div className="  w-auto h-full  shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_var(--neutral-200,#E1E4EA)] flex-1 bg-white rounded-l-xl p-4 clash-display-font ">
+        <div className="relative mb-10 w-full grid grid-cols-1 lg:grid-cols-[13rem_35rem] mt-10">
+          <div
+            className=" sm:py-4 py-0 sm:px-0 px-4 overflow-hidden relative"
+            data-aos="fade-right"
+          >
+            <div className="  w-auto h-full  shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_var(--neutral-200,#E1E4EA)] flex-1 bg-white sm:rounded-l-xl sm:rounded-t-none rounded-t-xl p-4 clash-display-font ">
               <div className="space-y-1 ">
                 <Image
                   disableAnimation
@@ -232,15 +233,15 @@ const SecureTransactionsCard = () => {
               </div>
             </div>
 
-            <div className="w-full bg-gradient-to-r  from-background-75/0 via-info-250/5 to-info-250/20 from-[24.2%] absolute inset-x-0 top-0 -bottom-5" />
+            <div className="w-full sm:bg-gradient-to-r bg-gradient-to-b  from-background-75/0 via-info-250/5 to-info-250/20 from-[24.2%] absolute inset-x-0 top-0 -bottom-5" />
           </div>
-
+          {/* bg-gradient-to-b from-transparent from-[50%] via-[95%] via-background-75 to-background-75  */}
           {/* gradients */}
-          <div className=" w-full bg-gradient-to-b from-transparent from-[50%] via-[95%] via-background-75 to-background-75 absolute inset-x-0 top-0 -left-5 -right-5 -bottom-5 " />
+          <div className=" w-full z-10 absolute top-0 bg-gradient-to-b from-transparent from-[50%] via-[95%] via-background-75 to-background-75 inset-x-0 -left-5 -right-5 -bottom-5  " />
 
           {/* shield / network */}
           <div
-            className=" border-l-2 border-info-250  flex items-center justify-start"
+            className=" sm:border-l-2 sm:border-t-0 border-t-2 border-info-250  flex items-center justify-start"
             data-aos="fade-left"
             data-aos-delay="200"
           >
