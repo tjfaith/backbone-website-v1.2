@@ -23,7 +23,7 @@ const JoinUs = () => {
   };
 
   return (
-    <div className="overflow-x-hidden bg-background-75 py-8">
+    <div className="overflow-hidden bg-background-75 py-8">
       <div
         className="page-max-width grid xl:grid-cols-[28rem_1fr] gap-[45px] "
         id="services"

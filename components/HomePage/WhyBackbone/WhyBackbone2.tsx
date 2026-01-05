@@ -71,7 +71,7 @@ import {
 
 const WhyBackbone2 = () => {
   return (
-    <div className="overflow-x-hidden bg-background-75 py-12  ">
+    <div className="overflow-hidden bg-background-75 py-12  ">
       <div className="page-max-width">
         <div className="flex flex-col items-center mb-20" data-aos="fade-up">
           <CTitle

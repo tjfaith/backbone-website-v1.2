@@ -23,7 +23,7 @@ import {
 
 const Partners = () => {
   return (
-    <div className="page-max-width pb-16 space-y-10   bg-background dark:bg-background-200 py-14 overflow-x-hidden">
+    <div className="page-max-width pb-16 space-y-10   bg-background dark:bg-background-200 py-14 overflow-hidden">
       <div className="">
         <div className="clash-display-font" data-aos="fade-up">
           <span className="text-primary text-[32px] font-medium">

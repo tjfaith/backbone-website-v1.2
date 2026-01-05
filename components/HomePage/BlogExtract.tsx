@@ -31,7 +31,7 @@ const BlogExtract = () => {
   }, [currentPath]);
 
   return (
-    <div className="overflow-x-hidden page-max-width px-6 py-14 grid grid-cols-1 md:grid-cols-3">
+    <div className="overflow-hidden page-max-width px-6 py-14 grid grid-cols-1 md:grid-cols-3">
       <div className=" max-w-md  mb-8">
         <div>
           <div className="clash-display-font text-4xl font-medium text-primary">
