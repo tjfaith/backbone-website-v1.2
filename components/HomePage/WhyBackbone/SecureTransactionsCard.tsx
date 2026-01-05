@@ -174,6 +174,17 @@ const SecureTransactionsCard = () => {
       <div className="py-6 pl-6 sm:pl-10 lg:pl-20 flex flex-col justify-between">
         <div className="relative mb-10 w-full grid grid-cols-1 lg:grid-cols-[13rem_35rem]">
           {/* invoice card */}
+          <div className="w-full flex justify-center">
+            <div className="relative px-3 mx-auto py-1 inline-flex rounded-full  flex-col items-center text-center text-info-250 bg-[#EBF8FF] border-none mb-3 sm:mb-4 lg:mb-5">
+              <div className="rounded-full h-3.5 w-3.5 bg-white absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                <div className="bg-info-250 rounded-full h-2 w-2" />
+              </div>
+              <div className="bg-[#EBF8FF] text-info-250 rounded-lg text-sm whitespace-nowrap">
+                Maximum Security
+              </div>
+            </div>
+          </div>
+
           <div className=" py-4 overflow-hidden relative" data-aos="fade-right">
             <div className="  w-auto h-full  shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_var(--neutral-200,#E1E4EA)] flex-1 bg-white rounded-l-xl p-4 clash-display-font ">
               <div className="space-y-1 ">
