@@ -55,7 +55,7 @@ const JoinUs = () => {
               className=" mt-4 "
               classNames={{
                 tabList:
-                  " flex sm:flex-row flex-col sm:px-1 px-5 py-0 sm:bg-transparent  ",
+                  " flex sm:flex-row flex-col sm:px-1 px-5 py-0 bg-transparent  ",
                 tabContent: `text-white  text-sm font-medium ${
                   selectedTab === "individuals"
                     ? "group-data-[selected=true]:text-[#1F7EAD]"
