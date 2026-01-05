@@ -8,7 +8,7 @@ import { ReceiveImg, SendImg, SwapImg } from "@/public/assets";
 
 const BackboneFee = () => {
   return (
-    <div className="bg-background-75">
+    <div className="overflow-x-hidden bg-background-75">
       <div className="page-max-width pt-12 pb-12">
         <div>
           <CTitle

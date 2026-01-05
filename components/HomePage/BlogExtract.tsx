@@ -31,7 +31,7 @@ const BlogExtract = () => {
   }, [currentPath]);
 
   return (
-    <div className="page-max-width px-6 py-14 grid grid-cols-1 md:grid-cols-3">
+    <div className="overflow-x-hidden page-max-width px-6 py-14 grid grid-cols-1 md:grid-cols-3">
       <div className=" max-w-md  mb-8">
         <div>
           <div className="clash-display-font text-4xl font-medium text-primary">
@@ -69,7 +69,7 @@ const BlogExtract = () => {
                 <div>
                   <div className=" mb-2 uppercase text-primary-600 font-normal text-sm">
                     {categories?.find(
-                      (cat: { _id: string }) => cat._id === blog.category,
+                      (cat: { _id: string }) => cat._id === blog.category
                     )?.name ?? "—"}
                   </div>
                   <div className=" clash-display-font text-xl font-medium text-primary mb-2 leading-snug">
@@ -81,7 +81,7 @@ const BlogExtract = () => {
                         ? parse(
                             blog?.content.length > 500
                               ? blog?.content.slice(0, 500) + "..."
-                              : blog?.content,
+                              : blog?.content
                           )
                         : null}
                     </div>
@@ -94,7 +94,7 @@ const BlogExtract = () => {
                     variant="light"
                     onPress={() =>
                       viewBlog(
-                        `/${blog._id}?title=${encodeURIComponent(blog.title)}&id=${blog._id}`,
+                        `/${blog._id}?title=${encodeURIComponent(blog.title)}&id=${blog._id}`
                       )
                     }
                   >
