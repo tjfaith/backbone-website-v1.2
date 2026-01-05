@@ -63,7 +63,7 @@ const HeroImage = () => {
           rounded-xl
         "
       >
-        <div className="relative w-full h-full transform skew-x-[12deg] overflow-hidden scale-[1.2]">
+        <div className="relative w-full h-full transform skew-x-[12deg]  scale-[1.2]">
           <HeroImageSlider />
         </div>
       </div>
