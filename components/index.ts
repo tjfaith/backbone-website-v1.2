@@ -23,6 +23,10 @@ export { default as CustomPhoneInput } from "./UI/CustomPhoneInput";
 export { default as CustomFileUploader } from "./UI/CustomFileUploader";
 export { default as GetStartedBtn } from "./UI/GetStartedBtn";
 export { default as ContactSalesBtn } from "./UI/ContactSalesBtn";
+<<<<<<< HEAD
+export { default as DrawPattern } from "./UI/DrawPattern";
+=======
+>>>>>>> e748c6c6a03f1be5b9e5c508d7f7de45ab427e50
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";
@@ -77,6 +81,10 @@ export { default as OfferingsCaption } from "./Offerings/OfferingsCaption";
 export { default as OfferingsCard } from "./Offerings/OfferingsCard";
 export { default as IndividualOfferings } from "./Offerings/IndividualOfferings";
 export { default as BusinessesOfferings } from "./Offerings/BusinessesOfferings";
+
+// Offerings -- individual offerings
+export { default as InvHeroSection } from "./InvestmentPage/InvHeroSection";
+export { default as InvHeroContent } from "./InvestmentPage/InvHeroSection/InvHeroContent";
 
 // About
 export { default as AboutHero } from "./AboutUs/AboutHero";

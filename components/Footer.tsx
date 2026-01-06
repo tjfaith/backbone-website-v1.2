@@ -1,6 +1,7 @@
 "use client";
 import { Image } from "@heroui/image";
 import React, { useState } from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "@heroui/link";
 import { Divider } from "@heroui/divider";
@@ -22,6 +23,9 @@ const Footer = () => {
   const [openGlobal, setOpenGlobal] = useState(false);
   const [openHome, setOpenHome] = useState(false);
 
+  const [openGlobal, setOpenGlobal] = useState(false);
+  const [openHome, setOpenHome] = useState(false);
+
   return (
     <footer className="bg-black dark:text-primary text-background py-16">
       <div className="page-max-width">
@@ -38,6 +42,7 @@ const Footer = () => {
                 Offerings
               </div>
               <div className=" space-y-2 flex flex-col">
+                {/* <Dropdown
                 {/* <Dropdown
                   className="text-primary bg-background-300 p-0"
                   radius="sm"
@@ -80,7 +85,7 @@ const Footer = () => {
                     }`}
                   />
                 </button>
-
+                {/* dnew  */}
                 {openGlobal && (
                   <div className="ml-4 flex flex-col space-y-2">
                     <Link
@@ -111,6 +116,7 @@ const Footer = () => {
                   Investments
                 </Link>
                 {/* <Dropdown
+                {/* <Dropdown
                   className="text-primary bg-background-300 p-0"
                   radius="sm"
                 >
@@ -135,6 +141,36 @@ const Footer = () => {
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown> */}
+
+                <button
+                  onClick={() => setOpenHome((v) => !v)}
+                  className="flex items-center gap-2 text-base focus:outline-none"
+                >
+                  <span>Home Finance</span>
+                  <Icon
+                    icon="ri:arrow-down-s-line"
+                    className={`transition-transform ${
+                      openHome ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {openHome && (
+                  <div className="ml-4 flex flex-col space-y-2">
+                    <Link
+                      className="text-background/80 dark:text-primary"
+                      href="/offerings/finance/rent"
+                    >
+                      Rent Finance
+                    </Link>
+                    <Link
+                      className="text-background/80 dark:text-primary"
+                      href="/offerings/finance/property"
+                    >
+                      Property Finance
+                    </Link>
+                  </div>
+                )}
 
                 <button
                   onClick={() => setOpenHome((v) => !v)}
