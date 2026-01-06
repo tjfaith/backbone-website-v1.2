@@ -17,7 +17,6 @@ const GetStartedBtn = ({ className }: Props) => {
         )}
         color="primary"
         href={`${process.env.NEXT_PUBLIC_APP_URL}/welcome`}
-        // size="sm"
       >
         Get Started Now
       </Button>
@@ -26,4 +25,3 @@ const GetStartedBtn = ({ className }: Props) => {
 };
 
 export default GetStartedBtn;
-
