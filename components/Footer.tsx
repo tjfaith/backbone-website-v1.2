@@ -1,28 +1,14 @@
 "use client";
 import { Image } from "@heroui/image";
 import React, { useState } from "react";
-import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "@heroui/link";
 import { Divider } from "@heroui/divider";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@heroui/dropdown";
 
 import { FullLogo } from "@/public/assets";
 import { AppDownloadBtn, Dot } from "@/components";
-// import Link from "next/link";
 
 const Footer = () => {
-  // const [globalBankingMenu, setGlobalBankingMenu] = useState(false);
-  // const [financeMenu, setFinanceMenu] = useState(false);
-
-  const [openGlobal, setOpenGlobal] = useState(false);
-  const [openHome, setOpenHome] = useState(false);
-
   const [openGlobal, setOpenGlobal] = useState(false);
   const [openHome, setOpenHome] = useState(false);
 
@@ -42,47 +28,16 @@ const Footer = () => {
                 Offerings
               </div>
               <div className=" space-y-2 flex flex-col">
-                {/* <Dropdown
-                {/* <Dropdown
-                  className="text-primary bg-background-300 p-0"
-                  radius="sm"
-                >
-                  <DropdownTrigger className="">
-                    <button className="gap-2 flex md:items-center border-none focus:outline-none !active:outline-none outline-none">
-                      <span className="text-base whitespace-nowrap ">
-                        Global Banking
-                      </span>
-                      <span>
-                        <Icon icon="ri:arrow-down-s-line" />
-                      </span>
-                    </button>
-                  </DropdownTrigger>
-                  <DropdownMenu
-                    aria-label="Global banking"
-                    className="p-0"
-                    closeOnSelect={false}
-                  >
-                    <DropdownItem key="individual" textValue="individual">
-                      <Link href="/offerings/individual">Personal Banking</Link>
-                    </DropdownItem>
-                    <DropdownItem key="corporate" textValue="business">
-                      <Link href="/offerings/businesses">
-                        Corporate Banking
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown> */}
-
                 <button
-                  onClick={() => setOpenGlobal((v) => !v)}
                   className="flex items-center gap-2 text-base focus:outline-none"
+                  onClick={() => setOpenGlobal((v) => !v)}
                 >
                   <span>Global Banking</span>
                   <Icon
-                    icon="ri:arrow-down-s-line"
                     className={`transition-transform ${
                       openGlobal ? "rotate-180" : ""
                     }`}
+                    icon="ri:arrow-down-s-line"
                   />
                 </button>
                 {/* dnew  */}
@@ -115,43 +70,17 @@ const Footer = () => {
                 >
                   Investments
                 </Link>
-                {/* <Dropdown
-                {/* <Dropdown
-                  className="text-primary bg-background-300 p-0"
-                  radius="sm"
-                >
-                  <DropdownTrigger className="">
-                    <button className="gap-2 flex md:items-center border-none focus:outline-none !active:outline-none outline-none">
-                      <span className="text-base whitespace-nowrap ">
-                        Home Finance
-                      </span>
-                      <span>
-                        <Icon icon="ri:arrow-down-s-line" />
-                      </span>
-                    </button>
-                  </DropdownTrigger>
-                  <DropdownMenu aria-label="Global banking" className="p-0">
-                    <DropdownItem key="rent" textValue="rent">
-                      <Link href="/offerings/finance/rent">Rent Finance</Link>
-                    </DropdownItem>
-                    <DropdownItem key="property" textValue="property">
-                      <Link href="/offerings/finance/property">
-                        Property Finance
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown> */}
 
                 <button
-                  onClick={() => setOpenHome((v) => !v)}
                   className="flex items-center gap-2 text-base focus:outline-none"
+                  onClick={() => setOpenHome((v) => !v)}
                 >
                   <span>Home Finance</span>
                   <Icon
-                    icon="ri:arrow-down-s-line"
                     className={`transition-transform ${
                       openHome ? "rotate-180" : ""
                     }`}
+                    icon="ri:arrow-down-s-line"
                   />
                 </button>
 
@@ -173,15 +102,15 @@ const Footer = () => {
                 )}
 
                 <button
-                  onClick={() => setOpenHome((v) => !v)}
                   className="flex items-center gap-2 text-base focus:outline-none"
+                  onClick={() => setOpenHome((v) => !v)}
                 >
                   <span>Home Finance</span>
                   <Icon
-                    icon="ri:arrow-down-s-line"
                     className={`transition-transform ${
                       openHome ? "rotate-180" : ""
                     }`}
+                    icon="ri:arrow-down-s-line"
                   />
                 </button>
 

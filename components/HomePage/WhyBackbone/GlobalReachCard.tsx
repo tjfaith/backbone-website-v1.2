@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const GlobalReachCard = () => {
   return (
     <div
-      className="border-t-[0.5px] lg:border-r-[0.5px] flex flex-col justify-between pb-6 "
+      className="lg:border-r-[0.5px] flex flex-col justify-between pb-6 "
       data-aos="fade-up"
     >
       <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 px-6 sm:h-[23vh]  border-b-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 px-6 sm:h-[23vh]  border-b-[0.5px]">
           <div
-            className=" sm:border-r-1 sm:border-b-0 border-b-1 flex flex-col items-center justify-center px-6 py-14"
+            className=" sm:border-r-[0.5px] sm:border-b-0 border-b-[0.5px] flex flex-col items-center justify-center px-6 py-14"
             data-aos="fade-up"
             data-aos-delay="0"
           >
@@ -27,7 +27,7 @@ const GlobalReachCard = () => {
           </div>
 
           <div
-            className=" sm:border-l-1  flex flex-col items-center justify-center px-6 py-14 "
+            className="  flex flex-col items-center justify-center px-6 py-14 "
             data-aos="fade-up"
             data-aos-delay="120"
           >
