@@ -45,11 +45,7 @@ const JoinUs = () => {
           </div>
           <div>
             <Divider
-<<<<<<< HEAD
               className="bg-background lg:block hidden"
-=======
-              className="bg-background lg:block hidden   "
->>>>>>> e748c6c6a03f1be5b9e5c508d7f7de45ab427e50
               orientation="horizontal"
             />
 
@@ -65,11 +61,7 @@ const JoinUs = () => {
                     : selectedTab === "businesses" &&
                       "group-data-[selected=true]:text-[#FF7300] group-data-[selected=true]:bg-white"
                 }`,
-<<<<<<< HEAD
                 tab: "outline-none",
-=======
-                tab: "",
->>>>>>> e748c6c6a03f1be5b9e5c508d7f7de45ab427e50
                 panel: "min-h-[120px] flex items-start", // ⭐ KEY FIX
               }}
               radius="full"
