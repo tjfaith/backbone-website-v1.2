@@ -13,7 +13,7 @@ const ProcessTransactionCard = () => {
       className="px-6 sm:px-10 lg:px-14 py-7 border-b-[0.5px] lg:border-r-[0.5px] flex flex-col justify-between items-center w-full"
       data-aos="fade-up"
     >
-      <div className="  relative mb-10 w-full" data-aos="zoom-in">
+      <div className="relative mb-10 w-full" data-aos="zoom-in">
         <div
           className=" mx-auto max-w-xs shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_var(--neutral-200,#E1E4EA)] bg-white rounded-xl p-4 clash-display-font"
           data-aos="fade-up"

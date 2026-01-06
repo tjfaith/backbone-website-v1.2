@@ -123,10 +123,10 @@ import ShieldNetworkPattern from "./ShieldNetworkPattern";
 
 const SecureTransactionsCard = () => {
   return (
-    <div className="border-t-[0.5px] lg:border-l-[0.5px]">
+    <div>
       {/* testimonial */}
       <div
-        className="flex items-stretch flex-0 gap-5 sm:h-[23vh] py-8 px-6 border-b-1"
+        className="flex items-stretch flex-0 gap-5 sm:h-[23vh] py-8 px-6 border-b-[0.5px]"
         data-aos="fade-up"
       >
         <div

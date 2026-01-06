@@ -111,7 +111,7 @@ import { HalfLogo } from "@/public/assets";
 const RatesCard = () => {
   return (
     <div
-      className="border-b-[0.5px] lg:border-l-[0.5px] flex flex-col justify-between items-center w-full px-6 sm:px-10 lg:px-14 py-7"
+      className="border-b-[0.5px] flex flex-col justify-between items-center w-full px-6 sm:px-10 lg:px-14 py-7"
       data-aos="fade-up"
     >
       {/* ICON STACK */}
