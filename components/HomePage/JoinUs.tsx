@@ -45,7 +45,7 @@ const JoinUs = () => {
           </div>
           <div>
             <Divider
-              className="bg-background lg:block hidden   "
+              className="bg-background lg:block hidden"
               orientation="horizontal"
             />
 
@@ -61,7 +61,7 @@ const JoinUs = () => {
                     : selectedTab === "businesses" &&
                       "group-data-[selected=true]:text-[#FF7300] group-data-[selected=true]:bg-white"
                 }`,
-                tab: "",
+                tab: "outline-none",
                 panel: "min-h-[120px] flex items-start", // ⭐ KEY FIX
               }}
               radius="full"

@@ -82,7 +82,7 @@ const WhyBackbone2 = () => {
           />
 
           <div
-            className="clash-display-font  text-center tracking-[-0.16px] leading-10  text-3xl text-primary font-medium max-w-lg mb-3"
+            className="clash-display-font  text-center tracking-[-0.16px] leading-10  text-[32px] text-primary font-medium max-w-lg mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -90,7 +90,7 @@ const WhyBackbone2 = () => {
           </div>
 
           <div
-            className=" mb-8 text-primary-500 text-center text-lg font-normal leading-6 tracking-[-0.27px] max-w-xl "
+            className=" mb-8 text-primary-500 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-xl "
             data-aos="fade-up"
             data-aos-delay="150"
           >

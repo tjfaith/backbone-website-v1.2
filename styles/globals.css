@@ -16,12 +16,12 @@ select {
   font-size: 16px;
 }
 
-.PhoneInputCountryIcon{
-  @apply !rounded-full overflow-hidden !border-none min-h-5 h-5 min-w-5 object-cover
+.PhoneInputCountryIcon {
+  @apply !rounded-full overflow-hidden !border-none min-h-5 h-5 min-w-5 object-cover;
 }
 
-.PhoneInputCountryIcon svg{
-  @apply w-full h-full object-cover
+.PhoneInputCountryIcon svg {
+  @apply w-full h-full object-cover;
 }
 
 .goog-te-banner-frame.skiptranslate {
@@ -99,14 +99,14 @@ select {
   font-family: "Digital Numbers", sans-serif;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 7px;
   height: 3px;
-}
+} */
 
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #ffffff;
   border: none;
   border-radius: 8px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.94);
-}
+} */
