@@ -23,7 +23,10 @@ export { default as CustomPhoneInput } from "./UI/CustomPhoneInput";
 export { default as CustomFileUploader } from "./UI/CustomFileUploader";
 export { default as GetStartedBtn } from "./UI/GetStartedBtn";
 export { default as ContactSalesBtn } from "./UI/ContactSalesBtn";
+<<<<<<< HEAD
 export { default as DrawPattern } from "./UI/DrawPattern";
+=======
+>>>>>>> e748c6c6a03f1be5b9e5c508d7f7de45ab427e50
 
 // Home
 export { default as HeroSection } from "./HomePage/HeroSection";

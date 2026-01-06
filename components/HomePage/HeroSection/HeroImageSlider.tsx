@@ -5,7 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 import { Hero1, Hero2, Hero3, Hero4, Hero5, Hero6 } from "@/public/assets";
+<<<<<<< HEAD
 import { DrawPattern } from "@/components";
+=======
+import DrawPattern from "./DrawPattern";
+>>>>>>> e748c6c6a03f1be5b9e5c508d7f7de45ab427e50
 
 const images = [
   Hero1.src,
