@@ -27,7 +27,7 @@ const AboutHero = () => {
           </div>
         </div>
         <div
-          className="text-primary-600 text-lg font-normal md:max-w-3xl text-center"
+          className="text-primary-600 text-sm font-normal md:max-w-3xl text-center"
           data-aos="fade-up"
         >
           Backbone is a B2B, B2C, and C2C Payments company enabling

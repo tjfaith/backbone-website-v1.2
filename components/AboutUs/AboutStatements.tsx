@@ -22,7 +22,7 @@ const AboutStatements = () => {
           <div className="text-3xl text-white mb-2 clash-display-font drop-shadow-xl">
             Mission
           </div>
-          <div className="xl:text-lg text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl">
+          <div className="xl:text-base text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl">
             Our Mission is to enable at least half of the fiat, stablecoin, and
             Bitcoin transactions that either originate out of Africa, have their
             destination in Africa, or are in one way or the other connected to
@@ -47,7 +47,7 @@ const AboutStatements = () => {
             <div className="text-3xl drop-shadow-xl text-white mb-2 clash-display-font">
               Vision
             </div>
-            <div className="xl:text-lg text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl">
+            <div className="xl:text-base text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl">
               Our longterm Vision is to build an ecosystem of integrated
               financial services that create possibilities for Africans and the
               rest of the world across a broad range of sectors, industries, and
@@ -71,7 +71,7 @@ const AboutStatements = () => {
             <div className="text-3xl text-white mb-2 clash-display-font drop-shadow-xl">
               Purpose
             </div>
-            <div className="xl:text-lg text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl ">
+            <div className="xl:text-base text-sm text-white max-w-xl font-medium tracking-tight drop-shadow-xl ">
               At Backbone, we see possibilities as the lightbulb moments when
               dreams suddenly feel tangible and achievable. Our Purpose is to
               enable these possibilities for the human race anywhere in the

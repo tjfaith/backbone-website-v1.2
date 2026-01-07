@@ -14,6 +14,7 @@ export { default as OurOfferingsMenu } from "./OurOfferingsMenu";
 export { default as ComingSoonBadge } from "./OurOfferingsMenu/ComingSoonBadge";
 export { default as ComingSoon } from "./ComingSoon";
 export { default as GlobalPopover } from "./GlobalPopover";
+export { default as AnnouncementModal } from "./UI/AnnouncementModal";
 
 //..... UI
 export { default as CustomButton } from "./UI/CustomButton";

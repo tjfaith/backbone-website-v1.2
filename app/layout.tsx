@@ -10,7 +10,13 @@ import { Providers } from "./providers";
 // test
 import { siteConfig } from "@/config/site";
 import { fontBeauRivage, fontSans } from "@/config/fonts";
-import { Footer, Navbar, PreLoader, ChatButton } from "@/components";
+import {
+  Footer,
+  Navbar,
+  PreLoader,
+  ChatButton,
+  AnnouncementModal,
+} from "@/components";
 
 export const metadata: Metadata = {
   title: {
@@ -74,6 +80,7 @@ s0.parentNode.insertBefore(s1,s0);
             {/* <div id="google_translate_element"></div> */}
             {children}
           </main>
+          <AnnouncementModal />
           <Footer />
           <Toaster />
         </Providers>

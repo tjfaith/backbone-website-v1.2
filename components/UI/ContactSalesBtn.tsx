@@ -11,11 +11,12 @@ const ContactSalesBtn = ({ className }: Props) => {
     <Button
       as={Link}
       className={cn(
-        "text-primary-500  bg-background-200 !px-6 !py-3 text-base font-medium rounded-[10px]",
+        "text-primary-500  bg-background-200 !px-6 !py-3 text-sm font-medium rounded-[10px]",
         className
       )}
-      variant="light"
       href="/contact-us"
+      size="md"
+      variant="light"
     >
       Contact Sales
     </Button>

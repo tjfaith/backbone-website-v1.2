@@ -118,10 +118,6 @@ const WhyBackbone3 = () => {
               mb-4
               text-primary-500
               text-base
-<<<<<<< HEAD
-=======
-              sm:text-lg
->>>>>>> e748c6c6a03f1be5b9e5c508d7f7de45ab427e50
               font-normal
               leading-6
               tracking-[-0.27px]
