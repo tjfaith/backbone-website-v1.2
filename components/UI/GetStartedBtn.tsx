@@ -12,12 +12,12 @@ const GetStartedBtn = ({ className }: Props) => {
       <Button
         as={Link}
         className={cn(
-          "text-background !py-3 text-base font-medium rounded-[10px]",
+          "text-background !py-3 text-sm font-medium rounded-[10px]",
           className
         )}
         color="primary"
         href={`${process.env.NEXT_PUBLIC_APP_URL}/welcome`}
-        size="lg"
+        size="md"
       >
         Get Started Now
       </Button>

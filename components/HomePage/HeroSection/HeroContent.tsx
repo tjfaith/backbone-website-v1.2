@@ -1,12 +1,14 @@
-import { ContactSalesBtn, GetStartedBtn } from "@/components";
 import { Avatar, AvatarGroup } from "@heroui/avatar";
-import { Button } from "@heroui/button";
-import { Divider } from "@heroui/divider";
-import { Link } from "@heroui/link";
 import { Icon } from "@iconify/react";
 import React from "react";
+import { useDispatch } from "react-redux";
+
+import { ContactSalesBtn, GetStartedBtn } from "@/components";
+import { setShowAnnouncement } from "@/app/store/Features/settingsSlice";
 
 const HeroContent = () => {
+  const dispatch = useDispatch();
+
   return (
     <div
       className=" mx-auto lg:mx-0 text-center lg:text-left"
@@ -65,7 +67,13 @@ const HeroContent = () => {
         </span>
       </div> */}
 
-      <div className="animate__delay-2s animate__animated animate__fadeInUp animate__fast md:bg-background-100 md:shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]  dark:text-white  md:text-primary rounded-full p-3 inline-flex md:flex-row flex-col items-center justify-center md:justify-start gap-3 mb-4">
+      {/* <button
+        onClick={() => {
+          localStorage.removeItem("announcement_seen_v1");
+          dispatch(setShowAnnouncement(true));
+        }}
+        className="animate__delay-2s animate__animated animate__fadeInUp animate__fast md:bg-background-100 md:shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]  dark:text-white  md:text-primary rounded-full p-3 inline-flex md:flex-row flex-col items-center justify-center md:justify-start gap-3 mb-4"
+      >
         <AvatarGroup size="sm" total={170}>
           <Avatar
             classNames={{ base: "bg-transparent" }}
@@ -114,11 +122,96 @@ const HeroContent = () => {
           </b>
           <span className="">
             {" "}
-            {/* {new Date().getFullYear() - 1} */}
+
             in transactions in 2025
           </span>
         </div>
-      </div>
+      </button> */}
+
+      <button
+        className="
+        cursor-pointer
+    group
+    animate__delay-2s animate__animated animate__fadeInUp animate__fast
+    md:bg-background-100
+    md:shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]
+    dark:text-white
+    md:text-primary
+    rounded-full
+    px-4 py-3
+    inline-flex
+    md:flex-row
+    flex-col
+    items-center
+    gap-3
+    mb-4
+    transition
+    hover:shadow-md
+  "
+        onClick={() => {
+          localStorage.removeItem("announcement_seen_v1");
+          dispatch(setShowAnnouncement(true));
+        }}
+      >
+        <AvatarGroup size="sm" total={170}>
+          <Avatar
+            classNames={{ base: "bg-transparent" }}
+            icon={
+              <Icon className="text-3xl" icon="emojione:flag-for-nigeria" />
+            }
+          />
+          <Avatar
+            classNames={{ base: "bg-transparent" }}
+            icon={
+              <Icon
+                className="text-3xl"
+                icon="emojione:flag-for-united-states"
+              />
+            }
+          />
+          <Avatar
+            classNames={{ base: "bg-transparent" }}
+            icon={<Icon className="text-3xl" icon="circle-flags:gb" />}
+          />
+          <Avatar
+            classNames={{ base: "bg-transparent" }}
+            icon={<Icon className="text-3xl" icon="circle-flags:cn" />}
+          />
+        </AvatarGroup>
+
+        <div className="text-center md:text-left text-sm md:text-base leading-tight">
+          <span className="opacity-80">Processed over </span>
+          <b>
+            $
+            {Number(
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+            ).toLocaleString()}
+          </b>
+          <span className="opacity-80"> in transactions in 2025</span>
+
+          {/* Read more */}
+          <div
+            className="
+        mt-1
+        text-xs
+        font-medium
+        text-primary
+        inline-flex
+        items-center
+        gap-1
+        opacity-80
+        group-hover:opacity-100
+        transition
+      "
+          >
+            Read more
+            <Icon
+              className="text-sm transition-transform group-hover:translate-x-0.5"
+              icon="solar:arrow-right-linear"
+            />
+          </div>
+        </div>
+      </button>
 
       {/* HEADLINE */}
       <div
@@ -130,7 +223,7 @@ const HeroContent = () => {
       </div>
 
       <div
-        className="text-primary-500 text-lg tracking-[-0.27px] leading-6 mb-8"
+        className="text-primary-500 text-base tracking-[-0.27px] leading-6 mb-8"
         data-aos="fade-up"
         data-aos-delay="300"
       >

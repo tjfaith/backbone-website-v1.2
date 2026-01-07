@@ -88,9 +88,9 @@ const Navbar = () => {
         <NavbarItem>
           <Button
             as={Link}
-            className="text-primary py-5 px-6"
+            className="text-primary py-5 px-6 text-sm"
             href={`${process.env.NEXT_PUBLIC_APP_URL}/sign-in`}
-            size="sm"
+            size="md"
             variant="flat"
           >
             Log in

@@ -33,6 +33,8 @@ export { default as Exchange } from "./img/exchange.svg";
 export { default as WorldMap } from "./img/worldMap.svg";
 export { default as transactionCrab } from "./img/transactionCrab.svg";
 export { default as backboneColoredLogo } from "./img/backboneColoredLogo.svg";
+export { default as VolumeBg } from "./img/volumeBg.jpg";
+export { default as VolumeBg2 } from "./img/volumeBg.svg";
 
 // hero
 export { default as Earth } from "./img/hero/earth.png";
