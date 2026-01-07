@@ -192,13 +192,12 @@ const HeroContent = () => {
           {/* Read more */}
           <div
             className="
-        mt-1
         text-xs
         font-medium
         text-primary
         inline-flex
         items-center
-        gap-1
+        gap-1 ml-1
         opacity-80
         group-hover:opacity-100
         transition
