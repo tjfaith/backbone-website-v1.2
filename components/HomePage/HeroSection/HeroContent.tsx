@@ -204,6 +204,7 @@ const HeroContent = () => {
         transition
       "
           >
+            {" "}
             Read more
             <Icon
               className="text-sm transition-transform group-hover:translate-x-0.5"
