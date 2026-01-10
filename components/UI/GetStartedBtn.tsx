@@ -5,8 +5,9 @@ import React from "react";
 
 interface Props {
   className?: string;
+  label?: string;
 }
-const GetStartedBtn = ({ className }: Props) => {
+const GetStartedBtn = ({ className, label = "Get Started Now" }: Props) => {
   return (
     <>
       <Button
@@ -19,7 +20,7 @@ const GetStartedBtn = ({ className }: Props) => {
         href={`${process.env.NEXT_PUBLIC_APP_URL}/welcome`}
         size="md"
       >
-        Get Started Now
+        {label}
       </Button>
     </>
   );

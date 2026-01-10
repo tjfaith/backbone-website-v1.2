@@ -6,8 +6,12 @@ import React from "react";
 
 interface Props {
   className?: string;
+  title?: string;
 }
-const SuccessToast2 = ({ className }: Props) => {
+const SuccessToast2 = ({
+  className,
+  title = "Transaction successful",
+}: Props) => {
   return (
     <div
       className={cn(
@@ -17,7 +21,7 @@ const SuccessToast2 = ({ className }: Props) => {
     >
       <Icon icon="ep:circle-check-filled" />
       <div className="tracking-[-0.176px] leading-6 font-medium text-base">
-        Transaction successful
+        {title}
       </div>
     </div>
   );

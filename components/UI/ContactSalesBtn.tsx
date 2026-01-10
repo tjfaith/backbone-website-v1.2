@@ -5,8 +5,9 @@ import React from "react";
 
 interface Props {
   className?: string;
+  label?: string;
 }
-const ContactSalesBtn = ({ className }: Props) => {
+const ContactSalesBtn = ({ className, label = "Contact Sales" }: Props) => {
   return (
     <Button
       as={Link}
@@ -18,7 +19,7 @@ const ContactSalesBtn = ({ className }: Props) => {
       size="md"
       variant="light"
     >
-      Contact Sales
+      {label}
     </Button>
   );
 };

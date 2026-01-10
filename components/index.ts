@@ -14,9 +14,10 @@ export { default as OurOfferingsMenu } from "./OurOfferingsMenu";
 export { default as ComingSoonBadge } from "./OurOfferingsMenu/ComingSoonBadge";
 export { default as ComingSoon } from "./ComingSoon";
 export { default as GlobalPopover } from "./GlobalPopover";
-export { default as AnnouncementModal } from "./UI/AnnouncementModal";
+export { default as Faq } from "./Faq";
 
 //..... UI
+export { default as AnnouncementModal } from "./UI/AnnouncementModal";
 export { default as CustomButton } from "./UI/CustomButton";
 export { default as CustomDropdown } from "./UI/CustomDropdown";
 export { default as CustomCheckbox } from "./UI/CustomCheckbox";
@@ -52,6 +53,13 @@ export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
 export { default as SuccessToast } from "./HomePage/HeroSection/SuccessToast";
 export { default as SuccessToast2 } from "./HomePage/HeroSection/SuccessToast2";
 export { default as SuccessToast3 } from "./HomePage/HeroSection/SuccessToast3";
+export { default as SuccessToast4 } from "./HomePage/HeroSection/SuccessToast4";
+export { default as SuccessToast5 } from "./HomePage/HeroSection/SuccessToast5";
+export { default as SuccessToast6 } from "./HomePage/HeroSection/SuccessToast6";
+export { default as SuccessToast7 } from "./HomePage/HeroSection/SuccessToast7";
+export { default as SuccessToast8 } from "./HomePage/HeroSection/SuccessToast8";
+export { default as SuccessToast9 } from "./HomePage/HeroSection/SuccessToast9";
+export { default as SuccessToast10 } from "./HomePage/HeroSection/SuccessToast10";
 export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
 export { default as HeroImageSlider } from "./HomePage/HeroSection/HeroImageSlider";
 
@@ -68,6 +76,12 @@ export { default as CurrencySlider } from "./HomePage/ChangingPayment/CurrencySl
 export { default as WhyBackbone1 } from "./HomePage/WhyBackbone/WhyBackbone1";
 export { default as WhyBackbone2 } from "./HomePage/WhyBackbone/WhyBackbone2";
 export { default as WhyBackbone3 } from "./HomePage/WhyBackbone/WhyBackbone3";
+export { default as WhyBackbone4 } from "./HomePage/WhyBackbone/WhyBackbone4";
+export { default as WhyBackbone5 } from "./HomePage/WhyBackbone/WhyBackbone5";
+export { default as WhyBackbone6 } from "./HomePage/WhyBackbone/WhyBackbone6";
+export { default as WhyBackbone7 } from "./HomePage/WhyBackbone/WhyBackbone7";
+export { default as WhyBackbone8 } from "./HomePage/WhyBackbone/WhyBackbone8";
+export { default as WhyBackbone9 } from "./HomePage/WhyBackbone/WhyBackbone9";
 export { default as ExpensesCard } from "./HomePage/WhyBackbone/ExpensesCard";
 export { default as RatesCard } from "./HomePage/WhyBackbone/RatesCard";
 export { default as ProcessTransactionCard } from "./HomePage/WhyBackbone/ProcessTransactionCard";
@@ -79,10 +93,33 @@ export { default as OfferingsCaption } from "./Offerings/OfferingsCaption";
 export { default as OfferingsCard } from "./Offerings/OfferingsCard";
 export { default as IndividualOfferings } from "./Offerings/IndividualOfferings";
 export { default as BusinessesOfferings } from "./Offerings/BusinessesOfferings";
+export { default as OfferingHeroSection } from "./Offerings/OfferingHeroSection";
+export { default as OfferingHeroContent } from "./Offerings/OfferingHeroSection/OfferingHeroContent";
+export { default as OfferingHeroImage } from "./Offerings/OfferingHeroSection/OfferingHeroImage";
+export { default as OfferingHeroImageSlider } from "./Offerings/OfferingHeroSection/OfferingHeroImageSlider";
 
 // Offerings -- individual offerings
-export { default as InvHeroSection } from "./InvestmentPage/InvHeroSection";
-export { default as InvHeroContent } from "./InvestmentPage/InvHeroSection/InvHeroContent";
+export { default as OurApproach } from "./InvestmentPage/OurApproach";
+export { default as HowToStartInvesting } from "./InvestmentPage/HowToStartInvesting";
+export { default as StartInvestment } from "./InvestmentPage/StartInvestment";
+
+// offerings -- trade finance
+export { default as Testimony } from "./Offerings/TradeFinancePage/Testimony";
+export { default as TestimonyCard } from "./Offerings/TradeFinancePage/TestimonyCard";
+export { default as WhatWeDo } from "./Offerings/TradeFinancePage/WhatWeDo";
+export { default as WhatWeOffer } from "./Offerings/TradeFinancePage/WhatWeOffer";
+export { default as TradeOurApproach } from "./Offerings/TradeFinancePage/TradeOurApproach";
+export { default as MoveForward } from "./Offerings/TradeFinancePage/MoveForward";
+
+// offerings -- property finance
+export { default as PropertyCarousel } from "./Offerings/PropertyFinancePage/PropertyCarousel";
+export { default as OurOffering } from "./Offerings/PropertyFinancePage/OurOffering";
+export { default as WhatWeCover } from "./Offerings/PropertyFinancePage/WhatWeCover";
+export { default as HowToApply } from "./Offerings/PropertyFinancePage/HowToApply";
+export { default as ReadyToMoveIn } from "./Offerings/PropertyFinancePage/ReadyToMoveIn";
+
+// offerings -- energy finance
+export { default as ReadyToPower } from "./Offerings/EnergyFinancePage/ReadyToPower";
 
 // About
 export { default as AboutHero } from "./AboutUs/AboutHero";
