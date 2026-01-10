@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
+import { Icon } from "@iconify/react";
 
 import { CTitle, GetStartedBtn, ContactSalesBtn } from "@/components";
-import { Icon } from "@iconify/react";
 
 const HowToStartInvesting = () => {
   const getStarted = [
@@ -88,11 +88,11 @@ const HowToStartInvesting = () => {
           {getStarted.map((data, index) => (
             <div
               key={index}
-              data-aos="fade-left"
-              data-aos-delay={300 + index * 100}
               className={`group p-6 border-l-[3px] ${
                 index === 0 && "border-info-250 bg-[#EBF8FF]"
               } transition-all ease-in-out duration-300`}
+              data-aos="fade-left"
+              data-aos-delay={300 + index * 100}
             >
               <div
                 className={`flex items-center gap-2 text-lg font-medium ${

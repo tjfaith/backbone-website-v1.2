@@ -21,7 +21,7 @@ const TestimonyCard = ({ cardPros, className, imageClassName }: Props) => {
         removeWrapper
         className={cn(
           "object-cover object-[60%_50%] w-full h-full",
-          imageClassName
+          imageClassName,
         )}
         src={cardPros.img}
       />
@@ -31,9 +31,9 @@ const TestimonyCard = ({ cardPros, className, imageClassName }: Props) => {
             <Image
               removeWrapper
               alt="tag"
+              className=" h-8 w-8 object-cover"
               radius="full"
               src={cardPros.tag.avatar}
-              className=" h-8 w-8 object-cover"
             />
             <div className="clash-display-font text-xs font-medium leading-6 tracking-[-0.132px]">
               {cardPros.tag.name}

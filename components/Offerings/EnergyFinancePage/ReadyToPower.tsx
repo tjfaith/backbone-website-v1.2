@@ -12,9 +12,9 @@ const ReadyToPower = () => {
           <Image
             removeWrapper
             className="h-[320px] sm:h-[460px] w-full object-cover object-[50%_50%]"
-            src={OfferingImg20.src}
             data-aos="zoom-in"
             data-aos-delay="100"
+            src={OfferingImg20.src}
           />
 
           <div

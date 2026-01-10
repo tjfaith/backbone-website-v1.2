@@ -7,7 +7,7 @@ import { RootState } from "@/app/store";
 import {
   setAccountType,
   setCompletedStep,
-  setCurrentStep,
+  updateCurrentStep,
   setIndividualDocuments,
   setPersonalInformation,
   setStepTitle,
@@ -41,7 +41,7 @@ const IndividualDocument = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(setCurrentStep("step4"));
+    dispatch(updateCurrentStep("step4"));
     dispatch(
       setCompletedStep([
         ...completedSteps.filter((step) => step !== "step3"),
@@ -53,7 +53,7 @@ const IndividualDocument = () => {
 
   useEffect(() => {
     dispatch(setStepTitle("Document verification"));
-    dispatch(setCurrentStep("step3"));
+    dispatch(updateCurrentStep("step3"));
   }, []);
 
   return (

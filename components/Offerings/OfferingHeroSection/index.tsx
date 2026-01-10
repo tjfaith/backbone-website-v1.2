@@ -1,6 +1,7 @@
 "use client";
-import { OfferingHeroContent, OfferingHeroImage } from "@/components";
 import { ReactNode } from "react";
+
+import { OfferingHeroContent, OfferingHeroImage } from "@/components";
 
 interface Props {
   heroData: {

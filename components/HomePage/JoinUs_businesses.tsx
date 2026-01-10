@@ -20,9 +20,9 @@ const JoinUsBusinesses = () => {
       <HerouiImage
         disableAnimation
         disableSkeleton
-        radius="none"
         alt="image 5"
         className=" object-cover md:object-left object-right w-full  h-full "
+        radius="none"
         src={Img5.src}
       />
       <div className="absolute top-auto md:top-8 left-0 md:left-4  p-8 text-background md:bottom-auto bottom-0 z-10 md:bg-transparent bg-white/80 backdrop-blur-md md:backdrop-blur-none animate__animated animate__flipInX">

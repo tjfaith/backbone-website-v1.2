@@ -1,13 +1,7 @@
 import { Image } from "@heroui/image";
 import React from "react";
-import { Icon } from "@iconify/react";
 
-import {
-  OfferingImg1,
-  OfferingImg2,
-  OfferingImg3,
-  WhyBB3,
-} from "@/public/assets";
+import { OfferingImg1, OfferingImg2, OfferingImg3 } from "@/public/assets";
 import { ContactSalesBtn, CTitle, GetStartedBtn } from "@/components";
 
 const WhyBackbone5 = () => {

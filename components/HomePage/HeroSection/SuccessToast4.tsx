@@ -1,6 +1,3 @@
-import { TransactionIcon } from "@/public/assets";
-import { Divider } from "@heroui/divider";
-import { Image } from "@heroui/image";
 import { cn } from "@heroui/theme";
 import { Icon } from "@iconify/react";
 import React from "react";
@@ -13,7 +10,7 @@ const SuccessToast3 = ({ className }: Props) => {
     <div
       className={cn(
         "bg-white border border-foreground-100 flex flex-col items-start p-3 rounded-xl overflow-hidden  w-full max-w-xs",
-        className
+        className,
       )}
     >
       <div className="flex relative items-center justify-between w-full mb-2">
@@ -25,7 +22,7 @@ const SuccessToast3 = ({ className }: Props) => {
             In the past 7 days
           </div>
         </div>
-        <Icon icon="ri:line-chart-line" className="text-[#1FC16B] text-xl" />
+        <Icon className="text-[#1FC16B] text-xl" icon="ri:line-chart-line" />
       </div>
       <div className="space-y-1">
         <div className="text-[#1FC16B] text-[40px] font-medium leading-10 tracking-[-0.4px] clash-display-font">

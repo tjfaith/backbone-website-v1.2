@@ -91,13 +91,13 @@ const DownloadApp = () => {
             disableAnimation
             disableSkeleton
             alt="backboneColoredLogo"
-            src={backboneColoredLogo.src}
             className="
               w-[220px]
               sm:w-[260px]
               lg:w-auto
             "
             data-aos="zoom-in"
+            src={backboneColoredLogo.src}
           />
         </div>
       </div>

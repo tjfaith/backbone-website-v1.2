@@ -1,7 +1,8 @@
-import { Toast5, TransactionIcon } from "@/public/assets";
 import { Image } from "@heroui/image";
 import { cn } from "@heroui/theme";
 import React from "react";
+
+import { Toast5 } from "@/public/assets";
 
 interface Props {
   className?: string;

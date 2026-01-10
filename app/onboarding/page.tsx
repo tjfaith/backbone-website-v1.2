@@ -7,7 +7,7 @@ import { useIsSSR } from "@react-aria/ssr";
 import {
   setAccountType,
   setCompletedStep,
-  setCurrentStep,
+  updateCurrentStep,
   setIndividualDocuments,
   setPersonalInformation,
 } from "@/app/store/Features/onboardingSlice";
@@ -50,7 +50,7 @@ const Onboarding = () => {
   };
 
   const handleResetForm = () => {
-    dispatch(setCurrentStep("step1"));
+    dispatch(updateCurrentStep("step1"));
     dispatch(setCompletedStep([]));
     restAllForms();
   };

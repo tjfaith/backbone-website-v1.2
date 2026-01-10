@@ -115,7 +115,7 @@ const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
         className: clsx(
           "group inline-flex items-center cursor-pointer",
           className,
-          classNames?.base
+          classNames?.base,
         ),
       })}
     >
@@ -134,26 +134,26 @@ const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
               "bg-default-200 dark:bg-default-100",
               "transition-colors duration-300",
             ],
-            classNames?.wrapper
+            classNames?.wrapper,
           ),
         })}
       >
         {/* Sun Icon */}
         <Icon
-          icon="ri:sun-fill"
           className={clsx(
             "absolute left-2 text-xs transition-opacity duration-300",
-            isSelected ? "opacity-0" : "opacity-100 text-warning"
+            isSelected ? "opacity-0" : "opacity-100 text-warning",
           )}
+          icon="ri:sun-fill"
         />
 
         {/* Moon Icon */}
         <Icon
-          icon="ri:moon-fill"
           className={clsx(
             "absolute right-2 text-xs transition-opacity duration-300",
-            isSelected ? "opacity-100 text-primary" : "opacity-0"
+            isSelected ? "opacity-100 text-primary" : "opacity-0",
           )}
+          icon="ri:moon-fill"
         />
 
         {/* Sliding Knob */}
@@ -164,7 +164,7 @@ const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
             "bg-white dark:bg-black",
             "shadow-md",
             "transition-transform duration-300 ease-out",
-            isSelected ? "translate-x-6" : "translate-x-0"
+            isSelected ? "translate-x-6" : "translate-x-0",
           )}
         />
       </div>

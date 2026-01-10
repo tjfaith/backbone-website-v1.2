@@ -9,7 +9,7 @@ import {
   setAccountType,
   setCompletedStep,
   setCorporateDocuments,
-  setCurrentStep,
+  updateCurrentStep,
   setCompanyInformation,
   setStepTitle,
 } from "@/app/store/Features/onboardingSlice";
@@ -41,7 +41,7 @@ const CorporateDocument = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(setCurrentStep("step4"));
+    dispatch(updateCurrentStep("step4"));
     dispatch(
       setCompletedStep([
         ...completedSteps.filter((step) => step !== "step3"),
@@ -53,7 +53,7 @@ const CorporateDocument = () => {
 
   useEffect(() => {
     dispatch(setStepTitle("Document verification"));
-    dispatch(setCurrentStep("step3"));
+    dispatch(updateCurrentStep("step3"));
   }, []);
 
   return (

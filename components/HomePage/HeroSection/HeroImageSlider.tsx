@@ -46,14 +46,14 @@ const HeroImageSlider = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
+          className="absolute inset-0"
           exit={{ opacity: 0, scale: 1.02 }}
+          initial={{ opacity: 0, scale: 1.04 }}
           transition={{
             duration: 1.4,
             ease: "easeInOut",
           }}
-          className="absolute inset-0"
         >
           <Image
             removeWrapper

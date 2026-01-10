@@ -20,7 +20,7 @@ const Dot = ({ timing = 0.75, className, innerClassName }: DotProps) => {
           animate={{ scale: 2.2, opacity: 0 }}
           className={cn(
             "absolute rounded-full border-4 border-white",
-            className
+            className,
           )}
           initial={{ scale: 0, opacity: 1 }}
           style={{

@@ -109,10 +109,15 @@ const Testimony = () => {
         {cardPros.map((data, index) => (
           <motion.div
             key={index}
+            className="
+              w-full flex justify-center
+              sm:w-auto
+            "
             data-aos="fade-up"
             data-aos-delay={index * 120}
             data-aos-duration="700"
             initial={false}
+            transition={{ type: "spring", stiffness: 260, damping: 18 }}
             whileHover={{
               y:
                 typeof window !== "undefined" && window.innerWidth < 640
@@ -123,21 +128,16 @@ const Testimony = () => {
                   ? 1.03
                   : 1,
             }}
-            transition={{ type: "spring", stiffness: 260, damping: 18 }}
-            className="
-              w-full flex justify-center
-              sm:w-auto
-            "
           >
             <TestimonyCard
-              imageClassName={`${index === 0 && "object-[50%_50%]"}`}
+              cardPros={data}
               className={`
                 ${(index < 1 || index > 1) && "h-[382px]"}
                 ${index === 0 && "sm:-mr-9"}
                 ${index === 2 && "sm:-ml-8 sm:z-10"}
                 ${index === 1 && "sm:z-20"}
               `}
-              cardPros={data}
+              imageClassName={`${index === 0 && "object-[50%_50%]"}`}
             />
           </motion.div>
         ))}

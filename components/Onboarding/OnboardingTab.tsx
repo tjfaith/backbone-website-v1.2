@@ -6,7 +6,7 @@ import { Button } from "@heroui/button";
 import { ActiveTab } from "@/components";
 import { OnboardingStep } from "@/types";
 import { RootState } from "@/app/store";
-import { setCurrentStep } from "@/app/store/Features/onboardingSlice";
+import { updateCurrentStep } from "@/app/store/Features/onboardingSlice";
 
 const OnboardingTab = () => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const OnboardingTab = () => {
     const prevStep = ("step" +
       String(Number(currentStep.at(-1)) - 1)) as OnboardingStep;
 
-    dispatch(setCurrentStep(prevStep));
+    dispatch(updateCurrentStep(prevStep));
   };
 
   return (

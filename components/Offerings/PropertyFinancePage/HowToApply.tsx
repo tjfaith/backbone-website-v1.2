@@ -39,9 +39,9 @@ const HowToApply = () => {
         <div data-aos="fade-up">
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
+            data-aos="fade-up"
             iconType="flashlight"
             title="How to apply"
-            data-aos="fade-up"
           />
 
           <div

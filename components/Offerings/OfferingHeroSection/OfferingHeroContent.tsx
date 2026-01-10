@@ -1,7 +1,8 @@
 "use client";
-import { ContactSalesBtn, GetStartedBtn } from "@/components";
 import { Icon } from "@iconify/react";
 import { ReactNode } from "react";
+
+import { ContactSalesBtn, GetStartedBtn } from "@/components";
 
 interface Props {
   content: {
@@ -84,7 +85,7 @@ const OfferingHeroContent = ({ content }: Props) => {
               <Icon icon="ri:check-double-fill" />
               <span>{bullet}</span>
             </div>
-          )
+          ),
         )}
       </div>
     </div>

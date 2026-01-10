@@ -7,7 +7,7 @@ import { CustomButton, CustomCheckbox } from "@/components";
 import {
   setAccountType,
   setCompletedStep,
-  setCurrentStep,
+  updateCurrentStep,
   setStepTitle,
 } from "@/app/store/Features/onboardingSlice";
 import { RootState } from "@/app/store";
@@ -20,7 +20,7 @@ const AccountType = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(setCurrentStep("step2"));
+    dispatch(updateCurrentStep("step2"));
     dispatch(
       setCompletedStep([
         ...completedSteps.filter((step) => step !== "step1"),
@@ -31,7 +31,7 @@ const AccountType = () => {
 
   useEffect(() => {
     dispatch(setStepTitle("Account type"));
-    dispatch(setCurrentStep("step1"));
+    dispatch(updateCurrentStep("step1"));
   }, []);
 
   return (

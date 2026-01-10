@@ -32,9 +32,6 @@ const Investments = () => {
       toastCards: (
         <>
           <SuccessToast4
-            data-aos="fade-left"
-            data-aos-delay="100"
-            data-aos-duration="700"
             className="
             absolute z-20
             -top-7 left-4
@@ -42,12 +39,12 @@ const Investments = () => {
             sm:-top-9 sm:left-6 sm:scale-90
             lg:-top-10 lg:left-2 lg:scale-100
           "
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="700"
           />
 
           <SuccessToast5
-            data-aos="fade-right"
-            data-aos-delay="250"
-            data-aos-duration="700"
             className="
             absolute z-20
             -bottom-4 right-4
@@ -55,6 +52,9 @@ const Investments = () => {
             sm:-bottom-6 sm:right-6 sm:scale-90
             lg:-bottom-6 lg:-right-12
           "
+            data-aos="fade-right"
+            data-aos-delay="250"
+            data-aos-duration="700"
           />
         </>
       ),

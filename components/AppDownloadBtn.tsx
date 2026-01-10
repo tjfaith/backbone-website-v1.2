@@ -1,9 +1,9 @@
 import { Button } from "@heroui/button";
 import Image from "next/image";
 import React from "react";
+import { Link } from "@heroui/link";
 
 import { androidLogo, IosLogo } from "@/public/assets";
-import { Link } from "@heroui/link";
 // import {IosLogo, AndroidLogo}
 
 interface props {
@@ -12,10 +12,10 @@ interface props {
 const AppDownloadBtn = ({ btnType }: props) => {
   return (
     <Button
-      className="bg-background-200 dark:bg-primary text-[#0E121B]"
-      radius="full"
       as={Link}
+      className="bg-background-200 dark:bg-primary text-[#0E121B]"
       href={`${process.env.NEXT_PUBLIC_APP_URL}/welcome`}
+      radius="full"
     >
       <>
         {btnType === "ios" && (

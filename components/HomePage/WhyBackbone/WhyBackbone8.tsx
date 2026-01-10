@@ -60,9 +60,9 @@ const WhyBackbone8 = () => {
             rounded-3xl
             object-cover
           "
-          src={OfferingImg19.src}
           data-aos="fade-up"
           data-aos-delay="100"
+          src={OfferingImg19.src}
         />
 
         {/* TEXT CONTENT */}
@@ -81,10 +81,10 @@ const WhyBackbone8 = () => {
         >
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
-            iconType="flashlight"
-            title="Why Backbone?"
             data-aos="fade-up"
             data-aos-delay="200"
+            iconType="flashlight"
+            title="Why Backbone?"
           />
 
           <div

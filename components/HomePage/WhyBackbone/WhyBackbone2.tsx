@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import {
   CTitle,
   GetStartedBtn,
@@ -18,9 +17,9 @@ const WhyBackbone2 = () => {
         <div className="flex flex-col items-center mb-20" data-aos="fade-up">
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
+            data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
-            data-aos="fade-up"
           />
 
           <div

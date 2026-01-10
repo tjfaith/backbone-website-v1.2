@@ -118,8 +118,9 @@ import React from "react";
 import { Image } from "@heroui/image";
 import { Skeleton } from "@heroui/skeleton";
 
-import { halfLogoBlack, transactionCrab } from "@/public/assets";
 import ShieldNetworkPattern from "./ShieldNetworkPattern";
+
+import { halfLogoBlack } from "@/public/assets";
 
 const SecureTransactionsCard = () => {
   return (
@@ -151,8 +152,8 @@ const SecureTransactionsCard = () => {
             data-aos-delay="200"
           >
             <Icon
-              icon="material-symbols:account-circle"
               className="text-2xl sm:text-[28px]"
+              icon="material-symbols:account-circle"
             />
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">

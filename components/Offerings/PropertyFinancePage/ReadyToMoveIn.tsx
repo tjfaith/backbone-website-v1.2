@@ -20,8 +20,8 @@ const ReadyToMoveIn = () => {
             object-cover
             object-[50%_50%]
           "
-            src={OfferingImg17.src}
             data-aos="fade-up"
+            src={OfferingImg17.src}
           />
 
           {/* CONTENT */}

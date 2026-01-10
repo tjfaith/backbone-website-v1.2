@@ -1,6 +1,4 @@
-import { TransactionIcon } from "@/public/assets";
 import { Divider } from "@heroui/divider";
-import { Image } from "@heroui/image";
 import { cn } from "@heroui/theme";
 import { Icon } from "@iconify/react";
 import React from "react";
@@ -13,7 +11,7 @@ const SuccessToast3 = ({ className }: Props) => {
     <div
       className={cn(
         "bg-white border border-foreground-100 rounded-xl flex flex-col items-start  w-full max-w-xs",
-        className
+        className,
       )}
     >
       <div className="flex items-center gap-1 p-3 rounded-t-xl w-full">

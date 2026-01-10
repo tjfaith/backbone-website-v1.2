@@ -14,12 +14,7 @@ import { Button } from "@heroui/button";
 
 import useNavbar from "./useNavbar";
 
-import {
-  BackboneLogo,
-  GetStartedBtn,
-  GlobalPopover,
-  ThemeSwitch,
-} from "@/components";
+import { BackboneLogo, GetStartedBtn, GlobalPopover } from "@/components";
 import { OurOfferingsMenu } from "@/components";
 
 const Navbar = () => {

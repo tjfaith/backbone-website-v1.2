@@ -20,8 +20,8 @@ const StartInvestment = () => {
             object-cover
             object-[50%_28%]
           "
-            src={Inv.src}
             data-aos="fade-up"
+            src={Inv.src}
           />
 
           {/* CONTENT */}
