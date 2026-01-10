@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
   },
   "dependencies": {
+    "@heroui/accordion": "^2.2.26",
     "@heroui/autocomplete": "^2.3.11",
     "@heroui/avatar": "^2.2.7",
     "@heroui/badge": "^2.2.14",
@@ -53,7 +54,7 @@
     "embla-carousel": "^8.5.2",
     "embla-carousel-auto-scroll": "^8.5.2",
     "embla-carousel-autoplay": "^8.5.2",
-    "embla-carousel-react": "^8.5.2",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "11.13.1",
     "html-react-parser": "^5.2.6",
     "intl-messageformat": "^10.5.0",

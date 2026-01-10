@@ -16,6 +16,8 @@ export { default as Img5 } from "./img/img5.png";
 export { default as Img6 } from "./img/img6.png";
 export { default as WhyBB1 } from "./img/whyBB1.png";
 export { default as WhyBB2 } from "./img/whyBB2.jpg";
+export { default as WhyBB3 } from "./img/whyBB3.png";
+export { default as OurApp } from "./img/ourApproach.png";
 export { default as LockImg } from "./img/lock.png";
 export { default as Rates } from "./img/rates.png";
 export { default as Innovation } from "./img/innovation.png";
@@ -35,6 +37,15 @@ export { default as transactionCrab } from "./img/transactionCrab.svg";
 export { default as backboneColoredLogo } from "./img/backboneColoredLogo.svg";
 export { default as VolumeBg } from "./img/volumeBg.jpg";
 export { default as VolumeBg2 } from "./img/volumeBg.svg";
+export { default as Inv } from "./img/inv.png";
+
+// toast
+export { default as Toast5 } from "./img/toast/toast5.svg";
+export { default as Toast6 } from "./img/toast/toast6.svg";
+export { default as Toast7 } from "./img/toast/toast7.svg";
+export { default as Toast8 } from "./img/toast/toast8.svg";
+export { default as Toast9 } from "./img/toast/toast9.svg";
+export { default as Toast10 } from "./img/toast/toast10.svg";
 
 // hero
 export { default as Earth } from "./img/hero/earth.png";
@@ -46,9 +57,34 @@ export { default as Hero3 } from "./img/hero/hero3.png";
 export { default as Hero4 } from "./img/hero/hero4.png";
 export { default as Hero5 } from "./img/hero/hero5.png";
 export { default as Hero6 } from "./img/hero/hero6.png";
+export { default as Hero7 } from "./img/hero/hero7.jpg";
+export { default as Hero8 } from "./img/hero/hero8.jpg";
+export { default as Hero9 } from "./img/hero/hero9.png";
 export { default as Pattern } from "./img/hero/pattern.svg";
 export { default as Pattern2 } from "./img/hero/pattern2.svg";
 export { default as Pattern3 } from "./img/hero/pattern3.svg";
+
+// offerings
+export { default as OfferingImg1 } from "./img/offerings/img1.png";
+export { default as OfferingImg2 } from "./img/offerings/img2.jpg";
+export { default as OfferingImg3 } from "./img/offerings/img3.jpg";
+export { default as OfferingImg4 } from "./img/offerings/img4.png";
+export { default as OfferingImg5 } from "./img/offerings/img5.png";
+export { default as OfferingImg6 } from "./img/offerings/img6.png";
+export { default as OfferingImg7 } from "./img/offerings/img7.png";
+export { default as OfferingImg8 } from "./img/offerings/img8.png";
+export { default as OfferingImg9 } from "./img/offerings/img9.svg";
+export { default as OfferingImg10 } from "./img/offerings/img10.jpg";
+export { default as OfferingImg11 } from "./img/offerings/img11.png";
+export { default as OfferingImg12 } from "./img/offerings/img12.png";
+export { default as OfferingImg13 } from "./img/offerings/img13.png";
+export { default as OfferingImg14 } from "./img/offerings/img14.png";
+export { default as OfferingImg15 } from "./img/offerings/img15.png";
+export { default as OfferingImg16 } from "./img/offerings/img16.png";
+export { default as OfferingImg17 } from "./img/offerings/img17.png";
+export { default as OfferingImg18 } from "./img/offerings/img18.png";
+export { default as OfferingImg19 } from "./img/offerings/img19.png";
+export { default as OfferingImg20 } from "./img/offerings/img20.png";
 
 // globalReach
 export { default as User1 } from "./img/globalReach/user1.png";

@@ -10,12 +10,12 @@ import {
 } from "@heroui/modal";
 import { Divider } from "@heroui/divider";
 import { Image } from "@heroui/image";
+import { useDispatch, useSelector } from "react-redux";
+import { Icon } from "@iconify/react";
 
 import { VolumeBg2 } from "@/public/assets";
-import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/store";
 import { setShowAnnouncement } from "@/app/store/Features/settingsSlice";
-import { Icon } from "@iconify/react";
 
 interface TimelineItemProps {
   date: string;

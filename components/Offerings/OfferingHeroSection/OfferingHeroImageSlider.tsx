@@ -4,22 +4,19 @@ import { Image } from "@heroui/image";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { Hero1, Hero2, Hero3, Hero4, Hero5, Hero6 } from "@/public/assets";
+import { Hero6 } from "@/public/assets";
 import { DrawPattern } from "@/components";
 
-const images = [
-  Hero1.src,
-  Hero2.src,
-  Hero3.src,
-  Hero4.src,
-  Hero5.src,
-  Hero6.src,
-];
+// const images = [Hero6.src];
 
 const IMAGE_DURATION = 16; // seconds per image
 const DRAW_DELAY = 1.2; // when pattern starts after image settles
 
-const HeroImageSlider = () => {
+interface Props {
+  images: string[];
+}
+
+const OfferingHeroImageSlider = ({ images }: Props) => {
   const [index, setIndex] = useState(0);
   const [showPattern, setShowPattern] = useState(false);
 
@@ -73,4 +70,4 @@ const HeroImageSlider = () => {
   );
 };
 
-export default HeroImageSlider;
+export default OfferingHeroImageSlider;
