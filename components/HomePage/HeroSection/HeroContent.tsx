@@ -184,13 +184,13 @@ const HeroContent = () => {
           <b>
             $
             {Number(
-              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
             ).toLocaleString()}
           </b>
           <span className="opacity-80"> in transactions in 2025</span>
 
           {/* Read more */}
-          <div
+          {/* <div
             className="
         text-xs
         font-medium
@@ -209,7 +209,7 @@ const HeroContent = () => {
               className="text-sm transition-transform group-hover:translate-x-0.5"
               icon="solar:arrow-right-linear"
             />
-          </div>
+          </div> */}
         </div>
       </button>
 
