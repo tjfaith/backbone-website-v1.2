@@ -1,8 +1,9 @@
-import { WorldMap } from "@/public/assets";
 import { Image } from "@heroui/image";
 import React from "react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+
+import { WorldMap } from "@/public/assets";
 
 const GlobalReachCard = () => {
   return (
@@ -48,22 +49,22 @@ const GlobalReachCard = () => {
             filter: "blur(12px)",
             scale: 1.02,
           }}
+          transition={{
+            duration: 1.8,
+            ease: "easeOut",
+          }}
+          viewport={{ once: true }}
           whileInView={{
             opacity: 1,
             filter: "blur(0px)",
             scale: 1,
           }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.8,
-            ease: "easeOut",
-          }}
         >
           <Image
-            src={WorldMap.src}
             disableAnimation
             disableSkeleton
             className="mb-2"
+            src={WorldMap.src}
           />
         </motion.div>
       </div>

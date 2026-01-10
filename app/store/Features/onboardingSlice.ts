@@ -39,7 +39,7 @@ const onboardingSlice = createSlice({
     setCompletedStep: (state, action: PayloadAction<OnboardingStep[]>) => {
       state.completedSteps = action.payload;
     },
-    setCurrentStep: (state, action: PayloadAction<OnboardingStep>) => {
+    updateCurrentStep: (state, action: PayloadAction<OnboardingStep>) => {
       state.currentStep = action.payload;
     },
     setStepTitle: (state, action: PayloadAction<string>) => {
@@ -77,7 +77,7 @@ const onboardingSlice = createSlice({
 
 export const {
   setCompletedStep,
-  setCurrentStep,
+  updateCurrentStep,
   setStepTitle,
   setAccountType,
   setPersonalInformation,

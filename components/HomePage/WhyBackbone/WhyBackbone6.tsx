@@ -1,8 +1,6 @@
-import { Image } from "@heroui/image";
 import React from "react";
 import { Icon } from "@iconify/react";
 
-import { WhyBB3 } from "@/public/assets";
 import {
   ContactSalesBtn,
   CTitle,
@@ -39,9 +37,9 @@ const WhyBackbone6 = () => {
         >
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
+            data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
-            data-aos="fade-up"
           />
 
           <div

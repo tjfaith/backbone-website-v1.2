@@ -4,7 +4,6 @@ import { Image } from "@heroui/image";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-import { Hero6 } from "@/public/assets";
 import { DrawPattern } from "@/components";
 
 // const images = [Hero6.src];
@@ -43,14 +42,14 @@ const OfferingHeroImageSlider = ({ images }: Props) => {
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
+          className="absolute inset-0"
           exit={{ opacity: 0, scale: 1.02 }}
+          initial={{ opacity: 0, scale: 1.04 }}
           transition={{
             duration: 1.4,
             ease: "easeInOut",
           }}
-          className="absolute inset-0"
         >
           <Image
             removeWrapper

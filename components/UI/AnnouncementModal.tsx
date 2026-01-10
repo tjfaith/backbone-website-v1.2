@@ -15,7 +15,7 @@ import { Icon } from "@iconify/react";
 
 import { VolumeBg2 } from "@/public/assets";
 import { RootState } from "@/app/store";
-import { setShowAnnouncement } from "@/app/store/Features/settingsSlice";
+import { updateShowAnnouncement } from "@/app/store/Features/settingsSlice";
 
 interface TimelineItemProps {
   date: string;
@@ -59,7 +59,7 @@ const AnnouncementModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const { showAnnouncement } = useSelector(
-    (state: RootState) => state.settings
+    (state: RootState) => state.settings,
   );
   const dispatch = useDispatch();
 
@@ -68,7 +68,7 @@ const AnnouncementModal = () => {
     const hasSeen = localStorage.getItem(STORAGE_KEY);
 
     if (!hasSeen) {
-      dispatch(setShowAnnouncement(true));
+      dispatch(updateShowAnnouncement(true));
     }
 
     // Redux controls visibility in real-time
@@ -80,7 +80,7 @@ const AnnouncementModal = () => {
 
     if (!open) {
       localStorage.setItem(STORAGE_KEY, "true");
-      dispatch(setShowAnnouncement(false));
+      dispatch(updateShowAnnouncement(false));
     }
   };
 

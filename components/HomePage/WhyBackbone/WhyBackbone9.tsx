@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { CTitle, GetStartedBtn, ContactSalesBtn } from "@/components";
 import { Icon } from "@iconify/react";
+
+import { CTitle, GetStartedBtn, ContactSalesBtn } from "@/components";
 
 const WhyBackbone9 = () => {
   const ourOfferings = [
@@ -43,10 +44,10 @@ const WhyBackbone9 = () => {
         >
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
-            iconType="flashlight"
-            title="Why Backbone?"
             data-aos="fade-up"
             data-aos-delay="100"
+            iconType="flashlight"
+            title="Why Backbone?"
           />
 
           <div
@@ -125,24 +126,24 @@ const WhyBackbone9 = () => {
               <div className="w-10 h-10 relative mb-6 sm:mb-10 flex items-center justify-center bg-[#F8FAFB]">
                 {/* Decorative corners */}
                 <Icon
-                  icon="clarity:angle-line"
                   className="absolute top-0 right-0 rotate-45 text-info-250"
+                  icon="clarity:angle-line"
                 />
                 <Icon
-                  icon="clarity:angle-line"
                   className="absolute top-0 left-0 -rotate-45 scale-x-[-1] text-info-250"
+                  icon="clarity:angle-line"
                 />
                 <Icon
-                  icon="clarity:angle-line"
                   className="absolute bottom-0 left-0 rotate-45 scale-y-[-1] text-info-250"
+                  icon="clarity:angle-line"
                 />
                 <Icon
-                  icon="clarity:angle-line"
                   className="absolute bottom-0 right-0 -rotate-45 scale-x-[-1] scale-y-[-1] text-info-250"
+                  icon="clarity:angle-line"
                 />
 
                 {/* Center icon */}
-                <Icon icon={data.icon} className="text-primary" />
+                <Icon className="text-primary" icon={data.icon} />
               </div>
 
               <div className="text-base text-black font-medium leading-6 tracking-[-0.176px] mb-3">

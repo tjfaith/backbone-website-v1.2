@@ -38,6 +38,7 @@ const WhyBackbone3 = () => {
           <Image
             disableAnimation
             disableSkeleton
+            alt="why backbone meeting"
             className="
               rounded-3xl
               w-full
@@ -46,10 +47,9 @@ const WhyBackbone3 = () => {
               sm:h-[260px]
               lg:h-auto
             "
-            alt="why backbone meeting"
-            src={Meeting.src}
             data-aos="zoom-in"
             data-aos-delay="100"
+            src={Meeting.src}
           />
 
           <div
@@ -88,9 +88,9 @@ const WhyBackbone3 = () => {
         >
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
+            data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
-            data-aos="fade-up"
           />
 
           <div

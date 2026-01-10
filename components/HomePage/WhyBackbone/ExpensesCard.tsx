@@ -1,7 +1,8 @@
-import { colorLogo } from "@/public/assets";
 import { Image } from "@heroui/image";
 import { cn } from "@heroui/theme";
 import React from "react";
+
+import { colorLogo } from "@/public/assets";
 
 interface Props {
   className?: string;
@@ -11,16 +12,16 @@ const ExpensesCard = ({ className }: Props) => {
     <div
       className={cn(
         " p-4 rounded-xl bg-white shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_var(--neutral-200,#E1E4EA)] max-w-2xl",
-        className
+        className,
       )}
     >
       <Image
-        src={colorLogo.src}
-        className=" mb-1"
-        radius="none"
         disableAnimation
         disableSkeleton
         alt="color logo"
+        className=" mb-1"
+        radius="none"
+        src={colorLogo.src}
       />
       <div className=" flex justify-between gap-8">
         <div>

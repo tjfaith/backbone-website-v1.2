@@ -65,8 +65,6 @@ const BlogExtract = ({
           <div className="mt-6">
             <Button
               as={Link}
-              href="/blog"
-              variant="light"
               className="
                 text-base
                 bg-background-200
@@ -77,6 +75,8 @@ const BlogExtract = ({
                 w-full
                 sm:w-auto
               "
+              href="/blog"
+              variant="light"
             >
               {btnText}
             </Button>
@@ -105,7 +105,6 @@ const BlogExtract = ({
                   >
                     <Image
                       alt="blog image"
-                      src={blog.featuredImage}
                       className="
                         object-cover
                         w-full
@@ -116,13 +115,14 @@ const BlogExtract = ({
                         mb-4
                         rounded-3xl
                       "
+                      src={blog.featuredImage}
                     />
 
                     <div className="flex flex-col justify-between h-full">
                       <div className="mb-5">
                         <div className="mb-2 uppercase text-primary-400 font-medium text-sm leading-5 tracking-[0.84px]">
                           {categories?.find(
-                            (cat: { _id: string }) => cat._id === blog.category
+                            (cat: { _id: string }) => cat._id === blog.category,
                           )?.name ?? "—"}
                         </div>
 
@@ -137,7 +137,7 @@ const BlogExtract = ({
                             ? parse(
                                 blog?.content.length > 100
                                   ? blog?.content.slice(0, 100) + "..."
-                                  : blog?.content
+                                  : blog?.content,
                               )
                             : null}
                         </div>
@@ -148,15 +148,15 @@ const BlogExtract = ({
                         onClick={() =>
                           viewBlog(
                             `/${blog._id}?title=${encodeURIComponent(
-                              blog.title
-                            )}&id=${blog._id}`
+                              blog.title,
+                            )}&id=${blog._id}`,
                           )
                         }
                       >
                         <span>Read article</span>
                         <Icon
-                          icon="ri:arrow-right-s-line"
                           className="text-lg font-bold"
+                          icon="ri:arrow-right-s-line"
                         />
                       </button>
                     </div>

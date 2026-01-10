@@ -102,7 +102,6 @@
 "use client";
 import { Image } from "@heroui/image";
 import { Spacer } from "@heroui/spacer";
-import { Tooltip } from "@heroui/tooltip";
 import { Icon } from "@iconify/react";
 import React from "react";
 
@@ -129,7 +128,7 @@ const RatesCard = () => {
               <Icon className="text-xl" icon="ri:building-2-fill" />
             </div>
           </div>
-          <Spacer y={20} className="lg:!h-[28px]" />
+          <Spacer className="lg:!h-[28px]" y={20} />
         </div>
 
         {/* CENTER (TOOLTIP) */}
@@ -173,7 +172,7 @@ const RatesCard = () => {
                 />
               </div>
             </div>
-            <Spacer y={36} className="lg:!h-[52px]" />
+            <Spacer className="lg:!h-[52px]" y={36} />
           </div>
         </div>
 
@@ -184,7 +183,7 @@ const RatesCard = () => {
               <Icon className="text-xl" icon="ri:building-2-fill" />
             </div>
           </div>
-          <Spacer y={20} className="lg:!h-[28px]" />
+          <Spacer className="lg:!h-[28px]" y={20} />
         </div>
       </div>
 

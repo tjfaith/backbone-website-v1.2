@@ -13,7 +13,7 @@ const ContactSalesBtn = ({ className, label = "Contact Sales" }: Props) => {
       as={Link}
       className={cn(
         "text-primary-500  bg-background-200 !px-6 !py-3 text-sm font-medium rounded-[10px]",
-        className
+        className,
       )}
       href="/contact-us"
       size="md"

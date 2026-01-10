@@ -4,7 +4,7 @@ import React from "react";
 import { Image } from "@heroui/image";
 
 import { CTitle, GetStartedBtn, ContactSalesBtn } from "@/components";
-import { OfferingImg10, OurApp } from "@/public/assets";
+import { OfferingImg10 } from "@/public/assets";
 
 const TradeOurApproach = () => {
   return (
@@ -73,8 +73,8 @@ const TradeOurApproach = () => {
           >
             <GetStartedBtn className="text-base w-full sm:w-auto" />
             <ContactSalesBtn
-              label="Speak to our team"
               className="w-full sm:w-auto"
+              label="Speak to our team"
             />
           </div>
         </div>
@@ -88,9 +88,9 @@ const TradeOurApproach = () => {
           <Image
             removeWrapper
             className="h-[32vh] sm:h-[40.6vh] w-full object-cover object-[50%_60%]"
-            src={OfferingImg10.src}
             data-aos="zoom-in"
             data-aos-delay="300"
+            src={OfferingImg10.src}
           />
 
           <div

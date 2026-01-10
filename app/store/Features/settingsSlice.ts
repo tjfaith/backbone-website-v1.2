@@ -23,12 +23,12 @@ const settingsSlice = createSlice({
     setCurrentHero: (state, action: PayloadAction<number>) => {
       state.currentHero = action.payload;
     },
-    setShowAnnouncement: (state, action: PayloadAction<boolean>) => {
+    updateShowAnnouncement: (state, action: PayloadAction<boolean>) => {
       state.showAnnouncement = action.payload;
     },
   },
 });
 
-export const { setShowLightNav, setCurrentHero, setShowAnnouncement } =
+export const { setShowLightNav, setCurrentHero, updateShowAnnouncement } =
   settingsSlice.actions;
 export default settingsSlice.reducer;

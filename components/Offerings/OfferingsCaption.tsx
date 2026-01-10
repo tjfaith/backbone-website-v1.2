@@ -66,7 +66,7 @@ const OfferingsCaption = ({
           <b>
             $
             {Number(
-              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
             ).toLocaleString()}
           </b>
           <span className="">

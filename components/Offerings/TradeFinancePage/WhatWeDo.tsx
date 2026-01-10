@@ -71,8 +71,8 @@ const WhatWeDo = () => {
           >
             <GetStartedBtn className="text-base w-full sm:w-auto" />
             <ContactSalesBtn
-              label="Speak to our team"
               className="w-full sm:w-auto"
+              label="Speak to our team"
             />
           </div>
         </div>

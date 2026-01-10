@@ -9,7 +9,7 @@ import { Select, SelectItem } from "@heroui/select";
 import { CompanyInformationProps, CompanyType } from "@/types";
 import {
   setCompletedStep,
-  setCurrentStep,
+  updateCurrentStep,
   setCompanyInformation,
   setStepTitle,
 } from "@/app/store/Features/onboardingSlice";
@@ -49,7 +49,7 @@ const CompanyInformation = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(setCurrentStep("step3"));
+    dispatch(updateCurrentStep("step3"));
     dispatch(
       setCompletedStep([
         ...completedSteps.filter((step) => step !== "step2"),
@@ -60,7 +60,7 @@ const CompanyInformation = () => {
 
   useEffect(() => {
     dispatch(setStepTitle("Company Information"));
-    dispatch(setCurrentStep("step2"));
+    dispatch(updateCurrentStep("step2"));
   }, []);
 
   return (

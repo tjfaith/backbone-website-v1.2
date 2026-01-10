@@ -4,7 +4,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 
 import { ContactSalesBtn, GetStartedBtn } from "@/components";
-import { setShowAnnouncement } from "@/app/store/Features/settingsSlice";
+import { updateShowAnnouncement } from "@/app/store/Features/settingsSlice";
 
 const HeroContent = () => {
   const dispatch = useDispatch();
@@ -70,7 +70,7 @@ const HeroContent = () => {
       {/* <button
         onClick={() => {
           localStorage.removeItem("announcement_seen_v1");
-          dispatch(setShowAnnouncement(true));
+          dispatch(updateShowAnnouncement(true));
         }}
         className="animate__delay-2s animate__animated animate__fadeInUp animate__fast md:bg-background-100 md:shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)]  dark:text-white  md:text-primary rounded-full p-3 inline-flex md:flex-row flex-col items-center justify-center md:justify-start gap-3 mb-4"
       >
@@ -150,7 +150,7 @@ const HeroContent = () => {
   "
         onClick={() => {
           localStorage.removeItem("announcement_seen_v1");
-          dispatch(setShowAnnouncement(true));
+          dispatch(updateShowAnnouncement(true));
         }}
       >
         <AvatarGroup size="sm" total={170}>
@@ -184,7 +184,7 @@ const HeroContent = () => {
           <b>
             $
             {Number(
-              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string
+              process.env.NEXT_PUBLIC_TOTAL_PROCESSED as string,
             ).toLocaleString()}
           </b>
           <span className="opacity-80"> in transactions in 2025</span>

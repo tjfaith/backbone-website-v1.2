@@ -1,5 +1,3 @@
-import { TransactionIcon } from "@/public/assets";
-import { Image } from "@heroui/image";
 import { cn } from "@heroui/theme";
 import { Icon } from "@iconify/react";
 import React from "react";
@@ -16,7 +14,7 @@ const SuccessToast2 = ({
     <div
       className={cn(
         "bg-[#E0F5FF] text-[#50BFF6] h-auto py-2 pl-3 pr-4 rounded-[40px] inline-flex items-center gap-2 ",
-        className
+        className,
       )}
     >
       <Icon icon="ep:circle-check-filled" />

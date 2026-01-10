@@ -48,10 +48,10 @@ const ProcessTransactionCard = () => {
               disableSkeleton
               alt="color logo2"
               className=" mb-1"
-              radius="none"
-              src={colorLogo2.src}
               data-aos="fade-left"
               data-aos-delay="250"
+              radius="none"
+              src={colorLogo2.src}
             />
           </div>
 

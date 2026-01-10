@@ -1,9 +1,10 @@
 "use client";
-import { backboneColoredLogo } from "@/public/assets";
 import { Image } from "@heroui/image";
 import { Icon } from "@iconify/react";
 import React from "react";
 import { Accordion, AccordionItem } from "@heroui/accordion";
+
+import { backboneColoredLogo } from "@/public/assets";
 
 interface Props {
   faqData: Record<string, string>[];
@@ -52,12 +53,12 @@ const Faq = ({ faqData }: Props) => {
               disableAnimation
               disableSkeleton
               alt="backboneColoredLogo"
-              src={backboneColoredLogo.src}
               className="
                 w-[220px]
                 sm:w-[280px]
                 lg:w-[363px]
               "
+              src={backboneColoredLogo.src}
             />
           </div>
         </div>
@@ -67,9 +68,9 @@ const Faq = ({ faqData }: Props) => {
           <Accordion
             showDivider
             className="px-0"
-            selectionMode="multiple"
             data-aos="fade-up"
             data-aos-anchor-placement="center-bottom"
+            selectionMode="multiple"
           >
             {faqData.map((question, index) => (
               <AccordionItem
@@ -82,6 +83,8 @@ const Faq = ({ faqData }: Props) => {
                   content: "text-sm",
                   indicator: "text-gray-600",
                 }}
+                data-aos="fade-up"
+                data-aos-delay={250 + index * 60}
                 indicator={({ isOpen }) =>
                   isOpen ? (
                     <div className="rounded-md p-1">
@@ -97,8 +100,6 @@ const Faq = ({ faqData }: Props) => {
                   )
                 }
                 title={question.question}
-                data-aos="fade-up"
-                data-aos-delay={250 + index * 60}
               >
                 <div>{question.answer}</div>
               </AccordionItem>

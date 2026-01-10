@@ -8,7 +8,7 @@ import { JoinUsBusinesses, JoinUsIndividual } from "@/components";
 
 const JoinUs = () => {
   const [selectedTab, setSelectedTab] = useState<"individuals" | "businesses">(
-    "individuals"
+    "individuals",
   );
 
   const components = {
@@ -65,8 +65,8 @@ const JoinUs = () => {
                 panel: "min-h-[120px] flex items-start", // ⭐ KEY FIX
               }}
               radius="full"
-              size="sm"
               selectedKey={selectedTab}
+              size="sm"
               onSelectionChange={(key) =>
                 setSelectedTab(key as "individuals" | "businesses")
               }
@@ -99,7 +99,7 @@ const JoinUs = () => {
             className="transition-all duration-400 ease-in-out h-[80vh] w-[95%] absolute left-1/2 -translate-x-1/2 right-0 z-0 -bottom-5 "
             onClick={() =>
               setSelectedTab(
-                selectedTab === "individuals" ? "businesses" : "individuals"
+                selectedTab === "individuals" ? "businesses" : "individuals",
               )
             }
           >
@@ -113,7 +113,7 @@ const JoinUs = () => {
             className="transition-all duration-400 ease-in-out h-[80vh] w-full z-10 "
             onClick={() =>
               setSelectedTab(
-                selectedTab === "individuals" ? "businesses" : "individuals"
+                selectedTab === "individuals" ? "businesses" : "individuals",
               )
             }
           >

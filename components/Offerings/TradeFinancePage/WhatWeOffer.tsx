@@ -88,8 +88,8 @@ const WhatWeOffer = () => {
           >
             <GetStartedBtn className="text-base w-full sm:w-auto" />
             <ContactSalesBtn
-              label="Speak to our team"
               className="w-full sm:w-auto"
+              label="Speak to our team"
             />
           </div>
         </div>
@@ -107,11 +107,11 @@ const WhatWeOffer = () => {
             {ourOfferings.map((data, index) => (
               <div
                 key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
                 className={`group p-5 sm:p-6 border-l-[3px] ${
                   index === 0 && "border-info-250 bg-[#EBF8FF]"
                 } transition-all ease-in-out duration-300`}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <div
                   className={`text-lg font-medium ${
@@ -140,11 +140,11 @@ const WhatWeOffer = () => {
             data-aos-delay="200"
           >
             <Image
-              src={OfferingImg9.src}
               alt="Offering Image 9"
               className="mx-auto w-full max-w-sm sm:max-w-none"
               data-aos="zoom-in"
               data-aos-delay="300"
+              src={OfferingImg9.src}
             />
           </div>
         </div>

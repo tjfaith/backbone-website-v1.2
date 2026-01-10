@@ -20,11 +20,11 @@ const randomDuration = () => 4 + Math.random() * 2; // slower, organic
 const ShieldNetworkPattern = () => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="313"
+      fill="none"
       height="313"
       viewBox="0 0 313 313"
-      fill="none"
+      width="313"
+      xmlns="http://www.w3.org/2000/svg"
     >
       {/* ================= STATIC SHIELD / SHAPES ================= */}
       {/* ⛔ DO NOT TOUCH YOUR ORIGINAL NON-BLUE PATHS */}
@@ -41,10 +41,10 @@ const ShieldNetworkPattern = () => {
         fill="#FAFAFA"
       />
       <rect
-        width="203.927"
+        fill="url(#paint0_linear_7212_25123)"
         height="230"
         transform="translate(53.5566 45.5913)"
-        fill="url(#paint0_linear_7212_25123)"
+        width="203.927"
       />
       <g filter="url(#filter0_i_7212_25123)">
         <path
@@ -76,367 +76,367 @@ const ShieldNetworkPattern = () => {
         fill="#D5F1FF"
       />
       <motion.path
-        opacity="0.1"
-        d="M170.34 117.299V53.9179L220.378 15M196.471 125.082V107.291L187.575 97.8395V63.3694L244.84 17.2239M207.59 142.873L227.049 130.642V53.9179L272.639 17.2239M205.366 166.224H214.818L254.292 125.082L299.881 120.634L311.557 156.216M205.366 179.011H223.713L251.512 150.657L269.303 162.332V286.313M200.919 185.683L254.292 223.489V300.769M187.575 200.138L235.945 239.056V284.09L210.926 312.444M170.34 214.593L214.818 251.843V290.761M162.557 214.593V300.769"
-        stroke="#47C2FF"
-        strokeWidth="1.11194"
-        strokeLinecap="round"
-        variants={lineAnim}
-        initial="initial"
         animate="animate"
+        d="M170.34 117.299V53.9179L220.378 15M196.471 125.082V107.291L187.575 97.8395V63.3694L244.84 17.2239M207.59 142.873L227.049 130.642V53.9179L272.639 17.2239M205.366 166.224H214.818L254.292 125.082L299.881 120.634L311.557 156.216M205.366 179.011H223.713L251.512 150.657L269.303 162.332V286.313M200.919 185.683L254.292 223.489V300.769M187.575 200.138L235.945 239.056V284.09L210.926 312.444M170.34 214.593L214.818 251.843V290.761M162.557 214.593V300.769"
+        initial="initial"
+        opacity="0.1"
+        stroke="#47C2FF"
+        strokeLinecap="round"
+        strokeWidth="1.11194"
         transition={{
           duration: randomDuration(),
           repeat: Infinity,
           ease: "linear",
           delay: 3,
         }}
+        variants={lineAnim}
       />
       <path
         d="M238.057 212L254.557 223.5V241"
         stroke="url(#paint1_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M170.057 108V83M192.057 102.5L196.557 107V116"
         stroke="url(#paint2_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M248.557 131L253.557 125.5L272.557 124"
         stroke="url(#paint3_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M218.057 136L227.057 130V110.5"
         stroke="url(#paint4_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M213.057 179H223.557L234.057 169.5M204.557 242.5L214.557 252V267M235.557 247V275M162.557 245V268.5"
         stroke="url(#paint5_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M213.557 179H224.367L233.557 169"
         stroke="url(#paint6_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <motion.path
-        opacity="0.1"
-        d="M141.773 117.299V53.9179L91.7357 15M115.642 125.082V107.291L124.538 97.8395V63.3694L67.2731 17.2239M104.523 142.873L85.0641 130.642V53.9179L39.4746 17.2239M106.747 166.224H97.2954L57.8216 125.082L12.232 120.634L0.556641 156.216M106.747 179.011H88.3999L60.6014 150.657L42.8104 162.332V286.313M111.195 185.683L57.8216 223.489V300.769M124.538 200.138L76.1686 239.056V284.09L101.187 312.444M141.773 214.593L97.2954 251.843V290.761M149.557 214.593V300.769"
-        stroke="#47C2FF"
-        strokeWidth="1.11194"
-        strokeLinecap="round"
-        variants={lineAnim}
-        initial="initial"
         animate="animate"
+        d="M141.773 117.299V53.9179L91.7357 15M115.642 125.082V107.291L124.538 97.8395V63.3694L67.2731 17.2239M104.523 142.873L85.0641 130.642V53.9179L39.4746 17.2239M106.747 166.224H97.2954L57.8216 125.082L12.232 120.634L0.556641 156.216M106.747 179.011H88.3999L60.6014 150.657L42.8104 162.332V286.313M111.195 185.683L57.8216 223.489V300.769M124.538 200.138L76.1686 239.056V284.09L101.187 312.444M141.773 214.593L97.2954 251.843V290.761M149.557 214.593V300.769"
+        initial="initial"
+        opacity="0.1"
+        stroke="#47C2FF"
+        strokeLinecap="round"
+        strokeWidth="1.11194"
         transition={{
           duration: randomDuration(),
           repeat: Infinity,
           ease: "linear",
           delay: 3,
         }}
+        variants={lineAnim}
       />
       <path
         d="M74.0566 212L57.5566 223.5V241"
         stroke="url(#paint7_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M142.057 108V83M120.057 102.5L115.557 107V116"
         stroke="url(#paint8_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M63.5566 131L58.5566 125.5L39.5566 124"
         stroke="url(#paint9_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M94.0566 136L85.0566 130V110.5"
         stroke="url(#paint10_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M99.0566 179H88.5566L78.0566 169.5M107.557 242.5L97.5566 252V267M76.5566 247V275M149.557 245V268.5"
         stroke="url(#paint11_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <path
         d="M98.5566 179H87.7458L78.5566 169"
         stroke="url(#paint12_linear_7212_25123)"
-        strokeWidth="1.11194"
         strokeLinecap="round"
+        strokeWidth="1.11194"
       />
       <rect
-        width="311"
+        fill="url(#paint13_radial_7212_25123)"
         height="297.444"
         transform="translate(0.556641)"
-        fill="url(#paint13_radial_7212_25123)"
+        width="311"
       />
 
       <motion.path
-        d="M238.057 212L254.557 223.5V241"
-        stroke="url(#paint1_linear)"
-        strokeWidth="1.11194"
-        strokeLinecap="round"
-        variants={lineAnim}
-        initial="initial"
         animate="animate"
+        d="M238.057 212L254.557 223.5V241"
+        initial="initial"
+        stroke="url(#paint1_linear)"
+        strokeLinecap="round"
+        strokeWidth="1.11194"
         transition={{
           duration: randomDuration(),
           repeat: Infinity,
           ease: "linear",
           delay: 1.5,
         }}
+        variants={lineAnim}
       />
 
       <motion.path
-        d="M413.5 210L397 222V239"
-        stroke="url(#paint2_linear)"
-        strokeWidth="1.11194"
-        strokeLinecap="round"
-        variants={lineAnim}
-        initial="initial"
         animate="animate"
+        d="M413.5 210L397 222V239"
+        initial="initial"
+        stroke="url(#paint2_linear)"
+        strokeLinecap="round"
+        strokeWidth="1.11194"
         transition={{
           duration: randomDuration(),
           repeat: Infinity,
           ease: "linear",
           delay: 2.2,
         }}
+        variants={lineAnim}
       />
 
       <motion.path
-        d="M326.5 164V188"
-        stroke="#47C2FF"
-        strokeWidth="1.11194"
-        strokeLinecap="round"
-        variants={lineAnim}
-        initial="initial"
         animate="animate"
+        d="M326.5 164V188"
+        initial="initial"
+        stroke="#47C2FF"
+        strokeLinecap="round"
+        strokeWidth="1.11194"
         transition={{
           duration: randomDuration(),
           repeat: Infinity,
           ease: "linear",
           delay: 3,
         }}
+        variants={lineAnim}
       />
 
       <motion.path
-        d="M300 300L270 320"
-        stroke="#47C2FF"
-        strokeWidth="1.11194"
-        strokeLinecap="round"
-        variants={lineAnim}
-        initial="initial"
         animate="animate"
+        d="M300 300L270 320"
+        initial="initial"
+        stroke="#47C2FF"
+        strokeLinecap="round"
+        strokeWidth="1.11194"
         transition={{
           duration: randomDuration(),
           repeat: Infinity,
           ease: "linear",
           delay: 2.8,
         }}
+        variants={lineAnim}
       />
 
       {/* ================= DEFINITIONS (KEEP YOUR ORIGINAL ONES) ================= */}
       <defs>
         <filter
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="88.4614"
           id="filter0_i_7212_25123"
+          width="78.2188"
           x="116.877"
           y="116.365"
-          width="78.2188"
-          height="88.4614"
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="BackgroundImageFix"
+            mode="normal"
             result="shape"
           />
           <feColorMatrix
             in="SourceAlpha"
+            result="hardAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
           />
           <feOffset />
           <feGaussianBlur stdDeviation="2.79352" />
-          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+          <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
           <feColorMatrix
             type="matrix"
             values="0 0 0 0 0.669091 0 0 0 0 0.821818 0 0 0 0 0.910909 0 0 0 1 0"
           />
           <feBlend
-            mode="normal"
             in2="shape"
+            mode="normal"
             result="effect1_innerShadow_7212_25123"
           />
         </filter>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint0_linear_7212_25123"
           x1="101.964"
-          y1="0"
           x2="101.964"
+          y1="0"
           y2="230"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="white" stopOpacity="0" />
           <stop offset="1" stopColor="white" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint1_linear_7212_25123"
           x1="246.307"
-          y1="212"
           x2="246.307"
+          y1="212"
           y2="241"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint2_linear_7212_25123"
           x1="183.307"
-          y1="83"
           x2="183.307"
+          y1="83"
           y2="116"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint3_linear_7212_25123"
           x1="260.557"
-          y1="124"
           x2="260.557"
+          y1="124"
           y2="131"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint4_linear_7212_25123"
           x1="222.557"
-          y1="110.5"
           x2="222.557"
+          y1="110.5"
           y2="136"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint5_linear_7212_25123"
           x1="199.057"
-          y1="169.5"
           x2="199.057"
+          y1="169.5"
           y2="275"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint6_linear_7212_25123"
           x1="223.557"
-          y1="169"
           x2="223.557"
+          y1="169"
           y2="179"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint7_linear_7212_25123"
           x1="65.8066"
-          y1="212"
           x2="65.8066"
+          y1="212"
           y2="241"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint8_linear_7212_25123"
           x1="128.807"
-          y1="83"
           x2="128.807"
+          y1="83"
           y2="116"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint9_linear_7212_25123"
           x1="51.5566"
-          y1="124"
           x2="51.5566"
+          y1="124"
           y2="131"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint10_linear_7212_25123"
           x1="89.5566"
-          y1="110.5"
           x2="89.5566"
+          y1="110.5"
           y2="136"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint11_linear_7212_25123"
           x1="113.057"
-          y1="169.5"
           x2="113.057"
+          y1="169.5"
           y2="275"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint12_linear_7212_25123"
           x1="88.5566"
-          y1="169"
           x2="88.5566"
+          y1="169"
           y2="179"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" stopOpacity="0" />
           <stop offset="1" stopColor="#47C2FF" />
         </linearGradient>
         <radialGradient
-          id="paint13_radial_7212_25123"
           cx="0"
           cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
           gradientTransform="translate(155.5 148.722) rotate(90.5571) scale(154.285 161.317)"
+          gradientUnits="userSpaceOnUse"
+          id="paint13_radial_7212_25123"
+          r="1"
         >
           <stop offset="0.689902" stopColor="#FAFAFA" stopOpacity="0" />
           <stop offset="1" stopColor="#FAFAFA" />
@@ -445,24 +445,24 @@ const ShieldNetworkPattern = () => {
 
       <defs>
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint1_linear"
           x1="238"
-          y1="212"
           x2="254"
+          y1="212"
           y2="241"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" />
           <stop offset="1" stopColor="#47C2FF" stopOpacity="0.3" />
         </linearGradient>
 
         <linearGradient
+          gradientUnits="userSpaceOnUse"
           id="paint2_linear"
           x1="413"
-          y1="210"
           x2="397"
+          y1="210"
           y2="239"
-          gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#47C2FF" />
           <stop offset="1" stopColor="#47C2FF" stopOpacity="0.3" />

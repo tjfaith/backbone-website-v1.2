@@ -50,7 +50,7 @@ const Individual = () => {
               action={() =>
                 window.open(
                   `${process.env.NEXT_PUBLIC_APP_URL}/sign-in`,
-                  "_blank"
+                  "_blank",
                 )
               }
               title={

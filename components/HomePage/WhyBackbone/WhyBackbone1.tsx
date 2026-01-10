@@ -1,6 +1,7 @@
-import { Exchange, WhyBB1, WhyBB2 } from "@/public/assets";
 import { Image } from "@heroui/image";
 import React from "react";
+
+import { Exchange, WhyBB1, WhyBB2 } from "@/public/assets";
 import {
   CTitle,
   GetStartedBtn,
@@ -38,11 +39,11 @@ const WhyBackbone1 = () => {
             data-aos-delay="250"
           >
             <Image
-              src={Exchange.src}
-              radius="none"
               disableAnimation
               disableSkeleton
               alt="exchange"
+              radius="none"
+              src={Exchange.src}
             />
           </div>
 
@@ -60,9 +61,9 @@ const WhyBackbone1 = () => {
         >
           <CTitle
             className="border border-foreground-100 bg-white mb-3"
+            data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
-            data-aos="fade-up"
           />
 
           <div

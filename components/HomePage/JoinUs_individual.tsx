@@ -20,9 +20,9 @@ const JoinUsIndividual = () => {
       <HerouiImage
         disableAnimation
         disableSkeleton
-        radius="none"
         alt="image 4"
         className=" object-cover md:object-left object-right w-full  h-full "
+        radius="none"
         src={Img4.src}
       />
       <div className="absolute left-0 top-auto md:top-10  md:bottom-auto bottom-0 z-10 md:bg-transparent bg-white/10 backdrop-blur-md md:backdrop-blur-none  p-8 text-background animate__animated animate__flipInX ">

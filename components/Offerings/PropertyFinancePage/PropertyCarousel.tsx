@@ -100,8 +100,8 @@ const PropertyCarousel = () => {
                 md:h-[440px]
               "
               height={400}
-              width={600}
               src={item.image}
+              width={600}
             />
 
             {/* Top Tag */}
