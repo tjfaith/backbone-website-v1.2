@@ -138,7 +138,7 @@ const GlobalPopover = () => {
   }
 
   return (
-    <Popover showArrow placement="bottom-start">
+    <Popover placement="bottom-start">
       <PopoverTrigger>{Trigger}</PopoverTrigger>
       <PopoverContent className="!items-start p-1 rounded-2xl border shadow-[0_6px_8px_0_rgba(0,0,0,0.02),_0_0_7px_2px_rgba(0,0,0,0.03),_0_0_0_1px_rgba(225,228,234,0.5)] bg-[#F5F7FA]">
         {Content}
