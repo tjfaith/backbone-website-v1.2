@@ -11,7 +11,9 @@ const MoveForward = () => {
         <div className="relative ">
           <Image
             removeWrapper
-            className="min-h-[460px] w-full object-cover object-[50%_50%] "
+            className=" h-[360px]
+            sm:h-[420px]
+            lg:h-[460px] w-full object-cover object-[50%_50%] "
             src={OfferingImg11.src}
           />
 
