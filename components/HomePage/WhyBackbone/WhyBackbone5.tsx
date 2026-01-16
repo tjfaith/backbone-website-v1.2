@@ -31,7 +31,14 @@ const WhyBackbone5 = () => {
           data-aos="fade-left"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="
+              border
+              border-foreground-100
+              bg-white
+              dark:bg-background-200
+              dark:border-foreground-700
+              mb-3
+            "
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
@@ -46,6 +53,7 @@ const WhyBackbone5 = () => {
               text-2xl
               sm:text-[32px]
               text-primary
+              dark:text-primary-50
               font-medium
               mb-3
               max-w-lg
@@ -60,6 +68,7 @@ const WhyBackbone5 = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-primary-400
               text-base
               font-normal
               leading-6
@@ -99,14 +108,13 @@ const WhyBackbone5 = () => {
             disableSkeleton
             alt="why backbone meeting"
             className="
-            self-end
-            max-w-md
-           rounded-[45.506px]
-          h-[144.419px]
+              self-end
+              max-w-md
+              rounded-[45.506px]
+              h-[144.419px]
               w-full
               object-cover
-              
-              "
+            "
             data-aos="fade-up"
             data-aos-delay="100"
             src={OfferingImg1.src}
@@ -116,14 +124,13 @@ const WhyBackbone5 = () => {
             disableSkeleton
             alt="why backbone meeting"
             className="
-            self-center
+              self-center
               max-w-md
-          h-[144.419px]
-                  rounded-[45.506px]
+              h-[144.419px]
+              rounded-[45.506px]
               w-full
               object-cover
-              
-              "
+            "
             data-aos="fade-up"
             data-aos-delay="100"
             src={OfferingImg2.src}
@@ -133,14 +140,13 @@ const WhyBackbone5 = () => {
             disableSkeleton
             alt="why backbone meeting"
             className="
-            self-start
+              self-start
               max-w-md
-          h-[144.419px]
-                     rounded-[45.506px]
+              h-[144.419px]
+              rounded-[45.506px]
               w-full
               object-cover
-              
-              "
+            "
             data-aos="fade-up"
             data-aos-delay="100"
             src={OfferingImg3.src}

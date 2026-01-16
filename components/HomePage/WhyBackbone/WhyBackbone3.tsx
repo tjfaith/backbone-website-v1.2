@@ -21,7 +21,9 @@ const WhyBackbone3 = () => {
         <div
           className="
             shadow-[0_4px_36px_0_rgba(0,0,0,0.05)]
+            dark:shadow-[0_4px_36px_0_rgba(0,0,0,0.4)]
             bg-white
+            dark:bg-background-100
             rounded-3xl
             px-2
             pt-2
@@ -64,6 +66,7 @@ const WhyBackbone3 = () => {
               leading-6
               font-normal
               text-primary
+              dark:text-primary-50
               text-center
             "
             data-aos="fade-up"
@@ -87,7 +90,14 @@ const WhyBackbone3 = () => {
           data-aos="fade-left"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="
+              border
+              border-foreground-100
+              dark:border-foreground-700
+              bg-white
+              dark:bg-background-100
+              mb-3
+            "
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
@@ -102,6 +112,7 @@ const WhyBackbone3 = () => {
               text-2xl
               sm:text-3xl
               text-primary
+              dark:text-primary-50
               font-medium
               mb-3
               max-w-xl
@@ -117,6 +128,7 @@ const WhyBackbone3 = () => {
             className="
               mb-4
               text-primary-500
+              dark:text-primary-400
               text-base
               font-normal
               leading-6

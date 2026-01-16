@@ -14,8 +14,13 @@ import { Button } from "@heroui/button";
 
 import useNavbar from "./useNavbar";
 
-import { BackboneLogo, GetStartedBtn, GlobalPopover } from "@/components";
-import { OurOfferingsMenu } from "@/components";
+import {
+  BackboneLogo,
+  GetStartedBtn,
+  GlobalPopover,
+  OurOfferingsMenu,
+  ThemeSwitch,
+} from "@/components";
 
 const Navbar = () => {
   const {
@@ -45,8 +50,8 @@ const Navbar = () => {
         <NavbarBrand as="li" className="!p-0 !m-0">
           <NextLink href="/">
             <BackboneLogo
-              // showDarkLogo={changeReady || showLightNav === false}
-              showDarkLogo={changeReady === false}
+              showDarkLogo={changeReady || showLightNav === false}
+              // showDarkLogo={changeReady === false}
             />
           </NextLink>
         </NavbarBrand>
@@ -74,9 +79,9 @@ const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        {/* <NavbarItem className="hidden lg:flex bg-primary items-center justify-center rounded-full p-0.5 h-6 w-6">
+        <NavbarItem className="hidden lg:flex bg-primary items-center justify-center rounded-full p-0.5 h-6 w-6">
           <ThemeSwitch />
-        </NavbarItem> */}
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="hidden lg:flex" justify="end">
@@ -100,9 +105,9 @@ const Navbar = () => {
         className={`${changeReady ? "text-primary" : showLightNav ? "text-background dark:text-primary" : "text-primary"} lg:hidden basis-1 pl-4  font-bold`}
         justify="end"
       >
-        {/* <NavbarItem className="bg-primary flex items-center justify-center rounded-full p-0.5 h-6 w-6">
+        <NavbarItem className="bg-primary flex items-center justify-center rounded-full p-0.5 h-6 w-6">
           <ThemeSwitch />
-        </NavbarItem> */}
+        </NavbarItem>
 
         <NavbarMenuToggle />
       </NavbarContent>

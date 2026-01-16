@@ -56,10 +56,12 @@ const BlogExtract = ({
         {/* LEFT CONTENT */}
         <div className="md:max-w-md w-full mb-8 px-2 sm:px-0 md:pr-6">
           <div>
-            <div className="clash-display-font text-3xl sm:text-4xl font-medium text-primary">
+            <div className="clash-display-font text-3xl sm:text-4xl font-medium text-primary dark:text-primary-50">
               {title}
             </div>
-            <div className="text-primary-600 max-w-5xl mt-2">{description}</div>
+            <div className="text-primary-600 dark:text-primary-400 max-w-5xl mt-2">
+              {description}
+            </div>
           </div>
 
           <div className="mt-6">
@@ -68,10 +70,12 @@ const BlogExtract = ({
               className="
                 text-base
                 bg-background-200
+                dark:bg-background-200
                 py-3
                 px-6
                 rounded-[10px]
                 text-primary-500
+                dark:text-primary-400
                 w-full
                 sm:w-auto
               "
@@ -96,6 +100,8 @@ const BlogExtract = ({
                       flex
                       flex-col
                       hover:bg-white
+                      dark:hover:bg-background-75
+                      dark:bg-background-100
                       rounded-3xl
                       p-2
                       transition-all
@@ -120,36 +126,36 @@ const BlogExtract = ({
 
                     <div className="flex flex-col justify-between h-full">
                       <div className="mb-5">
-                        <div className="mb-2 uppercase text-primary-400 font-medium text-sm leading-5 tracking-[0.84px]">
+                        <div className="mb-2 uppercase text-primary-400 dark:text-primary-450 font-medium text-sm leading-5 tracking-[0.84px]">
                           {categories?.find(
-                            (cat: { _id: string }) => cat._id === blog.category,
+                            (cat: { _id: string }) => cat._id === blog.category
                           )?.name ?? "—"}
                         </div>
 
-                        <div className="clash-display-font text-lg sm:text-xl font-medium text-primary mb-2 leading-6 sm:leading-7">
+                        <div className="clash-display-font text-lg sm:text-xl font-medium text-primary dark:text-primary-50 mb-2 leading-6 sm:leading-7">
                           {blog?.title.length > 30
                             ? blog?.title.slice(0, 30) + "..."
                             : blog?.title}
                         </div>
 
-                        <div className="text-primary-600 text-sm sm:text-base">
+                        <div className="text-primary-600 dark:text-primary-400 text-sm sm:text-base">
                           {typeof blog?.content === "string"
                             ? parse(
                                 blog?.content.length > 100
                                   ? blog?.content.slice(0, 100) + "..."
-                                  : blog?.content,
+                                  : blog?.content
                               )
                             : null}
                         </div>
                       </div>
 
                       <button
-                        className="flex items-center gap-1 text-primary font-medium text-sm leading-6 tracking-[-0.084px]"
+                        className="flex items-center gap-1 text-primary dark:text-primary-300 font-medium text-sm leading-6 tracking-[-0.084px]"
                         onClick={() =>
                           viewBlog(
                             `/${blog._id}?title=${encodeURIComponent(
-                              blog.title,
-                            )}&id=${blog._id}`,
+                              blog.title
+                            )}&id=${blog._id}`
                           )
                         }
                       >

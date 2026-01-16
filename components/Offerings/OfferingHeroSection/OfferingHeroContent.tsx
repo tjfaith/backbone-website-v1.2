@@ -26,6 +26,7 @@ const OfferingHeroContent = ({ content }: Props) => {
           tracking-[0.8px]
           leading-[42px] sm:leading-[48px] lg:leading-[52px]
           text-black
+          dark:text-primary-50
           mb-3
         "
         data-aos="fade-up"
@@ -37,6 +38,7 @@ const OfferingHeroContent = ({ content }: Props) => {
       <div
         className="
           text-primary-500
+          dark:text-primary-400
           text-base sm:text-lg
           tracking-[-0.27px]
           leading-6
@@ -72,7 +74,9 @@ const OfferingHeroContent = ({ content }: Props) => {
               key={index}
               className="
                 bg-background-200
+                dark:bg-background-300
                 text-primary-450
+                dark:text-primary-300
                 gap-2
                 px-3 py-1.5
                 text-xs sm:text-sm
@@ -85,7 +89,7 @@ const OfferingHeroContent = ({ content }: Props) => {
               <Icon icon="ri:check-double-fill" />
               <span>{bullet}</span>
             </div>
-          ),
+          )
         )}
       </div>
     </div>

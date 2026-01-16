@@ -25,7 +25,7 @@ const HowToApply = () => {
   ];
 
   return (
-    <div className="overflow-hidden bg-white py-12">
+    <div className="overflow-hidden bg-white dark:bg-background py-12">
       <div
         className="
           page-max-width
@@ -38,7 +38,7 @@ const HowToApply = () => {
         {/* LEFT CONTENT */}
         <div data-aos="fade-up">
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 dark:border-background-300 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="How to apply"
@@ -55,6 +55,7 @@ const HowToApply = () => {
               sm:text-2xl
               lg:text-[32px]
               text-primary
+              dark:text-foreground
               font-medium
               max-w-xl
               mb-3
@@ -70,6 +71,7 @@ const HowToApply = () => {
               mb-6
               sm:mb-8
               text-primary-500
+              dark:text-foreground-300
               text-sm
               sm:text-base
               font-normal
@@ -108,27 +110,28 @@ const HowToApply = () => {
             <div
               key={index}
               className={`group p-5 sm:p-6 border-l-[3px] ${
-                index === 0 && "border-info-250 bg-[#EBF8FF]"
+                index === 0 &&
+                "border-info-250 bg-[#EBF8FF] dark:border-info-500 dark:bg-background-100"
               } transition-all ease-in-out duration-300`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div
                 className={`flex items-center gap-2 text-base sm:text-lg font-medium ${
-                  index === 0 && "text-[#2597D0]"
+                  index === 0 && "text-[#2597D0] dark:text-info-600"
                 } mb-2`}
               >
                 <Icon icon={data.icon} />
                 <div
-                  className={`leading-6 tracking-[-0.27px] text-black ${
-                    index === 0 && "!text-[#2597D0]"
+                  className={`leading-6 tracking-[-0.27px] text-black dark:text-foreground ${
+                    index === 0 && "!text-[#2597D0] dark:!text-info-600"
                   }`}
                 >
                   {data.title}
                 </div>
               </div>
 
-              <div className="text-primary-500 text-sm sm:text-base font-normal leading-6 tracking-[-0.176px]">
+              <div className="text-primary-500 dark:text-foreground-300 text-sm sm:text-base font-normal leading-6 tracking-[-0.176px]">
                 {data.body}
               </div>
             </div>

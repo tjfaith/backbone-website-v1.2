@@ -12,21 +12,21 @@ import {
 const WhyBackbone1 = () => {
   return (
     <div
-      className="overflow-hidden bg-background-75 pb-8 pt-24 lg:pt-48 min-h-[85vh]"
+      className="overflow-hidden bg-background-75 dark:bg-background pb-8 pt-24 lg:pt-48 min-h-[85vh]"
       data-aos="fade-up"
     >
       <div className="page-max-width grid grid-cols-1 lg:grid-cols-2 gap-28">
         {/* LEFT SECTION */}
         <div className="relative flex items-center" data-aos="fade-right">
           <div
-            className=" max-w-md lg:absolute -top-28 -right-16"
+            className="max-w-md lg:absolute -top-28 -right-16"
             data-aos="zoom-in"
           >
             <Image alt="whyBB1" src={WhyBB1.src} />
           </div>
 
           <div
-            className=" sm:block hidden max-w-md lg:absolute sm:-bottom-32 "
+            className="sm:block hidden max-w-md lg:absolute sm:-bottom-32"
             data-aos="zoom-in"
             data-aos-delay="150"
           >
@@ -34,7 +34,7 @@ const WhyBackbone1 = () => {
           </div>
 
           <div
-            className="absolute -right-7 -bottom-14 "
+            className="absolute -right-7 -bottom-14"
             data-aos="fade-left"
             data-aos-delay="250"
           >
@@ -60,14 +60,14 @@ const WhyBackbone1 = () => {
           data-aos="fade-left"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 dark:border-foreground-300 bg-white dark:bg-background-200 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
           />
 
           <div
-            className="clash-display-font tracking-[-0.16px] leading-10 text-[32px] text-primary font-medium max-w-xl mb-3"
+            className="clash-display-font tracking-[-0.16px] leading-10 text-[32px] text-primary dark:text-foreground font-medium max-w-xl mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -75,7 +75,7 @@ const WhyBackbone1 = () => {
           </div>
 
           <div
-            className="mb-3 text-primary-500 text-base font-normal leading-6 tracking-[-0.27px] max-w-xl lg:pr-3"
+            className="mb-3 text-primary-500 dark:text-foreground-400 text-base font-normal leading-6 tracking-[-0.27px] max-w-xl lg:pr-3"
             data-aos="fade-up"
             data-aos-delay="200"
           >

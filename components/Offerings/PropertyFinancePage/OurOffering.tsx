@@ -8,21 +8,21 @@ import { OfferingImg14 } from "@/public/assets";
 
 const OurOffering = () => {
   return (
-    <div className="overflow-hidden bg-white py-12  ">
+    <div className="overflow-hidden bg-white dark:bg-background py-12">
       <div className="page-max-width">
         <div
           className="flex flex-col items-center mb-[53px]"
           data-aos="fade-up"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 dark:border-background-300 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="Our offering"
           />
 
           <div
-            className="clash-display-font  text-center tracking-[-0.16px] leading-10  text-[32px] text-primary font-medium max-w-md mb-3"
+            className="clash-display-font text-center tracking-[-0.16px] leading-10 text-[32px] text-primary dark:text-foreground font-medium max-w-md mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -30,7 +30,7 @@ const OurOffering = () => {
           </div>
 
           <div
-            className=" mb-8 text-primary-500 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-lg "
+            className="mb-8 text-primary-500 dark:text-foreground-300 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-lg"
             data-aos="fade-up"
             data-aos-delay="150"
           >
@@ -47,6 +47,7 @@ const OurOffering = () => {
             <ContactSalesBtn />
           </div>
         </div>
+
         <div
           className="relative overflow-hidden"
           data-aos="fade-up"
@@ -58,7 +59,7 @@ const OurOffering = () => {
             src={OfferingImg14.src}
           />
 
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_53.93%,#000_111.92%)] z-10 rounded-xl" />
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_53.93%,#000_111.92%)] dark:bg-[linear-gradient(180deg,transparent_53.93%,#0E121B_111.92%)] z-10 rounded-xl" />
         </div>
       </div>
     </div>

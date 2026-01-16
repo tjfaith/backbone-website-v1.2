@@ -10,7 +10,10 @@ import {
 
 const WhyBackbone6 = () => {
   return (
-    <div className="overflow-hidden py-12 sm:py-16 lg:py-20" data-aos="fade-up">
+    <div
+      className="overflow-hidden py-12 sm:py-16 lg:py-20 bg-white dark:bg-background"
+      data-aos="fade-up"
+    >
       <div
         className="
           page-max-width
@@ -36,7 +39,7 @@ const WhyBackbone6 = () => {
           data-aos="fade-left"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 dark:border-background-300 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
@@ -52,6 +55,7 @@ const WhyBackbone6 = () => {
               sm:text-2xl
               lg:text-[32px]
               text-primary
+              dark:text-foreground
               font-medium
               mb-3
               max-w-lg
@@ -68,6 +72,7 @@ const WhyBackbone6 = () => {
               mb-6
               sm:mb-8
               text-primary-500
+              dark:text-foreground-300
               text-sm
               sm:text-base
               font-normal
@@ -96,34 +101,34 @@ const WhyBackbone6 = () => {
             data-aos="fade-up"
             data-aos-delay="180"
           >
-            <div className="bg-[#F8FAFB] rounded-3xl p-4">
+            <div className="bg-[#F8FAFB] dark:bg-background-100 rounded-3xl p-4">
               <div
-                className="rounded-full bg-primary h-6 w-6 p-[1.455px] flex items-center justify-center text-white mb-5"
+                className="rounded-full bg-primary dark:bg-secondary h-6 w-6 p-[1.455px] flex items-center justify-center text-white dark:text-background mb-5"
                 data-aos="zoom-in"
               >
                 <Icon icon="ri:money-dollar-circle-fill" />
               </div>
-              <div className="text-black text-base font-medium leading-6 tracking-[-0.176px] mb-2">
+              <div className="text-black dark:text-foreground text-base font-medium leading-6 tracking-[-0.176px] mb-2">
                 Flexible Repayment
               </div>
-              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500">
+              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500 dark:text-foreground-300">
                 Pay back over time with terms designed around your income and
                 lifestyle
               </div>
             </div>
 
-            <div className="bg-[#F8FAFB] rounded-3xl p-4">
+            <div className="bg-[#F8FAFB] dark:bg-background-100 rounded-3xl p-4">
               <div
-                className="rounded-full bg-primary h-6 w-6 p-[1.455px] flex items-center justify-center text-white mb-5"
+                className="rounded-full bg-primary dark:bg-secondary h-6 w-6 p-[1.455px] flex items-center justify-center text-white dark:text-background mb-5"
                 data-aos="zoom-in"
                 data-aos-delay="100"
               >
                 <Icon icon="ri:building-fill" />
               </div>
-              <div className="text-black text-base font-medium leading-6 tracking-[-0.176px] mb-2">
+              <div className="text-black dark:text-foreground text-base font-medium leading-6 tracking-[-0.176px] mb-2">
                 Upfront Support
               </div>
-              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500">
+              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500 dark:text-foreground-300">
                 We cover your rent or home costs upfront, helping you move in
                 without financial strain.
               </div>

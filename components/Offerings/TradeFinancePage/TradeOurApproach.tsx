@@ -8,14 +8,20 @@ import { OfferingImg10 } from "@/public/assets";
 
 const TradeOurApproach = () => {
   return (
-    <div className="overflow-hidden bg-white py-10 sm:py-12">
+    <div className="overflow-hidden bg-white dark:bg-background py-10 sm:py-12">
       <div className="page-max-width px-4 sm:px-0">
         <div
           className="flex flex-col items-center mb-10 sm:mb-[53px]"
           data-aos="fade-up"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="
+              border border-foreground-100
+              bg-white
+              dark:bg-background-100
+              dark:border-background-300
+              mb-3
+            "
             data-aos="fade-up"
             iconType="flashlight"
             title="Our approach"
@@ -29,6 +35,7 @@ const TradeOurApproach = () => {
               leading-9 sm:leading-10
               text-[26px] sm:text-[32px]
               text-primary
+              dark:text-foreground-50
               font-medium
               max-w-xs sm:max-w-sm
               mb-3
@@ -43,6 +50,7 @@ const TradeOurApproach = () => {
             className="
               mb-6 sm:mb-8
               text-primary-500
+              dark:text-foreground-300
               text-center
               text-sm sm:text-base
               font-normal
@@ -94,7 +102,14 @@ const TradeOurApproach = () => {
           />
 
           <div
-            className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_53.93%,#000_111.92%)] z-10 rounded-xl"
+            className="
+              pointer-events-none
+              absolute inset-0
+              bg-[linear-gradient(180deg,transparent_53.93%,#000_111.92%)]
+              dark:bg-[linear-gradient(180deg,transparent_40%,#0E121B_100%)]
+              z-10
+              rounded-xl
+            "
             data-aos="fade-in"
             data-aos-delay="400"
           />

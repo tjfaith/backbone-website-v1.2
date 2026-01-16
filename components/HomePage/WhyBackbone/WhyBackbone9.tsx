@@ -31,7 +31,7 @@ const WhyBackbone9 = () => {
 
   return (
     <div
-      className="overflow-hidden bg-white py-10 sm:py-12"
+      className="overflow-hidden bg-white dark:bg-background py-10 sm:py-12"
       data-aos="fade-up"
       data-aos-duration="700"
     >
@@ -43,7 +43,7 @@ const WhyBackbone9 = () => {
           data-aos-delay="50"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 dark:border-background-300 mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
             iconType="flashlight"
@@ -60,6 +60,7 @@ const WhyBackbone9 = () => {
               text-2xl
               sm:text-[32px]
               text-primary
+              dark:text-foreground
               font-medium
               max-w-md
               mb-3
@@ -74,6 +75,7 @@ const WhyBackbone9 = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-foreground-300
               text-center
               text-base
               font-normal
@@ -119,37 +121,48 @@ const WhyBackbone9 = () => {
           {ourOfferings.map((data, index) => (
             <div
               key={index}
-              className="group p-5 sm:p-6 rounded-3xl bg-[#F8FAFB]"
+              className="
+                group
+                p-5
+                sm:p-6
+                rounded-3xl
+                bg-[#F8FAFB]
+                dark:bg-background-100
+              "
               data-aos="fade-up"
               data-aos-delay={350 + index * 80}
             >
-              <div className="w-10 h-10 relative mb-6 sm:mb-10 flex items-center justify-center bg-[#F8FAFB]">
+              <div className="w-10 h-10 relative mb-6 sm:mb-10 flex items-center justify-center bg-[#F8FAFB] dark:bg-background-200">
                 {/* Decorative corners */}
                 <Icon
-                  className="absolute top-0 right-0 rotate-45 text-info-250"
+                  className="absolute top-0 right-0 rotate-45 text-info-250 dark:text-info-600"
                   icon="clarity:angle-line"
                 />
                 <Icon
-                  className="absolute top-0 left-0 -rotate-45 scale-x-[-1] text-info-250"
+                  className="absolute top-0 left-0 -rotate-45 scale-x-[-1] text-info-250 dark:text-info-600"
                   icon="clarity:angle-line"
                 />
                 <Icon
-                  className="absolute bottom-0 left-0 rotate-45 scale-y-[-1] text-info-250"
+                  className="absolute bottom-0 left-0 rotate-45 scale-y-[-1] text-info-250 dark:text-info-600"
                   icon="clarity:angle-line"
                 />
                 <Icon
-                  className="absolute bottom-0 right-0 -rotate-45 scale-x-[-1] scale-y-[-1] text-info-250"
+                  className="absolute bottom-0 right-0 -rotate-45 scale-x-[-1] scale-y-[-1] text-info-250 dark:text-info-600"
                   icon="clarity:angle-line"
                 />
 
                 {/* Center icon */}
-                <Icon className="text-primary" icon={data.icon} />
+                <Icon
+                  className="text-primary dark:text-secondary"
+                  icon={data.icon}
+                />
               </div>
 
-              <div className="text-base text-black font-medium leading-6 tracking-[-0.176px] mb-3">
+              <div className="text-base text-black dark:text-foreground font-medium leading-6 tracking-[-0.176px] mb-3">
                 {data.title}
               </div>
-              <div className="text-primary-500 text-sm sm:text-base">
+
+              <div className="text-primary-500 dark:text-foreground-300 text-sm sm:text-base">
                 {data.body}
               </div>
             </div>
