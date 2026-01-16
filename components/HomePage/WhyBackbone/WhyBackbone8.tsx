@@ -80,7 +80,7 @@ const WhyBackbone8 = () => {
           data-aos-delay="150"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 mb-3"
             data-aos="fade-up"
             data-aos-delay="200"
             iconType="flashlight"
@@ -98,6 +98,7 @@ const WhyBackbone8 = () => {
               text-primary
               font-medium
               mb-3
+              dark:text-primary
             "
             data-aos="fade-up"
             data-aos-delay="250"
@@ -110,6 +111,7 @@ const WhyBackbone8 = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-primary-300
               text-base
               font-normal
               leading-6
@@ -159,6 +161,7 @@ const WhyBackbone8 = () => {
                 key={index}
                 className="
                   bg-[#F8FAFB]
+                  dark:bg-background-100
                   rounded-3xl
                   flex
                   gap-4
@@ -168,15 +171,15 @@ const WhyBackbone8 = () => {
                 data-aos="fade-up"
                 data-aos-delay={450 + index * 80}
               >
-                <div className="flex-shrink-0 rounded-full bg-primary h-6 w-6 p-[1.455px] flex items-center justify-center text-white">
+                <div className="flex-shrink-0 rounded-full bg-primary h-6 w-6 p-[1.455px] flex items-center justify-center text-white dark:bg-primary-450 dark:text-primary-950">
                   <Icon icon={data.icon} />
                 </div>
 
                 <div>
-                  <div className="text-black text-base font-medium leading-6 tracking-[-0.176px] mb-2">
+                  <div className="text-black dark:text-foreground-50 text-base font-medium leading-6 tracking-[-0.176px] mb-2">
                     {data.title}
                   </div>
-                  <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500 max-w-xl">
+                  <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500 dark:text-primary-300 max-w-xl">
                     {data.description}
                   </div>
                 </div>

@@ -23,14 +23,20 @@ const WhatWeOffer = () => {
   ];
 
   return (
-    <div className="overflow-hidden bg-white py-10 sm:py-12">
+    <div className="overflow-hidden bg-white dark:bg-background py-10 sm:py-12">
       <div className="page-max-width px-4 sm:px-0">
         <div
           className="flex flex-col items-center mb-10 sm:mb-[53px]"
           data-aos="fade-up"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="
+              border border-foreground-100
+              bg-white
+              dark:bg-background-100
+              dark:border-background-300
+              mb-3
+            "
             data-aos="fade-up"
             iconType="flashlight"
             title="What we offer"
@@ -44,6 +50,7 @@ const WhatWeOffer = () => {
               leading-9 sm:leading-10
               text-[26px] sm:text-[32px]
               text-primary
+              dark:text-foreground-50
               font-medium
               max-w-xs sm:max-w-md
               mb-3
@@ -58,6 +65,7 @@ const WhatWeOffer = () => {
             className="
               mb-6 sm:mb-8
               text-primary-500
+              dark:text-foreground-300
               text-center
               text-sm sm:text-base
               font-normal
@@ -107,27 +115,34 @@ const WhatWeOffer = () => {
             {ourOfferings.map((data, index) => (
               <div
                 key={index}
-                className={`group p-5 sm:p-6 border-l-[3px] ${
-                  index === 0 && "border-info-250 bg-[#EBF8FF]"
-                } transition-all ease-in-out duration-300`}
+                className={`
+                  group
+                  p-5 sm:p-6
+                  border-l-[3px]
+                  transition-all ease-in-out duration-300
+                  dark:bg-background-100
+                  dark:border-background-300
+                  ${
+                    index === 0 &&
+                    "border-info-250 bg-[#EBF8FF] dark:bg-info-50 dark:border-info-300"
+                  }
+                `}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div
-                  className={`text-lg font-medium ${
-                    index === 0 && "text-[#2597D0]"
-                  } mb-2`}
+                  className={`text-lg font-medium mb-2 ${
+                    index === 0
+                      ? "text-[#2597D0] dark:text-info-300"
+                      : "text-black dark:text-foreground-50"
+                  }`}
                 >
-                  <div
-                    className={`leading-6 tracking-[-0.27px] text-black ${
-                      index === 0 && "text-[#2597D0]"
-                    }`}
-                  >
+                  <div className="leading-6 tracking-[-0.27px]">
                     {data.title}
                   </div>
                 </div>
 
-                <div className="text-primary-500 text-sm sm:text-base font-normal leading-6 tracking-[-0.176px]">
+                <div className="text-primary-500 dark:text-foreground-300 text-sm sm:text-base font-normal leading-6 tracking-[-0.176px]">
                   {data.body}
                 </div>
               </div>

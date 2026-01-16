@@ -25,12 +25,12 @@ const HowToStartInvesting = () => {
   ];
 
   return (
-    <div className="overflow-hidden bg-white py-12">
+    <div className="overflow-hidden bg-white dark:bg-background py-12">
       <div className="page-max-width grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0">
         {/* LEFT CONTENT */}
         <div data-aos="fade-up">
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:border-foreground-700 dark:bg-background-100 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="How to start investing"
@@ -45,6 +45,7 @@ const HowToStartInvesting = () => {
               text-2xl
               sm:text-[32px]
               text-primary
+              dark:text-foreground
               font-medium
               max-w-md
               mb-3
@@ -59,6 +60,7 @@ const HowToStartInvesting = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-foreground-400
               text-base
               font-normal
               leading-6
@@ -88,28 +90,31 @@ const HowToStartInvesting = () => {
           {getStarted.map((data, index) => (
             <div
               key={index}
-              className={`group p-6 border-l-[3px] ${
-                index === 0 && "border-info-250 bg-[#EBF8FF]"
+              className={`group p-6 border-l-[3px] dark:border-foreground-700 ${
+                index === 0 &&
+                "border-info-250 bg-[#EBF8FF]  dark:bg-info-50 dark:border-info-300"
               } transition-all ease-in-out duration-300`}
               data-aos="fade-left"
               data-aos-delay={300 + index * 100}
             >
               <div
-                className={`flex items-center gap-2 text-lg font-medium ${
-                  index === 0 && "text-[#2597D0]"
-                } mb-2`}
+                className={`flex items-center gap-2 text-lg font-medium mb-2 ${
+                  index === 0
+                    ? "text-[#2597D0] dark:text-info-400"
+                    : "dark:text-foreground"
+                }`}
               >
                 <Icon icon={data.icon} />
                 <div
-                  className={`leading-6 tracking-[-0.27px] text-black ${
-                    index === 0 && "!text-[#2597D0]"
+                  className={`leading-6 tracking-[-0.27px] text-black dark:text-foreground-50 ${
+                    index === 0 && "!text-[#2597D0] dark:text-info-300"
                   }`}
                 >
                   {data.title}
                 </div>
               </div>
 
-              <div className="text-primary-500 text-base font-normal leading-6 tracking-[-0.176px]">
+              <div className="text-primary-500 dark:text-foreground-300 text-base font-normal leading-6 tracking-[-0.176px]">
                 {data.body}
               </div>
             </div>

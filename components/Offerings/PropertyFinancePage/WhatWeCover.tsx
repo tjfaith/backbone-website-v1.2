@@ -31,7 +31,7 @@ const WhatWeCover = () => {
           data-aos="fade-left"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 dark:border-background-300 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="What we cover"
@@ -46,6 +46,7 @@ const WhatWeCover = () => {
               text-2xl
               sm:text-[32px]
               text-primary
+              dark:text-foreground
               font-medium
               mb-3
               max-w-lg
@@ -60,6 +61,7 @@ const WhatWeCover = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-foreground-300
               text-base
               font-normal
               leading-6
@@ -114,14 +116,14 @@ const WhatWeCover = () => {
             />
 
             <div
-              className="flex flex-col justify-end p-6 rounded-3xl bg-gradient-to-r from-[#05161E] to-[rgba(0,0,0,0)] absolute inset-0 z-10"
+              className="flex flex-col justify-end p-6 rounded-3xl bg-gradient-to-r from-[#05161E] to-[rgba(0,0,0,0)] dark:from-background dark:to-transparent absolute inset-0 z-10"
               data-aos="fade-right"
               data-aos-delay="150"
             >
-              <div className="clash-display-font text-info-250 font-medium text-xl mb-1">
+              <div className="clash-display-font text-info-250 dark:text-foreground font-medium text-xl mb-1">
                 Property Finance
               </div>
-              <div className="text-info-250 text-sm font-normal leading-5 tracking-[-0.084px] max-w-md">
+              <div className="text-info-250 dark:text-foreground-300 text-sm font-normal leading-5 tracking-[-0.084px] max-w-md">
                 With Backbone, you can purchase your dream home and
                 <br />
                 pay back in flexible terms that suit your budget and lifestyle.
@@ -149,14 +151,14 @@ const WhatWeCover = () => {
             />
 
             <div
-              className="flex flex-col justify-end p-6 rounded-3xl bg-gradient-to-r from-[#110803] to-[rgba(0,0,0,0)] absolute inset-0 z-10"
+              className="flex flex-col justify-end p-6 rounded-3xl bg-gradient-to-r from-[#110803] to-[rgba(0,0,0,0)] dark:from-background dark:to-transparent absolute inset-0 z-10"
               data-aos="fade-left"
               data-aos-delay="200"
             >
-              <div className="clash-display-font text-[#FF8447] font-medium text-xl mb-1">
+              <div className="clash-display-font text-[#FF8447] dark:text-secondary font-medium text-xl mb-1">
                 Rent Finance
               </div>
-              <div className="text-[#FF8447] text-sm font-normal leading-5 tracking-[-0.084px] max-w-xs pr-5">
+              <div className="text-[#FF8447] dark:text-foreground-300 text-sm font-normal leading-5 tracking-[-0.084px] max-w-xs pr-5">
                 Backbone helps cover your rent upfront so you can move in now
                 and repay overtime.
               </div>

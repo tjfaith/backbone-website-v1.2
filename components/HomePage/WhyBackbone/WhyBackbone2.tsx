@@ -12,18 +12,18 @@ import {
 
 const WhyBackbone2 = () => {
   return (
-    <div className="overflow-hidden bg-background-75 py-12  ">
+    <div className="overflow-hidden bg-background-75 dark:bg-background py-12">
       <div className="page-max-width">
         <div className="flex flex-col items-center mb-20" data-aos="fade-up">
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 dark:border-foreground-300 bg-white dark:bg-background-200 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
           />
 
           <div
-            className="clash-display-font  text-center tracking-[-0.16px] leading-10  text-[32px] text-primary font-medium max-w-lg mb-3"
+            className="clash-display-font text-center tracking-[-0.16px] leading-10 text-[32px] text-primary dark:text-foreground font-medium max-w-lg mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -31,7 +31,7 @@ const WhyBackbone2 = () => {
           </div>
 
           <div
-            className=" mb-8 text-primary-500 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-xl "
+            className="mb-8 text-primary-500 dark:text-foreground-400 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-xl"
             data-aos="fade-up"
             data-aos-delay="150"
           >

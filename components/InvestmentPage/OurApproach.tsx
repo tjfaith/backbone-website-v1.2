@@ -8,7 +8,7 @@ import { OurApp } from "@/public/assets";
 
 const OurApproach = () => {
   return (
-    <div className="overflow-hidden bg-white py-12">
+    <div className="overflow-hidden bg-white dark:bg-background py-12">
       <div className="page-max-width">
         {/* TEXT HEADER */}
         <div
@@ -16,7 +16,13 @@ const OurApproach = () => {
           data-aos="fade-up"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="
+              border border-foreground-100
+              bg-white
+              dark:bg-background-100
+              dark:border-background-300
+              mb-3
+            "
             data-aos="fade-up"
             iconType="flashlight"
             title="Our approach"
@@ -32,6 +38,7 @@ const OurApproach = () => {
               text-2xl
               sm:text-[32px]
               text-primary
+              dark:text-foreground-50
               font-medium
               max-w-md
               mb-3
@@ -46,6 +53,7 @@ const OurApproach = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-foreground-300
               text-center
               text-base
               font-normal
@@ -109,6 +117,7 @@ const OurApproach = () => {
               sm:bottom-5
               sm:right-5
               text-white
+              dark:text-foreground-50
               max-w-[70%]
               text-right
             "
@@ -119,7 +128,16 @@ const OurApproach = () => {
             <div>Peter Lynch</div>
           </div>
 
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_53.93%,#000_111.92%)] z-10 rounded-xl" />
+          <div
+            className="
+              pointer-events-none
+              absolute inset-0
+              bg-[linear-gradient(180deg,transparent_53.93%,#000_111.92%)]
+              dark:bg-[linear-gradient(180deg,transparent_40%,#0E121B_100%)]
+              z-10
+              rounded-xl
+            "
+          />
         </div>
       </div>
     </div>

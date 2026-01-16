@@ -52,7 +52,13 @@ const WhyBackbone4 = () => {
           data-aos="fade-left"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="
+              border border-foreground-100
+              bg-white
+              dark:bg-background-100
+              dark:border-background-300
+              mb-3
+            "
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone?"
@@ -67,6 +73,7 @@ const WhyBackbone4 = () => {
               text-xl
               sm:text-[32px]
               text-primary
+              dark:text-foreground-50
               font-medium
               mb-3
               pr-0
@@ -83,6 +90,7 @@ const WhyBackbone4 = () => {
             className="
               mb-8
               text-primary-500
+              dark:text-foreground-300
               text-base
               font-normal
               leading-6
@@ -100,42 +108,54 @@ const WhyBackbone4 = () => {
           {/* FEATURE CARDS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <div
-              className="bg-[#F8FAFB] rounded-3xl p-4"
+              className="
+                bg-[#F8FAFB]
+                dark:bg-background-100
+                rounded-3xl
+                p-4
+              "
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <div
-                className="rounded-full bg-primary h-6 w-6 p-[1.455px] flex items-center justify-center text-white mb-6"
+                className="rounded-full bg-primary dark:bg-primary-450 h-6 w-6 p-[1.455px] flex items-center justify-center text-white mb-6"
                 data-aos="zoom-in"
                 data-aos-delay="250"
               >
                 <Icon icon="ri:fire-fill" />
               </div>
-              <div className="text-black text-base font-medium leading-6 tracking-[-0.176px] mb-3">
+
+              <div className="text-black dark:text-foreground-50 text-base font-medium leading-6 tracking-[-0.176px] mb-3">
                 Focused Strategy
               </div>
-              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500">
+              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500 dark:text-foreground-300">
                 We take a research-driven approach, focusing on what matters
                 most for consistent performance.
               </div>
             </div>
 
             <div
-              className="bg-[#F8FAFB] rounded-3xl p-4"
+              className="
+                bg-[#F8FAFB]
+                dark:bg-background-100
+                rounded-3xl
+                p-4
+              "
               data-aos="fade-up"
               data-aos-delay="250"
             >
               <div
-                className="rounded-full bg-primary h-6 w-6 p-[1.455px] flex items-center justify-center text-white mb-6"
+                className="rounded-full bg-primary dark:bg-primary-450 h-6 w-6 p-[1.455px] flex items-center justify-center text-white mb-6"
                 data-aos="zoom-in"
                 data-aos-delay="300"
               >
                 <Icon icon="ri:timer-fill" />
               </div>
-              <div className="text-black text-base font-medium leading-6 tracking-[-0.176px] mb-3">
+
+              <div className="text-black dark:text-foreground-50 text-base font-medium leading-6 tracking-[-0.176px] mb-3">
                 Long term Value
               </div>
-              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500">
+              <div className="text-sm font-normal leading-5 tracking-[-0.084px] text-primary-500 dark:text-foreground-300">
                 Our investments prioritise stability and sustainable returns for
                 steady long term value.
               </div>

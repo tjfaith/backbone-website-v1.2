@@ -6,7 +6,10 @@ import { backboneColoredLogo } from "@/public/assets";
 
 const DownloadApp = () => {
   return (
-    <div className="overflow-hidden bg-white py-12 sm:py-14" data-aos="fade-up">
+    <div
+      className="overflow-hidden bg-white dark:bg-background-75 py-12 sm:py-14"
+      data-aos="fade-up"
+    >
       <div
         className="
           page-max-width
@@ -42,6 +45,7 @@ const DownloadApp = () => {
               sm:leading-10
               tracking-[-0.16px]
               text-primary
+              dark:text-primary-50
               max-w-md
             "
             data-aos="fade-up"
@@ -57,6 +61,7 @@ const DownloadApp = () => {
               leading-6
               tracking-[-0.27px]
               text-primary-500
+              dark:text-primary-400
               max-w-md
             "
             data-aos="fade-up"

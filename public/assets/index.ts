@@ -97,27 +97,33 @@ export { default as User4 } from "./img/globalReach/user4.png";
 // export { default as GlobalBankingActive } from "./img/ourOfferings/globalBankingActive.png";
 export { default as GlobalBankingActive } from "./img/ourOfferings/globalBankingActive.svg";
 export { default as GlobalBankingInActive } from "./img/ourOfferings/globalBankingInActive.png";
-export { default as GlobalBankingOpen } from "./img/ourOfferings/globalBankingOpen.png";
+export { default as GlobalBankingOpen } from "./img/ourOfferings/globalBankingOpen.svg";
 
 // export { default as TradeFinanceActive } from "./img/ourOfferings/tradeFinanceActive.png";
 export { default as TradeFinanceActive } from "./img/ourOfferings/tradeFinanceActive.svg";
 export { default as TradeFinanceInActive } from "./img/ourOfferings/tradeFinanceInActive.png";
-export { default as TradeFinanceOpen } from "./img/ourOfferings/tradeFinanceOpen.png";
+export { default as TradeFinanceOpen } from "./img/ourOfferings/tradeFinanceOpen.svg";
 
 // export { default as InvestmentsActive } from "./img/ourOfferings/investmentsActive.png";
 export { default as InvestmentsActive } from "./img/ourOfferings/investmentsActive.svg";
 export { default as InvestmentsInActive } from "./img/ourOfferings/investmentsInActive.png";
-export { default as InvestmentsOpen } from "./img/ourOfferings/investmentOpen.png";
+export { default as InvestmentsOpen } from "./img/ourOfferings/investmentOpen.svg";
 
 // export { default as EnergyFinanceActive } from "./img/ourOfferings/energyFinanceActive.png";
 export { default as EnergyFinanceActive } from "./img/ourOfferings/energyFinanceActive.svg";
 export { default as EnergyFinanceInActive } from "./img/ourOfferings/energyFinanceInActive.png";
-export { default as EnergyFinanceOpen } from "./img/ourOfferings/energyFinanceOpen.png";
+export { default as EnergyFinanceOpen } from "./img/ourOfferings/energyFinanceOpen.svg";
 
 // export { default as HomeFinanceActive } from "./img/ourOfferings/homeFinanceActive.png";
 export { default as HomeFinanceActive } from "./img/ourOfferings/homeFinanceActive.svg";
 export { default as HomeFinanceInActive } from "./img/ourOfferings/homeFinanceInActive.png";
-export { default as HomeFinanceOpen } from "./img/ourOfferings/homeFinanceOpen.png";
+export { default as HomeFinanceOpen } from "./img/ourOfferings/homeFinanceOpen.svg";
+
+export { default as HarliviaActive } from "./img/ourOfferings/harliviaActive.svg";
+export { default as HarliviaInActive } from "./img/ourOfferings/harliviaInActive.svg";
+
+export { default as GlobilityActive } from "./img/ourOfferings/globilityActive.svg";
+export { default as GlobilityInActive } from "./img/ourOfferings/globilityInActive.svg";
 
 // about
 export { default as About1 } from "./img/about/about1.jpeg";

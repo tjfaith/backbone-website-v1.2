@@ -24,7 +24,10 @@ const HomePage = () => {
       <BackboneFee />
       <WhyBackbone1 />
       <WhyBackbone2 />
-      <div className=" bg-gradient-to-b from-background-75 from-[6%] via-white via-[22%] to-white">
+      <div
+        className="bg-gradient-to-b from-background-75 from-[6%] via-white via-[22%] to-white
+                dark:from-background-75 dark:via-background-100 dark:to-background"
+      >
         <WhyBackbone3 />
         <BlogExtract />
       </div>

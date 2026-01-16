@@ -7,13 +7,24 @@ interface Props {
   className?: string;
   label?: string;
 }
+
 const ContactSalesBtn = ({ className, label = "Contact Sales" }: Props) => {
   return (
     <Button
       as={Link}
       className={cn(
-        "text-primary-500  bg-background-200 !px-6 !py-3 text-sm font-medium rounded-[10px]",
-        className,
+        `
+        text-primary-500
+        bg-background-200
+        dark:text-foreground
+        dark:bg-background-100
+        !px-6
+        !py-3
+        text-sm
+        font-medium
+        rounded-[10px]
+        `,
+        className
       )}
       href="/contact-us"
       size="md"

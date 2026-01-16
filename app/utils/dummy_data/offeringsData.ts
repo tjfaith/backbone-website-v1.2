@@ -14,6 +14,10 @@ import {
   TradeFinanceActive,
   TradeFinanceInActive,
   TradeFinanceOpen,
+  HarliviaActive,
+  HarliviaInActive,
+  GlobilityActive,
+  GlobilityInActive,
 } from "@/public/assets";
 
 export const offerings = [
@@ -68,6 +72,13 @@ export const offerings = [
       },
       {
         title: "Letter of Credit",
+        description:
+          "A Letter of Credit protects both sides of the deal, ensuring payment only happens when terms are met.",
+        link: null,
+        linkText: null,
+      },
+      {
+        title: "Invoice Financing",
         description:
           "Get your business or project moving by financing your unpaid invoices through Backbone.",
         link: null,
@@ -152,6 +163,57 @@ export const offerings = [
           "With Backbone, you can purchase your dream home and pay back in flexible terms that suit your budget and lifestyle.",
         link: null,
         linkText: null,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Backbone Harlivia",
+    description:
+      "Backbone Harlivia harmonises our efforts to advance Precision Agriculture, Agribusiness Finance, and inclusive Real Estate ownership across Africa.",
+    icon: HarliviaInActive,
+    activeIcon: HarliviaActive,
+    coverIcon: HomeFinanceOpen,
+    active: false,
+    comingSoon: true,
+    generalLink: null,
+    generalLinkText: null,
+    details: [
+      {
+        title: "Backbone Agriculture",
+        description:
+          "Backbone Agriculture blends finance and precision agriculture to drive sustainable growth across the value chain. We help agribusinesses and investors improve yields, manage risk, and scale responsibly.",
+        link: "/offerings/harlivia/agriculture",
+        linkText: "Explore Backbone Agriculture",
+      },
+      {
+        title: "Bricshare",
+        description:
+          "Brickshare lets you partner with friends, families, or trusted networks to invest in properties around the world. By pooling resources, you gain access to global real estate opportunities..",
+        link: "/offerings/harlivia/bricshare",
+        linkText: "Explore Bricshare",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Backbone Globility",
+    description:
+      "Backbone Globility Backbone Harlivia harmonises our efforts to advance Precision Agriculture, Agribusiness Finance, and inclusive Real Estate ownership across Africa.",
+    icon: GlobilityInActive,
+    activeIcon: GlobilityActive,
+    coverIcon: HomeFinanceOpen,
+    active: false,
+    comingSoon: true,
+    generalLink: null,
+    generalLinkText: null,
+    details: [
+      {
+        title: "Orbis",
+        description:
+          "Orbis, from Backbone Globility, integrates global banking, global mobility, and strategic investments to unlock access to emerging and high-growth markets—powering a truly global life.",
+        link: "/offerings/globility/orbis",
+        linkText: "Explore Orbis",
       },
     ],
   },

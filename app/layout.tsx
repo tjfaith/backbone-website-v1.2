@@ -30,11 +30,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  // themeColor: [
-  //   { media: "(prefers-color-scheme: light)", color: "white" },
-  //   { media: "(prefers-color-scheme: dark)", color: "black" },
-  // ],
-  themeColor: "white",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  // themeColor: "white",
 };
 
 export default function RootLayout({
@@ -70,9 +70,9 @@ s0.parentNode.insertBefore(s1,s0);
         <Providers
           themeProps={{
             attribute: "class",
-            defaultTheme: "light",
-            forcedTheme: "light",
-            enableSystem: false,
+            defaultTheme: "system",
+            // forcedTheme: "light",
+            enableSystem: true,
           }}
         >
           <main className="dark:bg-background-200">

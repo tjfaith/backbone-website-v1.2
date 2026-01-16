@@ -8,21 +8,21 @@ import { OfferingImg18 } from "@/public/assets";
 
 const WhyBackbone7 = () => {
   return (
-    <div className="overflow-hidden bg-white py-12  ">
+    <div className="overflow-hidden bg-white dark:bg-background py-12">
       <div className="page-max-width">
         <div
           className="flex flex-col items-center mb-[53px]"
           data-aos="fade-up"
         >
           <CTitle
-            className="border border-foreground-100 bg-white mb-3"
+            className="border border-foreground-100 bg-white dark:bg-background-100 mb-3"
             data-aos="fade-up"
             iconType="flashlight"
             title="Why Backbone"
           />
 
           <div
-            className="clash-display-font  text-center tracking-[-0.16px] leading-10  text-[32px] text-primary font-medium max-w-xs mb-3"
+            className="clash-display-font text-center tracking-[-0.16px] leading-10 text-[32px] text-primary font-medium max-w-xs mb-3 dark:text-primary"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -30,7 +30,7 @@ const WhyBackbone7 = () => {
           </div>
 
           <div
-            className=" mb-8 text-primary-500 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-lg "
+            className="mb-8 text-primary-500 dark:text-primary-300 text-center text-base font-normal leading-6 tracking-[-0.176px] max-w-lg"
             data-aos="fade-up"
             data-aos-delay="150"
           >
@@ -47,6 +47,7 @@ const WhyBackbone7 = () => {
             <ContactSalesBtn />
           </div>
         </div>
+
         <div className="relative overflow-hidden">
           <Image
             removeWrapper
