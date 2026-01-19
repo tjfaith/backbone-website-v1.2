@@ -5,7 +5,6 @@ export type E164Number = string;
 export type PaymentTypeStatus = "Coming soon" | "flutterwave" | "";
 export type OfferingsStatus = "Coming soon" | "live";
 export type AccountTypeProps = "individual" | "corporate";
-export type OnboardingStep = "step1" | "step2" | "step3" | "step4";
 export type CurrencyType = "CRYPTO" | "FIAT";
 export type CompanyType =
   | "Startup"
@@ -161,41 +160,4 @@ export interface Offerings {
   title: string;
   description: string;
   status: OfferingsStatus;
-}
-
-// ONBOARDING FORMS
-export interface PersonalInfoProps {
-  firstName: string;
-  middleName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: E164Number | undefined;
-  occupation: string;
-  address: string;
-}
-
-export interface CompanyInformationProps {
-  companyName: string;
-  companyType: CompanyType;
-  tid: string;
-}
-
-export interface IndividualDocumentsProps {
-  passportPhotograph: File;
-  idCard: File;
-  addressEvidence: File;
-  bankStatement: File;
-}
-
-export interface CorporateDocumentsProps {
-  certificateOfIncorporation: File;
-  memorandum: File;
-  cac: File;
-  companyProfile: File;
-  idCard: File;
-  passportPhotograph: File;
-  companyAddress: File;
-  scrumlCertificate: File;
-  boarResolution: File;
-  companyPolicies: File;
 }

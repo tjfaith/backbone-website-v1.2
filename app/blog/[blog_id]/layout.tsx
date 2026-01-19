@@ -5,10 +5,10 @@ import { getBlogById } from "@/app/utils/services/internalServices/blog.server.s
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ blog_id: string }>; // ✅ make this a Promise
+  params: Promise<{ blog_id: string }>;
 }): Promise<Metadata> {
-  const { blog_id } = await params; // ✅ await it
-
+  const { blog_id } = await params;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
   const singleBlog = await getBlogById(blog_id);
 
   if (!singleBlog) {
@@ -21,11 +21,16 @@ export async function generateMetadata({
   return {
     title: singleBlog?.title || "Default Title",
     description: singleBlog?.description || "",
+    alternates: {
+      canonical: `/blog?id=${singleBlog._id.toString()}`,
+    },
     openGraph: {
       title: singleBlog?.title || "Default Title",
       description: singleBlog?.description || "",
       type: "article",
-      url: `/blog?title=${encodeURIComponent(singleBlog?.title || "")}&id=${singleBlog?._id}`,
+      url: `${baseUrl}/blog?title=${encodeURIComponent(
+        singleBlog.title,
+      )}&id=${singleBlog._id.toString()}`,
       images: [
         {
           url: singleBlog?.featuredImage || "",

@@ -4,6 +4,7 @@ import "animate.css";
 import "aos/dist/aos.css";
 import { Metadata, Viewport } from "next";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 import { Providers } from "./providers";
 
@@ -18,14 +19,50 @@ import {
   AnnouncementModal,
 } from "@/components";
 
+// export const metadata: Metadata = {
+//   title: {
+//     default: siteConfig.name,
+//     template: `%s - ${siteConfig.name}`,
+//   },
+//   description: siteConfig.description,
+//   icons: {
+//     icon: "/favicon.ico",
+//   },
+// };
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
+  keywords: siteConfig.keywords,
+  metadataBase: new URL("https://mybackbone.io"),
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: "https://mybackbone.io",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/assets/img/fullLogo.svg",
+        width: 1200,
+        height: 630,
+        alt: "Backbone Platform",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/assets/img/fullLogo.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -49,22 +86,23 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
           name="viewport"
         />
-
-        {/* <Script id="tawkto">
-          {`
-             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67af2a1f0bc1aa1a2cb09479/1ik23p38m';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-          `}
-        </Script> */}
       </head>
       <body className={`${fontSans.className} ${fontBeauRivage.variable}`}>
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Backbone",
+              url: "https://mybackbone.io",
+              logo: "https://mybackbone.io/logo.png",
+            }),
+          }}
+          id="organization-schema"
+          strategy="afterInteractive"
+          type="application/ld+json"
+        />
+
         <PreLoader />
         <ChatButton />
         <Providers
@@ -73,6 +111,7 @@ s0.parentNode.insertBefore(s1,s0);
             defaultTheme: "system",
             // forcedTheme: "light",
             enableSystem: true,
+            storageKey: "backbone-website",
           }}
         >
           <main className="dark:bg-background-200">

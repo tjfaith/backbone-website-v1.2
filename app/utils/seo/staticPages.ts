@@ -1,0 +1,17 @@
+export const staticPages = [
+  "/",
+  "/about",
+  "/contact-us",
+  "/offerings/businesses",
+  "/offerings/finance/energy",
+  "/offerings/finance/property",
+  "/offerings/finance/rent",
+  "/offerings/finance/trade",
+  "/offerings/blobility/orbis",
+  "/offerings/harlivia/agriculture",
+  "/offerings/harlivia/bricshare",
+  "/offerings/indevidual",
+  "/offerings/investments",
+  "/privacy-policy",
+  "/terms",
+];

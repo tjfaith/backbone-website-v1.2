@@ -138,20 +138,6 @@ export { default as BlogHero } from "./Blog/BlogHero";
 export { default as ContactForm } from "./ContactUs/ContactForm";
 export { default as ContactInfo } from "./ContactUs/ContactInfo";
 
-// Onboarding
-export { default as OnboardingTab } from "./Onboarding/OnboardingTab";
-export { default as AccountType } from "./Onboarding/AccountType";
-export { default as ActiveTab } from "./Onboarding/ActiveTab";
-export { default as FormSubmitted } from "./Onboarding/FormSubmitted";
-
-// Onboarding --corporate
-export { default as CompanyInformation } from "./Onboarding/Corporate/CompanyInformation";
-export { default as CorporateDocument } from "./Onboarding/Corporate/CorporateDocument";
-
-// Onboarding --individual
-export { default as PersonalInformation } from "./Onboarding/Individual/PersonalInformation";
-export { default as IndividualDocument } from "./Onboarding/Individual/IndividualDocument";
-
 // Verify payment
 export { default as SuccessfulPayment } from "./VerifyPayment/SuccessfulPayment";
 export { default as CancelledPayment } from "./VerifyPayment/CancelledPayment";
