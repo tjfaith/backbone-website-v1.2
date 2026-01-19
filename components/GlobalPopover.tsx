@@ -42,7 +42,6 @@ const GlobalPopover = () => {
     { name: "Egypt", flag: "emojione:flag-for-egypt" },
     { name: "India", flag: "emojione:flag-for-india" },
     { name: "Indonesia", flag: "emojione:flag-for-indonesia" },
-    { name: "Kenya", flag: "emojione:flag-for-kenya" },
     { name: "Mexico", flag: "emojione:flag-for-mexico" },
     { name: "Morocco", flag: "emojione:flag-for-morocco" },
     { name: "Philippines", flag: "emojione:flag-for-philippines" },
@@ -122,12 +121,12 @@ const GlobalPopover = () => {
     mb-[6px]
   "
       >
-        Multi-currency accounts are available in select countries, while
+        {/* Multi-currency accounts are available in select countries, while
         payments can be sent to and received from most countries worldwide,
-        excluding sanctioned regions.
+        excluding sanctioned regions. */}
+        Multi-currency accounts are currently available in the countries listed
+        below
       </div>
-
-      {/* <div className="w-full h-px bg-[linear-gradient(to_right,#E1E4EA_50%,transparent_0%)] mb-[6px] bg-[length:10px_1px] bg-repeat-x" /> */}
       <div
         className="
     w-full h-px
@@ -140,11 +139,6 @@ const GlobalPopover = () => {
 
       <div className="grid sm:grid-cols-3 grid-cols-2 text-sm mb-5">
         {regions.map((item) => (
-          // <button
-          //   key={item.name}
-          //   className="flex items-center gap-2 hover:text-primary transition text-left p-3 tracking-[-0.084px] leading-5"
-          //   onClick={() => setOpen(false)}
-          // >
           <button
             key={item.name}
             className="
@@ -156,7 +150,7 @@ const GlobalPopover = () => {
   "
             onClick={() => setOpen(false)}
           >
-            <Icon icon={item.flag} className="text-lg" />
+            <Icon className="text-lg" icon={item.flag} />
             {item.name}
           </button>
         ))}
@@ -168,23 +162,33 @@ const GlobalPopover = () => {
           innerClassName="bg-info-250"
           timing={0.8}
         />
-        {/* <p className="text-xs font-semibold text-default-500 whitespace-nowrap"> */}
         <p className="text-xs font-semibold text-default-500 dark:text-foreground-400 whitespace-nowrap">
           COMING SOON
         </p>
-        {/* <div className="w-full h-px bg-[linear-gradient(to_right,#E1E4EA_50%,transparent_0%)] bg-[length:10px_1px] bg-repeat-x" /> */}
         <div
           className="
     w-full h-px
     bg-[linear-gradient(to_right,#E1E4EA_50%,transparent_0%)]
     dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_50%,transparent_0%)]
-    mb-[6px]
     bg-[length:10px_1px] bg-repeat-x
   "
         />
       </div>
 
-      {/* <div className="grid grid-cols-3 gap-y-3 gap-x-4 text-sm text-default-500"> */}
+      <div
+        className="
+    text-xs text-primary-450 dark:text-foreground-300
+    font-normal leading-4
+    p-3 rounded-xl
+    bg-background-200 dark:bg-background-200
+    mb-[6px]
+  "
+      >
+        Multi-currency accounts are coming to these countries soon. We can still
+        help you send and receive payments to and from them, and most countries
+        worldwide. excluding sanctioned regions
+      </div>
+
       <div className="grid grid-cols-3 gap-y-3 gap-x-4 text-sm text-default-500 dark:text-foreground-400">
         {comingSoon.map((item) => (
           <div key={item.name} className="flex items-center gap-2 p-3">

@@ -7,7 +7,7 @@ import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { Link } from "@heroui/link";
 import Image from "next/image";
-import { Dispatch, SetStateAction, useRef } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";

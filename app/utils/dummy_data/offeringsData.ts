@@ -59,7 +59,7 @@ export const offerings = [
     activeIcon: TradeFinanceActive,
     coverIcon: TradeFinanceOpen,
     active: false,
-    comingSoon: true,
+    comingSoon: false,
     generalLink: "/offerings/finance/trade",
     generalLinkText: "Explore Trade Finance",
     details: [
@@ -102,7 +102,7 @@ export const offerings = [
     activeIcon: InvestmentsActive,
     coverIcon: InvestmentsOpen,
     active: false,
-    comingSoon: true,
+    comingSoon: false,
     generalLink: "/offerings/investments",
     generalLinkText: "Explore Investments",
     details: [
@@ -124,7 +124,7 @@ export const offerings = [
     activeIcon: EnergyFinanceActive,
     coverIcon: EnergyFinanceOpen,
     active: false,
-    comingSoon: true,
+    comingSoon: false,
     generalLink: "/offerings/finance/energy",
     generalLinkText: "Explore Energy Finance",
     details: [
@@ -146,7 +146,7 @@ export const offerings = [
     activeIcon: HomeFinanceActive,
     coverIcon: HomeFinanceOpen,
     active: false,
-    comingSoon: true,
+    comingSoon: false,
     generalLink: "/offerings/finance/property",
     generalLinkText: "Explore Home Finance",
     details: [
@@ -199,7 +199,7 @@ export const offerings = [
     id: 6,
     title: "Backbone Globility",
     description:
-      "Backbone Globility Backbone Harlivia harmonises our efforts to advance Precision Agriculture, Agribusiness Finance, and inclusive Real Estate ownership across Africa.",
+      "Backbone Globility  harmonises our efforts to advance Precision Agriculture, Agribusiness Finance, and inclusive Real Estate ownership across Africa.",
     icon: GlobilityInActive,
     activeIcon: GlobilityActive,
     coverIcon: HomeFinanceOpen,
