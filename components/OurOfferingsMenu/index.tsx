@@ -181,13 +181,13 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
         classNames={{ closeButton: "z-10" }}
         isOpen={menu.showPopover}
         placement="top"
+        scrollBehavior={menu.isMobile ? "inside" : "normal"}
         size={menu.isMobile ? "full" : "5xl"}
-        scrollBehavior="inside"
         onOpenChange={menu.setShowPopover}
       >
         <ModalContent className="p-0 shadow-xl bg-background-200 dark:bg-[#181B25] dark:shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
           <ModalBody className="p-0">
-              <MenuContent {...menu} />
+            <MenuContent {...menu} />
           </ModalBody>
         </ModalContent>
       </Modal>
