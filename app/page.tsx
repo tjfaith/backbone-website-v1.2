@@ -1,5 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useIsSSR } from "@react-aria/ssr";
+import { useTheme } from "next-themes";
 
 import {
   HeroSection,
@@ -13,8 +16,17 @@ import {
   WhyBackbone3,
   DownloadApp,
 } from "@/components";
+import { setShowLightNav } from "@/app/store/Features/settingsSlice";
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  const { theme } = useTheme();
+  const isSSR = useIsSSR();
+
+  useEffect(() => {
+    dispatch(setShowLightNav(theme === "light" || isSSR ? false : true));
+  }, [theme]);
+
   return (
     <div className="md:pt-0 pt-20 overflow-hidden">
       <HeroSection />

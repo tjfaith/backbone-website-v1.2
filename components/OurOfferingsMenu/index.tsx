@@ -116,7 +116,7 @@ const MenuContent = ({
             </button>
           )}
 
-          <div className="pb-3 mt-3 relative space-y-6 pl-5 pr-16 min-h-[40vh]">
+          <div className="pb-3 mt-3 relative space-y-6 pl-5 sm:pr-16 pr-5 min-h-[40vh]">
             {menuDetails.details.map((value: any, index: number) => (
               <div key={index}>
                 <div className="text-primary text-base font-semibold dark:text-foreground-100 tracking-[-0.176px] leading-6 mb-1 animate__animated animate__fadeIn">
