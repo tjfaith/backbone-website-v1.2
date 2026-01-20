@@ -109,7 +109,7 @@ const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
 
-        <NavbarMenuToggle />
+        <NavbarMenuToggle className="focus:outline-none focus-visible:outline-none focus-visible:ring-0" />
       </NavbarContent>
 
       {/* mobile */}

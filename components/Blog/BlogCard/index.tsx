@@ -38,12 +38,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
 
           <button
             className="flex mt-6 space-x-1 text-primary items-center font-sm cursor-pointer"
-            onClick={() =>
-              // viewBlog(
-              //   `/${data?._id}?title=${encodeURIComponent(data.title)}&id=${data?._id}`,
-              // )
-              viewBlog(`/${data?.slug}`)
-            }
+            onClick={() => viewBlog(data?.slug as string)}
           >
             <span>Read the story</span> <Icon icon="ri:arrow-right-s-line" />
           </button>

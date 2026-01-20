@@ -2,14 +2,14 @@
 
 import { Icon } from "@iconify/react";
 import { Modal, ModalBody, ModalContent } from "@heroui/modal";
-import { Drawer, DrawerContent } from "@heroui/drawer";
-import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { Link } from "@heroui/link";
 import Image from "next/image";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { FocusScope } from "@react-aria/focus";
 
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
+
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
 
 interface Props {
@@ -17,24 +17,25 @@ interface Props {
   setIsMenuOpen?: Dispatch<SetStateAction<boolean>>;
 }
 
-const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
-  const {
-    selectedMenu,
-    menuDetails,
-    isMobile,
-    viewDetails,
-    showLightNav,
-    showPopover,
-    isOfferingsOpen,
-    closeOfferings,
-    openOfferings,
-    closeAllMenu,
-    setShowPopover,
-    handleServiceClick,
-    handleBackToServices,
-  } = useOurOfferingsMenu({ setIsMenuOpen });
+/* ------------------ STABLE MENU CONTENT ------------------ */
+const MenuContent = ({
+  selectedMenu,
+  menuDetails,
+  isMobile,
+  viewDetails,
+  theme,
+  isSSR,
+  handleServiceClick,
+  handleBackToServices,
+  closeAllMenu,
+}: any) => {
+  const [mounted, setMounted] = useState(false);
 
-  const MenuContent = () => (
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return (
     <div
       className={`flex w-full ${
         isMobile ? "flex-col h-screen" : "flex-row items-stretch"
@@ -42,30 +43,30 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
     >
       {(!isMobile || !viewDetails) && (
         <div
-          className={`space-y-4 lg:w-9/12 pr-4 py-1 pl-1 border-r dark:border-foreground-400/20 ${
+          className={`space-y-3 lg:w-9/12 pr-4 py-1 pl-1 border-r dark:border-foreground-400/20 ${
             isMobile && "mt-10"
           }`}
         >
           {offerings.map((service) => (
             <button
               key={service.id}
-              onClick={() => handleServiceClick(service.id)}
-              className={`flex items-start gap-3 pr-10 py-2 pl-2 rounded-lg cursor-pointer transition-all duration-200 ${
+              className={`flex items-start gap-3 pr-10 py-3 pl-3 rounded-lg cursor-pointer transition-all duration-200 ${
                 selectedMenu === service.id
-                  ? "bg-background dark:bg-background-200 border dark:border-foreground-400/20 shadow-[0px_0px_0px_1px_#E1E4EA,_0px_4px_13px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
-                  : "hover:bg-white dark:hover:bg-background-300 hover:shadow-sm"
+                  ? "bg-background dark:bg-[#222635] shadow-[0px_0px_0px_1px_#E1E4EA,_0px_4px_13px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
+                  : "hover:bg-white dark:hover:bg-[#222635]/20 hover:shadow-sm"
               }`}
+              onClick={() => handleServiceClick(service.id)}
             >
               <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center">
                 <Image
-                  alt="service icon"
+                  alt={`service icon-${service.id}`}
                   className="object-contain"
-                  height={40}
-                  width={40}
                   src={
-                    selectedMenu === service.id
-                      ? service.activeIcon
-                      : service.icon
+                    !mounted
+                      ? service.lightIcon
+                      : theme === "light" || isSSR
+                        ? service.lightIcon
+                        : service.darkIcon
                   }
                 />
               </div>
@@ -79,13 +80,13 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
                   {service.comingSoon && (
                     <Chip
                       className="
-                        text-xs rounded-lg text-foreground-500 bg-white border-foreground-100
-                        dark:bg-background-200 dark:text-foreground-200 dark:border-foreground-300/30
-                        border-2 py-1 px-1 items-center gap-1 border-dashed
-                      "
+                          text-xs rounded-lg text-primary-400 bg-white  border-foreground-100
+                          dark:bg-white/10 dark:text-foreground-200 dark:border-[#E1E4EA]/10
+                          border-2 py-1 px-1 items-center gap-1 border-dashed
+                        "
                       startContent={
                         <Icon
-                          className="text-foreground-500 dark:text-foreground-400"
+                          className="text-primary-400 dark:text-foreground-400"
                           icon="ri:forbid-fill"
                         />
                       }
@@ -108,7 +109,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
         <div className="space-y-6 w-full relative h-full lg:h-auto mt-8 lg:mt-0">
           {isMobile && (
             <button
-              className="text-sm text-primary dark:text-info-500 hover:dark:text-info-400 pl-4 underline mb-3 flex items-center gap-1 absolute -top-5"
+              className="text-sm text-primary dark:text-white hover:dark:text-white/80 pl-4 underline mb-3 flex items-center gap-1 absolute -top-5"
               onClick={handleBackToServices}
             >
               <Icon icon="ri:arrow-left-s-line" />
@@ -117,7 +118,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
           )}
 
           <div className="pb-3 mt-3 relative space-y-6 pl-5 pr-16 min-h-[40vh]">
-            {menuDetails.details.map((value, index) => (
+            {menuDetails.details.map((value: any, index: number) => (
               <div key={index}>
                 <div className="text-primary text-base font-semibold dark:text-foreground-100 tracking-[-0.176px] leading-6 mb-1 animate__animated animate__fadeIn">
                   {value.title}
@@ -129,7 +130,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
 
                 {value.link && (
                   <Link
-                    className="text-sm text-primary dark:text-info-500 hover:dark:text-info-400 flex items-center gap-1 mt-1 underline animate__animated animate__fadeIn"
+                    className="text-sm text-primary dark:tex-white hover:dark:text-white/80 flex items-center gap-1 mt-1 underline animate__animated animate__fadeIn"
                     href={value.link}
                     onPress={closeAllMenu}
                   >
@@ -142,7 +143,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
 
             {menuDetails?.generalLink && (
               <Link
-                className="text-sm text-primary dark:text-info-500 hover:dark:text-info-400 flex items-center gap-1 underline mt-3 animate__animated animate__fadeIn"
+                className="text-sm text-primary dark:text-white hover:dark:text-white/80 flex items-center gap-1 underline mt-3 animate__animated animate__fadeIn"
                 href={menuDetails.generalLink}
                 onPress={closeAllMenu}
               >
@@ -150,63 +151,47 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
                 <Icon icon="ri:arrow-right-s-line" />
               </Link>
             )}
-
-            <Image
-              alt="cover icon"
-              className="ml-auto absolute -bottom-44 right-0"
-              src={menuDetails.coverIcon}
-            />
           </div>
         </div>
       )}
     </div>
   );
+};
 
-  return isMobile ? (
-    <>
-      <Button
-        className="text-base bg-transparent px-0 text-background lg:text-primary hover:text-primary"
-        endContent={<Icon icon="ri:arrow-down-s-line" />}
-        variant="light"
-        onPress={() => {
-          handleBackToServices();
-          openOfferings();
-        }}
-      >
-        Our Offerings
-      </Button>
+// MenuContent.displayName = "MenuContent";
 
-      <Drawer isOpen={isOfferingsOpen} onClose={closeOfferings}>
-        <DrawerContent className="max-w-full bg-background-200 dark:bg-background-75 rounded-t-xl shadow-lg">
-          <MenuContent />
-        </DrawerContent>
-      </Drawer>
-    </>
-  ) : (
+/* ------------------ MAIN COMPONENT ------------------ */
+const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
+  const menu = useOurOfferingsMenu({ setIsMenuOpen });
+
+  return (
     <>
       <button
-        onClick={() => setShowPopover(true)}
         className={`${changeReady && "!text-primary"} flex items-center gap-1 text-base bg-transparent px-2 hover:text-primary dark:text-primary ${
-          showLightNav ? "text-background" : "text-primary"
+          menu.showLightNav ? "text-background" : "text-primary"
         }`}
+        onClick={() => menu.setShowPopover(true)}
       >
         <span>Our Offerings</span>
         <Icon icon="ri:arrow-down-s-line" />
       </button>
 
       <Modal
-        isOpen={showPopover}
-        onOpenChange={setShowPopover}
-        size="5xl"
-        placement="top"
+        isDismissable
+        shouldBlockScroll
         backdrop="blur"
-        classNames={{
-          closeButton: "z-10",
-        }}
+        classNames={{ closeButton: "z-10" }}
+        isKeyboardDismissDisabled={false}
+        isOpen={menu.showPopover}
+        placement="top"
+        size={menu.isMobile ? "full" : "5xl"}
+        onOpenChange={menu.setShowPopover}
       >
         <ModalContent className="p-0 shadow-xl bg-background-200 dark:bg-background-75 border-2 dark:border-foreground-400/20 dark:shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
           <ModalBody className="p-0">
-            <MenuContent />
+            <FocusScope contain={false} restoreFocus={false}>
+              <MenuContent {...menu} />
+            </FocusScope>
           </ModalBody>
         </ModalContent>
       </Modal>
