@@ -213,7 +213,7 @@ const GlobalPopover = () => {
           size="full"
           onOpenChange={setOpen}
         >
-          <DrawerContent className="rounded-t-3xl">{Content}</DrawerContent>
+          <DrawerContent className="rounded-t-3xl p-0">{Content}</DrawerContent>
         </Drawer>
       </>
     );
