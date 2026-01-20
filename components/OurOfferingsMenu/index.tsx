@@ -6,7 +6,6 @@ import { Chip } from "@heroui/chip";
 import { Link } from "@heroui/link";
 import Image from "next/image";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { FocusScope } from "@react-aria/focus";
 
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
 
@@ -178,20 +177,17 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
 
       <Modal
         isDismissable
-        shouldBlockScroll
         backdrop="blur"
         classNames={{ closeButton: "z-10" }}
-        isKeyboardDismissDisabled={false}
         isOpen={menu.showPopover}
         placement="top"
+        scrollBehavior={menu.isMobile ? "inside" : "normal"}
         size={menu.isMobile ? "full" : "5xl"}
         onOpenChange={menu.setShowPopover}
       >
-        <ModalContent className="p-0 shadow-xl bg-background-200 dark:bg-[#181B25] border-2 dark:border-foreground-400/20 dark:shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
+        <ModalContent className="p-0 shadow-xl bg-background-200 dark:bg-[#181B25] dark:shadow-[0_20px_60px_rgba(0,0,0,0.55)]">
           <ModalBody className="p-0">
-            <FocusScope contain={false} restoreFocus={false}>
-              <MenuContent {...menu} />
-            </FocusScope>
+            <MenuContent {...menu} />
           </ModalBody>
         </ModalContent>
       </Modal>

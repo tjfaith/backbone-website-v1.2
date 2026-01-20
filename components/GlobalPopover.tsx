@@ -35,6 +35,7 @@ const GlobalPopover = () => {
     { name: "USA", flag: "emojione:flag-for-united-states" },
     { name: "UK", flag: "emojione:flag-for-united-kingdom" },
     { name: "Canada", flag: "emojione:flag-for-canada" },
+    { name: "Nigeria", flag: "emojione:flag-for-nigeria" },
   ];
 
   const comingSoon = [
@@ -42,6 +43,7 @@ const GlobalPopover = () => {
     { name: "Egypt", flag: "emojione:flag-for-egypt" },
     { name: "India", flag: "emojione:flag-for-india" },
     { name: "Indonesia", flag: "emojione:flag-for-indonesia" },
+    { name: "Gabon", flag: "emojione:flag-for-gabon" },
     { name: "Mexico", flag: "emojione:flag-for-mexico" },
     { name: "Morocco", flag: "emojione:flag-for-morocco" },
     { name: "Philippines", flag: "emojione:flag-for-philippines" },
@@ -56,7 +58,6 @@ const GlobalPopover = () => {
     { name: "Senegal", flag: "emojione:flag-for-senegal" },
     { name: "Togo", flag: "emojione:flag-for-togo" },
     { name: "Chad", flag: "emojione:flag-for-chad" },
-    { name: "Gabon", flag: "emojione:flag-for-gabon" },
     { name: "Equatorial Guinea", flag: "emojione:flag-for-equatorial-guinea" },
   ];
 
