@@ -42,14 +42,14 @@ const MenuContent = ({
     >
       {(!isMobile || !viewDetails) && (
         <div
-          className={`space-y-3 lg:w-9/12 pr-4 py-1 pl-1 border-r dark:border-foreground-400/20 ${
+          className={`space-y-3 lg:w-9/12 sm:pr-4 pr-1 py-1 pl-1 border-r dark:border-foreground-400/20 ${
             isMobile && "mt-10"
           }`}
         >
           {offerings.map((service) => (
             <button
               key={service.id}
-              className={`flex items-start gap-3 pr-10 py-3 pl-3 rounded-lg cursor-pointer transition-all duration-200 ${
+              className={`flex items-start gap-3 sm:pr-10 pr-3 py-3 pl-3 rounded-lg cursor-pointer transition-all duration-200 ${
                 selectedMenu === service.id
                   ? "bg-background dark:bg-[#222635] shadow-[0px_0px_0px_1px_#E1E4EA,_0px_4px_13px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
                   : "hover:bg-white dark:hover:bg-[#222635]/20 hover:shadow-sm"
