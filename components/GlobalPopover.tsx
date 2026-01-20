@@ -126,7 +126,7 @@ const GlobalPopover = () => {
         payments can be sent to and received from most countries worldwide,
         excluding sanctioned regions. */}
         Multi-currency accounts are currently available in the countries listed
-        below
+        below.
       </div>
       <div
         className="
@@ -187,7 +187,7 @@ const GlobalPopover = () => {
       >
         Multi-currency accounts are coming to these countries soon. We can still
         help you send and receive payments to and from them, and most countries
-        worldwide. excluding sanctioned regions
+        worldwide. excluding sanctioned regions.
       </div>
 
       <div className="grid grid-cols-3 gap-y-3 gap-x-4 text-sm text-default-500 dark:text-foreground-400">
