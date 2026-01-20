@@ -128,7 +128,7 @@ const BlogExtract = ({
                       <div className="mb-5">
                         <div className="mb-2 uppercase text-primary-400 dark:text-primary-450 font-medium text-sm leading-5 tracking-[0.84px]">
                           {categories?.find(
-                            (cat: { _id: string }) => cat._id === blog.category
+                            (cat: { _id: string }) => cat._id === blog.category,
                           )?.name ?? "—"}
                         </div>
 
@@ -143,7 +143,7 @@ const BlogExtract = ({
                             ? parse(
                                 blog?.content.length > 100
                                   ? blog?.content.slice(0, 100) + "..."
-                                  : blog?.content
+                                  : blog?.content,
                               )
                             : null}
                         </div>
@@ -151,13 +151,7 @@ const BlogExtract = ({
 
                       <button
                         className="flex items-center gap-1 text-primary dark:text-primary-300 font-medium text-sm leading-6 tracking-[-0.084px]"
-                        onClick={() =>
-                          viewBlog(
-                            `/${blog._id}?title=${encodeURIComponent(
-                              blog.title
-                            )}&id=${blog._id}`
-                          )
-                        }
+                        onClick={() => viewBlog(blog.slug as string)}
                       >
                         <span>Read article</span>
                         <Icon

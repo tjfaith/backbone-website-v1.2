@@ -6,6 +6,8 @@ import { useDisclosure } from "@heroui/modal";
 import { useIsMobile } from "@/app/customHooks";
 import { RootState } from "@/app/store";
 import { offerings } from "@/app/utils/dummy_data/offeringsData";
+import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 interface Props {
   setIsMenuOpen?: Dispatch<SetStateAction<boolean>>;
@@ -18,7 +20,9 @@ function useOurOfferingsMenu({ setIsMenuOpen }: Props) {
   const [viewDetails, setViewDetails] = useState(false);
   const [showPopover, setShowPopover] = useState(false);
   const isMobile = useIsMobile();
-
+  const { theme } = useTheme();
+  const isSSR = useIsSSR();
+  
   const {
     isOpen: isOfferingsOpen,
     onOpen: openOfferings,
@@ -52,6 +56,8 @@ function useOurOfferingsMenu({ setIsMenuOpen }: Props) {
     showLightNav,
     showPopover,
     isOfferingsOpen,
+    theme,
+    isSSR,
     closeOfferings,
     openOfferings,
     closeAllMenu,
