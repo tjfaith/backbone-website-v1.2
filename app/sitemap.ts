@@ -14,9 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getAllPublishedBlogs("Backbone");
 
   const blogUrls = blogs.map((blog) => ({
-    url: `${baseUrl}/blog?title=${encodeURIComponent(
-      blog.title
-    )}&id=${blog._id.toString()}`,
+    url: `${baseUrl}/blog/${blog.slug}`,
     lastModified: blog.updatedAt
       ? new Date(blog.updatedAt)
       : new Date(blog.createdAt),

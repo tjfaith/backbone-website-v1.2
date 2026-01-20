@@ -106,6 +106,7 @@ export interface AllBlogs {
   shares?: null | number;
   featured?: boolean;
   allowComments?: boolean;
+  slug?: string;
   author: {
     id: string;
     name: string;
