@@ -63,9 +63,7 @@ const LatestBlog = () => {
                         <button
                           className="flex mt-6 space-x-1 text-primary items-center font-medium cursor-pointer"
                           onClick={() =>
-                            viewBlog(
-                              `/${allBlogs?.data[0]?._id}?title=${encodeURIComponent(allBlogs?.data[0]?.title)}&id=${allBlogs?.data[0]?._id}`,
-                            )
+                            viewBlog(`/${allBlogs?.data[0]?.slug}`)
                           }
                         >
                           <span>Read the story</span>{" "}
