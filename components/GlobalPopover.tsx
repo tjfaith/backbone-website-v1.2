@@ -87,7 +87,7 @@ const GlobalPopover = () => {
     // <div className="p-3 bg-white rounded-2xl max-w-[33rem] overflow-y-auto md:border border-none box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.02), 0 0 7px 2px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(225, 228, 234, 0.50)">
     <div
       className={`
-        ${!isMobile && "rounded-2xl shadow-[0_6px_8px_0_rgba(0,0,0,0.02),_0_0_7px_2px_rgba(0,0,0,0.03),_0_0_0_1px_rgba(225,228,234,0.50)] dark:shadow-[0_6px_20px_rgba(0,0,0,0.35)] overflow-y-auto  max-w-[33rem]"} p-3 bg-white dark:bg-background-75
+        ${!isMobile && "rounded-2xl shadow-[0_6px_8px_0_rgba(0,0,0,0.02),_0_0_7px_2px_rgba(0,0,0,0.03),_0_0_0_1px_rgba(225,228,234,0.50)] dark:shadow-[0_6px_20px_rgba(0,0,0,0.35)] overflow-y-auto  max-w-[33rem]"} p-7 bg-white dark:bg-background-75
     md:border border-none
     md:dark:border-foreground-100/10
   `}
@@ -213,7 +213,7 @@ const GlobalPopover = () => {
           size="full"
           onOpenChange={setOpen}
         >
-          <DrawerContent className="rounded-t-3xl p-4">{Content}</DrawerContent>
+          <DrawerContent className="rounded-t-3xl p-0">{Content}</DrawerContent>
         </Drawer>
       </>
     );
