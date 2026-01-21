@@ -14,7 +14,11 @@ const AppDownloadBtn = ({ btnType }: props) => {
     <Button
       as={Link}
       className="bg-background-200 dark:bg-primary text-[#0E121B]"
-      href={`${process.env.NEXT_PUBLIC_APP_URL}/welcome`}
+      href={
+        btnType === "ios"
+          ? "https://apps.apple.com/us/app/mybackbone-io/id6756878687"
+          : `${process.env.NEXT_PUBLIC_APP_URL}/welcome`
+      }
       radius="full"
     >
       <>
