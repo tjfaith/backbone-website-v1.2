@@ -4,7 +4,6 @@ import React from "react";
 import { Link } from "@heroui/link";
 
 import { androidLogo, IosLogo } from "@/public/assets";
-// import {IosLogo, AndroidLogo}
 
 interface props {
   btnType: "android" | "ios";
