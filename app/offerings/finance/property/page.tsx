@@ -17,7 +17,7 @@ const PropertyFinance = () => {
     content: {
       title: (
         <div className="max-w-lg">
-          Move In today and pay comfortably over time.
+          Move in today and pay comfortably over time.
         </div>
       ),
       description: (

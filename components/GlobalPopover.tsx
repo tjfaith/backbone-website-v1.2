@@ -8,10 +8,14 @@ import { Drawer, DrawerContent } from "@heroui/drawer";
 
 import Dot from "./Dot";
 
+import { getUserCountryClient } from "@/app/utils";
+
 const GlobalPopover = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  const country =getUserCountryClient();
+  
   useEffect(() => {
     const media = window.matchMedia("(max-width: 768px)");
     const update = () => setIsMobile(media.matches);
@@ -94,7 +98,8 @@ const GlobalPopover = () => {
     >
       {/* <p className="text-[11px] font-medium mb-3 tracking-[0.22px] leading-3"> */}
       <p className="text-[11px] font-medium mb-3 tracking-[0.22px] leading-3 text-primary dark:text-foreground-300">
-        SELECT YOUR REGION
+        SELECT YOUR REGION<br/>
+        {country}
       </p>
 
       {/* <div className="text-info-250 text-sm font-normal tracking-[-0.084px] rounded-full gap-1 inline-flex items-center py-1 px-3 leading-5 bg-info-250/10 mb-[6px]"> */}
@@ -187,7 +192,7 @@ const GlobalPopover = () => {
       >
         Multi-currency accounts are coming to these countries soon. We can still
         help you send and receive payments to and from them, and most countries
-        worldwide. excluding sanctioned regions.
+        worldwide, excluding sanctioned regions.
       </div>
 
       <div className="grid grid-cols-3 gap-y-3 gap-x-4 text-sm text-default-500 dark:text-foreground-400">

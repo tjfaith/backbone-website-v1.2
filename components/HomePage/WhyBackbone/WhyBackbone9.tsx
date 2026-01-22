@@ -25,7 +25,7 @@ const WhyBackbone9 = () => {
     {
       icon: "ri:lightbulb-flash-fill",
       title: "Hybrid Renewable Energy Power Grid",
-      body: "AOur hybrid renewable energy grid lets homes and businesses tap into sustainable power, providing flexible, reliable energy for everyday use and growth.",
+      body: "We are financing  hybrid renewable energy grid that provides sustainable power while accelerating the energy transition and energy security across Africa.",
     },
   ];
 
