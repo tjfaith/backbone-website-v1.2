@@ -13,9 +13,31 @@ import { getUserCountryClient } from "@/app/utils";
 const GlobalPopover = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState<{
+    name: string;
+    flag: string;
+  } | null>(null);
 
-  const country =getUserCountryClient();
-  
+  // const country =getUserCountryClient();
+
+  useEffect(() => {
+    const code = getUserCountryClient();
+
+    if (!code) return;
+
+    const match = regions.find(
+      (r) =>
+        r.name.toLowerCase().includes(code.toLowerCase()) ||
+        (code === "NG" && r.name === "Nigeria") ||
+        (code === "US" && r.name === "USA") ||
+        (code === "GB" && r.name === "UK"),
+    );
+
+    if (match) {
+      setSelectedCountry(match);
+    }
+  }, []);
+
   useEffect(() => {
     const media = window.matchMedia("(max-width: 768px)");
     const update = () => setIsMobile(media.matches);
@@ -81,14 +103,18 @@ const GlobalPopover = () => {
       variant="bordered"
       onPress={() => isMobile && setOpen(true)}
     >
-      <Icon className="text-lg" icon="ri:global-line" />
-      Global
+      {/* <Icon className="text-lg" icon="ri:global-line" />
+      Global */}
+      <Icon
+        className="text-lg"
+        icon={selectedCountry?.flag ?? "ri:global-line"}
+      />
+      {selectedCountry?.name ?? "Global"}
       <Icon className="text-lg" icon="ri:arrow-down-s-line" />
     </Button>
   );
 
   const Content = (
-    // <div className="p-3 bg-white rounded-2xl max-w-[33rem] overflow-y-auto md:border border-none box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.02), 0 0 7px 2px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(225, 228, 234, 0.50)">
     <div
       className={`
         ${!isMobile && "rounded-2xl shadow-[0_6px_8px_0_rgba(0,0,0,0.02),_0_0_7px_2px_rgba(0,0,0,0.03),_0_0_0_1px_rgba(225,228,234,0.50)] dark:shadow-[0_6px_20px_rgba(0,0,0,0.35)] overflow-y-auto  max-w-[33rem]"} p-7 bg-white dark:bg-background-75
@@ -96,13 +122,10 @@ const GlobalPopover = () => {
     md:dark:border-foreground-100/10
   `}
     >
-      {/* <p className="text-[11px] font-medium mb-3 tracking-[0.22px] leading-3"> */}
       <p className="text-[11px] font-medium mb-3 tracking-[0.22px] leading-3 text-primary dark:text-foreground-300">
-        SELECT YOUR REGION<br/>
-        {country}
+        SELECT YOUR REGION
       </p>
 
-      {/* <div className="text-info-250 text-sm font-normal tracking-[-0.084px] rounded-full gap-1 inline-flex items-center py-1 px-3 leading-5 bg-info-250/10 mb-[6px]"> */}
       <div
         className="
     text-info-250
@@ -228,11 +251,6 @@ const GlobalPopover = () => {
     <Popover placement="bottom-start">
       <PopoverTrigger>{Trigger}</PopoverTrigger>
 
-      {/* <PopoverContent
-        className="!items-start p-1 rounded-2xl border bg-[#F5F7FA]
-               shadow-[0_6px_8px_0_rgba(0,0,0,0.02),_0_0_7px_2px_rgba(0,0,0,0.03),_0_0_0_1px_rgba(225,228,234,0.5)]
-               max-h-[80vh] overflow-hidden"
-      > */}
       <PopoverContent
         className="
     !items-start p-1 rounded-2xl border
