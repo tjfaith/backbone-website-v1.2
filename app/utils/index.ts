@@ -7,5 +7,5 @@ export {
 } from "./content_data/globalCountriesData";
 
 export { currencyConverter } from "./currencyConversion";
-export { getUserCountryClient, countryCodeFromName } from "./geo";
+export { getUserCountryClient } from "./geo";
 export { countryPageContent } from "./countryPageContent";
