@@ -24,7 +24,7 @@ const ContactSalesBtn = ({ className, label = "Contact Sales" }: Props) => {
         font-medium
         rounded-[10px]
         `,
-        className
+        className,
       )}
       href="/contact-us"
       size="md"

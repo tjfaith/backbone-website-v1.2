@@ -16,7 +16,6 @@ function useSingleBlog() {
 
   const slug = params.blog_id as string;
 
-
   // ✅ extract MongoDB id (after last "-")
   const blog_id = slug?.split("-").pop();
 

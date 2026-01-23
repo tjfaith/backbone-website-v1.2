@@ -9,7 +9,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import useOurOfferingsMenu from "./useOurOfferingsMenu";
 
-import { offerings } from "@/app/utils/dummy_data/offeringsData";
+import { offerings } from "@/app/utils/content_data/offeringsData";
 
 interface Props {
   changeReady?: boolean;

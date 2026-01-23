@@ -11,6 +11,8 @@ import { AppDownloadBtn, Dot } from "@/components";
 const Footer = () => {
   const [openGlobal, setOpenGlobal] = useState(false);
   const [openHome, setOpenHome] = useState(false);
+  const [openHarlivia, setOpenHarlivia] = useState(false);
+  const [openGlobility, setOpenGlobility] = useState(false);
 
   return (
     <footer className="bg-black dark:text-primary text-background py-16">
@@ -103,30 +105,54 @@ const Footer = () => {
 
                 <button
                   className="flex items-center gap-2 text-base focus:outline-none"
-                  onClick={() => setOpenHome((v) => !v)}
+                  onClick={() => setOpenHarlivia((v) => !v)}
                 >
-                  <span>Home Finance</span>
+                  <span>Backbone Harlivia</span>
                   <Icon
                     className={`transition-transform ${
-                      openHome ? "rotate-180" : ""
+                      openHarlivia ? "rotate-180" : ""
                     }`}
                     icon="ri:arrow-down-s-line"
                   />
                 </button>
 
-                {openHome && (
+                {openHarlivia && (
                   <div className="ml-4 flex flex-col space-y-2">
                     <Link
                       className="text-background/80 dark:text-primary"
-                      href="/offerings/finance/rent"
+                      href="/offerings/harlivia/agriculture"
                     >
-                      Rent Finance
+                      Agriculture
                     </Link>
                     <Link
                       className="text-background/80 dark:text-primary"
-                      href="/offerings/finance/property"
+                      href="/offerings/harlivia/bricshare"
                     >
-                      Property Finance
+                      Bricshare
+                    </Link>
+                  </div>
+                )}
+
+                <button
+                  className="flex items-center gap-2 text-base focus:outline-none"
+                  onClick={() => setOpenGlobility((v) => !v)}
+                >
+                  <span>Backbone Globility</span>
+                  <Icon
+                    className={`transition-transform ${
+                      openGlobility ? "rotate-180" : ""
+                    }`}
+                    icon="ri:arrow-down-s-line"
+                  />
+                </button>
+
+                {openGlobility && (
+                  <div className="ml-4 flex flex-col space-y-2">
+                    <Link
+                      className="text-background/80 dark:text-primary"
+                      href="/offerings/globility/orbis"
+                    >
+                      Orbis
                     </Link>
                   </div>
                 )}

@@ -14,7 +14,7 @@ const CTitle = ({ title, iconType = "check", className }: Props) => {
       <div
         className={cn(
           "mb-4 text-primary dark:text-foreground-100 inline-flex gap-2 text-sm font-medium bg-background-100 dark:bg-background-200 rounded-full items-center py-[6px] pr-[10px] pl-[6px] shadow-[inset_0px_-1px_4px_0px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_-1px_3px_0px_rgba(0,0,0,0.4)]",
-          className
+          className,
         )}
       >
         <div className="flex items-center justify-center text-background bg-primary dark:bg-primary-500 dark:text-background rounded-full p-0.5 text-base">

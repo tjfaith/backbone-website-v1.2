@@ -23,7 +23,7 @@ const WhyBackbone2 = () => {
           />
 
           <div
-            className="clash-display-font text-center tracking-[-0.16px] leading-10 text-[32px] text-primary dark:text-foreground font-medium max-w-lg mb-3"
+            className="clash-display-font text-center tracking-[-0.16px] leading-10 text-[32px] text-primary dark:text-foreground font-medium max-w-xl sm:px-2 mb-3"
             data-aos="fade-up"
             data-aos-delay="100"
           >

@@ -33,7 +33,7 @@ const CurrencySlider = () => {
 
 const CurrencyRow = ({ index }: { index: number }) => {
   const autoplayRef = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: false })
+    Autoplay({ delay: 4000, stopOnInteraction: false }),
   );
 
   const [emblaRef] = useEmblaCarousel({ loop: true }, [

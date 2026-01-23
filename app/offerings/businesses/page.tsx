@@ -41,7 +41,7 @@ const Businesses = () => {
             <SendMoneyForm
               action={() =>
                 window.open(
-                  `${process.env.NEXT_PUBLIC_APP_URL}/sign-in`,
+                  `${process.env.NEXT_PUBLIC_APP_URL}/welcome`,
                   "_blank",
                 )
               }

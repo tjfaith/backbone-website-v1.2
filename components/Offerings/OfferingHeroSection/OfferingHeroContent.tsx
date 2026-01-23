@@ -89,7 +89,7 @@ const OfferingHeroContent = ({ content }: Props) => {
               <Icon icon="ri:check-double-fill" />
               <span>{bullet}</span>
             </div>
-          )
+          ),
         )}
       </div>
     </div>

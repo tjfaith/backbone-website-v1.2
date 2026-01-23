@@ -1,6 +1,11 @@
-// dummy data
-export { allCurrencies } from "./dummy_data/currencies";
-export { exchangeRates } from "./dummy_data/exchangeRates";
+// content data
+export { allCurrencies } from "./content_data/currencies";
+export { exchangeRates } from "./content_data/exchangeRates";
+export {
+  globalRegions,
+  globalComingSoon,
+} from "./content_data/globalCountriesData";
 
 export { currencyConverter } from "./currencyConversion";
-export { getUserCountryClient } from "./geo";
+export { getUserCountryClient, countryCodeFromName } from "./geo";
+export { countryPageContent } from "./countryPageContent";

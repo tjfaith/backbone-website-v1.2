@@ -217,7 +217,6 @@
 
 // export default AnnouncementPanel;
 
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -275,7 +274,7 @@ const AnnouncementPanel = () => {
   const [showMore, setShowMore] = useState(false);
 
   const { showAnnouncement } = useSelector(
-    (state: RootState) => state.settings
+    (state: RootState) => state.settings,
   );
   const dispatch = useDispatch();
 
@@ -382,18 +381,18 @@ const AnnouncementPanel = () => {
             <div className="space-y-6 mt-[38px] mb-7">
               <TimelineItem
                 date="Nov 30"
-                title="Regulatory approvals underway"
                 description="Our IMTO licensing process is ongoing as part of our commitment to compliant operations in Nigeria."
+                title="Regulatory approvals underway"
               />
               <TimelineItem
                 date="Nov 30"
-                title="EMI licensing ongoing"
                 description="Our EMI licensing process in the UK is ongoing, in line with regulatory requirements."
+                title="EMI licensing ongoing"
               />
               <TimelineItem
                 date="Nov 30"
-                title="Expanding into Canada"
                 description="Our Canadian MSB license application is in progress as we continue to strengthen our global regulatory presence."
+                title="Expanding into Canada"
               />
             </div>
           )}
@@ -420,8 +419,8 @@ const AnnouncementPanel = () => {
 
       {/* Close */}
       <button
-        onClick={closePanel}
         className="absolute top-3 right-3 rounded-full p-2 bg-background-200 dark:bg-background-300 hover:bg-background-200/50 dark:hover:bg-background-400"
+        onClick={closePanel}
       >
         <Icon icon="mdi:close" />
       </button>

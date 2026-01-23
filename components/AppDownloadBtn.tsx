@@ -13,13 +13,13 @@ const AppDownloadBtn = ({ btnType }: props) => {
     <Button
       as={Link}
       className="bg-background-200 dark:bg-primary text-[#0E121B]"
-      target={btnType === "ios" ? "_blank" : undefined}
       href={
         btnType === "ios"
           ? `${process.env.NEXT_PUBLIC_IOS_APP_URL}`
           : `${process.env.NEXT_PUBLIC_APP_URL}/welcome`
       }
       radius="full"
+      target={btnType === "ios" ? "_blank" : undefined}
     >
       <>
         {btnType === "ios" && (

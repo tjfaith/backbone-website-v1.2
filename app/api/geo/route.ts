@@ -1,16 +1,14 @@
-import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const h = await headers();
-  const country = h.get("x-vercel-ip-country") ?? "UNKNOWN";
-  const body = await req.json();
+  const { country } = await req.json();
 
-  // save or process
-  // body + country
+  const res = NextResponse.json({ success: true });
 
-  return NextResponse.json({
-    success: true,
-    country,
+  res.cookies.set("user-country", country, {
+    path: "/",
+    sameSite: "lax",
   });
+
+  return res;
 }

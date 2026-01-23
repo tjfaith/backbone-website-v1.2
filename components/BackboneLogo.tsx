@@ -26,9 +26,9 @@ const BackboneLogo = ({ showDarkLogo }: Props) => {
         />
       ) : (
         <Image
-          radius="none"
           alt="logo"
           className=" outline-none"
+          radius="none"
           src={FullLogo.src}
           width={220}
         />
