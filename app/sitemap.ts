@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+
 import { getAllPublishedBlogs } from "@/app/utils/services/internalServices/blog.server.service";
 import { staticPages } from "@/app/utils/seo/staticPages";
 

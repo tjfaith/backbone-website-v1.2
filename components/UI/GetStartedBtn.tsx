@@ -21,7 +21,7 @@ const GetStartedBtn = ({ className, label = "Get Started Now" }: Props) => {
         font-medium
         rounded-[10px]
         `,
-        className
+        className,
       )}
       color="primary"
       href={`${process.env.NEXT_PUBLIC_APP_URL}/welcome`}

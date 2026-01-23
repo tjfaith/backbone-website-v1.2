@@ -1,15 +1,20 @@
 import { Image } from "@heroui/image";
 import React from "react";
+import { useSelector } from "react-redux";
+import { cn } from "@heroui/theme";
 
-import { Exchange, WhyBB1, WhyBB2 } from "@/public/assets";
+import { countryPageContent } from "@/app/utils";
 import {
   CTitle,
   GetStartedBtn,
   ContactSalesBtn,
   ExpensesCard,
 } from "@/components";
+import { RootState } from "@/app/store";
 
 const WhyBackbone1 = () => {
+  const { selectedCountry } = useSelector((state: RootState) => state.settings);
+
   return (
     <div
       className="overflow-hidden bg-background-75 dark:bg-background pb-8 pt-24 lg:pt-48 min-h-[85vh]"
@@ -19,22 +24,44 @@ const WhyBackbone1 = () => {
         {/* LEFT SECTION */}
         <div className="relative flex items-center" data-aos="fade-right">
           <div
-            className="max-w-md lg:absolute -top-28 -right-16"
+            className=" lg:absolute -top-28 -right-16 w-[416px] h-[349px] object-bottom overflow-hidden rounded-2xl"
             data-aos="zoom-in"
           >
-            <Image alt="whyBB1" src={WhyBB1.src} />
+            <Image
+              alt="whyBB1"
+              className={cn(
+                "w-[416px] h-[349px] object-cover scale-125 rounded-2xl",
+                countryPageContent[selectedCountry.code].homePage.whyBackbone1
+                  ?.img1Class,
+              )}
+              src={
+                countryPageContent[selectedCountry.code].homePage.whyBackbone1
+                  .img[0]
+              }
+            />
           </div>
 
           <div
-            className="sm:block hidden max-w-md lg:absolute sm:-bottom-32"
+            className="sm:block hidden lg:absolute sm:-bottom-48 w-[416px] h-[349px] overflow-hidden rounded-2xl"
             data-aos="zoom-in"
             data-aos-delay="150"
           >
-            <Image alt="whyBB1" src={WhyBB2.src} />
+            <Image
+              alt="whyBB2"
+              className={cn(
+                "w-[416px] h-[349px] object-cover  rounded-2xl",
+                countryPageContent[selectedCountry.code].homePage.whyBackbone1
+                  ?.img2Class,
+              )}
+              src={
+                countryPageContent[selectedCountry.code].homePage.whyBackbone1
+                  .img[1]
+              }
+            />
           </div>
 
           <div
-            className="absolute -right-7 -bottom-14"
+            className="absolute -right-2 -bottom-12"
             data-aos="fade-left"
             data-aos-delay="250"
           >
@@ -43,7 +70,10 @@ const WhyBackbone1 = () => {
               disableSkeleton
               alt="exchange"
               radius="none"
-              src={Exchange.src}
+              src={
+                countryPageContent[selectedCountry.code].homePage.whyBackbone1
+                  .exchange
+              }
             />
           </div>
 

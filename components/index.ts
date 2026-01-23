@@ -44,9 +44,7 @@ export { default as SendMoneyForm } from "./SendMoneyForm";
 export { default as DownloadApp } from "./HomePage/DownloadApp";
 
 // Home -> Hero section
-export { default as Hero1 } from "./HomePage/HeroSection/Hero1";
-export { default as Hero2 } from "./HomePage/HeroSection/Hero2";
-export { default as Hero3 } from "./HomePage/HeroSection/Hero3";
+export { default as TransactionReport } from "./HomePage/HeroSection/TransactionReport";
 export { default as HeroImage } from "./HomePage/HeroSection/HeroImage";
 export { default as HeroContent } from "./HomePage/HeroSection/HeroContent";
 export { default as SuccessToast } from "./HomePage/HeroSection/SuccessToast";
@@ -59,7 +57,6 @@ export { default as SuccessToast7 } from "./HomePage/HeroSection/SuccessToast7";
 export { default as SuccessToast8 } from "./HomePage/HeroSection/SuccessToast8";
 export { default as SuccessToast9 } from "./HomePage/HeroSection/SuccessToast9";
 export { default as SuccessToast10 } from "./HomePage/HeroSection/SuccessToast10";
-export { default as RotatingEarth } from "./HomePage/HeroSection/RotatingEarth";
 export { default as HeroImageSlider } from "./HomePage/HeroSection/HeroImageSlider";
 
 // Home -> Changing payment

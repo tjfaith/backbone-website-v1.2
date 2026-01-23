@@ -30,12 +30,11 @@ export async function generateMetadata({
 
   const canonicalUrl = `${baseUrl}/blog/${singleBlog.slug}`;
 
-
   return {
     title: singleBlog.title || "Default Title",
     description: singleBlog.description || "",
     alternates: {
-      canonical: canonicalUrl, 
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: singleBlog.title || "Default Title",

@@ -12,7 +12,7 @@ const SuccessToast3 = ({ className }: Props) => {
     <div
       className={cn(
         "bg-white dark:bg-background-100 border border-foreground-100 dark:border-foreground-600 rounded-xl flex flex-col items-start w-full max-w-xs",
-        className
+        className,
       )}
     >
       <div className="flex items-center gap-1 p-3 rounded-t-xl w-full">

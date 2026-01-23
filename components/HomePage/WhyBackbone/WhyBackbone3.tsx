@@ -1,10 +1,15 @@
 import { Image } from "@heroui/image";
 import React from "react";
+import { useSelector } from "react-redux";
+import { cn } from "@heroui/theme";
 
-import { Meeting } from "@/public/assets";
 import { ContactSalesBtn, CTitle, GetStartedBtn } from "@/components";
+import { countryPageContent } from "@/app/utils";
+import { RootState } from "@/app/store";
 
 const WhyBackbone3 = () => {
+  const { selectedCountry } = useSelector((state: RootState) => state.settings);
+
   return (
     <div className="overflow-hidden py-16 sm:py-20" data-aos="fade-up">
       <div
@@ -31,28 +36,30 @@ const WhyBackbone3 = () => {
             flex
             flex-col
             items-center
-            max-w-md
-            mx-auto
-            lg:max-w-none
           "
           data-aos="fade-right"
         >
-          <Image
-            disableAnimation
-            disableSkeleton
-            alt="why backbone meeting"
-            className="
-              rounded-3xl
-              w-full
-              object-cover
-              h-[220px]
-              sm:h-[260px]
-              lg:h-auto
-            "
+          <div
+            className=" rounded-3xl overflow-hidden h-[220px] sm:h-[260px] lg:h-[363px] w-full"
             data-aos="zoom-in"
-            data-aos-delay="100"
-            src={Meeting.src}
-          />
+            // data-aos-delay="100"
+          >
+            <Image
+              disableAnimation
+              disableSkeleton
+              // removeWrapper
+              alt="why backbone meeting"
+              className={cn(
+                "rounded-3xl w-full object-cover h-[220px] sm:h-[260px] lg:h-[363px]",
+                countryPageContent[selectedCountry.code]?.homePage.whyBackbone3
+                  .className,
+              )}
+              src={
+                countryPageContent[selectedCountry.code]?.homePage.whyBackbone3
+                  .img
+              }
+            />
+          </div>
 
           <div
             className="

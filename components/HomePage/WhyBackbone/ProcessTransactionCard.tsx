@@ -5,10 +5,14 @@ import { Spacer } from "@heroui/spacer";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 import React from "react";
+import { useSelector } from "react-redux";
 
+import { countryPageContent } from "@/app/utils";
 import { halfLogoBlack, colorLogo2, HalfLogo } from "@/public/assets";
+import { RootState } from "@/app/store";
 
 const ProcessTransactionCard = () => {
+  const { selectedCountry } = useSelector((state: RootState) => state.settings);
   const { theme } = useTheme();
 
   return (
@@ -41,8 +45,8 @@ const ProcessTransactionCard = () => {
                   disableAnimation
                   disableSkeleton
                   alt="half logo white"
-                  radius="none"
                   className="w-5"
+                  radius="none"
                   src={HalfLogo.src}
                 />
               )}
@@ -50,7 +54,10 @@ const ProcessTransactionCard = () => {
                 INV - 2938918
               </div>
               <div className="font-semibold text-[24.291px] tracking-[-0.243px] leading-[29.149px]">
-                $ 837,287.19
+                {
+                  countryPageContent[selectedCountry.code].homePage.whyBackbone2
+                    .totalProcessTransaction
+                }
               </div>
               <div className="text-[12.146px] font-medium leading-[17.004px] tracking-[0.729px]">
                 Due in 10 days

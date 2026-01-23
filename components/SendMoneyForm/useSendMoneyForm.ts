@@ -25,6 +25,7 @@ function useSendMoneyForm({ action }: Props) {
   const { data: rates, isLoading: rateLoading } =
     CurrencyServices().useGetExchangeRate(selectedCurrency?.id);
 
+
   const getCurrencyById = (id: string) =>
     activeCurrency.find((cur) => cur.id === id);
   const getCurrencyByCode = (code: string) =>

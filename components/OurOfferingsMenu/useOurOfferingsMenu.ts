@@ -2,12 +2,12 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDisclosure } from "@heroui/modal";
+import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 
 import { useIsMobile } from "@/app/customHooks";
 import { RootState } from "@/app/store";
-import { offerings } from "@/app/utils/dummy_data/offeringsData";
-import { useTheme } from "next-themes";
-import { useIsSSR } from "@react-aria/ssr";
+import { offerings } from "@/app/utils/content_data/offeringsData";
 
 interface Props {
   setIsMenuOpen?: Dispatch<SetStateAction<boolean>>;
@@ -22,7 +22,7 @@ function useOurOfferingsMenu({ setIsMenuOpen }: Props) {
   const isMobile = useIsMobile();
   const { theme } = useTheme();
   const isSSR = useIsSSR();
-  
+
   const {
     isOpen: isOfferingsOpen,
     onOpen: openOfferings,

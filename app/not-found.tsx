@@ -11,30 +11,44 @@ const NotFound = () => {
   return (
     <main className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] px-6 dark:bg-background">
       <div className="text-center max-w-2xl mx-auto">
-
         {/* SVG Illustration */}
         <div className="mb-6 flex justify-center">
           <svg
-            width="260"
+            className="opacity-90"
+            fill="none"
             height="200"
             viewBox="0 0 260 200"
-            fill="none"
+            width="260"
             xmlns="http://www.w3.org/2000/svg"
-            className="opacity-90"
           >
-            <circle cx="130" cy="100" r="80" className="fill-gray-200 dark:fill-background-300" />
-            <path
-              d="M90 90h80v20H90z"
-              className="fill-gray-400 dark:fill-primary-400"
+            <circle
+              className="fill-gray-200 dark:fill-background-300"
+              cx="130"
+              cy="100"
+              r="80"
             />
-            <circle cx="110" cy="100" r="6" className="fill-gray-600 dark:fill-foreground-50" />
-            <circle cx="150" cy="100" r="6" className="fill-gray-600 dark:fill-foreground-50" />
             <path
+              className="fill-gray-400 dark:fill-primary-400"
+              d="M90 90h80v20H90z"
+            />
+            <circle
+              className="fill-gray-600 dark:fill-foreground-50"
+              cx="110"
+              cy="100"
+              r="6"
+            />
+            <circle
+              className="fill-gray-600 dark:fill-foreground-50"
+              cx="150"
+              cy="100"
+              r="6"
+            />
+            <path
+              className="text-gray-500 dark:text-foreground-300"
               d="M110 130c10 10 30 10 40 0"
               stroke="currentColor"
-              strokeWidth="4"
               strokeLinecap="round"
-              className="text-gray-500 dark:text-foreground-300"
+              strokeWidth="4"
             />
           </svg>
         </div>

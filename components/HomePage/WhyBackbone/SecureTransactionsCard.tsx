@@ -3,12 +3,17 @@ import { Icon } from "@iconify/react";
 import React from "react";
 import { Image } from "@heroui/image";
 import { Skeleton } from "@heroui/skeleton";
+import { useSelector } from "react-redux";
 
 import ShieldNetworkPattern from "./ShieldNetworkPattern";
 
+import { countryPageContent } from "@/app/utils";
 import { halfLogoBlack } from "@/public/assets";
+import { RootState } from "@/app/store";
 
 const SecureTransactionsCard = () => {
+  const { selectedCountry } = useSelector((state: RootState) => state.settings);
+
   return (
     <div>
       {/* testimonial */}
@@ -80,15 +85,18 @@ const SecureTransactionsCard = () => {
                   disableAnimation
                   disableSkeleton
                   alt="half logo black"
-                  radius="none"
                   className="dark:invert"
+                  radius="none"
                   src={halfLogoBlack.src}
                 />
                 <div className="text-[12.146px] font-medium tracking-[0.729px] leading-[17.004px] text-primary dark:text-primary-200">
                   INV - 2938918
                 </div>
-                <div className="font-semibold text-[24.291px] tracking-[-0.243px] leading-[29.149px] text-primary dark:text-primary-100">
-                  $ 837,287.19
+                <div className="font-semibold whitespace-nowrap text-[24.291px] tracking-[-0.243px] leading-[29.149px] text-primary dark:text-primary-100">
+                  {
+                    countryPageContent[selectedCountry.code].homePage
+                      .whyBackbone2.totalSecureTransaction
+                  }
                 </div>
                 <div className="text-[12.146px] font-medium leading-[17.004px] tracking-[0.729px] text-primary-500 dark:text-primary-400">
                   Due in 10 days

@@ -16,8 +16,20 @@ function ContactServices() {
     });
   };
 
+  const useUpdateCountry = () => {
+    return useMutation({
+      mutationKey: ["update-country"],
+      mutationFn: async (countryCode: string) => {
+        return api.post("/geo", {
+          country: countryCode,
+        });
+      },
+    });
+  };
+
   return {
     useSendMessage,
+    useUpdateCountry,
   };
 }
 export default ContactServices;

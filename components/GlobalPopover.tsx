@@ -5,38 +5,29 @@ import { Icon } from "@iconify/react";
 import { Button } from "@heroui/button";
 import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 import { Drawer, DrawerContent } from "@heroui/drawer";
+import { useDispatch } from "react-redux";
 
 import Dot from "./Dot";
 
-import { getUserCountryClient } from "@/app/utils";
+import {
+  getUserCountryClient,
+  globalRegions,
+  globalComingSoon,
+} from "@/app/utils";
+import { ContactServices } from "@/app/utils/services";
+import { updateSelectedCountry } from "@/app/store/Features/settingsSlice";
 
 const GlobalPopover = () => {
+  const dispatch = useDispatch();
+  const { useUpdateCountry } = ContactServices();
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { mutate: updateCountry } = useUpdateCountry();
   const [selectedCountry, setSelectedCountry] = useState<{
     name: string;
     flag: string;
+    code: string;
   } | null>(null);
-
-  // const country =getUserCountryClient();
-
-  useEffect(() => {
-    const code = getUserCountryClient();
-
-    if (!code) return;
-
-    const match = regions.find(
-      (r) =>
-        r.name.toLowerCase().includes(code.toLowerCase()) ||
-        (code === "NG" && r.name === "Nigeria") ||
-        (code === "US" && r.name === "USA") ||
-        (code === "GB" && r.name === "UK"),
-    );
-
-    if (match) {
-      setSelectedCountry(match);
-    }
-  }, []);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 768px)");
@@ -48,44 +39,32 @@ const GlobalPopover = () => {
     return () => media.removeEventListener("change", update);
   }, []);
 
-  const regions = [
-    { name: "Tanzania", flag: "emojione:flag-for-tanzania" },
-    { name: "Ghana", flag: "emojione:flag-for-ghana" },
-    { name: "Uganda", flag: "emojione:flag-for-uganda" },
-    { name: "Kenya", flag: "emojione:flag-for-kenya" },
-    { name: "Côte d'Ivoire", flag: "emojione:flag-for-cote-divoire" },
-    { name: "Republic of the Benin", flag: "emojione:flag-for-benin" },
-    { name: "Cameroon", flag: "emojione:flag-for-cameroon" },
-    { name: "South Africa", flag: "emojione:flag-for-south-africa" },
-    { name: "Sierra Leone", flag: "emojione:flag-for-sierra-leone" },
-    { name: "USA", flag: "emojione:flag-for-united-states" },
-    { name: "UK", flag: "emojione:flag-for-united-kingdom" },
-    { name: "Canada", flag: "emojione:flag-for-canada" },
-    { name: "Nigeria", flag: "emojione:flag-for-nigeria" },
-  ];
+  const changeCountry = (country: {
+    name: string;
+    flag: string;
+    code: string;
+  }) => {
+    setSelectedCountry(country);
+    updateCountry(country.code);
+    dispatch(updateSelectedCountry(country));
+    setOpen(false);
+  };
 
-  const comingSoon = [
-    { name: "Brazil", flag: "emojione:flag-for-brazil" },
-    { name: "Egypt", flag: "emojione:flag-for-egypt" },
-    { name: "India", flag: "emojione:flag-for-india" },
-    { name: "Indonesia", flag: "emojione:flag-for-indonesia" },
-    { name: "Gabon", flag: "emojione:flag-for-gabon" },
-    { name: "Mexico", flag: "emojione:flag-for-mexico" },
-    { name: "Morocco", flag: "emojione:flag-for-morocco" },
-    { name: "Philippines", flag: "emojione:flag-for-philippines" },
-    { name: "Burkina Faso", flag: "emojione:flag-for-burkina-faso" },
-    { name: "Guinea-Bissau", flag: "emojione:flag-for-guinea-bissau" },
-    { name: "Mali", flag: "emojione:flag-for-mali" },
-    {
-      name: "Republic of the Congo",
-      flag: "emojione:flag-for-congo-brazzaville",
-    },
-    { name: "Niger", flag: "emojione:flag-for-niger" },
-    { name: "Senegal", flag: "emojione:flag-for-senegal" },
-    { name: "Togo", flag: "emojione:flag-for-togo" },
-    { name: "Chad", flag: "emojione:flag-for-chad" },
-    { name: "Equatorial Guinea", flag: "emojione:flag-for-equatorial-guinea" },
-  ];
+  useEffect(() => {
+    const code = getUserCountryClient();
+
+    if (!code) return;
+
+    const allCountries = [...globalRegions];
+
+    const match = allCountries.find(
+      (c) => c.code.toUpperCase() === code.toUpperCase(),
+    );
+
+    if (match) {
+      setSelectedCountry(match);
+    }
+  }, []);
 
   const Trigger = (
     <Button
@@ -109,7 +88,7 @@ const GlobalPopover = () => {
         className="text-lg"
         icon={selectedCountry?.flag ?? "ri:global-line"}
       />
-      {selectedCountry?.name ?? "Global"}
+      {selectedCountry?.code ?? "Global"}
       <Icon className="text-lg" icon="ri:arrow-down-s-line" />
     </Button>
   );
@@ -140,7 +119,6 @@ const GlobalPopover = () => {
         <span className=" p-1">Global</span>
       </div>
 
-      {/* <div className="text-xs text-primary-450 font-normal leading-4 p-3 rounded-xl bg-background-200 mb-[6px]"> */}
       <div
         className="
     text-xs text-primary-450 dark:text-foreground-300
@@ -150,9 +128,6 @@ const GlobalPopover = () => {
     mb-[6px]
   "
       >
-        {/* Multi-currency accounts are available in select countries, while
-        payments can be sent to and received from most countries worldwide,
-        excluding sanctioned regions. */}
         Multi-currency accounts are currently available in the countries listed
         below.
       </div>
@@ -167,17 +142,22 @@ const GlobalPopover = () => {
       />
 
       <div className="grid sm:grid-cols-3 grid-cols-2 text-sm mb-5">
-        {regions.map((item) => (
+        {globalRegions.map((item) => (
           <button
             key={item.name}
-            className="
+            className={`
     flex items-center gap-2
     hover:text-primary dark:hover:text-info-500
     transition text-left
     p-3 tracking-[-0.084px] leading-5
     text-primary dark:text-foreground-200
-  "
-            onClick={() => setOpen(false)}
+        ${
+          selectedCountry?.name === item.name
+            ? "bg-[#EBF8FF] rounded-full dark:bg-[rgba(59,130,246,0.15)]"
+            : ""
+        }
+`}
+            onClick={() => changeCountry(item)}
           >
             <Icon className="text-lg" icon={item.flag} />
             {item.name}
@@ -219,7 +199,7 @@ const GlobalPopover = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-y-3 gap-x-4 text-sm text-default-500 dark:text-foreground-400">
-        {comingSoon.map((item) => (
+        {globalComingSoon.map((item) => (
           <div key={item.name} className="flex items-center gap-2 p-3">
             <span className="text-lg">
               <Icon icon={item.flag} />
@@ -248,7 +228,7 @@ const GlobalPopover = () => {
   }
 
   return (
-    <Popover placement="bottom-start">
+    <Popover isOpen={open} placement="bottom-start" onOpenChange={setOpen}>
       <PopoverTrigger>{Trigger}</PopoverTrigger>
 
       <PopoverContent
