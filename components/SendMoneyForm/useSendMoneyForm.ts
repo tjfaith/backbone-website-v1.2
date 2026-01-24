@@ -1,9 +1,10 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-
+import { useSelector } from "react-redux";
 import { CurrencyServices } from "@/app/utils/services";
 import { Currency } from "@/types";
+import { RootState } from "@/app/store";
 
 interface Props {
   action: () => void;
@@ -11,12 +12,13 @@ interface Props {
 
 function useSendMoneyForm({ action }: Props) {
   const fees = { conversionFee: 0, platformFee: 0 };
+  const { selectedCountry } = useSelector((state: RootState) => state.settings);
   const [amount, setAmount] = useState(1);
   const [activeCurrency, setActiveCurrency] = useState<Currency[]>([]);
-  const [selectedCurrency, setSelectedCurrency] = useState<Currency | null>(
+  const [selectedCurrency, setSelectedCurrency] = useState<Currency | null | undefined>(
     null,
   );
-  const [selectedCurrency2, setSelectedCurrency2] = useState<Currency | null>(
+  const [selectedCurrency2, setSelectedCurrency2] = useState<Currency | null | undefined>(
     null,
   );
 
@@ -92,12 +94,13 @@ function useSendMoneyForm({ action }: Props) {
   }, [currenciesLoading]);
 
   useEffect(() => {
-    const usd = getCurrencyByCode("USD");
-    const ngn = getCurrencyByCode("NGN");
+    const base_currency = getCurrencyByCode("USD");
+    const convert_currency = getCurrencyByCode(selectedCountry?.currency);
 
-    if (usd) setSelectedCurrency(usd);
-    if (ngn) setSelectedCurrency2(ngn);
-  }, [activeCurrency]);
+
+    if (base_currency) setSelectedCurrency2(base_currency);
+    convert_currency ? setSelectedCurrency(convert_currency) : setSelectedCurrency(getCurrencyByCode("NGN"));
+  }, [activeCurrency, selectedCountry]);
 
   return {
     selectedCurrency,
