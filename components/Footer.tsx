@@ -20,7 +20,7 @@ const Footer = () => {
         {/* ROW 1 */}
         <div className="mb-10">
           <Image alt="full logo" className=" mb-4" src={FullLogo.src} />
-          <div className="grid lg:grid-cols-6 gap-7">
+          <div className="grid lg:grid-cols-6 grid-cols-1 gap-7">
             <div className=" col-span-2 pr-20 tracking-wide text-sm">
               We streamline payments for individuals, businesses, and
               nonprofits, creating possibilities you never thought possible.
