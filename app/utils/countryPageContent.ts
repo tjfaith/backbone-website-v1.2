@@ -581,4 +581,180 @@ export const countryPageContent: Record<string, CountryPageContent> = {
       },
     },
   },
+
+  US: {
+    code: "US",
+    homePage: {
+      heroSection: {
+        heroContent: {
+          tagLogo: "emojione:flag-for-nigeria",
+          contentHeading: "Powering payments that unlock global opportunities",
+          contentBody:
+            "We connect individuals, businesses, and nonprofits to a seamless global payment solution, spanning over 150 countries worldwide.",
+        },
+        heroImage: [
+          Hero1.src,
+          Hero2.src,
+          Hero3.src,
+          Hero4.src,
+          Hero5.src,
+          Hero6.src,
+        ],
+        successToast: [TransactionIcon.src],
+      },
+      joinUs: {
+        joinUsIndividual: {
+          pattern: Pattern2,
+          tabClass:
+            "group-data-[selected=true]:text-[#1F7EAD] group-data-[selected=true]:bg-white dark:group-data-[selected=true]:bg-background-100",
+          tabBgColor: "bg-info-250 dark:bg-info-200",
+          contentBgColor: "bg-[#D5F1FF] dark:bg-background-200",
+          textColor: "text-[#2597D0] dark:text-info-300",
+          bodyColor: "text-[#124B68] dark:text-foreground-50",
+        },
+      },
+      whyBackbone1: {
+        img: [WhyBB1.src, WhyBB2.src],
+        expensesCardValue: "$24,000",
+        exchange: Exchange.src,
+      },
+      whyBackbone2: {
+        totalProcessTransaction: "$ 837,287.19",
+        totalSecureTransaction: "$ 837,287.19",
+      },
+      whyBackbone3: { img: Meeting.src },
+    },
+  },
+
+  GB: {
+    code: "GB",
+    homePage: {
+      heroSection: {
+        heroContent: {
+          tagLogo: "emojione:flag-for-nigeria",
+          contentHeading: "Powering payments that unlock global opportunities",
+          contentBody:
+            "We connect individuals, businesses, and nonprofits to a seamless global payment solution, spanning over 150 countries worldwide.",
+        },
+        heroImage: [
+          Hero1.src,
+          Hero2.src,
+          Hero3.src,
+          Hero4.src,
+          Hero5.src,
+          Hero6.src,
+        ],
+        successToast: [TransactionIcon.src],
+      },
+      joinUs: {
+        joinUsIndividual: {
+          pattern: Pattern2,
+          tabClass:
+            "group-data-[selected=true]:text-[#1F7EAD] group-data-[selected=true]:bg-white dark:group-data-[selected=true]:bg-background-100",
+          tabBgColor: "bg-info-250 dark:bg-info-200",
+          contentBgColor: "bg-[#D5F1FF] dark:bg-background-200",
+          textColor: "text-[#2597D0] dark:text-info-300",
+          bodyColor: "text-[#124B68] dark:text-foreground-50",
+        },
+      },
+      whyBackbone1: {
+        img: [WhyBB1.src, WhyBB2.src],
+        expensesCardValue: "$24,000",
+        exchange: Exchange.src,
+      },
+      whyBackbone2: {
+        totalProcessTransaction: "$ 837,287.19",
+        totalSecureTransaction: "$ 837,287.19",
+      },
+      whyBackbone3: { img: Meeting.src },
+    },
+  },
+
+  CA: {
+    code: "CA",
+    homePage: {
+      heroSection: {
+        heroContent: {
+          tagLogo: "emojione:flag-for-nigeria",
+          contentHeading: "Powering payments that unlock global opportunities",
+          contentBody:
+            "We connect individuals, businesses, and nonprofits to a seamless global payment solution, spanning over 150 countries worldwide.",
+        },
+        heroImage: [
+          Hero1.src,
+          Hero2.src,
+          Hero3.src,
+          Hero4.src,
+          Hero5.src,
+          Hero6.src,
+        ],
+        successToast: [TransactionIcon.src],
+      },
+      joinUs: {
+        joinUsIndividual: {
+          pattern: Pattern2,
+          tabClass:
+            "group-data-[selected=true]:text-[#1F7EAD] group-data-[selected=true]:bg-white dark:group-data-[selected=true]:bg-background-100",
+          tabBgColor: "bg-info-250 dark:bg-info-200",
+          contentBgColor: "bg-[#D5F1FF] dark:bg-background-200",
+          textColor: "text-[#2597D0] dark:text-info-300",
+          bodyColor: "text-[#124B68] dark:text-foreground-50",
+        },
+      },
+      whyBackbone1: {
+        img: [WhyBB1.src, WhyBB2.src],
+        expensesCardValue: "$24,000",
+        exchange: Exchange.src,
+      },
+      whyBackbone2: {
+        totalProcessTransaction: "$ 837,287.19",
+        totalSecureTransaction: "$ 837,287.19",
+      },
+      whyBackbone3: { img: Meeting.src },
+    },
+  },
+
+   Global: {
+    code: "Global",
+    homePage: {
+      heroSection: {
+        heroContent: {
+          tagLogo: "emojione:flag-for-nigera",
+          contentHeading: "Powering payments that unlock global opportunities",
+          contentBody:
+            "We connect individuals, businesses, and nonprofits to a seamless global payment solution, spanning over 150 countries worldwide.",
+        },
+        heroImage: [
+          Hero1.src,
+          Hero2.src,
+          Hero3.src,
+          Hero4.src,
+          Hero5.src,
+          Hero6.src,
+        ],
+        successToast: [TransactionIcon.src],
+      },
+      joinUs: {
+        joinUsIndividual: {
+          pattern: Pattern2,
+          tabClass:
+            "group-data-[selected=true]:text-[#1F7EAD] group-data-[selected=true]:bg-white dark:group-data-[selected=true]:bg-background-100",
+          tabBgColor: "bg-info-250 dark:bg-info-200",
+          contentBgColor: "bg-[#D5F1FF] dark:bg-background-200",
+          textColor: "text-[#2597D0] dark:text-info-300",
+          bodyColor: "text-[#124B68] dark:text-foreground-50",
+        },
+      },
+      whyBackbone1: {
+        img: [WhyBB1.src, WhyBB2.src],
+        expensesCardValue: "$24,000",
+        exchange: Exchange.src,
+      },
+      whyBackbone2: {
+        totalProcessTransaction: "$ 837,287.19",
+        totalSecureTransaction: "$ 837,287.19",
+      },
+      whyBackbone3: { img: Meeting.src },
+    },
+  },
 };

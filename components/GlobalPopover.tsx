@@ -63,6 +63,12 @@ const GlobalPopover = () => {
 
     if (match) {
       setSelectedCountry(match);
+    }else{
+      setSelectedCountry({
+        name:"Global",
+        flag:"ri:global-line",
+        code:"Global"
+      })
     }
   }, []);
 
@@ -77,6 +83,7 @@ const GlobalPopover = () => {
       !px-2
       shadow-[0_0_6px_2px_rgba(0,0,0,0.05),_0_0_0_0.5px_#E1E4EA]
       dark:shadow-[0_0_0_1px_rgba(255,255,255,0.06)]
+      max-w-[200px] truncate
     "
       color="primary"
       variant="bordered"
@@ -88,7 +95,7 @@ const GlobalPopover = () => {
         className="text-lg"
         icon={selectedCountry?.flag ?? "ri:global-line"}
       />
-      {selectedCountry?.code ?? "Global"}
+      {!isMobile && <span>{selectedCountry?.name ?? "Global"}</span>}
       <Icon className="text-lg" icon="ri:arrow-down-s-line" />
     </Button>
   );
