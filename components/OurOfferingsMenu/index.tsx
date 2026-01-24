@@ -166,7 +166,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
   return (
     <>
       <button
-        className={`${changeReady && "!text-primary"} flex items-center gap-1 text-base bg-transparent px-2 hover:text-primary dark:text-primary ${
+        className={`${changeReady && "!text-primary"} flex items-center gap-1 text-base bg-transparent px-0 hover:text-primary dark:text-primary ${
           menu.showLightNav ? "text-background" : "text-primary"
         }`}
         onClick={() => menu.setShowPopover(true)}
