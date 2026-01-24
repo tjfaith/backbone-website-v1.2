@@ -65,9 +65,9 @@ const SendMoneyForm = ({ title, action }: Props) => {
                 size="sm"
                 type="number"
                 validationBehavior="native"
-                value={amount.toString()}
+                value={amount}
                 variant="flat"
-                onValueChange={(val) => setAmount(Number(val))}
+                onValueChange={(val) => setAmount(val)}
               />
             </div>
             <Select
