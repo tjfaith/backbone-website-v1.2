@@ -15,10 +15,10 @@ function useSendMoneyForm({ action }: Props) {
   const { selectedCountry } = useSelector((state: RootState) => state.settings);
   const [amount, setAmount] = useState(1);
   const [activeCurrency, setActiveCurrency] = useState<Currency[]>([]);
-  const [selectedCurrency, setSelectedCurrency] = useState<Currency | null>(
+  const [selectedCurrency, setSelectedCurrency] = useState<Currency | null | undefined>(
     null,
   );
-  const [selectedCurrency2, setSelectedCurrency2] = useState<Currency | null>(
+  const [selectedCurrency2, setSelectedCurrency2] = useState<Currency | null | undefined>(
     null,
   );
 
@@ -97,9 +97,6 @@ function useSendMoneyForm({ action }: Props) {
     const base_currency = getCurrencyByCode("USD");
     const convert_currency = getCurrencyByCode(selectedCountry?.currency);
 
-    console.log(selectedCountry?.currency, 'convert to...')
-    console.log(activeCurrency, 'active currency...')
-    console.log(convert_currency, 'convert currency...')
 
     if (base_currency) setSelectedCurrency2(base_currency);
     convert_currency ? setSelectedCurrency(convert_currency) : setSelectedCurrency(getCurrencyByCode("NGN"));
