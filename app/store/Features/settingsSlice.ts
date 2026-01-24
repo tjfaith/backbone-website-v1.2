@@ -9,6 +9,7 @@ interface SettingsState {
     name: string;
     flag: string;
     code: string;
+    currency: string;
   };
 }
 
@@ -20,6 +21,7 @@ const initialState: SettingsState = {
     name: "Nigeria",
     code: "NG",
     flag: "emojione:flag-for-nigeria",
+    currency: "NGN"
   },
 };
 
@@ -42,6 +44,7 @@ const settingsSlice = createSlice({
         name: string;
         flag: string;
         code: string;
+        currency: string;
       }>,
     ) => {
       state.selectedCountry = action.payload;

@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import { Image } from "@heroui/image";
 import { Input } from "@heroui/input";
 import { Divider } from "@heroui/divider";
+import {NumberInput} from "@heroui/number-input";
 import { Select, SelectedItems, SelectItem } from "@heroui/select";
 import { Button } from "@heroui/button";
 
@@ -52,7 +53,9 @@ const SendMoneyForm = ({ title, action }: Props) => {
               <div className="text-2xl font-medium clash-display-font text-primary ml-2 md:ml-0">
                 {selectedCurrency?.symbol}
               </div>
-              <Input
+              <NumberInput
+                isWheelDisabled
+                hideStepper
                 classNames={{
                   inputWrapper:
                     "bg-transparent px-1 shadow-none text-xs text-red-500",
@@ -79,6 +82,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
                     <Image
                       alt="currency image"
                       radius="full"
+                      className="h-5 w-5 object-cover"
                       src={selectedCurrency?.avatar}
                     />
                     <div>{selectedCurrency?.code}</div>
@@ -100,6 +104,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
                       <Image
                         alt="currency image"
                         radius="full"
+                        className="h-5 w-5 object-cover"
                         src={currency?.avatar}
                       />
                     }
@@ -149,6 +154,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
                     <Image
                       alt="currency image"
                       radius="full"
+                      className="h-5 w-5 object-cover"
                       src={selectedCurrency2?.avatar}
                     />
                     <div>{selectedCurrency2?.code}</div>
@@ -168,6 +174,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
                     <Image
                       alt="currency image"
                       radius="full"
+                      className="h-5 w-5 object-cover"
                       src={currency.avatar}
                     />
                   }

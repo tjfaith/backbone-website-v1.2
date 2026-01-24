@@ -43,6 +43,7 @@ const GlobalPopover = () => {
     name: string;
     flag: string;
     code: string;
+    currency: string;
   }) => {
     setSelectedCountry(country);
     updateCountry(country.code);
