@@ -165,6 +165,16 @@ export { default as ReceiveImg } from "./img/app/receive.svg";
 export { default as SendImg } from "./img/app/send.svg";
 export { default as SwapImg } from "./img/app/swap.svg";
 
+// FEE
+export { default as RGhs } from "./img/app/fee/rGHS.svg";
+export { default as RKsh } from "./img/app/fee/rKSh.svg";
+export { default as RSle } from "./img/app/fee/rSLE.svg";
+export { default as RTzs } from "./img/app/fee/rTZS.svg";
+export { default as RUgx } from "./img/app/fee/rUGX.svg";
+export { default as RXaf } from "./img/app/fee/rXAF.svg";
+export { default as RXof } from "./img/app/fee/rXOF.svg";
+export { default as RXof2 } from "./img/app/fee/rXOF2.svg";
+export { default as RZar } from "./img/app/fee/rZAR.svg";
 // blog
 export { default as BlogHeroImg } from "./img/blog/blogHero.jpg";
 

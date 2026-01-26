@@ -1,10 +1,11 @@
+'use client'
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Skeleton } from "@heroui/skeleton";
 import { Spacer } from "@heroui/spacer";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { countryPageContent } from "@/app/utils";
@@ -14,6 +15,16 @@ import { RootState } from "@/app/store";
 const ProcessTransactionCard = () => {
   const { selectedCountry } = useSelector((state: RootState) => state.settings);
   const { theme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; 
+  }
 
   return (
     <div

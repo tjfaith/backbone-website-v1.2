@@ -31,7 +31,7 @@ const IndividualOfferings = () => {
       title: "Locked Funds",
       description:
         "Secure a portion of your funds for a chosen period, ensuring disciplined saving and financial planning.",
-      status: "Coming soon",
+      status: "live",
     },
     {
       icon: "ri:hand-coin-fill",

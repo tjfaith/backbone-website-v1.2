@@ -1,73 +1,28 @@
-// export const globalRegions = [
-//   { name: "Tanzania", code: "TZ", flag: "emojione:flag-for-tanzania" },
-//   { name: "Ghana", code: "GH", flag: "emojione:flag-for-ghana" },
-//   { name: "Uganda", code: "UG", flag: "emojione:flag-for-uganda" },
-//   { name: "Kenya", code: "KE", flag: "emojione:flag-for-kenya" },
-//   {
-//     name: "Côte d'Ivoire",
-//     code: "CI",
-//     flag: "emojione:flag-for-cote-divoire",
-//   },
-//   { name: "Republic of Benin", code: "BJ", flag: "emojione:flag-for-benin" },
-//   { name: "Cameroon", code: "CM", flag: "emojione:flag-for-cameroon" },
-//   {
-//     name: "South Africa",
-//     code: "ZA",
-//     flag: "emojione:flag-for-south-africa",
-//   },
-//   {
-//     name: "Sierra Leone",
-//     code: "SL",
-//     flag: "emojione:flag-for-sierra-leone",
-//   },
-//   { name: "USA", code: "US", flag: "emojione:flag-for-united-states" },
-//   { name: "UK", code: "GB", flag: "emojione:flag-for-united-kingdom" },
-//   { name: "Canada", code: "CA", flag: "emojione:flag-for-canada" },
-//   { name: "Nigeria", code: "NG", flag: "emojione:flag-for-nigeria" },
-// ];
-
-// export const globalComingSoon = [
-//   { name: "Brazil", code: "BR", flag: "emojione:flag-for-brazil" },
-//   { name: "Egypt", code: "EG", flag: "emojione:flag-for-egypt" },
-//   { name: "India", code: "IN", flag: "emojione:flag-for-india" },
-//   { name: "Indonesia", code: "ID", flag: "emojione:flag-for-indonesia" },
-//   { name: "Gabon", code: "GA", flag: "emojione:flag-for-gabon" },
-//   { name: "Mexico", code: "MX", flag: "emojione:flag-for-mexico" },
-//   { name: "Morocco", code: "MA", flag: "emojione:flag-for-morocco" },
-//   { name: "Philippines", code: "PH", flag: "emojione:flag-for-philippines" },
-//   {
-//     name: "Burkina Faso",
-//     code: "BF",
-//     flag: "emojione:flag-for-burkina-faso",
-//   },
-//   {
-//     name: "Guinea-Bissau",
-//     code: "GW",
-//     flag: "emojione:flag-for-guinea-bissau",
-//   },
-//   { name: "Mali", code: "ML", flag: "emojione:flag-for-mali" },
-//   {
-//     name: "Republic of the Congo",
-//     code: "CG",
-//     flag: "emojione:flag-for-congo-brazzaville",
-//   },
-//   { name: "Niger", code: "NE", flag: "emojione:flag-for-niger" },
-//   { name: "Senegal", code: "SN", flag: "emojione:flag-for-senegal" },
-//   { name: "Togo", code: "TG", flag: "emojione:flag-for-togo" },
-//   { name: "Chad", code: "TD", flag: "emojione:flag-for-chad" },
-//   {
-//     name: "Equatorial Guinea",
-//     code: "GQ",
-//     flag: "emojione:flag-for-equatorial-guinea",
-//   },
-// ];
-
-
 export const globalRegions = [
-  { name: "Tanzania", code: "TZ", currency: "TZS", flag: "emojione:flag-for-tanzania" },
-  { name: "Ghana", code: "GH", currency: "GHS", flag: "emojione:flag-for-ghana" },
-  { name: "Uganda", code: "UG", currency: "UGX", flag: "emojione:flag-for-uganda" },
-  { name: "Kenya", code: "KE", currency: "KES", flag: "emojione:flag-for-kenya" },
+  {
+    name: "Tanzania",
+    code: "TZ",
+    currency: "TZS",
+    flag: "emojione:flag-for-tanzania",
+  },
+  {
+    name: "Ghana",
+    code: "GH",
+    currency: "GHS",
+    flag: "emojione:flag-for-ghana",
+  },
+  {
+    name: "Uganda",
+    code: "UG",
+    currency: "UGX",
+    flag: "emojione:flag-for-uganda",
+  },
+  {
+    name: "Kenya",
+    code: "KE",
+    currency: "KES",
+    flag: "emojione:flag-for-kenya",
+  },
   {
     name: "Côte d'Ivoire",
     code: "CI",
@@ -80,7 +35,12 @@ export const globalRegions = [
     currency: "XOF",
     flag: "emojione:flag-for-benin",
   },
-  { name: "Cameroon", code: "CM", currency: "XAF", flag: "emojione:flag-for-cameroon" },
+  {
+    name: "Cameroon",
+    code: "CM",
+    currency: "XAF",
+    flag: "emojione:flag-for-cameroon",
+  },
   {
     name: "South Africa",
     code: "ZA",
@@ -93,20 +53,75 @@ export const globalRegions = [
     currency: "SLE",
     flag: "emojione:flag-for-sierra-leone",
   },
-  { name: "USA", code: "US", currency: "USD", flag: "emojione:flag-for-united-states" },
-  { name: "UK", code: "GB", currency: "GBP", flag: "emojione:flag-for-united-kingdom" },
-  { name: "Canada", code: "CA", currency: "CAD", flag: "emojione:flag-for-canada" },
-  { name: "Nigeria", code: "NG", currency: "NGN", flag: "emojione:flag-for-nigeria" },
+  {
+    name: "USA",
+    code: "US",
+    currency: "USD",
+    flag: "emojione:flag-for-united-states",
+  },
+  {
+    name: "UK",
+    code: "GB",
+    currency: "GBP",
+    flag: "emojione:flag-for-united-kingdom",
+  },
+  {
+    name: "Canada",
+    code: "CA",
+    currency: "CAD",
+    flag: "emojione:flag-for-canada",
+  },
+  {
+    name: "Nigeria",
+    code: "NG",
+    currency: "NGN",
+    flag: "emojione:flag-for-nigeria",
+  },
 ];
 
 export const globalComingSoon = [
-  { name: "Brazil", code: "BR", currency: "BRL", flag: "emojione:flag-for-brazil" },
-  { name: "Egypt", code: "EG", currency: "EGP", flag: "emojione:flag-for-egypt" },
-  { name: "India", code: "IN", currency: "INR", flag: "emojione:flag-for-india" },
-  { name: "Indonesia", code: "ID", currency: "IDR", flag: "emojione:flag-for-indonesia" },
-  { name: "Gabon", code: "GA", currency: "XAF", flag: "emojione:flag-for-gabon" },
-  { name: "Mexico", code: "MX", currency: "MXN", flag: "emojione:flag-for-mexico" },
-  { name: "Morocco", code: "MA", currency: "MAD", flag: "emojione:flag-for-morocco" },
+  {
+    name: "Brazil",
+    code: "BR",
+    currency: "BRL",
+    flag: "emojione:flag-for-brazil",
+  },
+  {
+    name: "Egypt",
+    code: "EG",
+    currency: "EGP",
+    flag: "emojione:flag-for-egypt",
+  },
+  {
+    name: "India",
+    code: "IN",
+    currency: "INR",
+    flag: "emojione:flag-for-india",
+  },
+  {
+    name: "Indonesia",
+    code: "ID",
+    currency: "IDR",
+    flag: "emojione:flag-for-indonesia",
+  },
+  {
+    name: "Gabon",
+    code: "GA",
+    currency: "XAF",
+    flag: "emojione:flag-for-gabon",
+  },
+  {
+    name: "Mexico",
+    code: "MX",
+    currency: "MXN",
+    flag: "emojione:flag-for-mexico",
+  },
+  {
+    name: "Morocco",
+    code: "MA",
+    currency: "MAD",
+    flag: "emojione:flag-for-morocco",
+  },
   {
     name: "Philippines",
     code: "PH",
@@ -132,8 +147,18 @@ export const globalComingSoon = [
     currency: "XAF",
     flag: "emojione:flag-for-congo-brazzaville",
   },
-  { name: "Niger", code: "NE", currency: "XOF", flag: "emojione:flag-for-niger" },
-  { name: "Senegal", code: "SN", currency: "XOF", flag: "emojione:flag-for-senegal" },
+  {
+    name: "Niger",
+    code: "NE",
+    currency: "XOF",
+    flag: "emojione:flag-for-niger",
+  },
+  {
+    name: "Senegal",
+    code: "SN",
+    currency: "XOF",
+    flag: "emojione:flag-for-senegal",
+  },
   { name: "Togo", code: "TG", currency: "XOF", flag: "emojione:flag-for-togo" },
   { name: "Chad", code: "TD", currency: "XAF", flag: "emojione:flag-for-chad" },
   {

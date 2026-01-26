@@ -64,12 +64,12 @@ const GlobalPopover = () => {
 
     if (match) {
       setSelectedCountry(match);
-    }else{
+    } else {
       setSelectedCountry({
-        name:"Global",
-        flag:"ri:global-line",
-        code:"Global"
-      })
+        name: "Global",
+        flag: "ri:global-line",
+        code: "Global",
+      });
     }
   }, []);
 
@@ -113,19 +113,31 @@ const GlobalPopover = () => {
         SELECT YOUR REGION
       </p>
 
-      <div
-        className="
+      <button
+        className={`
     text-info-250
     text-sm font-normal tracking-[-0.084px]
     rounded-full gap-1 inline-flex items-center
     py-1 px-3 leading-5
-    bg-info-250/10 dark:bg-info-500/15
     mb-[6px]
-  "
+     ${
+       selectedCountry?.name === "Global"
+         ? "rounded-full  bg-info-250/10 dark:bg-info-500/15"
+         : ""
+     }
+  `}
+        onClick={() =>
+          changeCountry({
+            name: "Global",
+            flag: "ri:global-line",
+            code: "Global",
+            currency: "Global",
+          })
+        }
       >
         <Icon className="text-[15px]" icon="ri:global-line" />
         <span className=" p-1">Global</span>
-      </div>
+      </button>
 
       <div
         className="
@@ -151,17 +163,17 @@ const GlobalPopover = () => {
 
       <div className="grid sm:grid-cols-3 grid-cols-2 text-sm mb-5">
         {globalRegions.map((item) => (
+          <div key={item.name}>
           <button
-            key={item.name}
             className={`
-    flex items-center gap-2
+    inline-flex items-center gap-2
     hover:text-primary dark:hover:text-info-500
     transition text-left
     p-3 tracking-[-0.084px] leading-5
     text-primary dark:text-foreground-200
         ${
           selectedCountry?.name === item.name
-            ? "bg-[#EBF8FF] rounded-full dark:bg-[rgba(59,130,246,0.15)]"
+            ? "rounded-full  bg-info-250/10 dark:bg-info-500/15"
             : ""
         }
 `}
@@ -170,6 +182,7 @@ const GlobalPopover = () => {
             <Icon className="text-lg" icon={item.flag} />
             {item.name}
           </button>
+          </div>
         ))}
       </div>
 

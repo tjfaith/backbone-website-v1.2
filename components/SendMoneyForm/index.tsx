@@ -56,6 +56,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
               <NumberInput
                 isWheelDisabled
                 hideStepper
+                aria-label="Amount you are sending"
                 classNames={{
                   inputWrapper:
                     "bg-transparent px-1 shadow-none text-xs text-red-500",
@@ -71,7 +72,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
               />
             </div>
             <Select
-              aria-label="currency"
+              aria-label="Receiver currency"
               className=" md:max-w-36 md:w-44 w-full bg-transparent"
               classNames={{}}
               isLoading={currenciesLoading}
@@ -117,6 +118,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
         </div>
         <Button
           isIconOnly
+          aria-label="Swap currencies"
           className="text-default-600"
           variant="light"
           onPress={handleSwap}
@@ -144,7 +146,7 @@ const SendMoneyForm = ({ title, action }: Props) => {
               </div>
             </div>
             <Select
-              aria-label="currency"
+              aria-label="Sender currency"
               className=" md:max-w-36 md:w-44 w-full bg-transparent"
               classNames={{}}
               isRequired={true}
