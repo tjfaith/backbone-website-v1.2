@@ -177,7 +177,7 @@ const OurOfferingsMenu = ({ changeReady = false, setIsMenuOpen }: Props) => {
 
       <Modal
         isDismissable
-        backdrop="blur"
+        backdrop="transparent"
         classNames={{ closeButton: "z-10" }}
         isOpen={menu.showPopover}
         placement="top"

@@ -51,16 +51,15 @@ const Navbar = () => {
           <NextLink href="/">
             <BackboneLogo
               showDarkLogo={changeReady || showLightNav === false}
-              // showDarkLogo={changeReady === false}
             />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
-     <NavbarContent justify="start">
-             <NavbarItem>
-               <GlobalPopover />
-             </NavbarItem>
-           </NavbarContent>
+      <NavbarContent justify="start">
+        <NavbarItem>
+          <GlobalPopover />
+        </NavbarItem>
+      </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4 w-full" justify="center">
         <ul className="hidden lg:flex items-center gap-4 justify-start ml-2">

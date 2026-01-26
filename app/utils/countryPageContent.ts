@@ -70,6 +70,16 @@ import {
   WhyBB8,
   WhyBB9,
   Hero18,
+  ReceiveImg,
+  RTzs,
+  RGhs,
+  RUgx,
+  RKsh,
+  RXaf,
+  RSle,
+  RXof2,
+  RXof,
+  RZar,
 } from "@/public/assets";
 
 export interface CountryPageContent {
@@ -79,6 +89,11 @@ export interface CountryPageContent {
 
 export interface HomePageContent {
   heroSection: HeroSection;
+  backboneFee:{
+    receive:{
+      img: string
+    }
+  },
   whyBackbone1: {
     img1Class?: string;
     img2Class?: string;
@@ -140,6 +155,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         ],
         successToast: [TransactionIcon.src],
       },
+      backboneFee:{
+        receive:{
+          img: ReceiveImg,
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern2,
@@ -177,6 +197,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImage: [Hero10.src],
         successToast: [TransactionIcon2.src],
       },
+      backboneFee:{
+        receive:{
+          img: RTzs
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern2,
@@ -213,6 +238,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         },
         heroImage: [Hero11.src],
         successToast: [TransactionIcon3.src],
+      },
+      backboneFee:{
+        receive:{
+          img: RGhs
+        }
       },
       joinUs: {
         joinUsIndividual: {
@@ -259,6 +289,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImage: [Hero12.src],
         heroImageClass: "object-top",
         successToast: [TransactionIcon4.src],
+      },
+      backboneFee:{
+        receive:{
+          img: RUgx
+        }
       },
       joinUs: {
         joinUsIndividual: {
@@ -307,6 +342,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         },
         heroImage: [Hero13.src],
         successToast: [TransactionIcon5.src],
+      },
+      backboneFee:{
+        receive:{
+          img: RKsh
+        }
       },
       joinUs: {
         joinUsIndividual: {
@@ -359,6 +399,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImageClass: "object-top",
         successToast: [TransactionIcon6.src],
       },
+      backboneFee:{
+        receive:{
+          img: RXaf
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern7.src,
@@ -409,6 +454,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImageClass: "object-top",
         successToast: [TransactionIcon7.src],
       },
+      backboneFee:{
+        receive:{
+          img: RSle
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern8.src,
@@ -458,6 +508,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImage: [Hero18.src],
         heroImageClass: "object-top",
         successToast: [TransactionIcon8.src],
+      },
+      backboneFee:{
+        receive:{
+          img: RXof2
+        }
       },
       joinUs: {
         joinUsIndividual: {
@@ -510,6 +565,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImage: [Hero16.src],
         successToast: [TransactionIcon9.src],
       },
+      backboneFee:{
+        receive:{
+          img: RXof
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern2,
@@ -553,6 +613,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         heroImage: [Hero17.src],
         heroImageClass: "object-top",
         successToast: [TransactionIcon9.src],
+      },
+      backboneFee:{
+        receive:{
+          img: RZar
+        }
       },
       joinUs: {
         joinUsIndividual: {
@@ -602,6 +667,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         ],
         successToast: [TransactionIcon.src],
       },
+      backboneFee:{
+        receive:{
+          img: ReceiveImg
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern2,
@@ -645,6 +715,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
           Hero6.src,
         ],
         successToast: [TransactionIcon.src],
+      },
+      backboneFee:{
+        receive:{
+          img: ReceiveImg
+        }
       },
       joinUs: {
         joinUsIndividual: {
@@ -690,6 +765,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
         ],
         successToast: [TransactionIcon.src],
       },
+      backboneFee:{
+        receive:{
+          img: ReceiveImg
+        }
+      },
       joinUs: {
         joinUsIndividual: {
           pattern: Pattern2,
@@ -733,6 +813,11 @@ export const countryPageContent: Record<string, CountryPageContent> = {
           Hero6.src,
         ],
         successToast: [TransactionIcon.src],
+      },
+      backboneFee:{
+        receive:{
+          img: ReceiveImg
+        }
       },
       joinUs: {
         joinUsIndividual: {

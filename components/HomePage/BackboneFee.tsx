@@ -1,12 +1,18 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { useSelector } from "react-redux";
+import { countryPageContent } from "@/app/utils";
 
 import { CTitle } from "..";
 
 import { ReceiveImg, SendImg, SwapImg } from "@/public/assets";
+import { RootState } from "@/app/store";
 
 const BackboneFee = () => {
+  const { selectedCountry } = useSelector((state: RootState) => state.settings);
+
   return (
     <div className="overflow-hidden bg-background-75 dark:bg-background">
       <div className="page-max-width pt-12 pb-12">
@@ -52,7 +58,10 @@ const BackboneFee = () => {
           {/* RECEIVE */}
           <div className="h-full flex flex-col p-4">
             <div className="flex items-end justify-center bg-white dark:bg-background-200 rounded-3xl flex-1">
-              <Image alt="receive" src={ReceiveImg} />
+              <Image alt="receive"  src={
+                  countryPageContent[selectedCountry.code].homePage.backboneFee
+                    .receive.img
+                } />
             </div>
             <div className="w-full flex flex-col items-center mt-4">
               <div className="clash-display-font flex items-center gap-1 text-xl">
